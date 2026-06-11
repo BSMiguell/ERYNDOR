@@ -10,7 +10,7 @@ const bannerByFolder = {
   "Gigantes": "images/Banner/Banner-Gigantes.png",
   "Humanos": "images/Banner/Banner-Humanos.png", // Usar banner Mutantes como fallback
   "Magos": "images/Banner/Banner-Magos.png",
-  "Meio-Sangue": "images/Banner/Banner-Meio-Sague.png", // Nome existente
+  "Meio-Sangue": "images/Banner/Banner-Meio-Sangue.png", // Nome existente
   "Monstros": "images/Banner/Banner-Monstros.png",
   "Onis": "images/Banner/Banner-Onis.png",
   "Semi-Deus": "images/Banner/Banner-Semi-Deus.png",

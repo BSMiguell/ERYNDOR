@@ -1,7 +1,9 @@
 // ===== Main Entry Point =====
 
 // Global utilities
-window.prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+window.prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -28,7 +30,7 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { rootMargin: "0px 0px -60px 0px", threshold: 0.15 }
+  { rootMargin: "0px 0px -60px 0px", threshold: 0.15 },
 );
 window.revealObserver = revealObserver;
 
@@ -122,9 +124,7 @@ function setThemeFromRace(race) {
 // Initialize metrics (counters)
 function initMetrics(els, RACES) {
   const allCharacters = RACES.flatMap((race) => race.characters || []);
-  const regions = new Set(
-    allCharacters.map((char) => char.region)
-  );
+  const regions = new Set(allCharacters.map((char) => char.region));
 
   if (els.metricRaces) {
     els.metricRaces.dataset.count = RACES.length;
@@ -140,9 +140,16 @@ function initMetrics(els, RACES) {
   }
 
   if (els.mapPulse) {
-    const avgThreat = allCharacters.length > 0
-      ? Math.round(allCharacters.reduce((sum, c) => sum + (window.threatScore ? window.threatScore(c) : 50), 0) / allCharacters.length)
-      : 0;
+    const avgThreat =
+      allCharacters.length > 0
+        ? Math.round(
+            allCharacters.reduce(
+              (sum, c) =>
+                sum + (window.threatScore ? window.threatScore(c) : 50),
+              0,
+            ) / allCharacters.length,
+          )
+        : 0;
     els.mapPulse.textContent = `Kore ${avgThreat}`;
   }
 }
@@ -154,7 +161,7 @@ function renderHeroDossiers(els, RACES) {
       race,
       char,
       threat: window.threatScore ? window.threatScore(char) : 50,
-    }))
+    })),
   );
 
   const picks = [...allCharacters]
@@ -164,7 +171,8 @@ function renderHeroDossiers(els, RACES) {
   if (!els.heroDossiers) return;
 
   els.heroDossiers.innerHTML = picks
-    .map((item) => `
+    .map(
+      (item) => `
       <button class="hero-dossier" type="button" style="--race-color:${item.race.color};--race-glow:${item.race.glow}" data-character="${item.char.n}" data-cursor="Abrir">
         <img src="images/${item.race.folder}/${item.char.f}" alt="${escapeHtml(item.char.n)}" loading="eager" />
         <span>
@@ -173,17 +181,24 @@ function renderHeroDossiers(els, RACES) {
           <span>${escapeHtml(item.char.t)}</span>
         </span>
       </button>
-    `)
+    `,
+    )
     .join("");
 
-  els.heroDossiers.querySelectorAll(".hero-dossier").forEach((button, index) => {
-    button.addEventListener("click", (event) => {
-      const char = picks[index];
-      if (window.openModal) {
-        window.openModal(char, { clientX: event.clientX, clientY: event.clientY }, els);
-      }
+  els.heroDossiers
+    .querySelectorAll(".hero-dossier")
+    .forEach((button, index) => {
+      button.addEventListener("click", (event) => {
+        const char = picks[index];
+        if (window.openModal) {
+          window.openModal(
+            char,
+            { clientX: event.clientX, clientY: event.clientY },
+            els,
+          );
+        }
+      });
     });
-  });
 }
 
 // Render filters
@@ -215,27 +230,40 @@ function initScrollEffects(els) {
   let ticking = false;
 
   const update = () => {
-    const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+    const max = Math.max(
+      1,
+      document.documentElement.scrollHeight - innerHeight,
+    );
     const ratio = Math.min(1, scrollY / max);
-    document.documentElement.style.setProperty("--scroll-ratio", ratio.toFixed(4));
+    document.documentElement.style.setProperty(
+      "--scroll-ratio",
+      ratio.toFixed(4),
+    );
 
     const current = sections
       .filter((section) => scrollY >= section.offsetTop - 160)
       .at(-1)?.id;
 
     navLinks.forEach((link) =>
-      link.classList.toggle("is-active", link.getAttribute("href") === `#${current}`),
+      link.classList.toggle(
+        "is-active",
+        link.getAttribute("href") === `#${current}`,
+      ),
     );
 
     ticking = false;
   };
 
-  window.addEventListener("scroll", () => {
-    if (!ticking) {
-      requestAnimationFrame(update);
-      ticking = true;
-    }
-  }, { passive: true });
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    },
+    { passive: true },
+  );
 
   // Observe reveal elements
   document.querySelectorAll(".reveal, .chapter").forEach((el) => {
@@ -263,13 +291,23 @@ function bindEvents(els, RACES) {
   // Race navigation
   els.prevRace?.addEventListener("click", () => {
     if (window.activeRaceIndex !== undefined) {
-      window.selectRace((window.activeRaceIndex - 1 + RACES.length) % RACES.length, { preview: false }, els, RACES);
+      window.selectRace(
+        (window.activeRaceIndex - 1 + RACES.length) % RACES.length,
+        { preview: false },
+        els,
+        RACES,
+      );
     }
   });
 
   els.nextRace?.addEventListener("click", () => {
     if (window.activeRaceIndex !== undefined) {
-      window.selectRace((window.activeRaceIndex + 1) % RACES.length, { preview: false }, els, RACES);
+      window.selectRace(
+        (window.activeRaceIndex + 1) % RACES.length,
+        { preview: false },
+        els,
+        RACES,
+      );
     }
   });
 
@@ -306,7 +344,10 @@ function bindEvents(els, RACES) {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && els.modalBackdrop?.classList.contains("open")) {
+    if (
+      event.key === "Escape" &&
+      els.modalBackdrop?.classList.contains("open")
+    ) {
       closeModal(els);
     }
   });
@@ -329,11 +370,19 @@ function bindEvents(els, RACES) {
   });
 
   // Easter egg - Kore code (Konami-like)
-  const KORE_CODE = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown',
-                     'ArrowLeft','ArrowRight','ArrowLeft','ArrowRight'];
+  const KORE_CODE = [
+    "ArrowUp",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowDown",
+    "ArrowLeft",
+    "ArrowRight",
+    "ArrowLeft",
+    "ArrowRight",
+  ];
   let koreProgress = 0;
 
-  document.addEventListener('keydown', (e) => {
+  document.addEventListener("keydown", (e) => {
     if (e.key === KORE_CODE[koreProgress]) {
       koreProgress++;
       if (koreProgress === KORE_CODE.length) {
@@ -359,35 +408,33 @@ function bindEvents(els, RACES) {
 
 // Hero letter scroll reveal
 function initHeroLetters() {
-  document.querySelectorAll('.hero-letter').forEach((el, i) => {
-    el.style.setProperty('--drift-y', `${(Math.random() - 0.5) * 80}px`);
-    el.style.setProperty('--drift-x', `${(Math.random() - 0.5) * 60}px`);
-    el.style.setProperty('--drift-r', `${(Math.random() - 0.5) * 25}deg`);
-    el.style.setProperty('--delay', `${i * 0.04}s`);
+  document.querySelectorAll(".hero-letter").forEach((el, i) => {
+    el.style.setProperty("--drift-y", `${(Math.random() - 0.5) * 80}px`);
+    el.style.setProperty("--drift-x", `${(Math.random() - 0.5) * 60}px`);
+    el.style.setProperty("--drift-r", `${(Math.random() - 0.5) * 25}deg`);
+    el.style.setProperty("--delay", `${i * 0.04}s`);
   });
 }
 
 // Section sigil animation (SVG stroke-dashoffset)
 function initSigils() {
-  const sigilObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        sigilObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
+  const sigilObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          sigilObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 },
+  );
 
-  document.querySelectorAll('.section-sigil').forEach(el => {
+  document.querySelectorAll(".section-sigil").forEach((el) => {
     sigilObserver.observe(el);
   });
 }
 
-// Duel state
-let duelState = { left: null, right: null };
-
-// Visible count for pagination
-let visibleCount = 24;
 
 // Initialize everything
 function boot() {
@@ -428,8 +475,8 @@ window.showToast = showToast;
 window.escapeHtml = escapeHtml;
 
 // Wait for DOM and data
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', boot);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", boot);
 } else {
   boot();
 }

@@ -8,8 +8,14 @@
 
     <!-- Open Graph meta tags (CORREÇÃO CRÍTICA) -->
     <meta property="og:title" content="ERYNDOR — Atlas Vivo da Convergência" />
-    <meta property="og:description" content="Explore o atlas de guerra de Eryndor: raças, personagens e a Convergência Kore." />
-    <meta property="og:image" content="https://bsmiguell.github.io/ERYNDOR/images/og-cover.jpg" />
+    <meta
+      property="og:description"
+      content="Explore o atlas de guerra de Eryndor: raças, personagens e a Convergência Kore."
+    />
+    <meta
+      property="og:image"
+      content="https://bsmiguell.github.io/ERYNDOR/images/og-cover.jpg"
+    />
     <meta property="og:url" content="https://bsmiguell.github.io/ERYNDOR/" />
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -18,7 +24,6 @@
 
     <!-- Preloads (CORREÇÃO CRÍTICA) -->
     <link rel="preload" href="css/tokens.css" as="style" />
-    <link rel="preload" href="js/data.js" as="script" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,24 +35,66 @@
     <!-- Critical CSS Inline (above-the-fold) -->
     <style>
       :root {
-        --ink: #080706; --bone: #f0e2c4; --paper: #d8c7a1; --kore: #d7af45;
-        --copper: #cf6f3b; --verdigris: #4ab59e; --blood: #b83d34; --moss: #91a36d;
-        --storm: #48687e; --active-race: var(--kore); --active-glow: rgba(215, 175, 69, 0.32);
-        --cursor-x: 50vw; --cursor-y: 50vh; --transition-fast: 0.18s ease;
+        --ink: #080706;
+        --bone: #f0e2c4;
+        --paper: #d8c7a1;
+        --kore: #d7af45;
+        --copper: #cf6f3b;
+        --verdigris: #4ab59e;
+        --blood: #b83d34;
+        --moss: #91a36d;
+        --storm: #48687e;
+        --active-race: var(--kore);
+        --active-glow: rgba(215, 175, 69, 0.32);
+        --cursor-x: 50vw;
+        --cursor-y: 50vh;
+        --transition-fast: 0.18s ease;
         --transition-med: 0.35s cubic-bezier(0.19, 1, 0.22, 1);
       }
-      body { margin: 0; color: var(--bone); background: var(--ink); font-family: "EB Garamond", Georgia, serif; }
-      .top-nav { position: fixed; inset: 0 0 auto; z-index: 1100; display: flex; align-items: center; justify-content: space-between; min-height: 68px; }
-      .hero { min-height: 96svh; position: relative; padding: 7.8rem 1rem; }
-      .hero h1 { font-family: "Cinzel Decorative", serif; font-size: clamp(3rem, 12vw, 6rem); margin: 0; color: var(--bone); }
+      body {
+        margin: 0;
+        color: var(--bone);
+        background: var(--ink);
+        font-family: "EB Garamond", Georgia, serif;
+      }
+      .top-nav {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 1100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 68px;
+      }
+      .hero {
+        min-height: 96svh;
+        position: relative;
+        padding: 7.8rem 1rem;
+      }
+      .hero h1 {
+        font-family: "Cinzel Decorative", serif;
+        font-size: clamp(3rem, 12vw, 6rem);
+        margin: 0;
+        color: var(--bone);
+      }
     </style>
 
     <!-- Non-critical CSS (CORREÇÃO CRÍTICA: preload + print media) -->
     <link rel="stylesheet" href="css/tokens.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/animations.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'" />
+    <link
+      rel="stylesheet"
+      href="css/animations.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <link
+      rel="stylesheet"
+      href="css/responsive.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
@@ -71,7 +118,15 @@
         <li><a href="#duel" data-cursor="Duelo">Duelo</a></li>
       </ul>
       <div class="nav-quick">
-        <button class="icon-button" id="random-char" type="button" aria-label="Abrir personagem aleatório" data-cursor="Aleatório">✦</button>
+        <button
+          class="icon-button"
+          id="random-char"
+          type="button"
+          aria-label="Abrir personagem aleatório"
+          data-cursor="Aleatório"
+        >
+          ✦
+        </button>
       </div>
     </nav>
 
@@ -81,13 +136,13 @@
         <div class="hero-copy">
           <p class="eyebrow reveal">Atlas Vivo da Convergência</p>
           <h1 class="reveal">
-            <span class="hero-letter" style="--delay: 0s;">E</span>
-            <span class="hero-letter" style="--delay: 0.04s;">R</span>
-            <span class="hero-letter" style="--delay: 0.08s;">Y</span>
-            <span class="hero-letter" style="--delay: 0.12s;">N</span>
-            <span class="hero-letter" style="--delay: 0.16s;">D</span>
-            <span class="hero-letter" style="--delay: 0.2s;">O</span>
-            <span class="hero-letter" style="--delay: 0.24s;">R</span>
+            <span class="hero-letter" style="--delay: 0s">E</span>
+            <span class="hero-letter" style="--delay: 0.04s">R</span>
+            <span class="hero-letter" style="--delay: 0.08s">Y</span>
+            <span class="hero-letter" style="--delay: 0.12s">N</span>
+            <span class="hero-letter" style="--delay: 0.16s">D</span>
+            <span class="hero-letter" style="--delay: 0.2s">O</span>
+            <span class="hero-letter" style="--delay: 0.24s">R</span>
             <span class="hero-title-line">respira em guerra</span>
           </h1>
           <p class="hero-lead reveal">
@@ -96,8 +151,12 @@
             fim.
           </p>
           <div class="hero-actions reveal">
-            <a class="command-button" href="#races" data-cursor="Entrar">Abrir linhagens</a>
-            <a class="ghost-button" href="#characters" data-cursor="Investigar">Ver dossiês</a>
+            <a class="command-button" href="#races" data-cursor="Entrar"
+              >Abrir linhagens</a
+            >
+            <a class="ghost-button" href="#characters" data-cursor="Investigar"
+              >Ver dossiês</a
+            >
           </div>
           <div class="hero-ledger reveal" aria-live="polite">
             <div class="ledger-item">
@@ -114,12 +173,19 @@
             </div>
           </div>
         </div>
-        <div class="hero-dossiers" id="hero-dossiers" aria-label="Dossiês em destaque"></div>
+        <div
+          class="hero-dossiers"
+          id="hero-dossiers"
+          aria-label="Dossiês em destaque"
+        ></div>
       </section>
 
       <div class="section-sigil" aria-hidden="true">
         <svg viewBox="0 0 200 60" class="sigil-divider">
-          <path class="sigil-path" d="M0,30 H60 M140,30 H200 M80,5 L100,30 L120,5 M80,55 L100,30 L120,55"/>
+          <path
+            class="sigil-path"
+            d="M0,30 H60 M140,30 H200 M80,5 L100,30 L120,5 M80,55 L100,30 L120,55"
+          />
         </svg>
       </div>
 
@@ -137,21 +203,33 @@
         </div>
         <div class="story-grid">
           <div class="story-chapters">
-            <article class="chapter" data-index="I" style="--chapter-color: var(--kore)">
+            <article
+              class="chapter"
+              data-index="I"
+              style="--chapter-color: var(--kore)"
+            >
               <h3>Os Selos cedem</h3>
               <p>
                 A barreira entre planos perdeu a forma. Demônios, Aparições e
                 forças sem nome passaram a disputar território no mesmo mapa.
               </p>
             </article>
-            <article class="chapter" data-index="II" style="--chapter-color: var(--verdigris)">
+            <article
+              class="chapter"
+              data-index="II"
+              style="--chapter-color: var(--verdigris)"
+            >
               <h3>O Kore escolhe corpos</h3>
               <p>
                 Cristais deixaram de ser relíquias e viraram motores de mutação,
                 fé, fome, disciplina, ruína e ascensão.
               </p>
             </article>
-            <article class="chapter" data-index="III" style="--chapter-color: var(--blood)">
+            <article
+              class="chapter"
+              data-index="III"
+              style="--chapter-color: var(--blood)"
+            >
               <h3>A guerra ganha nomes</h3>
               <p>
                 Cada personagem do atlas entra como dossiê vivo: poder, papel,
@@ -170,7 +248,10 @@
 
       <div class="section-sigil" aria-hidden="true">
         <svg viewBox="0 0 200 60" class="sigil-divider">
-          <path class="sigil-path" d="M0,30 H60 M140,30 H200 M80,5 L100,30 L120,5 M80,55 L100,30 L120,55"/>
+          <path
+            class="sigil-path"
+            d="M0,30 H60 M140,30 H200 M80,5 L100,30 L120,5 M80,55 L100,30 L120,55"
+          />
         </svg>
       </div>
 
@@ -199,8 +280,24 @@
             </div>
           </div>
           <div class="race-controls">
-            <button class="icon-button" id="prev-race" type="button" aria-label="Raça anterior" data-cursor="Anterior">‹</button>
-            <button class="icon-button" id="next-race" type="button" aria-label="Próxima raça" data-cursor="Próxima">›</button>
+            <button
+              class="icon-button"
+              id="prev-race"
+              type="button"
+              aria-label="Raça anterior"
+              data-cursor="Anterior"
+            >
+              ‹
+            </button>
+            <button
+              class="icon-button"
+              id="next-race"
+              type="button"
+              aria-label="Próxima raça"
+              data-cursor="Próxima"
+            >
+              ›
+            </button>
           </div>
         </div>
         <div class="races-grid" id="races-grid"></div>
@@ -208,7 +305,10 @@
 
       <div class="section-sigil" aria-hidden="true">
         <svg viewBox="0 0 200 60" class="sigil-divider">
-          <path class="sigil-path" d="M0,30 H60 M140,30 H200 M80,5 L100,30 L120,5 M80,55 L100,30 L120,55"/>
+          <path
+            class="sigil-path"
+            d="M0,30 H60 M140,30 H200 M80,5 L100,30 L120,5 M80,55 L100,30 L120,55"
+          />
         </svg>
       </div>
 
@@ -227,7 +327,12 @@
 
         <div class="toolbar reveal" aria-label="Controles da galeria">
           <label class="field">
-            <input id="search-input" type="search" placeholder="Buscar personagem, raça ou região" autocomplete="off" />
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Buscar personagem, raça ou região"
+              autocomplete="off"
+            />
           </label>
           <label class="field">
             <select id="sort-select" aria-label="Ordenar personagens">
@@ -237,10 +342,21 @@
               <option value="power">Poder</option>
             </select>
           </label>
-          <button class="ghost-button" id="clear-filters" type="button" data-cursor="Limpar">Limpar</button>
+          <button
+            class="ghost-button"
+            id="clear-filters"
+            type="button"
+            data-cursor="Limpar"
+          >
+            Limpar
+          </button>
         </div>
 
-        <div class="filters reveal" id="race-filters" aria-label="Filtros por raça"></div>
+        <div
+          class="filters reveal"
+          id="race-filters"
+          aria-label="Filtros por raça"
+        ></div>
 
         <div class="gallery-status">
           <span id="gallery-count">0 personagens</span>
@@ -252,13 +368,23 @@
         <div class="empty-state" id="empty-state">Nenhum dossiê encontrado</div>
 
         <div class="load-row">
-          <button class="command-button" id="load-more" type="button" data-cursor="Mais">Carregar mais</button>
+          <button
+            class="command-button"
+            id="load-more"
+            type="button"
+            data-cursor="Mais"
+          >
+            Carregar mais
+          </button>
         </div>
       </section>
 
       <div class="section-sigil" aria-hidden="true">
         <svg viewBox="0 0 200 60" class="sigil-divider">
-          <path class="sigil-path" d="M0,30 H60 M140,30 H200 M80,5 L100,30 L120,5 M80,55 L100,30 L120,55"/>
+          <path
+            class="sigil-path"
+            d="M0,30 H60 M140,30 H200 M80,5 L100,30 L120,5 M80,55 L100,30 L120,55"
+          />
         </svg>
       </div>
 
@@ -274,12 +400,31 @@
           </p>
         </div>
         <div class="duel-board reveal">
-          <button class="duel-pick" id="duel-left" type="button" data-cursor="Abrir"></button>
+          <button
+            class="duel-pick"
+            id="duel-left"
+            type="button"
+            data-cursor="Abrir"
+          ></button>
           <div class="duel-core">
-            <button class="command-button" id="draw-duel" type="button" data-cursor="Sortear">Sortear duelo</button>
-            <div class="duel-verdict" id="duel-verdict">Aguardando o próximo choque.</div>
+            <button
+              class="command-button"
+              id="draw-duel"
+              type="button"
+              data-cursor="Sortear"
+            >
+              Sortear duelo
+            </button>
+            <div class="duel-verdict" id="duel-verdict">
+              Aguardando o próximo choque.
+            </div>
           </div>
-          <button class="duel-pick" id="duel-right" type="button" data-cursor="Abrir"></button>
+          <button
+            class="duel-pick"
+            id="duel-right"
+            type="button"
+            data-cursor="Abrir"
+          ></button>
         </div>
       </section>
     </main>
@@ -287,13 +432,28 @@
     <!-- Modal -->
     <div class="modal-backdrop" id="modal-backdrop" role="presentation">
       <img class="modal-bg" id="modal-bg" alt="" aria-hidden="true" />
-      <article class="character-modal" id="character-modal" role="dialog" aria-modal="true" aria-labelledby="modal-name" tabindex="-1">
+      <article
+        class="character-modal"
+        id="character-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-name"
+        tabindex="-1"
+      >
         <div class="modal-art">
           <img id="modal-img" src="" alt="" />
           <canvas id="modal-canvas" aria-hidden="true"></canvas>
         </div>
         <div class="modal-copy">
-          <button class="icon-button modal-close" id="modal-close" type="button" aria-label="Fechar dossiê" data-cursor="Fechar">×</button>
+          <button
+            class="icon-button modal-close"
+            id="modal-close"
+            type="button"
+            aria-label="Fechar dossiê"
+            data-cursor="Fechar"
+          >
+            ×
+          </button>
           <div class="modal-race" id="modal-race"></div>
           <h2 class="modal-name" id="modal-name"></h2>
           <div class="modal-title" id="modal-title"></div>
