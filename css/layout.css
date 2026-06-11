@@ -1,0 +1,113 @@
+/* ===== Layout & Grid ===== */
+
+.page-shell {
+  position: relative;
+  z-index: 2;
+}
+
+.section {
+  position: relative;
+  padding: 6rem max(1.2rem, calc((100vw - 1240px) / 2));
+}
+
+.section + .section {
+  border-top: 1px solid rgba(240, 226, 196, 0.08);
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(260px, 0.42fr);
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: var(--bone);
+  font-family: "Cinzel Decorative", serif;
+  font-size: 3.2rem;
+  line-height: 1;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 96svh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.72fr);
+  align-items: end;
+  gap: 2rem;
+  padding: 7.8rem max(1.2rem, calc((100vw - 1240px) / 2)) 4.8rem;
+  overflow: hidden;
+}
+
+#ambient-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.82;
+}
+
+.hero-copy,
+.hero-dossiers {
+  position: relative;
+  z-index: 2;
+}
+
+/* Duel Section */
+.duel-section {
+  padding-top: 3rem;
+}
+
+.duel-board {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+/* Toolbar */
+.toolbar {
+  position: sticky;
+  top: 68px;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) auto auto;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(240, 226, 196, 0.12);
+  border-radius: 6px;
+  background: rgba(8, 7, 6, 0.78);
+  backdrop-filter: blur(10px);
+}
+
+.field {
+  position: relative;
+}
+
+/* Gallery status */
+.gallery-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+}
+
+.load-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}

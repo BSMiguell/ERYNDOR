@@ -5187,3 +5187,6 @@ for (const race of RACES) {
   race.count = race.characters.length;
 }
 
+// Export RACES to window for module access
+window.RACES = RACES;
+

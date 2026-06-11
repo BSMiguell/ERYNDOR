@@ -1,0 +1,14 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="koreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cf6f3b"/>
+      <stop offset="50%" stop-color="#d7af45"/>
+      <stop offset="100%" stop-color="#4ab59e"/>
+    </linearGradient>
+  </defs>
+  <!-- 8-pointed sigil from navigation -->
+  <g fill="none" stroke="url(#koreGrad)" stroke-width="3">
+    <path d="M50,5 L56,33 L94,39 L56,45 L50,95 L44,45 L6,39 L44,33 Z"/>
+  </g>
+  <circle cx="50" cy="50" r="8" fill="#d7af45" opacity="0.8"/>
+</svg>

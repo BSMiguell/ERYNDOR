@@ -1,0 +1,102 @@
+/* ===== Animations & Keyframes ===== */
+
+@keyframes sigilAwaken {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) rotate(-90deg);
+    filter: blur(12px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1) rotate(15deg);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: blur(0);
+  }
+}
+
+@keyframes sigilTurn {
+  0% {
+    transform: rotate(0) scale(0.86);
+  }
+  55% {
+    transform: rotate(180deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.86);
+  }
+}
+
+@keyframes loaderSweep {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(260%);
+  }
+}
+
+@keyframes dossierIn {
+  from {
+    opacity: 0;
+    transform: translateX(var(--entry-x, 0)) translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(var(--entry-x, 0)) translateY(0);
+  }
+}
+
+@keyframes mapPulse {
+  0%,
+  100% {
+    transform: scale(0.96) rotate(0deg);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.02) rotate(2deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes veilOpen {
+  from {
+    clip-path: circle(0 at var(--origin-x, 50%) var(--origin-y, 50%));
+  }
+  to {
+    clip-path: circle(150% at var(--origin-x, 50%) var(--origin-y, 50%));
+  }
+}
+
+@keyframes clashFlash {
+  0%   { opacity: 0; }
+  30%  { opacity: 0.6; }
+  100% { opacity: 0; }
+}
+
+@keyframes slideFromLeft {
+  from { transform: translateX(-120%) rotate(-8deg); opacity: 0; }
+  to   { transform: translateX(0) rotate(0deg);      opacity: 1; }
+}
+
+@keyframes slideFromRight {
+  from { transform: translateX(120%) rotate(8deg); opacity: 0; }
+  to   { transform: translateX(0) rotate(0deg);   opacity: 1; }
+}
+
+/* Scroll reveal animation */
+.reveal {
+  transform: translateY(26px);
+  opacity: 0;
+  transition:
+    transform 0.7s ease,
+    opacity 0.7s ease;
+}
+
+.reveal.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}

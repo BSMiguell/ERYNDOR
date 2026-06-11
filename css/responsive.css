@@ -1,0 +1,203 @@
+/* ===== Responsive Breakpoints ===== */
+
+/* Desktop Small */
+@media (max-width: 1240px) {
+  .hero,
+  .section-heading,
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    align-items: center;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: clamp(2.8rem, 8vw, 4.5rem);
+  }
+
+  .hero-dossiers {
+    display: none;
+  }
+
+  .races-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .characters-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .section-heading {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Landscape / Small Tablet */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: clamp(2.5rem, 10vw, 3.2rem);
+  }
+
+  .race-stage {
+    min-height: 420px;
+  }
+
+  .race-stage-copy {
+    left: 1rem;
+    right: 1rem;
+    bottom: 5.5rem;
+  }
+
+  .race-stage-copy h3 {
+    font-size: 2rem;
+  }
+
+  .races-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rift-map {
+    display: none;
+  }
+
+  /* Mobile Navigation */
+  .top-nav .nav-links {
+    position: fixed;
+    inset: 0;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(8, 7, 6, 0.97);
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  .top-nav .nav-links.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .top-nav .nav-links a {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .races-grid {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    gap: 0.6rem;
+  }
+
+  .race-card {
+    flex: 0 0 82vw;
+    scroll-snap-align: start;
+  }
+
+  .toolbar {
+    position: relative;
+    top: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .characters-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+  }
+
+  .char-card {
+    min-height: 360px;
+  }
+
+  .char-art {
+    min-height: 220px;
+  }
+
+  .duel-core {
+    min-width: 0;
+  }
+
+  .modal-copy {
+    padding: 1.35rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .command-button,
+  .ghost-button {
+    width: 100%;
+  }
+}
+
+/* Mobile Portrait - Small */
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  .hero-ledger {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scroll Snap for Mobile Race Cards */
+@media (max-width: 768px) {
+  .races-grid {
+    scroll-snap-type: x mandatory;
+  }
+}
+
+/* ===== Scroll Reveal for Section Headings ===== */
+.section-heading h2 {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.section-heading.is-visible h2 {
+  clip-path: inset(0 0% 0 0);
+}
+
+/* ===== Horizontal Scroll for Story Chapters (Mobile) ===== */
+@media (max-width: 768px) {
+  .story-chapters {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .chapter {
+    flex: 0 0 85vw;
+    scroll-snap-align: center;
+    border-left: none;
+    border-top: 3px solid color-mix(in srgb, var(--chapter-color), transparent 26%);
+    padding: 1.25rem;
+  }
+}
+
+/* ===== Skip Link Adjustments ===== */
+@media (max-width: 768px) {
+  .skip-link {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
