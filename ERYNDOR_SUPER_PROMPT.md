@@ -1,826 +1,968 @@
-# ERYNDOR — Super Prompt de Reconstrução Total
-> Documento técnico e criativo completo para uma IA executar a reconstrução do site ERYNDOR do zero.  
-> Repositório original: https://github.com/BSMiguell/ERYNDOR  
-> Site atual: https://bsmiguell.github.io/ERYNDOR/
+# ERYNDOR — Super Prompt + Análise Completa de Melhoria
+
+> Documento gerado após leitura de: `index.html` (2777 linhas), `data.js` (5192 linhas), `js/main.js`, `js/canvas.js`, `js/characters.js`, `js/cursor.js`, `js/duel.js`, `js/loader.js`, `js/races.js`, `css/animations.css`, `css/components.css`, `css/layout.css`, `css/responsive.css`, `css/tokens.css`
 
 ---
 
-## 🧭 CONTEXTO DO PROJETO
+## 1. DIAGNÓSTICO HONESTO DO ESTADO ATUAL
 
-ERYNDOR é um **atlas vivo de um universo de RPG de fantasia sombria**. O mundo tem:
+### O que está BOM e deve ser preservado
 
-- **5+ raças** com cores, banners, traços culturais e papéis no conflito
-- **Personagens** com dossiês detalhados (ameaça, poder, alinhamento, região, ferida, promessa)
-- **Mecânica da Convergência Kore** — cristais que racharam a ordem antiga e movem a guerra
-- **4 seções principais:** Hero → Crônica → Raças → Personagens → Duelo
-- **Tom visual:** dark fantasy, parchment+ink, latão envelhecido, verdigris, sangue seco
+- **Palette de tokens** sólida: `--ink`, `--kore`, `--copper`, `--verdigris`, `--blood` — coerente com a fantasia sombria
+- **Cursor customizado** com troca de cor por raça: ideia genial, rara em sites de worldbuilding
+- **Parallax no banner de raça** via mousemove: execução limpa
+- **Scroll-progress bar** no topo com gradiente tri-color: sofisticado
+- **`clip-path` poligonal** nos botões (chanfrado) — estética de RPG sem clichê
+- **Konami Code** adaptado (Kore Code) + Easter Egg do logo: personalidade
+- **Canvas ambient** no hero: diferenciador visual
+- **Sistema modular** de JS em arquivos separados por responsabilidade
 
-### Paleta original preservada (obrigatório manter estes tokens)
-```css
---ink: #080706        /* fundo principal */
---bone: #f0e2c4       /* texto principal */
---paper: #d8c7a1      /* texto secundário */
---kore: #d7af45       /* dourado sagrado */
---copper: #cf6f3b     /* cobre queimado */
---verdigris: #4ab59e  /* verde-azulado */
---blood: #b83d34      /* vermelho sangue */
---moss: #91a36d       /* verde musgo */
---storm: #48687e      /* azul tempestade */
-```
+### O que está FRACO e precisa ser destruído/refeito
 
-### Fontes originais preservadas (obrigatório manter)
-- `Cinzel Decorative` — títulos épicos H1, logo
-- `Cinzel` — nomes de personagens, raças, subheadings
-- `EB Garamond` — corpo de texto, descrições, citações
-- `Bricolage Grotesque` — UI, badges, labels, navegação
+| Problema                                                                    | Onde           | Impacto                                    |
+| --------------------------------------------------------------------------- | -------------- | ------------------------------------------ |
+| Lore de 30+ personagens com texto genérico ("presença recém-reconhecida")   | `data.js`      | Quebra toda a imersão                      |
+| `font-size: 6.1rem` no hero title não tem responsividade real via `clamp()` | CSS hero       | Quebra em tablet 768px                     |
+| Seção Crônica ("O mapa não fica parado") é apenas texto estático            | `index.html`   | Desperdício da proposta de "atlas vivo"    |
+| Banners de raça: um `<img>` com parallax básico                             | `js/races.js`  | Sem profundidade, sem história visual      |
+| Filtro de personagens: dropdown simples + input texto                       | CSS/JS         | Não reflete a lógica de "atlas de guerra"  |
+| Mesa de Duelo: dois cards lado a lado sem tensão dramática                  | `js/duel.js`   | Mecânica pouco envolvente                  |
+| Loader: sigil giratório + barra de progresso genérica                       | `js/loader.js` | Momento de entrada perdido                 |
+| `data.js` com personagens sem lore real (Pyre, Scylla, Valerius, Zoro…)     | `data.js`      | 30% do conteúdo é placeholder              |
+| Mapa (`rift-map`) é puro CSS com hex clip-path                              | `index.html`   | Promete mapa interativo, entrega decoração |
+| Nenhum estado de transição entre seções                                     | CSS            | Rolagem abrupta, sem fluxo narrativo       |
 
 ---
 
-## 🔴 PROBLEMAS CRÍTICOS A CORRIGIR
-
-### 1. Arquivo monolítico (CRÍTICO)
-O projeto inteiro está em um único `index.html` de 88KB e 2777 linhas com CSS inline, JS inline e HTML misturados. **Separar obrigatoriamente em:**
+## 2. SUPER PROMPT — USE ESTE PARA CADA IMPLEMENTAÇÃO
 
 ```
-ERYNDOR/
-├── index.html           (~150 linhas, só estrutura)
-├── css/
-│   ├── tokens.css       (custom properties, reset)
-│   ├── layout.css       (grid, sections, hero)
-│   ├── components.css   (cards, buttons, badges, nav)
-│   ├── animations.css   (keyframes, transitions)
-│   └── responsive.css   (breakpoints mobile/tablet)
-├── js/
-│   ├── data.js          (dados de raças e personagens)
-│   ├── loader.js        (site-loader, progress)
-│   ├── cursor.js        (cursor customizado)
-│   ├── canvas.js        (ambient canvas de partículas)
-│   ├── races.js         (lógica da seção de raças)
-│   ├── characters.js    (filtro, paginação, dossiês)
-│   ├── duel.js          (mesa de duelo)
-│   └── main.js          (scroll, nav, init global)
-└── images/
-    ├── Banner/
-    ├── Races/
-    └── Characters/
-```
+Você é o arquiteto de experiências do ERYNDOR — um worldbuilding de fantasia sombria onde:
+- Cristais Kore fragmentaram a ordem entre planos
+- 10+ raças (Amaldiçoados, Aparições, Beserk, Canibais, Demônios…) disputam território
+- O site É o atlas: cada interação revela camadas da Convergência
 
-### 2. Alt text em todas as imagens (CRÍTICO)
-Cada `<img>` precisa de `alt` descritivo. Ex: `alt="Banner da raça Mutantes — figuras transformadas pelo Kore"`.
+CONTEXTO TÉCNICO:
+- Stack: HTML puro + CSS com custom properties + JS vanilla modular
+- Hosted em GitHub Pages (sem backend, sem npm, sem build step)
+- Fontes: Cinzel Decorative (display), Cinzel (subheadings), EB Garamond (corpo), Bricolage Grotesque (UI)
+- Tokens existentes: --ink, --kore, --copper, --verdigris, --blood, --bone, --paper, --muted
 
-### 3. Banners de raça quebrados (CRÍTICO)
-O sistema atual tenta trocar o `src` de uma `<img>` como banner de fundo. **Isso falhou** porque a imagem não cobre o stage corretamente em todos os navegadores.
+PRINCÍPIOS DE DESIGN INEGOCIÁVEIS:
+1. Cada animação conta um pedaço da história — se não tem lore, não existe
+2. O usuário deve sentir que está DENTRO do atlas, não olhando para ele
+3. Nenhuma transição genérica: cada hover, scroll e click deve ter significado dramático
+4. Performance first: CSS transitions antes de JS, requestAnimationFrame onde necessário
+5. Acessibilidade: prefers-reduced-motion sempre respeitado
 
-**Solução completa descrita na seção de redesign abaixo.**
+HIERARQUIA DE IMPACTO (priorize nesta ordem):
+- Imersão narrativa > Beleza visual > Funcionalidade técnica > Originalidade de código
 
-### 4. Cursor custom visível em mobile (MODERADO)
-```javascript
-// Adicionar no início de cursor.js
-if ('ontouchstart' in window || navigator.maxTouchPoints > 0) return;
-```
+PROIBIÇÕES ABSOLUTAS:
+- Sem gradientes pastéis ou palettes "premium dark"
+- Sem card grids padronizados sem textura
+- Sem animações de "loading spinner" genéricas
+- Sem typography system copiado de Tailwind ou Bootstrap
+- Sem glassmorphism básico (blur sem propósito)
+- Sem lore placeholder — cada personagem precisa de história real
 
-### 5. Lazy loading ausente (MODERADO)
-Todas as imagens abaixo do hero devem receber `loading="lazy"` e `decoding="async"`.
-
-### 6. Contadores hero sempre zerados (MODERADO)
-Os ledger-items (Raças, Personagens, Regiões) exibem **0** até o JS carregar. Usar valores hardcoded no HTML como fallback, depois atualizar via JS.
-
-### 7. Meta tags Open Graph incompletas (MENOR)
-```html
-<meta property="og:title" content="ERYNDOR — Atlas Vivo da Convergência" />
-<meta property="og:description" content="Explore o atlas de guerra de Eryndor: raças, personagens e a Convergência Kore." />
-<meta property="og:image" content="https://bsmiguell.github.io/ERYNDOR/images/og-cover.jpg" />
-<meta property="og:url" content="https://bsmiguell.github.io/ERYNDOR/" />
-<meta name="twitter:card" content="summary_large_image" />
-```
-
-### 8. Favicon ausente (MENOR)
-Gerar favicon a partir do símbolo de 8 pontas já usado na nav:
-```html
-<link rel="icon" type="image/svg+xml" href="/ERYNDOR/favicon.svg" />
+AO IMPLEMENTAR QUALQUER FEATURE, responda sempre:
+1. Qual momento da história do Eryndor isso representa?
+2. Que técnica CSS/JS vai causar "wow" num dev senior?
+3. Como isso funciona sem JavaScript (fallback gracioso)?
 ```
 
 ---
 
-## 🟡 REDESIGNS DE FUNCIONALIDADES QUE NÃO FUNCIONARAM
+## 3. ROADMAP DE MELHORIAS — PRIORIDADE MÁXIMA PRIMEIRO
 
-### ❌ PROBLEMA: Banners de raça como `<img>` com parallax
-**O que falhou:** A imagem de banner era definida via `--race-banner` CSS var e aplicada como `background` ou `<img>` com `object-fit`. O parallax quebrava em Safari e o efeito de transição era brusco.
+---
 
-**✅ SOLUÇÃO: Shader-like CSS com múltiplas camadas e transição de opacidade cruzada**
+### 🔴 PRIORIDADE 1 — IMERSÃO NARRATIVA (faz o site ter alma)
 
-```html
-<!-- race-stage usa dois elementos de fundo empilhados -->
-<div class="race-stage" id="race-stage">
-  <div class="race-bg race-bg--prev" aria-hidden="true"></div>
-  <div class="race-bg race-bg--curr" aria-hidden="true"></div>
-  <!-- conteúdo do stage -->
-</div>
-```
+#### 3.1 Loader como Ritual de Entrada
+
+**O que mudar:** O loader atual é sigil girando + barra. Deveria ser o momento em que o usuário "atravessa o Selo".
+
+**Implementação:**
 
 ```css
-.race-bg {
+/* Loader redesenhado: fragmentação de selos */
+.site-loader {
+  background: radial-gradient(ellipse at center, #1a0a00 0%, #080706 70%);
+}
+
+/* Partículas de cristal Kore emanando do centro */
+.loader-kore-shards {
   position: absolute;
-  inset: -8%;
-  width: 116%;
-  height: 116%;
-  background-size: cover;
-  background-position: center top;
-  filter: saturate(1.15) contrast(1.1);
-  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform, opacity;
+  inset: 0;
+  /* SVG animado com fragmentos de cristal */
 }
-.race-bg--prev { opacity: 0; }
-.race-bg--curr { opacity: 0.82; }
-.race-bg.is-leaving { opacity: 0; }
-.race-bg.is-entering { opacity: 0.82; }
-```
 
-```javascript
-// Transição cruzada suave entre banners
-function switchRaceBanner(newImageUrl) {
-  const prev = document.querySelector('.race-bg--curr');
-  const next = document.querySelector('.race-bg--prev');
-  next.style.backgroundImage = `url(${newImageUrl})`;
-  prev.classList.add('is-leaving');
-  next.classList.add('is-entering');
-  // após transição, trocar papéis
-  setTimeout(() => {
-    prev.classList.remove('is-leaving', 'race-bg--curr');
-    prev.classList.add('race-bg--prev');
-    next.classList.remove('is-entering', 'race-bg--prev');
-    next.classList.add('race-bg--curr');
-    prev.style.opacity = '';
-    next.style.opacity = '';
-  }, 720);
+/* Texto que "rasga" a barreira */
+.loader-text {
+  animation: sealRip 0.8s cubic-bezier(0.25, 1.5, 0.5, 1) both;
+  letter-spacing: 0.4em;
 }
-```
 
-**Parallax suave via mousemove (apenas desktop):**
-```javascript
-if (!('ontouchstart' in window)) {
-  document.querySelector('.race-stage').addEventListener('mousemove', (e) => {
-    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - left) / width - 0.5) * 18;
-    const y = ((e.clientY - top) / height - 0.5) * 10;
-    document.querySelector('.race-bg--curr').style.transform =
-      `translate(${x}px, ${y}px) scale(1.04)`;
-  });
-}
-```
-
----
-
-### ❌ PROBLEMA: Canvas de partículas ambient genérico
-**O que falhou:** O canvas gerava partículas simples circulares sem personalidade, pesado em CPU.
-
-**✅ SOLUÇÃO: Partículas em forma de fragmentos de cristal Kore com WebGL-lite**
-
-Substituir o canvas de partículas por fragmentos poligonais que **reagem à cor da raça ativa**:
-
-```javascript
-class KoreParticle {
-  constructor(canvas) {
-    this.reset(canvas);
-    this.points = this.generateCrystalShape();
-    this.color = getComputedStyle(document.documentElement)
-      .getPropertyValue('--active-race').trim();
+@keyframes sealRip {
+  from {
+    clip-path: inset(50% 0 50% 0);
+    filter: brightness(3) blur(4px);
   }
-
-  generateCrystalShape() {
-    // Polígono irregular de 5-7 lados (fragmento de cristal)
-    const sides = 5 + Math.floor(Math.random() * 3);
-    const r = 2 + Math.random() * 4;
-    return Array.from({ length: sides }, (_, i) => {
-      const angle = (i / sides) * Math.PI * 2 + Math.random() * 0.6;
-      const radius = r * (0.7 + Math.random() * 0.3);
-      return [Math.cos(angle) * radius, Math.sin(angle) * radius];
-    });
-  }
-
-  draw(ctx) {
-    ctx.save();
-    ctx.translate(this.x, this.y);
-    ctx.rotate(this.rotation);
-    ctx.beginPath();
-    this.points.forEach(([px, py], i) =>
-      i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py));
-    ctx.closePath();
-    ctx.fillStyle = this.color + Math.floor(this.opacity * 255).toString(16).padStart(2, '0');
-    ctx.fill();
-    ctx.restore();
-    this.update();
+  to {
+    clip-path: inset(0 0 0 0);
+    filter: brightness(1) blur(0);
   }
 }
 ```
 
-Limitar a **40 partículas máximas**, usar `requestAnimationFrame` com throttle de 30fps para performance.
+**Narrativa:** "Os Selos cedem. Você está entrando em Eryndor."
+**Duração ideal:** 1.8s máximo — cinematográfico, não cansativo.
 
 ---
 
-### ❌ PROBLEMA: Rift Map estático e sem significado
-**O que falhou:** O mapa era apenas CSS com gradientes e animação pseudo-cartográfica — nada interativo e sem relação com o lore.
+#### 3.2 Hero — Do Banner Estático para o Campo de Batalha
 
-**✅ SOLUÇÃO: Mapa SVG procedural das regiões de Eryndor**
+**O que mudar:** O hero atual tem canvas ambient + parallax no background. Falta a sensação de que a guerra está acontecendo AGORA.
 
-Criar um SVG estilizado com:
-- Regiões como polígonos clicáveis com tooltips
-- Cada região muda de cor/intensidade conforme a raça selecionada domina aquela área
-- Linhas de tensão (tracejado animado) entre regiões em conflito
-
-```html
-<svg id="eryndor-map" viewBox="0 0 600 420" class="rift-map-svg">
-  <defs>
-    <filter id="map-glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-  </defs>
-  <!-- Regiões como <polygon> com data-region="nome-da-regiao" -->
-  <!-- Cada polygon tem fill inicial muted e ilumina com a cor da raça -->
-  <polygon
-    data-region="planicie-central"
-    data-race="humans"
-    points="180,120 280,100 320,160 260,200 180,180"
-    class="map-region"
-    tabindex="0"
-    aria-label="Planície Central — domínio humano"
-  />
-</svg>
-```
-
----
-
-## 🟢 NOVIDADES E IDEIAS INOVADORAS A IMPLEMENTAR
-
-### 💡 IDEIA 1: Hero com texto revelado por scroll (técnica Sticky Scroll Reveal)
-
-Ao invés do hero estático, o título "ERYNDOR" se monta letra por letra conforme o usuário começa a scrollar. Cada letra do título aparece de uma direção diferente, como fragmentos de cristal se unindo.
+**Técnica: Compositing por camadas com scroll-driven animation (CSS nativa)**
 
 ```css
+/* Adicionar ao CSS do hero */
+@keyframes scroll-hero {
+  to {
+    transform: translateY(-40px);
+  }
+}
+
+.hero::before {
+  animation: scroll-hero linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 400px;
+}
+
+/* Névoa de batalha que emerge com scroll */
+.hero-warfog {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 120% 60% at 30% 80%,
+      rgba(184, 61, 52, 0.18),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 80% 40% at 70% 20%,
+      rgba(74, 181, 158, 0.12),
+      transparent
+    );
+  animation: fogDrift 8s ease-in-out infinite alternate;
+}
+
+@keyframes fogDrift {
+  from {
+    transform: translateX(-1%) scale(1.02);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateX(1%) scale(0.98);
+    opacity: 1;
+  }
+}
+```
+
+**Adicionar ao canvas.js:** Partículas de Kore flutuando que reagem ao movimento do mouse — cada raça tem sua cor de partícula quando o cursor está sobre o dossier dela.
+
+---
+
+#### 3.3 Seção Crônica — O Atlas que Respira
+
+**Problema central:** "O mapa não fica parado" mas o mapa é CSS estático.
+
+**Solução: SVG Map progressivo com scroll-triggered lore reveals**
+
+O `rift-map` deve ser um SVG real com:
+
+- Regiões clicáveis (Korrfeld, Wildmere, Sombrath, Thornwall, Plano Espiritual)
+- Pulsação de cores baseada nas raças nativas de cada região
+- Ao scroll chegar no capítulo correspondente, a região no mapa "acende"
+
+```javascript
+// js/map.js (novo arquivo)
+class EryndorMap {
+  constructor(svgEl) {
+    this.regions = {
+      korrfeld: { color: "#c0392b", races: ["amaldic"] },
+      wildmere: { color: "#d35400", races: ["beserk"] },
+      sombrath: { color: "#8e44ad", races: ["demonio"] },
+      thornwall: { color: "#2ecc71", races: ["elfo", "semideus"] },
+      spiritual: { color: "#8ab4c0", races: ["aparic"] },
+    };
+  }
+
+  pulseRegion(regionId, intensity = 1) {
+    const el = this.svgEl.querySelector(`[data-region="${regionId}"]`);
+    el?.animate(
+      [
+        { filter: "brightness(1)", opacity: 0.6 },
+        { filter: `brightness(${1 + intensity})`, opacity: 1 },
+        { filter: "brightness(1)", opacity: 0.6 },
+      ],
+      { duration: 2000, iterations: Infinity, easing: "ease-in-out" },
+    );
+  }
+}
+```
+
+---
+
+### 🟠 PRIORIDADE 2 — DESIGN VISUAL (200% melhor)
+
+#### 3.4 Banners de Raça — De Imagem para Território
+
+**Problema:** O banner atual é uma `<img>` com parallax básico. Sem profundidade, sem identidade da raça.
+
+**Solução: Multi-layer composition com CSS backdrop + SVG sigil único por raça**
+
+```css
+/* Cada raça tem um padrão de fundo único além da imagem */
+.race-stage[data-race="amaldic"] {
+  --race-pattern: url("data:image/svg+xml,<svg>…crânios geométricos…</svg>");
+}
+
+.race-stage[data-race="beserk"] {
+  --race-pattern: url("data:image/svg+xml,<svg>…runas nórdicas…</svg>");
+}
+
+/* Layer stack: pattern + noise + banner + vignette + overlay de cor */
+.race-stage::before {
+  background:
+    /* 1. Vignette dramático */
+    radial-gradient(
+      ellipse at 80% 50%,
+      transparent 40%,
+      rgba(8, 7, 6, 0.95) 100%
+    ),
+    /* 2. Overlay de cor da raça */
+    linear-gradient(
+        125deg,
+        color-mix(in srgb, var(--active-race), transparent 82%),
+        transparent 55%
+      ),
+    /* 3. Pattern único */ var(--race-pattern),
+    /* 4. Banner */ var(--race-bg) center/cover no-repeat;
+}
+```
+
+**Transition ao trocar raça:** Não fade simples. Implementar `clip-path` transition:
+
+```css
+.race-banner {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transition: clip-path 0.65s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.race-banner.is-leaving {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+.race-banner.is-entering {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+```
+
+---
+
+#### 3.5 Cards de Personagem — Dossiê Real, Não Grid de Avatar
+
+**Problema:** Os cards de personagem são avatar + nome + badge. Parecem cards de jogo de baralho sem alma.
+
+**Solução: Cards com estrutura de dossiê/prontuário de guerra**
+
+```html
+<!-- Estrutura nova do card -->
+<article class="char-dossier" style="--race-color: …; --threat: 87">
+  <header class="dossier-header">
+    <span class="dossier-id">REG-0042</span>
+    <span class="dossier-align" data-align="evil">⚠ HOSTIL</span>
+  </header>
+
+  <div class="dossier-portrait">
+    <img src="…" alt="…" />
+    <!-- Threat meter como border animado -->
+    <div class="threat-ring" style="--pct: calc(var(--threat) * 3.6deg)"></div>
+  </div>
+
+  <div class="dossier-body">
+    <p class="dossier-race">Amaldiçoados · Korrfeld</p>
+    <h3 class="dossier-name">Crimson Kore</h3>
+    <p class="dossier-title">O Primeiro Amaldiçoado</p>
+  </div>
+
+  <div class="dossier-stats-mini">
+    <!-- Barras horizontais de POW/SPD/DEF/INT -->
+  </div>
+
+  <footer class="dossier-footer">
+    <span class="dossier-status" data-status="Ativo">● ATIVO</span>
+    <button class="dossier-open">Dossiê Completo →</button>
+  </footer>
+</article>
+```
+
+```css
+/* Threat ring via conic-gradient */
+.threat-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--race-color) var(--pct),
+    rgba(255, 255, 255, 0.06) var(--pct)
+  );
+  mask: radial-gradient(circle, transparent 82%, black 83%);
+}
+```
+
+---
+
+#### 3.6 Sistema Tipográfico Elevado
+
+**Problema:** Fonts estão bem escolhidas mas usadas de forma previsível.
+
+**Técnicas a adicionar:**
+
+```css
+/* 1. Títulos com text-stroke para profundidade */
+.race-stage-copy h3 {
+  -webkit-text-stroke: 1px
+    color-mix(in srgb, var(--active-race), transparent 60%);
+  paint-order: stroke fill;
+}
+
+/* 2. Hero H1 com scramble letter reveal */
 .hero-letter {
   display: inline-block;
-  opacity: 0;
-  transform: translateY(var(--drift-y, 40px)) translateX(var(--drift-x, 0px)) 
-             rotate(var(--drift-r, 0deg));
-  transition: opacity 0.6s ease var(--delay), transform 0.6s cubic-bezier(0.19, 1, 0.22, 1) var(--delay);
+  animation: letterReveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--i) * 0.05s);
 }
-.hero-letter.is-revealed {
-  opacity: 1;
-  transform: none;
-}
-```
 
-```javascript
-// Cada letra recebe drift aleatório na inicialização
-document.querySelectorAll('.hero-letter').forEach((el, i) => {
-  el.style.setProperty('--drift-y', `${(Math.random() - 0.5) * 80}px`);
-  el.style.setProperty('--drift-x', `${(Math.random() - 0.5) * 60}px`);
-  el.style.setProperty('--drift-r', `${(Math.random() - 0.5) * 25}deg`);
-  el.style.setProperty('--delay', `${i * 0.04}s`);
-});
+/* 3. Lore text com ornamentos */
+.modal-lore::first-letter {
+  float: left;
+  font-size: 3.5em;
+  line-height: 0.75;
+  margin: 0.1em 0.1em 0 0;
+  color: var(--active-race);
+  font-family: "Cinzel Decorative", serif;
+}
+
+/* 4. Section eyebrows com contador de raças */
+.section-eyebrow[data-count]::after {
+  content: " — " counter(race-count) " linhagens registradas";
+  color: var(--muted);
+  font-size: 0.75em;
+}
 ```
 
 ---
 
-### 💡 IDEIA 2: Cards de personagem com "flip 3D" ao hover
+#### 3.7 Mesa de Duelo — Tensão Dramática Real
 
-Os cards dos personagens atualmente são flat e estáticos. Transformar em cards com flip 3D:
-- **Frente:** portrait + nome + raça + badge de ameaça
-- **Verso:** stats detalhados, citação do personagem, alinhamento, ferida, promessa
+**Problema:** Dois cards lado a lado com "VS" no meio. Sem build-up, sem teatro.
+
+**Solução: Duelo como cena de combate**
+
+```javascript
+// Sequência de entrada dramatizada
+async function dramaticDuelReveal(left, right, els) {
+  // 1. Escurecer tela (2/3 para o preto)
+  els.duelArena.classList.add("pre-combat");
+  await wait(400);
+
+  // 2. Rugido sonoro via Web Audio API (opcional, com toggle de som)
+  playKoreChime();
+
+  // 3. Rachar a tela ao meio com clip-path animation
+  els.duelLeft.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 0 100%)";
+  els.duelLeft.animate(
+    [
+      { clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" },
+      { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" },
+    ],
+    {
+      duration: 500,
+      easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+      fill: "forwards",
+    },
+  );
+
+  await wait(200);
+
+  // 4. Right entra pelo lado oposto
+  els.duelRight.animate(
+    [
+      { clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)" },
+      { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" },
+    ],
+    {
+      duration: 500,
+      easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+      fill: "forwards",
+    },
+  );
+
+  await wait(600);
+
+  // 5. Raio de impacto no centro (CSS ::after com glow burst)
+  els.duelArena.classList.add("impact");
+
+  await wait(300);
+
+  // 6. Veredicto aparece com typewriter
+  typewriteVerdict(els.duelVerdict, calcVerdict(left, right));
+}
+```
 
 ```css
-.character-card-wrapper {
-  perspective: 1000px;
-  height: 340px;
+/* Arena de duelo */
+.duel-arena {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 6px 1fr;
+  gap: 0;
+  min-height: 500px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #180a00, #080706);
 }
-.character-card {
-  transform-style: preserve-3d;
-  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-  height: 100%;
+
+/* Linha de racha central com glow */
+.duel-rift {
+  width: 6px;
+  background: linear-gradient(180deg, transparent, var(--kore), transparent);
+  box-shadow:
+    0 0 40px var(--kore),
+    0 0 80px rgba(215, 175, 69, 0.3);
+  animation: riftPulse 2s ease-in-out infinite;
 }
-.character-card:hover,
-.character-card:focus-within {
-  transform: rotateY(180deg);
-}
-.character-card-front,
-.character-card-back {
+
+/* Impacto de Kore no momento do duelo */
+.duel-arena.impact::after {
+  content: "";
   position: absolute;
   inset: 0;
-  backface-visibility: hidden;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(215, 175, 69, 0.6),
+    transparent 50%
+  );
+  animation: koreImpact 0.4s ease-out forwards;
 }
-.character-card-back {
-  transform: rotateY(180deg);
-  background: var(--charcoal);
-  padding: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-```
 
----
-
-### 💡 IDEIA 3: Linha do tempo da Crônica com scroll horizontal em tela mobile
-
-A seção de crônica atualmente é uma lista vertical de capítulos. Transformar em:
-- **Desktop:** scroll vertical normal com capítulos empilhados e linha temporal à esquerda
-- **Mobile:** carrossel horizontal deslizável com snap, cada capítulo como um "pergaminho"
-
-```css
-@media (max-width: 768px) {
-  .story-chapters {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1rem;
-    padding-bottom: 1rem;
-    scrollbar-width: none;
-  }
-  .chapter {
-    flex: 0 0 85vw;
-    scroll-snap-align: center;
-    border-left: none;
-    border-top: 3px solid color-mix(in srgb, var(--chapter-color), transparent 26%);
-    padding: 1.25rem;
-  }
-}
-```
-
----
-
-### 💡 IDEIA 4: Sistema de "Ameaça Visual" nos cards com barra animada
-
-Cada personagem tem um nível de ameaça (1–5). Transformar isso em uma barra que se preenche com animação ao entrar na viewport:
-
-```html
-<div class="threat-bar" aria-label="Nível de ameaça: 4 de 5">
-  <div class="threat-fill" style="--threat: 4; --max: 5;"></div>
-</div>
-```
-
-```css
-.threat-fill {
-  width: 0%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--blood), var(--kore));
-  border-radius: 2px;
-  transition: width 1.2s cubic-bezier(0.19, 1, 0.22, 1) var(--delay, 0s);
-}
-.threat-bar.is-visible .threat-fill {
-  width: calc((var(--threat) / var(--max)) * 100%);
-}
-```
-
----
-
-### 💡 IDEIA 5: Duelo com animação de "clash" e resultado cinematográfico
-
-A mesa de duelo atual exibe dois cards lado a lado sem dramatismo. Adicionar:
-
-**Fase 1 — Confronto:** Os dois cards deslizam de cada lado e param no centro com um impacto visual (flash de luz, vibração sutil).
-
-**Fase 2 — Contagem:** Barras de stat se preenchem progressivamente, comparando os dois personagens.
-
-**Fase 3 — Veredito:** O vencedor avança (scale up), o perdedor recua (scale down + dessaturação). Um texto épico aparece: *"A Convergência decidiu."*
-
-```css
-@keyframes slideFromLeft {
-  from { transform: translateX(-120%) rotate(-8deg); opacity: 0; }
-  to   { transform: translateX(0) rotate(0deg);      opacity: 1; }
-}
-@keyframes slideFromRight {
-  from { transform: translateX(120%) rotate(8deg); opacity: 0; }
-  to   { transform: translateX(0) rotate(0deg);   opacity: 1; }
-}
-@keyframes clashFlash {
-  0%   { opacity: 0; }
-  30%  { opacity: 0.6; }
-  100% { opacity: 0; }
-}
-.duel-flash {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, var(--kore), transparent 60%);
-  animation: clashFlash 0.5s ease-out forwards;
-  pointer-events: none;
-  z-index: 10;
-}
-```
-
----
-
-### 💡 IDEIA 6: Filtro de personagens com animação de "baralho"
-
-Ao filtrar por raça ou ameaça, os cards que saem não somem instantaneamente — eles "escorregam para baixo do baralho" e os que entram surgem como se fossem comprados de um deck:
-
-```javascript
-function filterCharacters(filtro) {
-  const cards = document.querySelectorAll('.character-card-wrapper');
-  const sair = [...cards].filter(c => !matchFiltro(c, filtro));
-  const entrar = [...cards].filter(c => matchFiltro(c, filtro));
-
-  // Animar saída
-  sair.forEach((card, i) => {
-    card.style.transition = `transform 0.35s ease ${i * 0.03}s, opacity 0.35s ease`;
-    card.style.transform = 'translateY(20px) scale(0.92)';
-    card.style.opacity = '0';
-    setTimeout(() => { card.style.display = 'none'; }, 400 + i * 30);
-  });
-
-  // Animar entrada
-  entrar.forEach((card, i) => {
-    card.style.display = '';
-    card.style.transform = 'translateY(-16px) scale(0.96)';
-    card.style.opacity = '0';
-    requestAnimationFrame(() => {
-      card.style.transition = `transform 0.5s cubic-bezier(0.19,1,0.22,1) ${i * 0.04}s, opacity 0.4s ease ${i * 0.04}s`;
-      card.style.transform = '';
-      card.style.opacity = '1';
-    });
-  });
-}
-```
-
----
-
-### 💡 IDEIA 7: Modo "Pergaminho" para leitura da crônica
-
-Um botão na nav que ativa um overlay em tela cheia simulando um pergaminho antigo sendo aberto. O texto da crônica completa aparece sobre textura de papel com fonte Garamond aumentada. Rolagem lenta e automática disponível.
-
-```css
-.scroll-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 1500;
-  background:
-    radial-gradient(ellipse at center, #e8d5a3 0%, #c9b67a 50%, #a8934d 100%);
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 6rem 2rem 4rem;
-  overflow-y: auto;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-.scroll-overlay.is-open {
-  opacity: 1;
-  visibility: visible;
-}
-.scroll-content {
-  max-width: 680px;
-  font-family: 'EB Garamond', serif;
-  font-size: 1.35rem;
-  line-height: 1.9;
-  color: #2a1f0e;
-}
-/* Bordas desgastadas simuladas com pseudo-elemento */
-.scroll-overlay::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  box-shadow: inset 0 0 80px rgba(100, 60, 0, 0.4);
-}
-```
-
----
-
-### 💡 IDEIA 8: Sigil animado como separador de seções
-
-Entre cada seção, ao invés de um `<hr>` simples, um **sigil SVG da Convergência** que se desenha à medida que o usuário chega naquele ponto da página (stroke-dashoffset animation com IntersectionObserver):
-
-```html
-<div class="section-sigil" aria-hidden="true">
-  <svg viewBox="0 0 200 60" class="sigil-divider">
-    <path class="sigil-path" d="M0,30 H60 M140,30 H200 M80,5 L100,30 L120,5 M80,55 L100,30 L120,55"/>
-  </svg>
-</div>
-```
-
-```css
-.sigil-path {
-  stroke: var(--kore);
-  stroke-width: 1.5;
-  fill: none;
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
-  transition: stroke-dashoffset 1.4s cubic-bezier(0.19, 1, 0.22, 1);
-}
-.section-sigil.is-visible .sigil-path {
-  stroke-dashoffset: 0;
-}
-```
-
----
-
-### 💡 IDEIA 9: Easter Egg — Código Kore oculto
-
-Em algum ponto da página, um input oculto que aceita um "código Kore" (sequência de teclas, ex: ↑↑↓↓←→←→). Ao digitar, um personagem secreto é revelado com animação de cristal se formando. Completamente opcional e off-spec para surpreender usuários exploradores.
-
-```javascript
-const KORE_CODE = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown',
-                   'ArrowLeft','ArrowRight','ArrowLeft','ArrowRight'];
-let koreProgress = 0;
-document.addEventListener('keydown', (e) => {
-  if (e.key === KORE_CODE[koreProgress]) {
-    koreProgress++;
-    if (koreProgress === KORE_CODE.length) {
-      revealSecretCharacter();
-      koreProgress = 0;
-    }
-  } else {
-    koreProgress = 0;
-  }
-});
-```
-
----
-
-### 💡 IDEIA 10: Scroll-linked section title com clip-path reveal
-
-Os títulos de seção (`## Linhagens com memória visual`) atualmente aparecem estáticos. Aplicar um reveal via `clip-path` sincronizado com o scroll:
-
-```css
-.section-heading h2 {
-  clip-path: inset(0 100% 0 0);
-  transition: clip-path 1.1s cubic-bezier(0.19, 1, 0.22, 1);
-}
-.section-heading.is-visible h2 {
-  clip-path: inset(0 0% 0 0);
-}
-```
-
----
-
-## 📱 RESPONSIVIDADE COMPLETA
-
-### Breakpoints obrigatórios
-```css
-/* Mobile portrait */
-@media (max-width: 480px) { /* ... */ }
-
-/* Mobile landscape / tablet pequeno */
-@media (max-width: 768px) { /* ... */ }
-
-/* Tablet */
-@media (max-width: 1024px) { /* ... */ }
-
-/* Desktop pequeno */
-@media (max-width: 1240px) { /* ... */ }
-```
-
-### Hero em mobile
-```css
-@media (max-width: 768px) {
-  .hero {
-    grid-template-columns: 1fr;
-    min-height: 100svh;
-    padding: 5rem 1rem 3rem;
-  }
-  .hero h1 { font-size: clamp(2.8rem, 12vw, 5rem); }
-  .hero-dossiers { display: none; } /* ou carrossel compacto */
-  .hero-ledger { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
-}
-```
-
-### Races grid em mobile
-```css
-@media (max-width: 768px) {
-  .races-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.6rem;
-  }
-}
-@media (max-width: 480px) {
-  .races-grid { grid-template-columns: 1fr; }
-}
-```
-
-### Nav em mobile (hambúrguer)
-```css
-@media (max-width: 768px) {
-  .nav-links {
-    position: fixed;
-    inset: 0;
-    flex-direction: column;
-    justify-content: center;
-    background: rgba(8, 7, 6, 0.97);
-    backdrop-filter: blur(20px);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-  }
-  .nav-links.is-open {
+@keyframes koreImpact {
+  0% {
     opacity: 1;
-    visibility: visible;
+    transform: scale(0.3);
   }
-  .nav-links a { font-size: 1.5rem; padding: 1rem 2rem; }
-}
-```
-
----
-
-## ♿ ACESSIBILIDADE MÍNIMA OBRIGATÓRIA
-
-```html
-<!-- Landmarks semânticos -->
-<header role="banner">
-<nav aria-label="Navegação principal">
-<main role="main">
-<section aria-labelledby="races-heading">
-<footer role="contentinfo">
-
-<!-- Skip link -->
-<a href="#main-content" class="skip-link">Pular para o conteúdo</a>
-
-<!-- Focus visible em todos os elementos interativos -->
-/* CSS */
-:focus-visible {
-  outline: 2px solid var(--kore);
-  outline-offset: 3px;
-}
-
-<!-- ARIA em botões sem texto visível -->
-<button aria-label="Próxima raça" class="icon-button">›</button>
-
-<!-- Reduzir movimento para usuários sensíveis -->
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+  100% {
+    opacity: 0;
+    transform: scale(3);
   }
 }
 ```
 
 ---
 
-## ⚡ PERFORMANCE
+#### 3.8 Modal de Personagem — A Ficha que Vive
 
-### Critical CSS inline no `<head>`
-Colocar apenas o CSS necessário para renderizar o above-the-fold (nav + hero) inline no `<head>`. Todo o resto via `<link rel="stylesheet" media="print" onload="this.media='all'">`.
+**Melhoria:** O modal atual tem stats e lore. Precisa de mais camadas sensoriais.
 
-### Preload de recursos críticos
-```html
-<link rel="preload" href="images/Banner/Banner-Mutantes.png" as="image" />
-<link rel="preload" href="css/tokens.css" as="style" />
-<link rel="preload" href="js/data.js" as="script" />
-```
+```css
+/* Modal com ruído de pergaminho + borda viva */
+.character-modal {
+  background:
+    /* Ruído de papel pergaminho */
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/><feColorMatrix type='saturate' values='0'/></filter><rect width='200' height='200' filter='url(%23noise)' opacity='0.03'/></svg>"),
+    linear-gradient(160deg, rgba(8, 7, 6, 0.98), rgba(20, 15, 8, 0.99));
+  border: 1px solid color-mix(in srgb, var(--active-race), transparent 40%);
+}
 
-### IntersectionObserver para tudo
-Substituir qualquer `scroll` event listener por `IntersectionObserver` com `threshold: 0.15`. Mais performático e sem jank.
+/* Barra de ameaça animada como plasma */
+.stat-bar-fill {
+  background: linear-gradient(
+    90deg,
+    var(--race-color),
+    color-mix(in srgb, var(--race-color), #fff 30%)
+  );
+  box-shadow: 0 0 12px var(--race-color);
+  animation: plasmaFlow 3s ease-in-out infinite alternate;
+}
 
-```javascript
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target); // observar só uma vez
-    }
-  });
-}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
-
-document.querySelectorAll('[data-observe]').forEach(el => observer.observe(el));
-```
-
-### Web Workers para canvas
-Mover o ambient canvas para um OffscreenCanvas em Web Worker se disponível:
-```javascript
-if ('OffscreenCanvas' in window) {
-  const worker = new Worker('js/canvas-worker.js');
-  const offscreen = canvas.transferControlToOffscreen();
-  worker.postMessage({ canvas: offscreen }, [offscreen]);
+@keyframes plasmaFlow {
+  from {
+    filter: brightness(1);
+  }
+  to {
+    filter: brightness(1.4);
+  }
 }
 ```
 
 ---
 
-## 🗂️ ESTRUTURA DO `data.js` RECOMENDADA
+### 🟡 PRIORIDADE 3 — FUNCIONALIDADE ELEVADA
 
-```javascript
-export const RACES = [
-  {
-    id: 'mutantes',
-    name: 'Mutantes',
-    color: '#d7af45',        // --kore
-    banner: 'images/Banner/Banner-Mutantes.png',
-    region: 'Planície Central',
-    icon: '◈',
-    traits: ['Adaptação', 'Kore-fundidos', 'Imprevisíveis'],
-    description: '...',
-    lore: '...',
-    meta: { power: 4, mobility: 5, wisdom: 2, threat: 4 },
-  },
-  // ...
-];
+#### 3.9 Lore dos Personagens — Completar os Placeholders
 
-export const CHARACTERS = [
-  {
-    id: 'personagem-1',
-    name: '...',
-    race: 'mutantes',       // referência ao id da raça
-    role: '...',
-    region: '...',
-    threat: 4,              // 1–5
-    alignment: 'caótico',
-    wound: '...',
-    promise: '...',
-    power: '...',
-    portrait: 'images/Characters/...',
-    quote: '...',
-  },
-  // ...
-];
+Os personagens abaixo têm lore genérico e precisam de texto real:
 
-export const REGIONS = [
-  {
-    id: 'planicie-central',
-    name: 'Planície Central',
-    dominant: 'mutantes',
-    tension: ['floresta-vermelha'],
-    mapCoords: [[180,120],[280,100],[320,160],[260,200],[180,180]],
-  },
-  // ...
-];
+**Amaldiçoados:** Pyre, Scylla, Valerius, Zoro
+**Aparições:** Kaminari, Mycelium  
+**Beserk:** Grom, Ksante (duplicado!), Thomas, Thorin, Thrum, Zephyrus
+
+**Técnica para gerar lore coerente:** Use o Super Prompt acima + este sub-prompt:
+
+```
+Para o personagem [NOME] da raça [RAÇA] de Eryndor:
+- Ele/ela chegou ao mundo ANTES ou DEPOIS da Grande Fratura?
+- Qual foi seu PRIMEIRO contato com energia Kore?
+- Qual é a FERIDA que carrega (física, emocional, filosófica)?
+- Qual é a PROMESSA que o mantém vivo (mesmo que impossível)?
+- Qual REGIÃO marcou seu corpo/alma?
+- Escreva o lore em 3-4 frases no estilo: épico, econômico, sem adjetivos genéricos.
+
+Proibido usar: "poderoso", "lendário", "temido", "renomado", "brilhante"
 ```
 
 ---
 
-## 🧠 INSTRUÇÕES PARA A IA EXECUTORA
+#### 3.10 Filtros de Personagens — Atlas de Guerra, Não E-commerce
 
-### Tom e filosofia de execução
-- O site deve ter **alma** — parecer feito à mão por alguém que ama o universo
-- **Evitar absolutamente:** efeitos genéricos de "site de template", hover states fracos, gradientes de arco-íris sem sentido
-- **Cada animação deve ter significado narrativo** — o flash do duelo é o impacto da Convergência; as partículas são fragmentos de cristal Kore
-- **A tipografia é sagrada** — nunca usar fontes fora do conjunto definido
-- **Jamais quebrar o sistema de cores** — toda cor usada deve ser um token CSS existente ou derivado via `color-mix()`
+**Problema:** Input de busca + dropdown = lógica de loja. Não faz sentido num atlas de batalha.
 
-### Ordem de execução recomendada
-1. Criar estrutura de pastas e arquivos vazios
-2. Migrar tokens CSS para `tokens.css`
-3. Migrar todos os `@keyframes` para `animations.css`
-4. Migrar layout para `layout.css`, componentes para `components.css`
-5. Migrar JavaScript por módulo (cursor, canvas, races, characters, duel, main)
-6. Implementar as correções críticas (alt, lazy, mobile cursor, og tags)
-7. Implementar redesigns (banners, parallax, mapa SVG)
-8. Implementar novas ideias em ordem de impacto (flip cards, duelo cinematográfico, scroll reveal)
-9. Testar responsividade em 480, 768, 1024, 1440px
-10. Validar acessibilidade com axe ou Lighthouse
+**Solução: Tags de "inteligência de campo"**
 
-### Validação de qualidade
-Antes de entregar, verificar:
-- [ ] Lighthouse Performance ≥ 85
-- [ ] Lighthouse Accessibility ≥ 90
-- [ ] Lighthouse Best Practices ≥ 95
-- [ ] Nenhuma imagem sem `alt`
-- [ ] Nenhum elemento interativo sem `focus-visible`
-- [ ] Console sem erros em Chrome, Firefox e Safari
-- [ ] Funcional em mobile iOS Safari e Android Chrome
-- [ ] README.md criado no repositório
+```html
+<!-- Substituir filtros atuais por -->
+<div class="intel-filters">
+  <div class="intel-group">
+    <span class="intel-label">⚔ Alinhamento</span>
+    <div class="intel-tags">
+      <button class="intel-tag" data-filter="align:good">Aliado</button>
+      <button class="intel-tag" data-filter="align:neutral">Neutro</button>
+      <button class="intel-tag" data-filter="align:evil">Hostil</button>
+      <button class="intel-tag" data-filter="align:chaos">Imprevisível</button>
+    </div>
+  </div>
 
----
+  <div class="intel-group">
+    <span class="intel-label">⚠ Nível de Ameaça</span>
+    <div class="intel-tags">
+      <button class="intel-tag" data-filter="threat:critical">
+        Crítico 90+
+      </button>
+      <button class="intel-tag" data-filter="threat:high">Alto 70-89</button>
+      <button class="intel-tag" data-filter="threat:medium">Médio -69</button>
+    </div>
+  </div>
 
-## 📋 CHECKLIST FINAL
-
-### Correções obrigatórias
-- [ ] Separar em múltiplos arquivos CSS e JS
-- [ ] Alt text em todas as imagens
-- [ ] `loading="lazy"` + `decoding="async"` em imagens off-screen
-- [ ] Desativar cursor custom em touch devices
-- [ ] Meta Open Graph completas + favicon SVG
-- [ ] Contadores hero com valores fallback
-- [ ] README.md no repositório
-
-### Redesigns de funcionalidades quebradas
-- [ ] Banner de raças com crossfade CSS + dupla camada
-- [ ] Parallax via mousemove somente desktop
-- [ ] Mapa SVG procedural das regiões (opcional, alto impacto)
-- [ ] Canvas de partículas Kore com fragmentos poligonais
-
-### Novas funcionalidades
-- [ ] Scroll reveal das letras do título hero
-- [ ] Cards de personagem com flip 3D
-- [ ] Crônica como carrossel horizontal em mobile
-- [ ] Barra de ameaça animada com IntersectionObserver
-- [ ] Duelo cinematográfico com fases animadas
-- [ ] Filtro de personagens com animação de baralho
-- [ ] Modo Pergaminho para leitura da crônica
-- [ ] Sigil SVG animado como divisor de seções
-- [ ] Easter Egg — código Kore (Konami-like)
-- [ ] Clip-path reveal nos títulos de seção
-
-### Qualidade e performance
-- [ ] IntersectionObserver substituindo scroll listeners
-- [ ] Critical CSS inline no `<head>`
-- [ ] Preload de recursos críticos
-- [ ] OffscreenCanvas para canvas ambient
-- [ ] Nav hambúrguer responsiva
-- [ ] Breakpoints completos (480/768/1024/1240)
-- [ ] `prefers-reduced-motion` respeitado
-- [ ] Skip link de acessibilidade
+  <div class="intel-group">
+    <span class="intel-label">📍 Status</span>
+    <div class="intel-tags">
+      <button class="intel-tag" data-filter="status:Ativo">Ativo</button>
+      <button class="intel-tag" data-filter="status:Errante">Errante</button>
+      <button class="intel-tag" data-filter="status:Fragmentado">
+        Fragmentado
+      </button>
+    </div>
+  </div>
+</div>
+```
 
 ---
 
-*Super Prompt gerado com análise completa do repositório BSMiguell/ERYNDOR em junho/2026*  
-*Para usar: forneça este arquivo a uma IA junto com o código atual do repositório*
+#### 3.11 Scroll Storytelling — Seções que Respiram
+
+**Técnica: Horizontal scroll dentro de seção vertical (sem wheel hijack)**
+
+```css
+/* Crônica como timeline horizontal com scroll snap */
+.chronicle-scroll {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+  scrollbar-width: none;
+}
+
+.chronicle-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.chronicle-chapter {
+  flex: 0 0 min(80vw, 600px);
+  scroll-snap-align: center;
+  position: relative;
+}
+
+/* Linha do tempo conectando os capítulos */
+.chronicle-scroll::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--kore),
+    var(--verdigris),
+    transparent
+  );
+  pointer-events: none;
+}
+```
+
+---
+
+### 🟢 PRIORIDADE 4 — TÉCNICAS QUE IMPRESSIONAM DEVS
+
+#### 3.12 Cursor que Conta a História
+
+O cursor atual troca de cor por raça (ótimo). **Elevar:**
+
+```javascript
+// cursor.js — adicionar estado de "batalha"
+class EryNdorCursor {
+  setState(state) {
+    // 'explore' → cursor padrão com ring lento
+    // 'combat' → cursor com aura pulsante rápida (hover em cards de duelo)
+    // 'ancient' → cursor com trail de fragmentos Kore (hover em Amaldiçoados)
+    // 'spectral' → cursor semi-transparente (hover em Aparições)
+    this.el.dataset.state = state;
+  }
+
+  // Trail de partículas ao mover sobre personagens de alta ameaça
+  addKoreTrail(x, y, raceColor) {
+    const particle = document.createElement("div");
+    particle.className = "cursor-kore-particle";
+    particle.style.cssText = `
+      left: ${x}px; top: ${y}px;
+      background: ${raceColor};
+      animation: particleFade 0.6s ease-out forwards;
+    `;
+    document.body.appendChild(particle);
+    setTimeout(() => particle.remove(), 600);
+  }
+}
+```
+
+---
+
+#### 3.13 CSS Scroll-Driven Animations (sem JavaScript)
+
+**Técnica nativa moderna que impressiona devs:**
+
+```css
+/* Barras de stats no modal que crescem quando o modal abre */
+@keyframes stat-fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--stat-pct);
+  }
+}
+
+.stat-bar-fill {
+  animation: stat-fill 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--stat-index) * 0.1s);
+  /* Dispara ao abrir o modal via animation-play-state */
+  animation-play-state: paused;
+}
+
+.modal.is-open .stat-bar-fill {
+  animation-play-state: running;
+}
+
+/* View Transitions API ao navegar entre raças */
+/* (quando suportado) */
+@view-transition {
+  navigation: auto;
+}
+
+.race-stage::view-transition-old {
+  animation: slideOutLeft 0.4s ease-in;
+}
+
+.race-stage::view-transition-new {
+  animation: slideInRight 0.4s ease-out;
+}
+```
+
+---
+
+#### 3.14 Web Audio API — Atmosfera Sonora (opcional, com toggle)
+
+```javascript
+// js/audio.js (novo, carregado por demanda)
+class KoreAmbience {
+  constructor() {
+    this.ctx = null; // Lazy init após primeiro gesto do usuário
+    this.enabled = false;
+  }
+
+  init() {
+    if (this.ctx) return;
+    this.ctx = new AudioContext();
+    this.createDroneOscillator(); // Tom base sinistro de Eryndor
+  }
+
+  createDroneOscillator() {
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+    const filter = this.ctx.createBiquadFilter();
+
+    osc.frequency.value = 55; // A1 — grave e ominoso
+    filter.type = "lowpass";
+    filter.frequency.value = 200;
+    gain.gain.value = 0.03; // Quase inaudível, ambiental
+
+    osc.connect(filter);
+    filter.connect(gain);
+    gain.connect(this.ctx.destination);
+    osc.start();
+  }
+
+  // Chime de Kore ao abrir modal de personagem de ameaça alta
+  playKoreChime(threatLevel) {
+    const freq = 200 + threatLevel * 8; // Mais alto = mais agudo
+    // ... implementação
+  }
+}
+```
+
+---
+
+#### 3.15 `@property` CSS para Animações de Gradiente
+
+```css
+/* Técnica rara: animar gradientes via custom property tipada */
+@property --kore-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 45deg;
+}
+
+@property --race-glow-opacity {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0.3;
+}
+
+.race-card.is-active {
+  --kore-angle: 225deg;
+  transition:
+    --kore-angle 0.8s ease,
+    --race-glow-opacity 0.4s ease;
+  background: linear-gradient(
+    var(--kore-angle),
+    var(--race-color),
+    transparent
+  );
+}
+```
+
+---
+
+## 4. CHECKLIST DE REMOÇÃO — O QUE TIRAR AGORA
+
+- [ ] Todas as instâncias de lore `"presença recém-reconhecida em Eryndor"` — substituir por texto real
+- [ ] `Personagem de [Raça]` no campo `role` — sem significado narrativo
+- [ ] O sigil do loader (forma de estrela giratória) — muito genérico, substituir por símbolo único de Eryndor
+- [ ] Hover effects de translateY(-3px) em todos os botões — muito padrão, diferentizar por tipo
+- [ ] A seção "Mesa de Duelo" com apenas "Aguardando o próximo choque" como estado vazio — usar lore real
+- [ ] Ksante duplicado em Beserk (existe tanto como personagem completo quanto como placeholder)
+- [ ] O gradiente `linear-gradient(135deg, #f0d98b, var(--kore) 48%, #b86838)` no `.command-button` — muito "botão premium de SaaS"
+
+---
+
+## 5. ORÇAMENTO DE IMPACTO — MENOR ESFORÇO, MAIOR WOW
+
+| Implementação                       | Esforço (dias) | Impacto Visual | Impacto Dev |
+| ----------------------------------- | -------------- | -------------- | ----------- |
+| Duelo cinematográfico com clip-path | 1              | ★★★★★          | ★★★★☆       |
+| Cards de dossiê com threat ring     | 1              | ★★★★★          | ★★★★☆       |
+| Loader como ritual de Selos         | 0.5            | ★★★★☆          | ★★★☆☆       |
+| @property CSS para gradientes       | 0.5            | ★★★☆☆          | ★★★★★       |
+| Cursor com estados e trail          | 1              | ★★★★☆          | ★★★★★       |
+| SVG Map interativo                  | 3              | ★★★★★          | ★★★★★       |
+| Lore completo dos placeholders      | 2              | ★★★★★          | ★☆☆☆☆       |
+| Filtros de inteligência de campo    | 1              | ★★★☆☆          | ★★★☆☆       |
+| Scroll timeline horizontal          | 1              | ★★★★☆          | ★★★☆☆       |
+| Web Audio ambiental                 | 2              | ★★★★☆          | ★★★★★       |
+
+---
+
+## 6. EXEMPLO DE IMPLEMENTAÇÃO COMPLETA — Card de Dossiê
+
+```html
+<!-- Substitui o .char-card atual -->
+<article
+  class="dossier-card reveal"
+  data-race="amaldic"
+  data-threat="95"
+  style="--race-color: #c0392b; --threat-pct: 95%"
+  tabindex="0"
+  role="button"
+  aria-label="Abrir dossiê de Crimson Kore"
+>
+  <!-- Header de classificação -->
+  <div class="dossier-class">
+    <code class="dossier-id">REG-AMLD-001</code>
+    <span class="dossier-align is-evil">⚠ HOSTIL</span>
+  </div>
+
+  <!-- Retrato com ring de ameaça -->
+  <div class="dossier-portrait-wrap">
+    <div class="threat-ring" aria-hidden="true"></div>
+    <img
+      class="dossier-portrait"
+      src="images/Amaldiçoados/Crimson-Kore.png"
+      alt="Crimson Kore"
+      loading="lazy"
+      decoding="async"
+    />
+    <div class="dossier-region-badge">Korrfeld</div>
+  </div>
+
+  <!-- Identidade -->
+  <div class="dossier-identity">
+    <p class="dossier-lineage">Amaldiçoados</p>
+    <h3 class="dossier-name">Crimson Kore</h3>
+    <p class="dossier-epithet">O Primeiro Amaldiçoado</p>
+  </div>
+
+  <!-- Stats compactos -->
+  <div class="dossier-stats" aria-label="Estatísticas de combate">
+    <div class="stat-mini" style="--v: 95%">
+      <span>POW</span>
+      <div class="bar"><div></div></div>
+    </div>
+    <div class="stat-mini" style="--v: 80%">
+      <span>VEL</span>
+      <div class="bar"><div></div></div>
+    </div>
+    <div class="stat-mini" style="--v: 88%">
+      <span>DEF</span>
+      <div class="bar"><div></div></div>
+    </div>
+  </div>
+
+  <!-- Footer de status -->
+  <footer class="dossier-footer">
+    <span class="dossier-status is-active">● Ativo</span>
+    <span class="dossier-cta">Abrir dossiê ›</span>
+  </footer>
+</article>
+```
+
+```css
+.dossier-card {
+  position: relative;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(240, 226, 196, 0.025) 0 1px,
+      transparent 1px 12px
+    ),
+    linear-gradient(
+      160deg,
+      color-mix(in srgb, var(--race-color), #0a0806 88%),
+      rgba(8, 7, 6, 0.96)
+    );
+  border: 1px solid color-mix(in srgb, var(--race-color), transparent 55%);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 18px) 0,
+    100% 18px,
+    100% 100%,
+    18px 100%,
+    0 calc(100% - 18px)
+  );
+  cursor: pointer;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.25s ease,
+    box-shadow 0.35s ease;
+}
+
+.dossier-card:hover,
+.dossier-card:focus-visible {
+  transform: translateY(-6px) scale(1.015);
+  border-color: color-mix(in srgb, var(--race-color), #fff 28%);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px var(--race-color);
+  outline: none;
+}
+
+/* Threat ring via conic-gradient */
+.threat-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--race-color) var(--threat-pct),
+    rgba(255, 255, 255, 0.05) var(--threat-pct)
+  );
+  mask: radial-gradient(circle, transparent 78%, black 79%);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.dossier-card:hover .threat-ring {
+  opacity: 1;
+}
+
+/* Stat bars animadas */
+.stat-mini .bar div {
+  height: 3px;
+  width: var(--v);
+  background: linear-gradient(
+    90deg,
+    var(--race-color),
+    color-mix(in srgb, var(--race-color), #fff 40%)
+  );
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: calc(var(--stat-index, 0) * 0.08s);
+}
+
+.dossier-card:hover .stat-mini .bar div,
+.dossier-card:focus-visible .stat-mini .bar div {
+  transform: scaleX(1);
+}
+```
+
+---
+
+## 7. PALAVRAS FINAIS — O QUE FAZ UM SITE SER GENIAL
+
+O ERYNDOR já tem a estrutura certa. A alma existe no código: cursor que muda com raça, canvas ambient, scroll-ratio no topo, easter eggs, parallax de banner. **O que está faltando é coerência dramática** — cada peça funciona isolada, mas o conjunto ainda não conta uma história única.
+
+O salto de "bom" para "genial" acontece quando:
+
+1. **O usuário não consegue descrever a técnica**, só a emoção ("parece que o atlas está vivo")
+2. **Um dev abre o DevTools por curiosidade** ("como eles fizeram isso com CSS puro?")
+3. **Cada personagem tem peso**, não é ficha de dado — tem ferida, tem promessa, tem destino
+4. **O scroll é narrativo**: você desce a página como quem avança numa guerra
+
+Use este documento como bússola. Implemente uma prioridade por vez, teste no mobile, commit, repita.
+
+**Eryndor respira em guerra. Faça o código respirar com ela.**

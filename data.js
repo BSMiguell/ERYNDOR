@@ -1,26 +1,26 @@
-﻿const RACES = [
+const RACES = [
   {
     "id": "amaldic",
-    "name": "Amaldiçoados",
-    "folder": "Amaldiçoados",
+    "name": "Amaldi�oados",
+    "folder": "Amaldi�oados",
     "color": "#c0392b",
     "glow": "rgba(192,57,43,0.5)",
     "color2": "#ff6b57",
-    "icon": "☠",
+    "icon": "?",
     "count": 11,
     "region": "Korrfeld",
-    "trait": "Imortais pela maldição do Kore",
-    "desc": "Guerreiros que absorveram Cristais Kore sem ritual de proteção e se transformaram em algo entre mortal e divino — presos em corpos imortais que nunca conhecerão paz. Cada Amaldiçoado carrega a maldição de seu primeiro contato com o Kore, manifestada de forma única.",
+    "trait": "Imortais pela maldi��o do Kore",
+    "desc": "Guerreiros que absorveram Cristais Kore sem ritual de prote��o e se transformaram em algo entre mortal e divino � presos em corpos imortais que nunca conhecer�o paz. Cada Amaldi�oado carrega a maldi��o de seu primeiro contato com o Kore, manifestada de forma �nica.",
     "characters": [
       {
         "n": "Crimson Kore",
         "f": "Crimson-Kore.png",
-        "t": "O Primeiro Amaldiçoado",
-        "role": "Patriarca da Maldição",
-        "lore": "O primeiro ser a tocar um Cristal Kore sem proteção ritual. Sua transformação em segundos demonstrou ao mundo o poder e o horror dos cristais. Governa os Amaldiçoados não por escolha, mas porque é the mais antigo — e portanto o mais poderoso. Seu armor carmesim pulsa com a energia primordial que consome seu ser há milênios.",
+        "t": "O Primeiro Amaldi�oado",
+        "role": "Patriarca da Maldi��o",
+        "lore": "O primeiro ser a tocar um Cristal Kore sem prote��o ritual. Sua transforma��o em segundos demonstrou ao mundo o poder e o horror dos cristais. Governa os Amaldi�oados n�o por escolha, mas porque � the mais antigo � e portanto o mais poderoso. Seu armor carmesim pulsa com a energia primordial que consome seu ser h� mil�nios.",
         "ab": [
           "Aura Carmesim",
-          "Propagação da Maldição",
+          "Propaga��o da Maldi��o",
           "Imortalidade Imperfeita"
         ],
         "pow": 95,
@@ -36,11 +36,11 @@
         "f": "Nameless-King-V-1.png",
         "t": "O Rei Sem Nome",
         "role": "Soberano Esquecido",
-        "lore": "Um rei que renunciou ao seu próprio nome ao pacto com o Vazio em troca de poder eterno. Empunha uma lança colossial forjada de ossos de dragões caídos. Ninguém mais lembra quem ele foi, nem mesmo ele mesmo — apenas o peso de séculos de guerras sem propósito.",
+        "lore": "Um rei que renunciou ao seu pr�prio nome ao pacto com o Vazio em troca de poder eterno. Empunha uma lan�a colossial forjada de ossos de drag�es ca�dos. Ningu�m mais lembra quem ele foi, nem mesmo ele mesmo � apenas o peso de s�culos de guerras sem prop�sito.",
         "ab": [
-          "Lança das Eras",
+          "Lan�a das Eras",
           "Vazio do Ego",
-          "Invocação Dracônica"
+          "Invoca��o Drac�nica"
         ],
         "pow": 92,
         "spd": 72,
@@ -54,12 +54,12 @@
         "n": "Ren Kuro",
         "f": "Ren-Kuro-V-1.png",
         "t": "A Chama Negra",
-        "role": "Samurai Amaldiçoado",
-        "lore": "Outrora um nobre samurai do oriente, Ren tocou um fragmento de Kore durante uma batalha e foi consumido por chamas negras que nunca se apagaram. Sua técnica de espada permanece impecável, porém sua alma arde em agonia eterna. Dizem que chora lágrimas de sangue quando mata, pois ainda sente cada vida que cessa.",
+        "role": "Samurai Amaldi�oado",
+        "lore": "Outrora um nobre samurai do oriente, Ren tocou um fragmento de Kore durante uma batalha e foi consumido por chamas negras que nunca se apagaram. Sua t�cnica de espada permanece impec�vel, por�m sua alma arde em agonia eterna. Dizem que chora l�grimas de sangue quando mata, pois ainda sente cada vida que cessa.",
         "ab": [
-          "Lâmina das Chamas Negras",
+          "L�mina das Chamas Negras",
           "Corte Fantasma",
-          "Purgatório de Chamas"
+          "Purgat�rio de Chamas"
         ],
         "pow": 85,
         "spd": 92,
@@ -74,9 +74,9 @@
         "f": "Skull-Knight-V-1.png",
         "t": "O Cavaleiro Eterno",
         "role": "Paladino dos Mortos",
-        "lore": "Mais antigo que a maioria das civilizações, Skull Knight foi um paladino que recusou morrer ao final de uma guerra perdida. Absorveu fragmentos de Kore de soldados caídos e tornou-se o guardião involuntário do equilíbrio entre vida e morte. Combate tanto demônios quanto anjos, pois não confia em nenhum dos dois lados.",
+        "lore": "Mais antigo que a maioria das civiliza��es, Skull Knight foi um paladino que recusou morrer ao final de uma guerra perdida. Absorveu fragmentos de Kore de soldados ca�dos e tornou-se o guardi�o involunt�rio do equil�brio entre vida e morte. Combate tanto dem�nios quanto anjos, pois n�o confia em nenhum dos dois lados.",
         "ab": [
-          "Espada da Aniquilação",
+          "Espada da Aniquila��o",
           "Armadura Imortal",
           "Salto Dimensional"
         ],
@@ -92,11 +92,11 @@
         "n": "Soul of Cinder",
         "f": "Soul-of-Cinder-V-1.png",
         "t": "A Alma da Cinza Ardente",
-        "role": "Manifestação das Almas",
-        "lore": "Não é um ser individual — é a manifestação coletiva de todas as almas que morreram queimadas pela energia do Kore corrupto. Cada alma que absorveu aumentou seu poder e sua tormenta. Combate com a habilidade de todos que o compõem, mas sofre com a memória de cada uma de suas mortes constituintes.",
+        "role": "Manifesta��o das Almas",
+        "lore": "N�o � um ser individual � � a manifesta��o coletiva de todas as almas que morreram queimadas pela energia do Kore corrupto. Cada alma que absorveu aumentou seu poder e sua tormenta. Combate com a habilidade de todos que o comp�em, mas sofre com a mem�ria de cada uma de suas mortes constituintes.",
         "ab": [
           "Tempestade de Chamas Primordiais",
-          "Memória dos Caídos",
+          "Mem�ria dos Ca�dos",
           "Renascimento das Cinzas"
         ],
         "pow": 97,
@@ -112,10 +112,10 @@
         "f": "Xerxes.png",
         "t": "O Imperador Damnado",
         "role": "Senhor dos Condenados",
-        "lore": "Imperador de um reino esquecido cuja capital queimou quando a Grande Fratura libertou os demônios. Absorveu múltiplos Cristais Kore ao mesmo tempo em um ato desesperado de sobrevivência, tornando-se irreconhecível. Agora comanda exércitos de mortos e jura reconstruir seu império, mas não tem mais certeza do que isso significa.",
+        "lore": "Imperador de um reino esquecido cuja capital queimou quando a Grande Fratura libertou os dem�nios. Absorveu m�ltiplos Cristais Kore ao mesmo tempo em um ato desesperado de sobreviv�ncia, tornando-se irreconhec�vel. Agora comanda ex�rcitos de mortos e jura reconstruir seu imp�rio, mas n�o tem mais certeza do que isso significa.",
         "ab": [
-          "Exército dos Damnados",
-          "Cetro da Ruína",
+          "Ex�rcito dos Damnados",
+          "Cetro da Ru�na",
           "Vontade de Ferro"
         ],
         "pow": 88,
@@ -130,12 +130,12 @@
         "n": "Zenon",
         "f": "Zenon-V-1.png",
         "t": "O Espectro Branco",
-        "role": "Guardião do Limiar",
-        "lore": "Um ser tão antigo que o Kore que o corrompeu quase consumiu completamente sua essência, deixando apenas uma silhueta espectral de poder imaculado. Zenon não luta por nenhum lado, mas age como um freio natural ao excesso — intervindo quando qualquer raça ameaça destruir o equilíbrio de Eryndor.",
+        "role": "Guardi�o do Limiar",
+        "lore": "Um ser t�o antigo que o Kore que o corrompeu quase consumiu completamente sua ess�ncia, deixando apenas uma silhueta espectral de poder imaculado. Zenon n�o luta por nenhum lado, mas age como um freio natural ao excesso � intervindo quando qualquer ra�a amea�a destruir o equil�brio de Eryndor.",
         "ab": [
           "Vazio Branco",
           "Barreira do Limiar",
-          "Extinção da Forma"
+          "Extin��o da Forma"
         ],
         "pow": 93,
         "spd": 85,
@@ -149,11 +149,11 @@
         "n": "Pyre",
         "f": "Pyre-V-1.png",
         "t": "O Pyre",
-        "role": "Personagem de Amaldiçoados",
-        "lore": "Pyre é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Amaldiçoados, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Amaldi�oados",
+        "lore": "Pyre tocou o Kore ap�s a Grande Fratura, buscando curar sua vila que morria de fome. A cura veio em forma de chamas que consomem tudo menos a si mesmas. Inflama a terra em sinal vermelho para marcar o campo de batalha. Sua ferida: alimentar o fogo sem queimar quem ainda respira. Sua promessa: que as chamas cessem quando o �ltimo inverno reine.",
         "ab": [
-          "Golpe de Amaldiçoados",
-          "Presença Imponente",
+          "Golpe de Amaldi�oados",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -168,11 +168,11 @@
         "n": "Scylla",
         "f": "Scylla-V-1.png",
         "t": "O Scylla",
-        "role": "Personagem de Amaldiçoados",
-        "lore": "Scylla é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Amaldiçoados, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Amaldi�oados",
+        "lore": "Scylla emergiu do abismo de Korrfeld ap�s a Fratura, quando o oceano virou est�tua de sal. Cada tent�culo carrega uma batalha perdida, cada olho v� um futuro imenso. Sua ferida: lembrar tudo e ainda assim falhar. Sua promessa: afogar o que o mundo n�o pode suportar.",
         "ab": [
-          "Golpe de Amaldiçoados",
-          "Presença Imponente",
+          "Golpe de Amaldi�oados",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -187,11 +187,11 @@
         "n": "Valerius",
         "f": "Valerius-V-1.png",
         "t": "O Valerius",
-        "role": "Personagem de Amaldiçoados",
-        "lore": "Valerius é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Amaldiçoados, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Amaldi�oados",
+        "lore": "Valerius era um general antes da Fratura, comandando ex�rcitos que hoje s�o ru�na. Sua maldi��o o transformou em estatua viva: cada vit�ria petrifica-lhe um membro, mas tamb�m lhe confere imortalidade na forma de pedra. Sua ferida: sentir o peso das batalhas perdidas. Sua promessa: erguer um monumento a cada soldado ca�do.",
         "ab": [
-          "Golpe de Amaldiçoados",
-          "Presença Imponente",
+          "Golpe de Amaldi�oados",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -206,11 +206,11 @@
         "n": "Zoro",
         "f": "Zoro-V-1.png",
         "t": "O Zoro",
-        "role": "Personagem de Amaldiçoados",
-        "lore": "Zoro é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Amaldiçoados, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Amaldi�oados",
+        "lore": "Zoro navegou os mares de Korrfeld seguindo estrelas que brilhavam com luz de Kore. Agora sua caravela voa entre as nuvens, mas cada vela � uma alma amaldi�oada que ele n�o p�de salvar. Sua ferida: ver o c�u como pris�o. Sua promessa: encontrar o porto onde as ondas n�o cortam carne.",
         "ab": [
-          "Golpe de Amaldiçoados",
-          "Presença Imponente",
+          "Golpe de Amaldi�oados",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -225,26 +225,26 @@
   },
   {
     "id": "aparic",
-    "name": "Aparições",
-    "folder": "Aparições",
+    "name": "Apari��es",
+    "folder": "Apari��es",
     "color": "#8ab4c0",
     "glow": "rgba(138,180,192,0.35)",
     "color2": "#d0e8f0",
-    "icon": "👁",
+    "icon": "??",
     "count": 8,
     "region": "Plano Espiritual",
-    "trait": "Existem entre os mundos físico e espiritual",
-    "desc": "Espíritos de guerreiros e magos que recusaram partir após a morte. Quando a Grande Fratura colapsou a barreira entre o mundo espiritual e físico, as Aparições tornaram-se permanentemente ancoradas ao plano mortal — condenadas ou abençoadas com uma segunda existência etérea.",
+    "trait": "Existem entre os mundos f�sico e espiritual",
+    "desc": "Esp�ritos de guerreiros e magos que recusaram partir ap�s a morte. Quando a Grande Fratura colapsou a barreira entre o mundo espiritual e f�sico, as Apari��es tornaram-se permanentemente ancoradas ao plano mortal � condenadas ou aben�oadas com uma segunda exist�ncia et�rea.",
     "characters": [
       {
         "n": "Bone Plume",
         "f": "Bone-Plume-V-1.png",
-        "t": "O Espírito das Sepulturas",
+        "t": "O Esp�rito das Sepulturas",
         "role": "Assombrador",
-        "lore": "Nascida das ossadas coletivas de guerreiros tombados em uma batalha que durou sete anos. Cada pena de seu corpo espectral é feita de fragmentos de osso animados por restos de consciência dos soldados mortos. Voa sobre campos de batalha, colhendo as últimas memórias dos moribundos.",
+        "lore": "Nascida das ossadas coletivas de guerreiros tombados em uma batalha que durou sete anos. Cada pena de seu corpo espectral � feita de fragmentos de osso animados por restos de consci�ncia dos soldados mortos. Voa sobre campos de batalha, colhendo as �ltimas mem�rias dos moribundos.",
         "ab": [
-          "Tempestade de Penas Ósseas",
-          "Colheita de Memórias",
+          "Tempestade de Penas �sseas",
+          "Colheita de Mem�rias",
           "Voo dos Mortos"
         ],
         "pow": 70,
@@ -258,13 +258,13 @@
       {
         "n": "Clangoro",
         "f": "Clangoro-V-1.png",
-        "t": "O Guardião dos Sinos",
-        "role": "Oráculo Arcano",
-        "lore": "Espírito de um mago que dedicou sua vida a estudar a ressonância entre sons e realidade. Em morte, fundiu-se com seus instrumentos rituais, tornando-se um ser de sinos e magia viva. Cada toque de seu corpo ressoa como uma nota que altera a realidade ao redor.",
+        "t": "O Guardi�o dos Sinos",
+        "role": "Or�culo Arcano",
+        "lore": "Esp�rito de um mago que dedicou sua vida a estudar a resson�ncia entre sons e realidade. Em morte, fundiu-se com seus instrumentos rituais, tornando-se um ser de sinos e magia viva. Cada toque de seu corpo ressoa como uma nota que altera a realidade ao redor.",
         "ab": [
-          "Ressonância Arcana",
-          "Toque da Revelação",
-          "Sinfonía de Destruição"
+          "Resson�ncia Arcana",
+          "Toque da Revela��o",
+          "Sinfon�a de Destrui��o"
         ],
         "pow": 65,
         "spd": 60,
@@ -278,12 +278,12 @@
         "n": "Corvus",
         "f": "Corvus-V-1.png",
         "t": "O Mensageiro das Sombras",
-        "role": "Espião Entre-Mundos",
-        "lore": "Corvus foi um bardo que conhecia todos os segredos de todos os reinos. Assassinado por saber demais, sua alma recusou partir antes de transmitir tudo o que sabia. Agora existe como um corvo de sombra, mensageiro entre os vivos e os mortos, e espião involuntário de todas as facções.",
+        "role": "Espi�o Entre-Mundos",
+        "lore": "Corvus foi um bardo que conhecia todos os segredos de todos os reinos. Assassinado por saber demais, sua alma recusou partir antes de transmitir tudo o que sabia. Agora existe como um corvo de sombra, mensageiro entre os vivos e os mortos, e espi�o involunt�rio de todas as fac��es.",
         "ab": [
           "Voo Sombrio",
-          "Transmissão Mental",
-          "Visão dos Mundos"
+          "Transmiss�o Mental",
+          "Vis�o dos Mundos"
         ],
         "pow": 55,
         "spd": 95,
@@ -298,10 +298,10 @@
         "f": "Ossuarion-V-1.png",
         "t": "A Chama Espectral",
         "role": "Espectro Arcano",
-        "lore": "O espírito de um grande mago cujo corpo foi destruído em combate, mas cuja fúria ardente era tão intensa que sua alma tomou a forma de um crânio em chamas. Ossuarion é o espírito de batalha puro — raiva destilada em forma etérea, incapaz de sentir paz até que seu assassino seja encontrado.",
+        "lore": "O esp�rito de um grande mago cujo corpo foi destru�do em combate, mas cuja f�ria ardente era t�o intensa que sua alma tomou a forma de um cr�nio em chamas. Ossuarion � o esp�rito de batalha puro � raiva destilada em forma et�rea, incapaz de sentir paz at� que seu assassino seja encontrado.",
         "ab": [
-          "Explosão de Fogo Espiritual",
-          "Crânio da Perdição",
+          "Explos�o de Fogo Espiritual",
+          "Cr�nio da Perdi��o",
           "Ira Eterna"
         ],
         "pow": 80,
@@ -315,13 +315,13 @@
       {
         "n": "Saint Vail",
         "f": "Saint-Vail-V-1.png",
-        "t": "O Guardião Caído",
-        "role": "Espírito Protetor",
-        "lore": "Um paladino de renome que morreu defendendo inocentes de um ataque demoníaco. Sua devoção era tão profunda que sua alma não poderia partir enquanto houvesse inocentes em perigo. Agora vaga como um guerreiro de lâmina de luz, protegendo os fracos dos horrores da Guerra da Convergência.",
+        "t": "O Guardi�o Ca�do",
+        "role": "Esp�rito Protetor",
+        "lore": "Um paladino de renome que morreu defendendo inocentes de um ataque demon�aco. Sua devo��o era t�o profunda que sua alma n�o poderia partir enquanto houvesse inocentes em perigo. Agora vaga como um guerreiro de l�mina de luz, protegendo os fracos dos horrores da Guerra da Converg�ncia.",
         "ab": [
-          "Lâmina de Luz Sagrada",
+          "L�mina de Luz Sagrada",
           "Escudo dos Inocentes",
-          "Bênção do Mártir"
+          "B�n��o do M�rtir"
         ],
         "pow": 75,
         "spd": 70,
@@ -336,7 +336,7 @@
         "f": "Vyrn-V-1.png",
         "t": "O Soldado Eterno",
         "role": "Guerreiro Fantasma",
-        "lore": "Um general de alto escalão cujo senso de dever era tão arraigado que não consegue aceitar o próprio fim. Morreu no momento em que uma batalha estava prestes a ser decidida e permanece naquele momento, incapaz de aceitar que a guerra que ele conhecia terminou séculos atrás. Continua lutando contra inimigos há muito desaparecidos.",
+        "lore": "Um general de alto escal�o cujo senso de dever era t�o arraigado que n�o consegue aceitar o pr�prio fim. Morreu no momento em que uma batalha estava prestes a ser decidida e permanece naquele momento, incapaz de aceitar que a guerra que ele conhecia terminou s�culos atr�s. Continua lutando contra inimigos h� muito desaparecidos.",
         "ab": [
           "Armadura Imortal",
           "Golpe de Cavalaria Fantasma",
@@ -354,11 +354,11 @@
         "n": "Kaminari",
         "f": "Kaminari-V-1.png",
         "t": "O Kaminari",
-        "role": "Personagem de Aparições",
-        "lore": "Kaminari é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Aparições, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Apari��es",
+        "lore": "Kaminari apareceu no Plano Espiritual antes da Fratura, como �ltimo sussurro de um mago que quebrou o sil�ncio. Cada raio que emana de sua forma � uma palavra n�o dita na vida: furia, aviso, confess�o. Sua ferida: falar sem ser ouvido. Sua promessa: iluminar a escurid�o at� que algu�m responda.",
         "ab": [
-          "Golpe de Aparições",
-          "Presença Imponente",
+          "Golpe de Apari��es",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -373,11 +373,11 @@
         "n": "Mycelium",
         "f": "Mycelium-V-1.png",
         "t": "O Mycelium",
-        "role": "Personagem de Aparições",
-        "lore": "Mycelium é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Aparições, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Apari��es",
+        "lore": "Mycelium era um druida da Floresta de Wildmere, morto ao tocar um cristal pulverizado no solo. Sua consci�ncia se espalhou como fungo, conectando ra�zes de todo o continente. Agora cresce em sil�ncio, ouvindo as batalhas. Sua ferida: ser mil vozes e nenhuma delas individual. Sua promessa: transmitir as �ltimas palavras dos ca�dos at� as ra�zes mais profundas.",
         "ab": [
-          "Golpe de Aparições",
-          "Presença Imponente",
+          "Golpe de Apari��es",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -397,20 +397,20 @@
     "color": "#d35400",
     "glow": "rgba(211,84,0,0.5)",
     "color2": "#ff8c42",
-    "icon": "⚔",
+    "icon": "?",
     "count": 14,
     "region": "Wildmere / Norte",
-    "trait": "Fúria que supera limites físicos",
-    "desc": "Guerreiros-nômades do extremo norte e das florestas primordiais, os Beserk são a prova de que a carne pode superar o impossível quando movida por fúria suficiente. Rejeitam toda ordem estabelecida e vivem pela lei do poder. Paradoxalmente, são os mais honestos de todas as raças.",
+    "trait": "F�ria que supera limites f�sicos",
+    "desc": "Guerreiros-n�mades do extremo norte e das florestas primordiais, os Beserk s�o a prova de que a carne pode superar o imposs�vel quando movida por f�ria suficiente. Rejeitam toda ordem estabelecida e vivem pela lei do poder. Paradoxalmente, s�o os mais honestos de todas as ra�as.",
     "characters": [
       {
         "n": "Guts",
         "f": "Guts-2.png",
         "t": "O Guerreiro Negro",
-        "role": "Campeão do Beserk",
-        "lore": "O único guerreiro Beserk a ter sobrevivido a cem batalhas sem um arranhão que ele não infligiu a si mesmo. Empunha uma espada do tamanho de uma árvore jovem com uma só mão. Guts não luta por glória ou poder — luta porque é a única coisa que sabe fazer, e o peso de um passado brutal o impede de parar.",
+        "role": "Campe�o do Beserk",
+        "lore": "O �nico guerreiro Beserk a ter sobrevivido a cem batalhas sem um arranh�o que ele n�o infligiu a si mesmo. Empunha uma espada do tamanho de uma �rvore jovem com uma s� m�o. Guts n�o luta por gl�ria ou poder � luta porque � a �nica coisa que sabe fazer, e o peso de um passado brutal o impede de parar.",
         "ab": [
-          "Espadão Drakar",
+          "Espad�o Drakar",
           "Frenesi de Batalha",
           "Vontade de Ferro Absoluta"
         ],
@@ -425,13 +425,13 @@
       {
         "n": "Kaldor Kore",
         "f": "Kaldor-Kore.png",
-        "t": "O Dragão Beserk",
+        "t": "O Drag�o Beserk",
         "role": "Guerreiro Kore",
-        "lore": "Um Beserk que absorveu voluntariamente energia de Kore, tornando-se algo entre guerreiro e dragão. Sua armadura cresceu como escamas do seu próprio corpo. Kaldor é a prova de que um Beserk com disciplina suficiente pode absorver o Kore sem se tornar Amaldiçoado — mas o preço foi perder toda a humanidade que lhe restava.",
+        "lore": "Um Beserk que absorveu voluntariamente energia de Kore, tornando-se algo entre guerreiro e drag�o. Sua armadura cresceu como escamas do seu pr�prio corpo. Kaldor � a prova de que um Beserk com disciplina suficiente pode absorver o Kore sem se tornar Amaldi�oado � mas o pre�o foi perder toda a humanidade que lhe restava.",
         "ab": [
-          "Escamas de Dragão",
+          "Escamas de Drag�o",
           "Sopro do Kore",
-          "Fúria Dracônica"
+          "F�ria Drac�nica"
         ],
         "pow": 93,
         "spd": 75,
@@ -446,9 +446,9 @@
         "f": "Ksante.png",
         "t": "O Absorvedor",
         "role": "Estrategista-Combatente",
-        "lore": "Diferente dos demais Beserk, Ksante é um combatente que estuda, aprende e adapta. Sua armadura de chamas arco-íris absorve técnicas inimigas e as replica com o dobro da força. É o único Beserk que usa diplomacia como arma, mas quando a diplomacia falha, sua brutalidade supera qualquer adversário.",
+        "lore": "Diferente dos demais Beserk, Ksante � um combatente que estuda, aprende e adapta. Sua armadura de chamas arco-�ris absorve t�cnicas inimigas e as replica com o dobro da for�a. � o �nico Beserk que usa diplomacia como arma, mas quando a diplomacia falha, sua brutalidade supera qualquer advers�rio.",
         "ab": [
-          "Absorção de Técnicas",
+          "Absor��o de T�cnicas",
           "Contra-Golpe Amplificado",
           "Armadura Adaptativa"
         ],
@@ -465,7 +465,7 @@
         "f": "Leon-V-1.png",
         "t": "O Rei do Rugido",
         "role": "Rei Tribal",
-        "lore": "Um Beserk com sangue de leão primordial em suas veias. Seu rugido sozinho despedaça pedra e rompe formações militares. Como rei dos clãs do norte, Leon manteve sua gente fora da Guerra da Convergência por anos — mas quando os demônios queimaram seu lar, ele jurou que não haveria pedra dos reinos demoníacos que ficaria sobre outra.",
+        "lore": "Um Beserk com sangue de le�o primordial em suas veias. Seu rugido sozinho despeda�a pedra e rompe forma��es militares. Como rei dos cl�s do norte, Leon manteve sua gente fora da Guerra da Converg�ncia por anos � mas quando os dem�nios queimaram seu lar, ele jurou que n�o haveria pedra dos reinos demon�acos que ficaria sobre outra.",
         "ab": [
           "Rugido Destrutivo",
           "Garras do Predador",
@@ -482,13 +482,13 @@
       {
         "n": "Lord Kaelthorn",
         "f": "Lord Kaelthorn.png",
-        "t": "O Senhor das Lâminas",
+        "t": "O Senhor das L�minas",
         "role": "Soberano Beserk",
-        "lore": "O Beserk que tentou civilizar o caos de sua raça. Kaelthorn acredita que os Beserk poderiam conquistar o mundo se parassem de guerrear entre si. Sua armadura de ouro e negro representa esta dualidade — o selvagem disciplinado. Comanda exércitos com uma mão e espalha destruição com a outra.",
+        "lore": "O Beserk que tentou civilizar o caos de sua ra�a. Kaelthorn acredita que os Beserk poderiam conquistar o mundo se parassem de guerrear entre si. Sua armadura de ouro e negro representa esta dualidade � o selvagem disciplinado. Comanda ex�rcitos com uma m�o e espalha destrui��o com a outra.",
         "ab": [
           "Comando de Batalha",
-          "Duplas Lâminas Negras",
-          "Presença do Senhor"
+          "Duplas L�minas Negras",
+          "Presen�a do Senhor"
         ],
         "pow": 87,
         "spd": 80,
@@ -501,13 +501,13 @@
       {
         "n": "Ragnar",
         "f": "Ragnar-V-1.png",
-        "t": "O Inabalável",
+        "t": "O Inabal�vel",
         "role": "Lenda Viva",
-        "lore": "A lenda dos Beserk — um guerreiro de cabelos brancos que não envelheceu em dois séculos de batalhas. Dizem que ele foi morto quarenta e sete vezes e se recusou a permanecer morto. Ragnar não afirma nenhum poder sobrenatural — apenas uma vontade que encontrou ser mais forte que a morte.",
+        "lore": "A lenda dos Beserk � um guerreiro de cabelos brancos que n�o envelheceu em dois s�culos de batalhas. Dizem que ele foi morto quarenta e sete vezes e se recusou a permanecer morto. Ragnar n�o afirma nenhum poder sobrenatural � apenas uma vontade que encontrou ser mais forte que a morte.",
         "ab": [
-          "Recusa à Morte",
-          "Força do Lendário",
-          "Golpe dos Cem Séculos"
+          "Recusa � Morte",
+          "For�a do Lend�rio",
+          "Golpe dos Cem S�culos"
         ],
         "pow": 91,
         "spd": 77,
@@ -515,16 +515,16 @@
         "int": 70,
         "align": "chaos",
         "region": "Errante",
-        "status": "Lendário"
+        "status": "Lend�rio"
       },
       {
         "n": "Vorgreth",
         "f": "Vorgreth.png",
         "t": "A Chama do Caos",
         "role": "Guerreiro de Fogo",
-        "lore": "Um híbrido entre Beserk e uma antiga linhagem de demônio de fogo, Vorgreth não escolheu ser o que é. Sua aparência assusta até outros Beserk — mas sua lealdade às tradições de sua raça é inabalável. Combate com chamas que ele mesmo não consegue controlar completamente, tornando-o tão perigoso para aliados quanto para inimigos.",
+        "lore": "Um h�brido entre Beserk e uma antiga linhagem de dem�nio de fogo, Vorgreth n�o escolheu ser o que �. Sua apar�ncia assusta at� outros Beserk � mas sua lealdade �s tradi��es de sua ra�a � inabal�vel. Combate com chamas que ele mesmo n�o consegue controlar completamente, tornando-o t�o perigoso para aliados quanto para inimigos.",
         "ab": [
-          "Chamas Incontroláveis",
+          "Chamas Incontrol�veis",
           "Caos Ardente",
           "Hibridismo Infernal"
         ],
@@ -540,11 +540,11 @@
         "n": "Vorgrim Ironspine",
         "f": "Vorgrim Ironspine.png",
         "t": "A Arma Viva",
-        "role": "Guerreiro Ápice",
-        "lore": "Uma mutação Beserk evolutiva — ossos que cresceram para fora do corpo, formando uma armadura natural de espinhos de ferro biológico. Vorgrim é o que os Beserk poderiam se tornar se continuassem evoluindo por mil anos. Não é mais completamente orgânico, mas tampouco é inorgânico — é algo terceiro.",
+        "role": "Guerreiro �pice",
+        "lore": "Uma muta��o Beserk evolutiva � ossos que cresceram para fora do corpo, formando uma armadura natural de espinhos de ferro biol�gico. Vorgrim � o que os Beserk poderiam se tornar se continuassem evoluindo por mil anos. N�o � mais completamente org�nico, mas tampouco � inorg�nico � � algo terceiro.",
         "ab": [
           "Espinhos de Ferro",
-          "Adaptação Evolutiva",
+          "Adapta��o Evolutiva",
           "Muralha Vivente"
         ],
         "pow": 92,
@@ -560,10 +560,10 @@
         "f": "Grom-V-1.png",
         "t": "O Grom",
         "role": "Personagem de Beserk",
-        "lore": "Grom é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Beserk, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Grom vangloriou em Wildmere antes da Fratura, quando seu rugido partiu montanhas. O Kore transformou seu berserker em f�ria contagiante: onde passa, guerreiros perdem a raz�o. Sua ferida: n�o distinguir inimigo de aliado nos ataques de f�ria. Sua promessa: encontrar final em batalha, onde a f�ria � justa.",
         "ab": [
           "Golpe de Beserk",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -579,10 +579,10 @@
         "f": "Ksante-V-1.png",
         "t": "O Ksante",
         "role": "Personagem de Beserk",
-        "lore": "Ksante é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Beserk, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Ksante era um mercador de runas em Thornwall, escravo de um Kore que lhe exigiu tributos em sangue. Cada tatuagem em sua pele � uma runa viva, uma batalha ganhada ou perdida. Sua ferida: carregar o hist�rico de cada marca. Sua promessa: quebrar as runas que n�o servem � batalha final.",
         "ab": [
           "Golpe de Beserk",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -596,12 +596,12 @@
       {
         "n": "Thomas",
         "f": "Thomas-V-1.png",
-        "t": "O Thomas",
-        "role": "Personagem de Beserk",
-        "lore": "Thomas é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Beserk, servindo como peça viva da Guerra da Convergência.",
+        "t": "O Martelo de Ferro",
+        "role": "Guerreiro de Forja",
+        "lore": "Thomas era um ferreiro de Wildmere antes de tocar um cristal de Kore incandescente. Sua forja virou temple interior; cada martelo � golpe, cada metal � chama. Sua ferida: caldo que nunca esfria. Sua promessa: moldar a �ltima arma sem toque de fogo.",
         "ab": [
           "Golpe de Beserk",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -615,12 +615,12 @@
       {
         "n": "Thorin",
         "f": "Thorin-V-1.png",
-        "t": "O Thorin",
-        "role": "Personagem de Beserk",
-        "lore": "Thorin é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Beserk, servindo como peça viva da Guerra da Convergência.",
+        "t": "O An�o de Batalha",
+        "role": "Guerreiro de Pedra",
+        "lore": "Thorin era um an�o de Montanhas do Norte antes de um Kore rubro transformar sua armadura em rocha viva. Cada golpe abre fissuras na terra; cada passos causa terremotos. Sua ferida: carregar o peso das montanhas. Sua promessa: erguer uma torre que alcance o c�u sem derrubar.",
         "ab": [
           "Golpe de Beserk",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -634,12 +634,12 @@
       {
         "n": "Thrum",
         "f": "Thrum-V-1.png",
-        "t": "O Thrum",
-        "role": "Personagem de Beserk",
-        "lore": "Thrum é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Beserk, servindo como peça viva da Guerra da Convergência.",
+        "t": "O Trov�o Ancestral",
+        "role": "Guerreiro das Mar�s",
+        "lore": "Thrum era um pescador de Thornwall antes de tocar um cristal bravo que captou os trov�es. Sua for�a agora vincula-se �s mar�s � cresce com o luar, diminui com o sol. Sua ferida: ouvir o oceano sem respirar. Sua promessa: acalmar a tempestade que carrega.",
         "ab": [
           "Golpe de Beserk",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -653,12 +653,12 @@
       {
         "n": "Zephyrus",
         "f": "Zephyrus-V-1.png",
-        "t": "O Zephyrus",
-        "role": "Personagem de Beserk",
-        "lore": "Zephyrus é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Beserk, servindo como peça viva da Guerra da Convergência.",
+        "t": "O Vento Cortante",
+        "role": "Guerreiro do C�u",
+        "lore": "Zephyrus era um mensageiro que voava sobre Wildmere antes de tocar um Kore azul que se fundiu com seus pulm�es. Agora cada exala��o corta carne; cada passo levanta redemoinhos. Sua ferida: n�o respirar sem destruir. Sua promessa: soprar a �ltima brisa sem sangramento.",
         "ab": [
           "Golpe de Beserk",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -678,22 +678,22 @@
     "color": "#8f4b2b",
     "glow": "rgba(143,75,43,0.45)",
     "color2": "#d58b5b",
-    "icon": "☠",
+    "icon": "?",
     "count": 9,
     "region": "Terras Devastadas",
     "trait": "Sobreviventes que transformaram a fome em linhagem",
-    "desc": "Os Canibais surgiram nos territórios onde a guerra, a fome e a Fratura tornaram a carne mais valiosa que o ouro. Eles não veem o ato de devorar como barbárie, mas como herança: absorver o poder, a memória e a força do derrotado faz parte de sua cultura. Entre eles, sobreviver nunca foi suficiente; é preciso carregar o outro dentro de si.",
+    "desc": "Os Canibais surgiram nos territ�rios onde a guerra, a fome e a Fratura tornaram a carne mais valiosa que o ouro. Eles n�o veem o ato de devorar como barb�rie, mas como heran�a: absorver o poder, a mem�ria e a for�a do derrotado faz parte de sua cultura. Entre eles, sobreviver nunca foi suficiente; � preciso carregar o outro dentro de si.",
     "characters": [
       {
         "n": "Dokuro",
         "f": "Dokuro-V-1.png",
-        "t": "O Ossuário Vivo",
+        "t": "O Ossu�rio Vivo",
         "role": "Patriarca da Fome",
-        "lore": "Dokuro foi o primeiro dos Canibais a transformar a fome em doutrina. Depois de perder seu clã para a guerra, devorou os mortos não por desespero, mas para aprender a continuar lutando. Cada vitória sua é celebrada como um ritual de incorporação.",
+        "lore": "Dokuro foi o primeiro dos Canibais a transformar a fome em doutrina. Depois de perder seu cl� para a guerra, devorou os mortos n�o por desespero, mas para aprender a continuar lutando. Cada vit�ria sua � celebrada como um ritual de incorpora��o.",
         "ab": [
           "Rito da Carne",
-          "Memória Digestiva",
-          "Fúria do Ossuário"
+          "Mem�ria Digestiva",
+          "F�ria do Ossu�rio"
         ],
         "pow": 84,
         "spd": 72,
@@ -707,12 +707,12 @@
         "n": "Ganshu",
         "f": "Ganshu-V-1.png",
         "t": "O Cozinheiro de Guerra",
-        "role": "Estratégia da Mesa",
-        "lore": "Ganshu organiza campos de batalha como cozinhas: escolhe o que será preservado, o que será consumido e o que será transformado em arma. Sua genialidade é temida porque sua crueldade nunca é impulsiva.",
+        "role": "Estrat�gia da Mesa",
+        "lore": "Ganshu organiza campos de batalha como cozinhas: escolhe o que ser� preservado, o que ser� consumido e o que ser� transformado em arma. Sua genialidade � temida porque sua crueldade nunca � impulsiva.",
         "ab": [
           "Corte Preciso",
           "Fervura de Ossos",
-          "Banquete Tático"
+          "Banquete T�tico"
         ],
         "pow": 78,
         "spd": 69,
@@ -723,11 +723,11 @@
         "status": "Ativo"
       },
       {
-        "n": "Gokū Maru",
-        "f": "Gokū-Maru-V-1.png",
+        "n": "Goku Maru",
+        "f": "Goku-Maru-V-1.png",
         "t": "O Devoto do Banquete",
-        "role": "Fanático Ritual",
-        "lore": "Gokū Maru transformou a fome em religião. Para ele, cada refeição é um juramento, e cada inimigo derrotado deve ser devolvido ao mundo através do fogo do estômago. Ele conduz rituais coletivos antes das batalhas, convencendo os seus de que consumir o vencido é também herdar sua coragem.",
+        "role": "Fan�tico Ritual",
+        "lore": "Goku Maru transformou a fome em religi�o. Para ele, cada refei��o � um juramento, e cada inimigo derrotado deve ser devolvido ao mundo atrav�s do fogo do est�mago. Ele conduz rituais coletivos antes das batalhas, convencendo os seus de que consumir o vencido � tamb�m herdar sua coragem.",
         "ab": [
           "Liturgia da Carne",
           "Fogo Visceral",
@@ -746,7 +746,7 @@
         "f": "Reigen-V-1.png",
         "t": "O Enganador de Ossos",
         "role": "Fraudador Sagrado",
-        "lore": "Reigen sobreviveu entre facções mais fortes usando lábia, medo e oportunismo. Ele vendeu bênçãos falsas, mapas falsos e promessas falsas até perceber que a mentira podia ser tão nutritiva quanto a carne.",
+        "lore": "Reigen sobreviveu entre fac��es mais fortes usando l�bia, medo e oportunismo. Ele vendeu b�n��os falsas, mapas falsos e promessas falsas at� perceber que a mentira podia ser t�o nutritiva quanto a carne.",
         "ab": [
           "Armadilha Mental",
           "Promessa Vazia",
@@ -764,12 +764,12 @@
         "n": "Ryouka",
         "f": "Ryouka-V-1.png",
         "t": "A Faca Faminta",
-        "role": "Caçadora de Restos",
-        "lore": "Ryouka cresceu em campos onde as crianças aprendiam cedo a dividir ou morrer. Ela desenvolveu um estilo de combate leve e brutal, sempre buscando desmembrar o adversário antes que ele pudesse reagir.",
+        "role": "Ca�adora de Restos",
+        "lore": "Ryouka cresceu em campos onde as crian�as aprendiam cedo a dividir ou morrer. Ela desenvolveu um estilo de combate leve e brutal, sempre buscando desmembrar o advers�rio antes que ele pudesse reagir.",
         "ab": [
-          "Passo da Caça",
+          "Passo da Ca�a",
           "Fome Cortante",
-          "Execução Rápida"
+          "Execu��o R�pida"
         ],
         "pow": 75,
         "spd": 91,
@@ -777,18 +777,18 @@
         "int": 71,
         "align": "chaos",
         "region": "Terras Devastadas",
-        "status": "Em Caça"
+        "status": "Em Ca�a"
       },
       {
-        "n": "Ryōgen",
-        "f": "Ryōgen-V-1.png",
+        "n": "Ryogen",
+        "f": "Ryogen-V-1.png",
         "t": "O Mestre do Corte Frio",
         "role": "Carrasco Ritual",
-        "lore": "Ryōgen é o lado disciplinado do clã: silencioso, preciso e quase cerimonial. Ele não mata por prazer, mas por necessidade de manter o equilíbrio interno dos Canibais, eliminando os que enfraquecem o grupo. Sua lâmina gelada serve para preservar o que o fogo da fome destruiria rápido demais.",
+        "lore": "Ryogen � o lado disciplinado do cl�: silencioso, preciso e quase cerimonial. Ele n�o mata por prazer, mas por necessidade de manter o equil�brio interno dos Canibais, eliminando os que enfraquecem o grupo. Sua l�mina gelada serve para preservar o que o fogo da fome destruiria r�pido demais.",
         "ab": [
-          "Lâmina Fria",
-          "Silêncio do Carrasco",
-          "Preservação do Corpo"
+          "L�mina Fria",
+          "Sil�ncio do Carrasco",
+          "Preserva��o do Corpo"
         ],
         "pow": 79,
         "spd": 74,
@@ -799,15 +799,15 @@
         "status": "Ativo"
       },
       {
-        "n": "Sōma",
-        "f": "Sōma-V-1.png",
+        "n": "Soma",
+        "f": "Soma-V-1.png",
         "t": "O Herdeiro do Sabor",
         "role": "Alquimista da Carne",
-        "lore": "Sōma enxerga o corpo como um laboratório. Ele mistura sangue, temperos, venenos e magia para extrair força, memória e resistência dos derrotados. Seu talento tornou o clã mais temido, porque até feridas podem ser convertidas em vantagem quando ele está por perto.",
+        "lore": "Soma enxerga o corpo como um laborat�rio. Ele mistura sangue, temperos, venenos e magia para extrair for�a, mem�ria e resist�ncia dos derrotados. Seu talento tornou o cl� mais temido, porque at� feridas podem ser convertidas em vantagem quando ele est� por perto.",
         "ab": [
           "Mistura Visceral",
-          "Técnica do Paladar",
-          "Transformação Nutritiva"
+          "T�cnica do Paladar",
+          "Transforma��o Nutritiva"
         ],
         "pow": 71,
         "spd": 68,
@@ -822,10 +822,10 @@
         "f": "Sukuna-V-1.png",
         "t": "O Rei da Carne Viva",
         "role": "Monarca dos Canibais",
-        "lore": "Sukuna domina os Canibais por força, presença e uma fome que não conhece limite. Em vez de esconder o horror da carne devorada, ele o elevou a símbolo de soberania.",
+        "lore": "Sukuna domina os Canibais por for�a, presen�a e uma fome que n�o conhece limite. Em vez de esconder o horror da carne devorada, ele o elevou a s�mbolo de soberania.",
         "ab": [
           "Mandato da Carne",
-          "Domínio do Banquete",
+          "Dom�nio do Banquete",
           "Corte Absoluto"
         ],
         "pow": 98,
@@ -839,13 +839,13 @@
       {
         "n": "Zankoku",
         "f": "Zankoku-V-1.png",
-        "t": "A Última Mordida",
+        "t": "A �ltima Mordida",
         "role": "Executor Final",
-        "lore": "Zankoku é a face mais temida dos Canibais: calmo, quase gentil, até o momento da execução. Ele acredita que o último golpe deve ser o mais limpo possível para honrar o alimento que virá depois.",
+        "lore": "Zankoku � a face mais temida dos Canibais: calmo, quase gentil, at� o momento da execu��o. Ele acredita que o �ltimo golpe deve ser o mais limpo poss�vel para honrar o alimento que vir� depois.",
         "ab": [
           "Mordida Final",
-          "Execução Limpa",
-          "Honra da Sobrevivência"
+          "Execu��o Limpa",
+          "Honra da Sobreviv�ncia"
         ],
         "pow": 82,
         "spd": 84,
@@ -859,27 +859,27 @@
   },
   {
     "id": "demonio",
-    "name": "Demônio",
+    "name": "Dem�nio",
     "folder": "Demonio",
     "color": "#8e44ad",
     "glow": "rgba(142,68,173,0.5)",
     "color2": "#c47ef0",
-    "icon": "👿",
+    "icon": "??",
     "count": 30,
     "region": "Sombrath",
     "trait": "Nascidos do pecado e do caos primordial",
-    "desc": "Demônios do plano infernal, os Demônios existem há mais tempo que a maioria das raças de Eryndor. Sua liberação pelos Selos destruídos não foi um acidente — foi um plano milênios em elaboração. Cada demônio tem uma essência diferente, mas todos compartilham o desejo de consumir e expandir.",
+    "desc": "Dem�nios do plano infernal, os Dem�nios existem h� mais tempo que a maioria das ra�as de Eryndor. Sua libera��o pelos Selos destru�dos n�o foi um acidente � foi um plano mil�nios em elabora��o. Cada dem�nio tem uma ess�ncia diferente, mas todos compartilham o desejo de consumir e expandir.",
     "characters": [
       {
         "n": "Aatrox",
         "f": "Aatrox-V-1.png",
         "t": "O Exterminador dos Mundos",
         "role": "Destruidor Primordial",
-        "lore": "Não é um demônio comum — é uma entidade primordial de destruição selada em uma espada por divindades que temiam seu poder. Quando a Grande Fratura enfraqueceu os selos dimensionais, Aatrox se libertou e começou sua missão milenar: a extinção de toda vida em Eryndor. Não por ódio, mas porque acredita que a extinção é libertação.",
+        "lore": "N�o � um dem�nio comum � � uma entidade primordial de destrui��o selada em uma espada por divindades que temiam seu poder. Quando a Grande Fratura enfraqueceu os selos dimensionais, Aatrox se libertou e come�ou sua miss�o milenar: a extin��o de toda vida em Eryndor. N�o por �dio, mas porque acredita que a extin��o � liberta��o.",
         "ab": [
-          "Espada da Extinção",
+          "Espada da Extin��o",
           "Forma do Aniquilador",
-          "Voo da Destruição"
+          "Voo da Destrui��o"
         ],
         "pow": 100,
         "spd": 88,
@@ -887,18 +887,18 @@
         "int": 85,
         "align": "evil",
         "region": "Sombrath",
-        "status": "Ativo — Caçando"
+        "status": "Ativo � Ca�ando"
       },
       {
         "n": "Danji",
         "f": "Danji-V-1.png",
-        "t": "O Caçador de Anjos",
-        "role": "Caçador Dimensional",
-        "lore": "Um demônio de chama roxa que desenvolveu um gosto peculiar: caçar Semi-Deuses e Aparições pela emoção da caça. Não é o mais poderoso dos demônios, mas é o mais rápido e o mais obstinado. Nenhuma de suas presas escapou duas vezes.",
+        "t": "O Ca�ador de Anjos",
+        "role": "Ca�ador Dimensional",
+        "lore": "Um dem�nio de chama roxa que desenvolveu um gosto peculiar: ca�ar Semi-Deuses e Apari��es pela emo��o da ca�a. N�o � o mais poderoso dos dem�nios, mas � o mais r�pido e o mais obstinado. Nenhuma de suas presas escapou duas vezes.",
         "ab": [
           "Chama Roxa Devastadora",
           "Rastreio Dimensional",
-          "Golpe do Caçador"
+          "Golpe do Ca�ador"
         ],
         "pow": 82,
         "spd": 95,
@@ -906,18 +906,18 @@
         "int": 78,
         "align": "evil",
         "region": "Errante",
-        "status": "Caçando"
+        "status": "Ca�ando"
       },
       {
         "n": "Drakhar",
         "f": "Drakhar.png",
         "t": "O Senhor do Caos",
         "role": "Lorde do Caos",
-        "lore": "Um demônio de dreadlocks brancos e poder caótico que não obedece nem ao próprio Sukuna. Drakhar é o caos personificado — suas ações seguem lógica própria incompreensível para mentes ordinárias. Paradoxalmente, isso o torna o demônio mais imprevisível e portanto o mais perigoso em batalha aberta.",
+        "lore": "Um dem�nio de dreadlocks brancos e poder ca�tico que n�o obedece nem ao pr�prio Sukuna. Drakhar � o caos personificado � suas a��es seguem l�gica pr�pria incompreens�vel para mentes ordin�rias. Paradoxalmente, isso o torna o dem�nio mais imprevis�vel e portanto o mais perigoso em batalha aberta.",
         "ab": [
-          "Explosão do Caos",
+          "Explos�o do Caos",
           "Imprevisibilidade Absoluta",
-          "Fragmentação da Realidade"
+          "Fragmenta��o da Realidade"
         ],
         "pow": 88,
         "spd": 85,
@@ -930,12 +930,12 @@
       {
         "n": "Drakon Ghen",
         "f": "Drakon-Ghen-V-1.png",
-        "t": "O Dragão Carmesim",
-        "role": "Comandante Dracônico",
-        "lore": "O maior dragão demoníaco de Sombrath, Drakon-Ghen tem envergadura que eclipsa cidades inteiras. Foi libertado pela Grande Fratura e imediatamente estabeleceu domínio sobre os céus do sul. Sua existência mudou os conflitos aéreos — nenhum exército pode combater por terra enquanto ele patrulha o ar.",
+        "t": "O Drag�o Carmesim",
+        "role": "Comandante Drac�nico",
+        "lore": "O maior drag�o demon�aco de Sombrath, Drakon-Ghen tem envergadura que eclipsa cidades inteiras. Foi libertado pela Grande Fratura e imediatamente estabeleceu dom�nio sobre os c�us do sul. Sua exist�ncia mudou os conflitos a�reos � nenhum ex�rcito pode combater por terra enquanto ele patrulha o ar.",
         "ab": [
           "Sopro do Apocalipse",
-          "Domínio do Ar",
+          "Dom�nio do Ar",
           "Escamas Infernais"
         ],
         "pow": 97,
@@ -943,7 +943,7 @@
         "def": 95,
         "int": 70,
         "align": "evil",
-        "region": "Céus do Sul",
+        "region": "C�us do Sul",
         "status": "Dominando"
       },
       {
@@ -951,10 +951,10 @@
         "f": "Dread-V-1.png",
         "t": "O Medo Encarnado",
         "role": "Senhor do Terror",
-        "lore": "Uma entidade que não tem forma fixa — manifesta-se como o pior medo de quem a observa. Dread não precisa matar seus inimigos com força bruta; a maioria morre de pânico antes de precisar usar as garras. É o arma psicológica mais eficaz de Sukuna.",
+        "lore": "Uma entidade que n�o tem forma fixa � manifesta-se como o pior medo de quem a observa. Dread n�o precisa matar seus inimigos com for�a bruta; a maioria morre de p�nico antes de precisar usar as garras. � o arma psicol�gica mais eficaz de Sukuna.",
         "ab": [
-          "Manifestação do Medo",
-          "Visão de Terror",
+          "Manifesta��o do Medo",
+          "Vis�o de Terror",
           "Paralisia do Pavor"
         ],
         "pow": 75,
@@ -968,13 +968,13 @@
       {
         "n": "Golden Sperm",
         "f": "Golden-Sperm-V-1.png",
-        "t": "O Pico da Perfeição",
+        "t": "O Pico da Perfei��o",
         "role": "Entidade de Poder",
-        "lore": "Uma anomalia entre os demônios — um ser de perfeição física absoluta e poder ilimitado que se acredita ser a manifestação do ideal de força pura. Golden Sperm não tem emoções complexas: apenas poder, e a vontade de demonstrá-lo.",
+        "lore": "Uma anomalia entre os dem�nios � um ser de perfei��o f�sica absoluta e poder ilimitado que se acredita ser a manifesta��o do ideal de for�a pura. Golden Sperm n�o tem emo��es complexas: apenas poder, e a vontade de demonstr�-lo.",
         "ab": [
-          "Força Absoluta",
+          "For�a Absoluta",
           "Corpo Perfeito",
-          "Pressão Divina"
+          "Press�o Divina"
         ],
         "pow": 99,
         "spd": 90,
@@ -987,11 +987,11 @@
       {
         "n": "Golgoth",
         "f": "Golgoth-V-1.png",
-        "t": "O Titã Infernal",
-        "role": "Titã do Fogo",
-        "lore": "Um titã demoníaco de dimensões colossais, Golgoth não foi criado pelos Primordiais — nasceu no núcleo de Sombrath há eons. Seu corpo é literalmente feito de ferro fundido e chamas. Quando caminha, a terra racha. Quando grita, montanhas desmoronam.",
+        "t": "O Tit� Infernal",
+        "role": "Tit� do Fogo",
+        "lore": "Um tit� demon�aco de dimens�es colossais, Golgoth n�o foi criado pelos Primordiais � nasceu no n�cleo de Sombrath h� eons. Seu corpo � literalmente feito de ferro fundido e chamas. Quando caminha, a terra racha. Quando grita, montanhas desmoronam.",
         "ab": [
-          "Punho da Extinção",
+          "Punho da Extin��o",
           "Corpo de Lava",
           "Grito do Apocalipse"
         ],
@@ -1001,18 +1001,18 @@
         "int": 38,
         "align": "evil",
         "region": "Sombrath Profundo",
-        "status": "Dormindo — Despertando"
+        "status": "Dormindo � Despertando"
       },
       {
         "n": "Kokushibo",
         "f": "Kokushibo-V-1.png",
-        "t": "O Mestre das Lâminas Lunares",
-        "role": "Mestre da Espada Demoníaca",
-        "lore": "Outrora um humano que se tornou o maior espadachim de todos os tempos, Kokushibo vendeu sua humanidade para superar seu irmão. Tornou-se um demônio e desenvolveu a Respiração da Lua — uma técnica de espada com dezesseis lâminas crescendo do próprio corpo. Em mil anos de existência, nenhum espadachim igualou-o.",
+        "t": "O Mestre das L�minas Lunares",
+        "role": "Mestre da Espada Demon�aca",
+        "lore": "Outrora um humano que se tornou o maior espadachim de todos os tempos, Kokushibo vendeu sua humanidade para superar seu irm�o. Tornou-se um dem�nio e desenvolveu a Respira��o da Lua � uma t�cnica de espada com dezesseis l�minas crescendo do pr�prio corpo. Em mil anos de exist�ncia, nenhum espadachim igualou-o.",
         "ab": [
-          "Respiração da Lua — Décimo Sexto Padrão",
-          "Lâminas do Corpo",
-          "Olhos dos Espíritos"
+          "Respira��o da Lua � D�cimo Sexto Padr�o",
+          "L�minas do Corpo",
+          "Olhos dos Esp�ritos"
         ],
         "pow": 95,
         "spd": 97,
@@ -1025,13 +1025,13 @@
       {
         "n": "Mahoraga",
         "f": "Mahoraga-V-1.png",
-        "t": "O Intamável",
-        "role": "Besta Divina Indomável",
-        "lore": "Uma besta demoníaca que nunca foi derrotada na história registrada. Mahoraga adapta-se a qualquer ataque em segundos — seu escudo shikigami analisa, processa e cria imunidade a qualquer técnica em uma única rotação. É considerado o ser vivo mais indomável de Eryndor.",
+        "t": "O Intam�vel",
+        "role": "Besta Divina Indom�vel",
+        "lore": "Uma besta demon�aca que nunca foi derrotada na hist�ria registrada. Mahoraga adapta-se a qualquer ataque em segundos � seu escudo shikigami analisa, processa e cria imunidade a qualquer t�cnica em uma �nica rota��o. � considerado o ser vivo mais indom�vel de Eryndor.",
         "ab": [
-          "Adaptação Infinita",
+          "Adapta��o Infinita",
           "Escudo Shikigami",
-          "Devastação Total"
+          "Devasta��o Total"
         ],
         "pow": 100,
         "spd": 85,
@@ -1039,17 +1039,17 @@
         "int": 80,
         "align": "evil",
         "region": "Sombrath",
-        "status": "Não Aprisionável"
+        "status": "N�o Aprision�vel"
       },
       {
         "n": "Monspiet",
         "f": "Monspiet-V-1.png",
-        "t": "O Fênix dos Dez",
+        "t": "O F�nix dos Dez",
         "role": "Comandante dos Dez Mandamentos",
-        "lore": "Um dos Dez Mandamentos — a elite mais poderosa dos demônios. Monspiet tem o poder do Pássaro Negro, capaz de lançar chamas que apagam qualquer luz e corrosão que dissolve barreiras mágicas. Apesar de sua afiliação demoníaca, mantém um código de honra peculiar.",
+        "lore": "Um dos Dez Mandamentos � a elite mais poderosa dos dem�nios. Monspiet tem o poder do P�ssaro Negro, capaz de lan�ar chamas que apagam qualquer luz e corros�o que dissolve barreiras m�gicas. Apesar de sua afilia��o demon�aca, mant�m um c�digo de honra peculiar.",
         "ab": [
-          "Pássaro Negro",
-          "Chamas da Extinção da Luz",
+          "P�ssaro Negro",
+          "Chamas da Extin��o da Luz",
           "Voo da Pureza Negra"
         ],
         "pow": 91,
@@ -1063,13 +1063,13 @@
       {
         "n": "Nosferatu Zodd",
         "f": "Nosferatu-Zodd-V-1.png",
-        "t": "O Apóstolo Imortal",
-        "role": "Apóstolo da Guerra",
-        "lore": "Um demônio-apóstolo que existe há mais de três séculos, sobrevivendo a batalhas que mataram exércitos inteiros. Zodd respeita apenas os guerreiros mais poderosos — e passa a vida buscando alguém capaz de matá-lo. Teme apenas a profecia que prevê sua derrota às mãos de alguém que ainda não nasceu.",
+        "t": "O Ap�stolo Imortal",
+        "role": "Ap�stolo da Guerra",
+        "lore": "Um dem�nio-ap�stolo que existe h� mais de tr�s s�culos, sobrevivendo a batalhas que mataram ex�rcitos inteiros. Zodd respeita apenas os guerreiros mais poderosos � e passa a vida buscando algu�m capaz de mat�-lo. Teme apenas a profecia que prev� sua derrota �s m�os de algu�m que ainda n�o nasceu.",
         "ab": [
-          "Transformação Apostólica",
-          "Lâmina da Morte Certa",
-          "Imortalidade do Apóstolo"
+          "Transforma��o Apost�lica",
+          "L�mina da Morte Certa",
+          "Imortalidade do Ap�stolo"
         ],
         "pow": 93,
         "spd": 85,
@@ -1084,10 +1084,10 @@
         "f": "Orochi-V-1.png",
         "t": "O Rei dos Venenos",
         "role": "Serpente do Caos",
-        "lore": "O demônio de oito cabeças, cada uma representando uma forma de corrupção diferente. Orochi não precisa de força bruta — seu veneno dissolve a matéria, corrói a magia e envenena até os espíritos. A maior ameaça de Orochi é sua paciência: pode esperar séculos pela oportunidade certa.",
+        "lore": "O dem�nio de oito cabe�as, cada uma representando uma forma de corrup��o diferente. Orochi n�o precisa de for�a bruta � seu veneno dissolve a mat�ria, corr�i a magia e envenena at� os esp�ritos. A maior amea�a de Orochi � sua paci�ncia: pode esperar s�culos pela oportunidade certa.",
         "ab": [
-          "Veneno das Oito Cabeças",
-          "Corrupção Progressiva",
+          "Veneno das Oito Cabe�as",
+          "Corrup��o Progressiva",
           "Caos Serpenteante"
         ],
         "pow": 87,
@@ -1101,11 +1101,11 @@
       {
         "n": "Sukuna",
         "f": "Sukuna-V-1.png",
-        "t": "O Rei das Maldições",
-        "role": "Senhor Supremo dos Demônios",
-        "lore": "O mais poderoso demônio-feiticeiro que já existiu — um ser da era pré-divina que os Semi-Deuses tentaram apagar da história. Sukuna lidou com a Grande Fratura não como vitimizado pelos eventos, mas como arquiteto oculto deles. Sua fórmula de quatro braços e domínio sobre múltiplos domínios o torna virtualmente ilimitado em combate.",
+        "t": "O Rei das Maldi��es",
+        "role": "Senhor Supremo dos Dem�nios",
+        "lore": "O mais poderoso dem�nio-feiticeiro que j� existiu � um ser da era pr�-divina que os Semi-Deuses tentaram apagar da hist�ria. Sukuna lidou com a Grande Fratura n�o como vitimizado pelos eventos, mas como arquiteto oculto deles. Sua f�rmula de quatro bra�os e dom�nio sobre m�ltiplos dom�nios o torna virtualmente ilimitado em combate.",
         "ab": [
-          "Domínio Primordial — Maleficência",
+          "Dom�nio Primordial � Malefic�ncia",
           "Cleave",
           "Flecha Divina"
         ],
@@ -1114,7 +1114,7 @@
         "def": 92,
         "int": 100,
         "align": "evil",
-        "region": "Sombrath — Trono dos Ossos",
+        "region": "Sombrath � Trono dos Ossos",
         "status": "Ascendendo"
       },
       {
@@ -1122,11 +1122,11 @@
         "f": "Surtur-V-1.png",
         "t": "O Fim do Mundo",
         "role": "Rei do Fogo do Fim dos Tempos",
-        "lore": "Uma profecia fala de Surtur — o gigante demoníaco de fogo que encerrará Eryndor em chamas no fim dos tempos. A profecia não diz se esse é um evento inevitável ou apenas um aviso. Surtur tomou o conhecimento da profecia e decidiu acelerar o cronograma.",
+        "lore": "Uma profecia fala de Surtur � o gigante demon�aco de fogo que encerrar� Eryndor em chamas no fim dos tempos. A profecia n�o diz se esse � um evento inevit�vel ou apenas um aviso. Surtur tomou o conhecimento da profecia e decidiu acelerar o cronograma.",
         "ab": [
           "Espada do Apocalipse",
           "Chamas do Fim",
-          "Presença do Fim dos Tempos"
+          "Presen�a do Fim dos Tempos"
         ],
         "pow": 99,
         "spd": 72,
@@ -1141,10 +1141,10 @@
         "f": "Swain-V-1.png",
         "t": "O Coletor de Almas",
         "role": "Feiticeiro General",
-        "lore": "Um warlock-general que descobriu como consumir partes das almas dos inimigos derrotados, absorvendo seus poderes e memórias. Swain conhece os segredos de centenas de guerreiros mortos — cada batalha o torna mais completo, mais terrível, mais incompreensível para quem o enfrenta pela primeira vez.",
+        "lore": "Um warlock-general que descobriu como consumir partes das almas dos inimigos derrotados, absorvendo seus poderes e mem�rias. Swain conhece os segredos de centenas de guerreiros mortos � cada batalha o torna mais completo, mais terr�vel, mais incompreens�vel para quem o enfrenta pela primeira vez.",
         "ab": [
           "Consumo de Almas",
-          "Forma do Abutre Demoníaco",
+          "Forma do Abutre Demon�aco",
           "Conhecimento dos Mortos"
         ],
         "pow": 86,
@@ -1153,18 +1153,18 @@
         "int": 97,
         "align": "evil",
         "region": "Sombrath / Thornwall Ocupado",
-        "status": "Avançando"
+        "status": "Avan�ando"
       },
       {
         "n": "Thul",
         "f": "Thul-V-1.png",
-        "t": "O Primordial Ósseo",
-        "role": "Demônio Primordial",
-        "lore": "Um demônio anterior à própria categorização de demônios — Thul existia quando os Primordiais ainda molda o mundo. Seu corpo de osso branco-acinzentado é feito de fragmentos de entidades que ele consumiu ao longo de eons. Não tem ambições, não tem lealdades — apenas existe, consome e persiste.",
+        "t": "O Primordial �sseo",
+        "role": "Dem�nio Primordial",
+        "lore": "Um dem�nio anterior � pr�pria categoriza��o de dem�nios � Thul existia quando os Primordiais ainda molda o mundo. Seu corpo de osso branco-acinzentado � feito de fragmentos de entidades que ele consumiu ao longo de eons. N�o tem ambi��es, n�o tem lealdades � apenas existe, consome e persiste.",
         "ab": [
           "Consumo Primordial",
           "Ossos da Era Primeira",
-          "Persistência Eterna"
+          "Persist�ncia Eterna"
         ],
         "pow": 94,
         "spd": 62,
@@ -1178,11 +1178,11 @@
         "n": "Yoru",
         "f": "Yoru-V-1.png",
         "t": "A Dobradora da Realidade",
-        "role": "Manipuladora da Existência",
-        "lore": "Aparência ilusoriamente infantil esconde um poder que dobra os limites da realidade. Yoru não precisa de força física — ela simplesmente reescreve as regras do espaço ao redor de seus inimigos. Sua maior fraqueza é também sua maior força: ela se diverte com o caos que cria.",
+        "role": "Manipuladora da Exist�ncia",
+        "lore": "Apar�ncia ilusoriamente infantil esconde um poder que dobra os limites da realidade. Yoru n�o precisa de for�a f�sica � ela simplesmente reescreve as regras do espa�o ao redor de seus inimigos. Sua maior fraqueza � tamb�m sua maior for�a: ela se diverte com o caos que cria.",
         "ab": [
           "Dobra da Realidade",
-          "Inversão do Espaço",
+          "Invers�o do Espa�o",
           "Riso do Fim"
         ],
         "pow": 90,
@@ -1191,18 +1191,18 @@
         "int": 98,
         "align": "chaos",
         "region": "Errante",
-        "status": "Ativa — Caótica"
+        "status": "Ativa � Ca�tica"
       },
       {
         "n": "Yrul",
         "f": "Yrul-V-1.png",
-        "t": "O Anjo Caído",
+        "t": "O Anjo Ca�do",
         "role": "Semideus Corrompido",
-        "lore": "Yrul foi um Semi-Deus antes de ser seduziado pelo poder de Sombrath. Diferente dos demônios que nasceram no plano infernal, ele conhece a luz e escolheu as trevas — tornando-o mais perigoso que qualquer demônio nativo, pois entende exatamente o que está combatendo.",
+        "lore": "Yrul foi um Semi-Deus antes de ser seduziado pelo poder de Sombrath. Diferente dos dem�nios que nasceram no plano infernal, ele conhece a luz e escolheu as trevas � tornando-o mais perigoso que qualquer dem�nio nativo, pois entende exatamente o que est� combatendo.",
         "ab": [
           "Asas da Queda",
           "Luz Corrompida",
-          "Traição Divina"
+          "Trai��o Divina"
         ],
         "pow": 89,
         "spd": 88,
@@ -1217,10 +1217,10 @@
         "f": "Zoran-V-1.png",
         "t": "O Elementar das Chamas",
         "role": "Senhor Elemental do Fogo",
-        "lore": "Um elemental demoníaco de fogo puro — não tem consciência elaborada, mas tem poder enorme e instinto predatório refinado. Zoran manifesta-se como um vórtice de chamas e vontade de destruição. Sukuna usa-o como arma de sítio: onde Zoran vai, não sobra pedra sobre pedra.",
+        "lore": "Um elemental demon�aco de fogo puro � n�o tem consci�ncia elaborada, mas tem poder enorme e instinto predat�rio refinado. Zoran manifesta-se como um v�rtice de chamas e vontade de destrui��o. Sukuna usa-o como arma de s�tio: onde Zoran vai, n�o sobra pedra sobre pedra.",
         "ab": [
-          "Vórtice de Fogo Puro",
-          "Instinto Predatório",
+          "V�rtice de Fogo Puro",
+          "Instinto Predat�rio",
           "Forma Elemental"
         ],
         "pow": 88,
@@ -1229,17 +1229,17 @@
         "int": 42,
         "align": "evil",
         "region": "Sombrath",
-        "status": "Arma de Sítio"
+        "status": "Arma de S�tio"
       },
       {
         "n": "Cyber Gore",
         "f": "Cyber-Gore-V-1.png",
         "t": "O Cyber Gore",
-        "role": "Personagem de Demônio",
-        "lore": "Cyber Gore é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Demônio, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Dem�nio",
+        "lore": "Cyber Gore emergiu do núcleo de Sombrath quando força bruta tentou dominar a tecnologia. Sua carne se tornou aço vivente, mas sua alma permaneceu demoníaca. Chegou após a Fratura em busca de um equilíbrio que o mundo não lhe deu.",
         "ab": [
-          "Golpe de Demônio",
-          "Presença Imponente",
+          "Golpe de Dem�nio",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -1254,11 +1254,11 @@
         "n": "Garrison",
         "f": "Garrison-V-1.png",
         "t": "O Garrison",
-        "role": "Personagem de Demônio",
-        "lore": "Garrison é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Demônio, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Dem�nio",
+        "lore": "Garrison era um general que lutou contra demônios antes de ser corrompido por um fragmento de Kore roxo. Agora comanda um exército de sombras em batalhas que já terminaram há séculos. Sua ferida: ver a vitória como derrota. Sua promessa: reescrever a história da guerra.",
         "ab": [
-          "Golpe de Demônio",
-          "Presença Imponente",
+          "Golpe de Dem�nio",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -1273,11 +1273,11 @@
         "n": "Mordecai",
         "f": "Mordecai-V-1.png",
         "t": "O Mordecai",
-        "role": "Personagem de Demônio",
-        "lore": "Mordecai é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Demônio, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Dem�nio",
+        "lore": "Mordecai era um mago da Torre de Ossos que buscou estudar o Vazio. O Kore mostrou-lhe segredos que ninguém deveria saber — agora suas mãos sangram conhecimento proibido. Sua ferida: carregar verdades que enlouquecem. Sua promessa: codificar os segredos antes que o Vazio o encontre.",
         "ab": [
-          "Golpe de Demônio",
-          "Presença Imponente",
+          "Golpe de Dem�nio",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -1292,11 +1292,11 @@
         "n": "Obsidius",
         "f": "Obsidius-V-1.png",
         "t": "O Obsidius",
-        "role": "Personagem de Demônio",
-        "lore": "Obsidius é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Demônio, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Dem�nio",
+        "lore": "Obsidius era um cristal vivo nas profundezas de Sombrath. A Fratura o transformou de pedra em demônio de fogo, mas a obsessão por formas retas persiste. Sua ferida: ser oblíquo no mundo dos planos. Sua promessa: esculpir uma face bonita antes do fim.",
         "ab": [
-          "Golpe de Demônio",
-          "Presença Imponente",
+          "Golpe de Dem�nio",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -1311,11 +1311,11 @@
         "n": "Oogway",
         "f": "Oogway-V-1.png",
         "t": "O Oogway",
-        "role": "Personagem de Demônio",
-        "lore": "Oogway é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Demônio, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Dem�nio",
+        "lore": "Oogway renasceu das cinzas de um monastério destruído, mas não como sábio — como vingança viva. Cada golpe é um ensinamento não dado, cada vitória é um monge que não salvou. Sua ferida: a colmeia da ordem destruída. Sua promessa: restaurar o templo em ruínas.",
         "ab": [
-          "Golpe de Demônio",
-          "Presença Imponente",
+          "Golpe de Dem�nio",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -1330,11 +1330,11 @@
         "n": "Platinum Sperm",
         "f": "Platinum-Sperm-V-1.png",
         "t": "O Platinum Sperm",
-        "role": "Personagem de Demônio",
-        "lore": "Platinum Sperm é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Demônio, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Dem�nio",
+        "lore": "Platinum Sperm nasceu do desejo de perfeição demoníaca — uma forma física ideal que ignora toda imperfeição. A perfeição é seu dom, mas também sua prisão. Sua ferida: nunca conhecer imperfeição. Sua promessa: encontrar a imperfeita que o complete.",
         "ab": [
-          "Golpe de Demônio",
-          "Presença Imponente",
+          "Golpe de Dem�nio",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -1349,11 +1349,11 @@
         "n": "Pyros",
         "f": "Pyros-V-1.png",
         "t": "O Pyros",
-        "role": "Personagem de Demônio",
-        "lore": "Pyros é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Demônio, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Dem�nio",
+        "lore": "Pyros era um sacerdote que rezava pelas chamas antes de ser tocado pelo Kore. Agora sua oração é fogo puro que consome tudo, incluindo suas palavras. Sua ferida: os rituais perdidos. Sua promessa: acender a última vela no altar abandonado.",
         "ab": [
-          "Golpe de Demônio",
-          "Presença Imponente",
+          "Golpe de Dem�nio",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -1368,11 +1368,11 @@
         "n": "Sad Sperm",
         "f": "Sad-Sperm-V-1.png",
         "t": "O Sad Sperm",
-        "role": "Personagem de Demônio",
-        "lore": "Sad Sperm é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Demônio, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Dem�nio",
+        "lore": "Sad Sperm surgiu do luto excessivo por uma batalha perdida — suas lágrimas viraram veneno que corrói a esperança. Combatem tristeza transformada em arma. Sua ferida: não conseguir chorar sem destruir. Sua promessa: secar as lágrimas do mundo.",
         "ab": [
-          "Golpe de Demônio",
-          "Presença Imponente",
+          "Golpe de Dem�nio",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -1387,11 +1387,11 @@
         "n": "Shadoweaver",
         "f": "Shadoweaver-V-1.png",
         "t": "O Shadoweaver",
-        "role": "Personagem de Demônio",
-        "lore": "Shadoweaver é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Demônio, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Dem�nio",
+        "lore": "Shadoweaver era um ladrão que roubava sombras de inimigos em Wildmere. O Kore lhe deu o poder de literalizar o que roubava — agora lança sombras como lâminas. Sua ferida: as sombras roubadas não são suas. Sua promessa: devolver o que roubou.",
         "ab": [
-          "Golpe de Demônio",
-          "Presença Imponente",
+          "Golpe de Dem�nio",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -1406,11 +1406,11 @@
         "n": "Sion",
         "f": "Sion-V-1.png",
         "t": "O Sion",
-        "role": "Personagem de Demônio",
-        "lore": "Sion é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Demônio, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Dem�nio",
+        "lore": "Sion era um soldado cuja morte foi duvidoso na primeira Fratura. Recusou-se a ficar morto e agora opera com segunda licença. Sua ferida: existir como falha no mundo. Sua promessa: corrigir a falha que o trouxe de volta.",
         "ab": [
-          "Golpe de Demônio",
-          "Presença Imponente",
+          "Golpe de Dem�nio",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -1425,11 +1425,11 @@
         "n": "Xar Koth",
         "f": "Xar-Koth-V-1.png",
         "t": "O Xar Koth",
-        "role": "Personagem de Demônio",
-        "lore": "Xar Koth é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Demônio, servindo como peça viva da Guerra da Convergência.",
+        "role": "Personagem de Dem�nio",
+        "lore": "Xar Koth era um historiador que registrou batalhas em pedra. O Kore lhe deu a capacidade de carvar eventos futuros — mas a tinta é seu próprio sangue. Sua ferida: escrever seu próprio fim. Sua promessa: registrar a última página.",
         "ab": [
-          "Golpe de Demônio",
-          "Presença Imponente",
+          "Golpe de Dem�nio",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -1449,22 +1449,22 @@
     "color": "#9b59b6",
     "glow": "rgba(155,89,182,0.4)",
     "color2": "#d7b4f3",
-    "icon": "❓",
+    "icon": "?",
     "count": 12,
     "region": "O Entremundo",
-    "trait": "Origem e motivações completamente desconhecidas",
-    "desc": "Entidades cuja origem, motivação e natureza são inteiramente enigmáticas. Nem os Semi-Deuses conseguem categorizar os Desconhecidos adequadamente. Eles observam o conflito de Eryndor com uma mistura de curiosidade e indiferença que sugere uma perspectiva fundamentalmente diferente do tempo e do propósito.",
+    "trait": "Origem e motiva��es completamente desconhecidas",
+    "desc": "Entidades cuja origem, motiva��o e natureza s�o inteiramente enigm�ticas. Nem os Semi-Deuses conseguem categorizar os Desconhecidos adequadamente. Eles observam o conflito de Eryndor com uma mistura de curiosidade e indiferen�a que sugere uma perspectiva fundamentalmente diferente do tempo e do prop�sito.",
     "characters": [
       {
         "n": "Aurelius",
         "f": "Aurelius-V-1.png",
         "t": "O Cavaleiro de Prata",
         "role": "Indefinido / Protetor",
-        "lore": "Um ser de armadura prateada mecânica que apareceu sem origem conhecida nas bordas do conflito entre Semi-Deuses e Demônios. Não fala com ninguém, não aceita aliados, mas consistentemente posiciona-se contra forças de destruição total. Alguns acreditam que é um servo de um Primordial que ainda não se revelou.",
+        "lore": "Um ser de armadura prateada mec�nica que apareceu sem origem conhecida nas bordas do conflito entre Semi-Deuses e Dem�nios. N�o fala com ningu�m, n�o aceita aliados, mas consistentemente posiciona-se contra for�as de destrui��o total. Alguns acreditam que � um servo de um Primordial que ainda n�o se revelou.",
         "ab": [
-          "Armadura Impossível",
-          "Velocidade Mecânica",
-          "Propósito Oculto"
+          "Armadura Imposs�vel",
+          "Velocidade Mec�nica",
+          "Prop�sito Oculto"
         ],
         "pow": 85,
         "spd": 90,
@@ -1478,11 +1478,11 @@
         "n": "Garrick",
         "f": "Garrick-V-1.png",
         "t": "O Vidente das Linhas",
-        "role": "Indefinido / Oráculo de Timelines",
-        "lore": "Uma silhueta roxa que existe em múltiplas linhas temporais simultaneamente. Garrick viu o fim de Eryndor em 847 versões diferentes e está buscando as poucas onde o mundo sobrevive. Ninguém sabe se sua presença em uma batalha significa que essa linha sobreviverá — ou que ele está apenas observando como morre.",
+        "role": "Indefinido / Or�culo de Timelines",
+        "lore": "Uma silhueta roxa que existe em m�ltiplas linhas temporais simultaneamente. Garrick viu o fim de Eryndor em 847 vers�es diferentes e est� buscando as poucas onde o mundo sobrevive. Ningu�m sabe se sua presen�a em uma batalha significa que essa linha sobreviver� � ou que ele est� apenas observando como morre.",
         "ab": [
-          "Visão de Timelines",
-          "Presença Múltipla",
+          "Vis�o de Timelines",
+          "Presen�a M�ltipla",
           "Conhecimento do Fim"
         ],
         "pow": 72,
@@ -1496,12 +1496,12 @@
       {
         "n": "Glorivex",
         "f": "Glorivex-V-1.png",
-        "t": "O Dragão Cósmico",
-        "role": "Indefinido / Entidade Cósmica",
-        "lore": "Um dragão de aparência alienígena — tons de roxo e amarelo que não correspondem a nenhuma espécie dracônica conhecida de Eryndor. Glorivex sugere origens além do mundo físico, possivelmente de um plano cósmico que os Primordiais nunca mapearam. Não é hostil, mas sua simples presença desestabiliza a magia ao redor.",
+        "t": "O Drag�o C�smico",
+        "role": "Indefinido / Entidade C�smica",
+        "lore": "Um drag�o de apar�ncia alien�gena � tons de roxo e amarelo que n�o correspondem a nenhuma esp�cie drac�nica conhecida de Eryndor. Glorivex sugere origens al�m do mundo f�sico, possivelmente de um plano c�smico que os Primordiais nunca mapearam. N�o � hostil, mas sua simples presen�a desestabiliza a magia ao redor.",
         "ab": [
-          "Presença Cósmica",
-          "Respiração Não-Elementar",
+          "Presen�a C�smica",
+          "Respira��o N�o-Elementar",
           "Origem Desconhecida"
         ],
         "pow": 90,
@@ -1517,7 +1517,7 @@
         "f": "Jester-V-1.png",
         "t": "O Deus-Bobo",
         "role": "Indefinido / Divindade do Caos",
-        "lore": "Uma entidade que veste a aparência de um bobo da corte cósmico — mas seu riso racha a realidade ao redor. Jester pode ser uma divindade esquecida, pode ser uma manifestação do Vazio com senso de humor, pode ser algo que nenhuma categorização conhecida abarca. Seus atos parecem aleatórios mas sempre, sempre servem a algum propósito oculto.",
+        "lore": "Uma entidade que veste a apar�ncia de um bobo da corte c�smico � mas seu riso racha a realidade ao redor. Jester pode ser uma divindade esquecida, pode ser uma manifesta��o do Vazio com senso de humor, pode ser algo que nenhuma categoriza��o conhecida abarca. Seus atos parecem aleat�rios mas sempre, sempre servem a algum prop�sito oculto.",
         "ab": [
           "Riso que Racha o Real",
           "Truque do Fim",
@@ -1529,17 +1529,17 @@
         "int": 96,
         "align": "chaos",
         "region": "Desconhecida",
-        "status": "Pregando Peças"
+        "status": "Pregando Pe�as"
       },
       {
         "n": "Kiran",
         "f": "Kiran-V-1.png",
         "t": "O Guerreiro de Ouro Envelhecido",
         "role": "Indefinido / Guerreiro Milenar",
-        "lore": "Um guerreiro de aparência humana envelhecida mas força que desmente cada ruga. Kiran nunca diz de onde vem, nunca explica o que busca, nunca revela para quem luta. Sua técnica de combate é a mais antiga documentada — anterior a qualquer escola conhecida de qualquer raça.",
+        "lore": "Um guerreiro de apar�ncia humana envelhecida mas for�a que desmente cada ruga. Kiran nunca diz de onde vem, nunca explica o que busca, nunca revela para quem luta. Sua t�cnica de combate � a mais antiga documentada � anterior a qualquer escola conhecida de qualquer ra�a.",
         "ab": [
           "Arte Marcial Primordial",
-          "Força que Desmente a Idade",
+          "For�a que Desmente a Idade",
           "Sabedoria de Eons"
         ],
         "pow": 88,
@@ -1555,7 +1555,7 @@
         "f": "Maw-Shin-V-1.png",
         "t": "O Deus Bestial",
         "role": "Indefinido / Divindade Animalesca",
-        "lore": "Uma criatura entre deus e animal, com um rosto de fome permanente e um corpo que desafia anatomia conhecida. Maw-Shin representa o instinto puro levado à divindade — é o que acontece quando a natureza primordial ganha consciência e poder sem perder sua animalidade.",
+        "lore": "Uma criatura entre deus e animal, com um rosto de fome permanente e um corpo que desafia anatomia conhecida. Maw-Shin representa o instinto puro levado � divindade � � o que acontece quando a natureza primordial ganha consci�ncia e poder sem perder sua animalidade.",
         "ab": [
           "Fome Primordial",
           "Instinto Divino",
@@ -1574,11 +1574,11 @@
         "f": "Mellifera-V-1.png",
         "t": "A Deusa das Abelhas",
         "role": "Indefinido / Divindade da Natureza",
-        "lore": "Uma entidade de aparência deliciosa e poder mortal. Mellifera manifesta-se como uma divindade de mel, abelhas e natureza — mas a natureza que representa não é suave. É a natureza que mata sem remorso, que polui e purifica com a mesma indiferença. Seus favores são tão perigosos quanto sua hostilidade.",
+        "lore": "Uma entidade de apar�ncia deliciosa e poder mortal. Mellifera manifesta-se como uma divindade de mel, abelhas e natureza � mas a natureza que representa n�o � suave. � a natureza que mata sem remorso, que polui e purifica com a mesma indiferen�a. Seus favores s�o t�o perigosos quanto sua hostilidade.",
         "ab": [
           "Enxame da Divindade",
           "Mel Venenoso",
-          "Bênção da Colmeia"
+          "B�n��o da Colmeia"
         ],
         "pow": 78,
         "spd": 85,
@@ -1593,10 +1593,10 @@
         "f": "Stellaris-V-1.png",
         "t": "O Ser das Estrelas",
         "role": "Indefinido / Entidade Estelar",
-        "lore": "Uma criatura de escuridão e luz estelar que surgiu sem antecedentes durante a Grande Fratura. Stellaris não se comunica na linguagem de nenhuma raça conhecida — mas sua presença parece proteger regiões de serem completamente consumidas pelo Vazio. Pode ser um mecanismo de defesa do próprio cosmos de Eryndor.",
+        "lore": "Uma criatura de escurid�o e luz estelar que surgiu sem antecedentes durante a Grande Fratura. Stellaris n�o se comunica na linguagem de nenhuma ra�a conhecida � mas sua presen�a parece proteger regi�es de serem completamente consumidas pelo Vazio. Pode ser um mecanismo de defesa do pr�prio cosmos de Eryndor.",
         "ab": [
           "Luz Estelar",
-          "Escuridão Protetora",
+          "Escurid�o Protetora",
           "Linguagem das Estrelas"
         ],
         "pow": 90,
@@ -1611,12 +1611,12 @@
         "n": "Vane",
         "f": "Vane-V-1.png",
         "t": "O Silencioso",
-        "role": "Indefinido / Caçador Interdimensional",
-        "lore": "Vane nunca falou. Nunca sorriu. Nunca demonstrou emoção de qualquer tipo. Aparece, combate com maestria letal, e desaparece. Alguns teorizam que Vane é um servo de uma entidade que existe além do alcance de Eryndor — um caçador enviado para coletar algo que ainda não foi identificado.",
+        "role": "Indefinido / Ca�ador Interdimensional",
+        "lore": "Vane nunca falou. Nunca sorriu. Nunca demonstrou emo��o de qualquer tipo. Aparece, combate com maestria letal, e desaparece. Alguns teorizam que Vane � um servo de uma entidade que existe al�m do alcance de Eryndor � um ca�ador enviado para coletar algo que ainda n�o foi identificado.",
         "ab": [
-          "Silêncio Absoluto",
-          "Técnica Perfeita",
-          "Origem Além"
+          "Sil�ncio Absoluto",
+          "T�cnica Perfeita",
+          "Origem Al�m"
         ],
         "pow": 86,
         "spd": 93,
@@ -1624,17 +1624,17 @@
         "int": 75,
         "align": "neutral",
         "region": "Desconhecida",
-        "status": "Missão Oculta"
+        "status": "Miss�o Oculta"
       },
       {
         "n": "Glorivex",
         "f": "Glorivex-V-2.png",
         "t": "O Glorivex",
         "role": "Personagem de Desconhecido",
-        "lore": "Glorivex é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Desconhecido, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Glorivex surge do Entremundo como desafio personificado — sua forma oscila entre rosto humano e espinha dracônica. É um mistério vivo cujo propósito desconhece até os Semi-Deuses. Sua ferida: não pertencer a nenhuma história. Sua promessa: escrever sua própria linhagem.",
         "ab": [
           "Golpe de Desconhecido",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -1650,10 +1650,10 @@
         "f": "Helion-V-1.png",
         "t": "O Helion",
         "role": "Personagem de Desconhecido",
-        "lore": "Helion é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Desconhecido, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Helion é a luz que caiu no Entremundo e virou sombra. Não é nem demônio nem anjo — é um intermediário de luz e escuridão. Sua ferida: brilhar sem ser iluminado. Sua promessa: achar a luz.",
         "ab": [
           "Golpe de Desconhecido",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -1669,10 +1669,10 @@
         "f": "Noxus-V-1.png",
         "t": "O Noxus",
         "role": "Personagem de Desconhecido",
-        "lore": "Noxus é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Desconhecido, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Noxus é a ausência dada forma — criado quando alguém perguntou qual seria o vazio sem o Vazio. Responde a pergunta vivendo, mas sem resposta verdadeira. Sua ferida: não saber se existe. Sua promessa: descobrir sua própria existência.",
         "ab": [
           "Golpe de Desconhecido",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -1692,22 +1692,22 @@
     "color": "#2980b9",
     "glow": "rgba(41,128,185,0.45)",
     "color2": "#72c0f5",
-    "icon": "🌊",
+    "icon": "??",
     "count": 20,
     "region": "Todo o Continente",
-    "trait": "Forças da natureza em forma de ser vivo",
-    "desc": "Os Gigantes não são simplesmente criaturas grandes — são manifestações vivas de forças primordiais. Antes da Guerra da Convergência, permaneciam indiferentes às guerras dos mortais. Agora que o conflito ameaça o próprio tecido da realidade, até os Gigantes precisam escolher lados.",
+    "trait": "For�as da natureza em forma de ser vivo",
+    "desc": "Os Gigantes n�o s�o simplesmente criaturas grandes � s�o manifesta��es vivas de for�as primordiais. Antes da Guerra da Converg�ncia, permaneciam indiferentes �s guerras dos mortais. Agora que o conflito amea�a o pr�prio tecido da realidade, at� os Gigantes precisam escolher lados.",
     "characters": [
       {
         "n": "Asura",
         "f": "Asura-V-1.png",
         "t": "O Deus da Guerra",
         "role": "Deus Guerreiro dos Gigantes",
-        "lore": "Com braços infinitos e força que supera qualquer cálculo mortal, Asura é a manifestação do conflito vivo. Não pode morrer enquanto houver guerra no mundo — e portanto, enquanto Eryndor existir em seu estado atual, Asura é efetivamente eterno. Combate não por escolha mas por natureza.",
+        "lore": "Com bra�os infinitos e for�a que supera qualquer c�lculo mortal, Asura � a manifesta��o do conflito vivo. N�o pode morrer enquanto houver guerra no mundo � e portanto, enquanto Eryndor existir em seu estado atual, Asura � efetivamente eterno. Combate n�o por escolha mas por natureza.",
         "ab": [
           "Mil Punhos",
-          "Fúria Infinita",
-          "Presença da Guerra"
+          "F�ria Infinita",
+          "Presen�a da Guerra"
         ],
         "pow": 100,
         "spd": 82,
@@ -1720,9 +1720,9 @@
       {
         "n": "Azure Kore",
         "f": "Azure-Kore-V-1.png",
-        "t": "O Dragão Azul",
-        "role": "Dragão-Gigante do Kore",
-        "lore": "Um dragão de proporções gigantescas infundido com energia Kore azul, criando um ser que não é apenas dragão, não é apenas gigante — é uma força da natureza ativa. Azure Kore controla tempestades de energia Kore, tornando cada ataque não apenas físicamente devastador mas magicamente corrosivo.",
+        "t": "O Drag�o Azul",
+        "role": "Drag�o-Gigante do Kore",
+        "lore": "Um drag�o de propor��es gigantescas infundido com energia Kore azul, criando um ser que n�o � apenas drag�o, n�o � apenas gigante � � uma for�a da natureza ativa. Azure Kore controla tempestades de energia Kore, tornando cada ataque n�o apenas f�sicamente devastador mas magicamente corrosivo.",
         "ab": [
           "Tempestade Kore Azul",
           "Alento de Energia Primordial",
@@ -1733,18 +1733,18 @@
         "def": 92,
         "int": 72,
         "align": "neutral",
-        "region": "Céus do Norte",
+        "region": "C�us do Norte",
         "status": "Ativo"
       },
       {
         "n": "Charizard",
         "f": "Charizard.png",
-        "t": "O Dragão Lendário",
-        "role": "Rei Dracônico Ancestral",
-        "lore": "Um dragão que a magia antiga de Eryndor elevou à statura de Gigante há eons. Charizard é a prova de que dragões antigos o suficiente transcendem sua categoria original. Não pertence a nenhum lado do conflito, mas quando se manifesta, os exércitos param e contemplam.",
+        "t": "O Drag�o Lend�rio",
+        "role": "Rei Drac�nico Ancestral",
+        "lore": "Um drag�o que a magia antiga de Eryndor elevou � statura de Gigante h� eons. Charizard � a prova de que drag�es antigos o suficiente transcendem sua categoria original. N�o pertence a nenhum lado do conflito, mas quando se manifesta, os ex�rcitos param e contemplam.",
         "ab": [
           "Inferno Azul",
-          "Presença do Lendário",
+          "Presen�a do Lend�rio",
           "Voo do Ancestral"
         ],
         "pow": 93,
@@ -1758,12 +1758,12 @@
       {
         "n": "Elbaf",
         "f": "Elbaf-V-1.png",
-        "t": "O Trovão Viking",
-        "role": "Senhor de Guerra Nórdico",
-        "lore": "Um gigante de tradição viking cujo povo habita as ilhas do extremo norte. Elbaf luta com uma lança que canalizou raios durante dois séculos, tornando-a um condutor de tempestade. Seu povo — os Gigantes Nórdicos — é o único grupo de Gigantes com estrutura social coesa e código de honra definido.",
+        "t": "O Trov�o Viking",
+        "role": "Senhor de Guerra N�rdico",
+        "lore": "Um gigante de tradi��o viking cujo povo habita as ilhas do extremo norte. Elbaf luta com uma lan�a que canalizou raios durante dois s�culos, tornando-a um condutor de tempestade. Seu povo � os Gigantes N�rdicos � � o �nico grupo de Gigantes com estrutura social coesa e c�digo de honra definido.",
         "ab": [
-          "Lança das Tempestades",
-          "Grito de Guerra Nórdico",
+          "Lan�a das Tempestades",
+          "Grito de Guerra N�rdico",
           "Honra do Norte"
         ],
         "pow": 91,
@@ -1779,9 +1779,9 @@
         "f": "Harald-V-1.png",
         "t": "O Ciclope das Tempestades",
         "role": "Comandante de Tempestades",
-        "lore": "Um gigante de um olho que controla os ventos e as marés. Harald comanda as tempestades do oceano norte, protegendo as rotas marítimas dos Gigantes Nórdicos. Acredita que a Guerra da Convergência é uma tempestade como as que ele conhece — destrutiva mas necessária para limpar o que está podre.",
+        "lore": "Um gigante de um olho que controla os ventos e as mar�s. Harald comanda as tempestades do oceano norte, protegendo as rotas mar�timas dos Gigantes N�rdicos. Acredita que a Guerra da Converg�ncia � uma tempestade como as que ele conhece � destrutiva mas necess�ria para limpar o que est� podre.",
         "ab": [
-          "Controle das Marés",
+          "Controle das Mar�s",
           "Olho da Tempestade",
           "Vento de Comando"
         ],
@@ -1796,13 +1796,13 @@
       {
         "n": "Hydraskull",
         "f": "Hydraskull-V-1.png",
-        "t": "O Enxame dos Crânios",
+        "t": "O Enxame dos Cr�nios",
         "role": "Entidade de Enxame",
-        "lore": "Não é um único gigante — é uma colônia de crânios menores que se organizam em algo que aparenta ser um único ser gigante. Hydraskull representa um tipo de inteligência coletiva e de força distribuída: destrua partes, mas o todo se reagrupa imediatamente.",
+        "lore": "N�o � um �nico gigante � � uma col�nia de cr�nios menores que se organizam em algo que aparenta ser um �nico ser gigante. Hydraskull representa um tipo de intelig�ncia coletiva e de for�a distribu�da: destrua partes, mas o todo se reagrupa imediatamente.",
         "ab": [
-          "Enxame Indestrutível",
-          "Regeneração do Coletivo",
-          "Visão de Centenas"
+          "Enxame Indestrut�vel",
+          "Regenera��o do Coletivo",
+          "Vis�o de Centenas"
         ],
         "pow": 88,
         "spd": 68,
@@ -1815,11 +1815,11 @@
       {
         "n": "Kaido",
         "f": "Kaido-V-1.png",
-        "t": "O Dragão dos Mares",
+        "t": "O Drag�o dos Mares",
         "role": "A Criatura Mais Poderosa Viva",
-        "lore": "A criatura mais poderosa que respira hoje em Eryndor — um dragão-gigante que nunca foi derrotado em batalha aberta. Kaido dominou os oceanos por séculos e agora observa a Guerra da Convergência com interesse crescente. Quando ele finalmente escolher um lado, o conflito terminará — da maneira que ele decidir.",
+        "lore": "A criatura mais poderosa que respira hoje em Eryndor � um drag�o-gigante que nunca foi derrotado em batalha aberta. Kaido dominou os oceanos por s�culos e agora observa a Guerra da Converg�ncia com interesse crescente. Quando ele finalmente escolher um lado, o conflito terminar� � da maneira que ele decidir.",
         "ab": [
-          "Dragão dos Mares",
+          "Drag�o dos Mares",
           "Invencibilidade Provada",
           "Supremacia Absoluta"
         ],
@@ -1834,13 +1834,13 @@
       {
         "n": "Loki",
         "f": "Loki-V-1.png",
-        "t": "O Deus da Traição",
+        "t": "O Deus da Trai��o",
         "role": "Gigante Trickster",
-        "lore": "O gigante-deus das ilusões e da traição. Loki não é confiável por nenhuma facção mas é essencial para todas, porque seus truques frequentemente resolvem problemas que a força bruta não consegue. Está jogando um jogo cujas regras apenas ele conhece — e está ganhando.",
+        "lore": "O gigante-deus das ilus�es e da trai��o. Loki n�o � confi�vel por nenhuma fac��o mas � essencial para todas, porque seus truques frequentemente resolvem problemas que a for�a bruta n�o consegue. Est� jogando um jogo cujas regras apenas ele conhece � e est� ganhando.",
         "ab": [
-          "Ilusão Perfeita",
+          "Ilus�o Perfeita",
           "Metamorfose",
-          "Manipulação Cósmica"
+          "Manipula��o C�smica"
         ],
         "pow": 78,
         "spd": 90,
@@ -1853,13 +1853,13 @@
       {
         "n": "Multi Supreme",
         "f": "Multi-Supreme-V-1.png",
-        "t": "O Amálgama",
+        "t": "O Am�lgama",
         "role": "Entidade Coletiva",
-        "lore": "Uma massa sombria que é a fusão de múltiplas almas gigantescas — cada uma de um guerreiro lendário caído durante a Grande Fratura. Multi-Supreme herdou os poderes e memórias de todos eles, tornando-se um arquivo vivo de técnicas de combate perdidas há gerações.",
+        "lore": "Uma massa sombria que � a fus�o de m�ltiplas almas gigantescas � cada uma de um guerreiro lend�rio ca�do durante a Grande Fratura. Multi-Supreme herdou os poderes e mem�rias de todos eles, tornando-se um arquivo vivo de t�cnicas de combate perdidas h� gera��es.",
         "ab": [
-          "Técnicas Absorvidas",
-          "Força do Coletivo",
-          "Memória de Guerreiros"
+          "T�cnicas Absorvidas",
+          "For�a do Coletivo",
+          "Mem�ria de Guerreiros"
         ],
         "pow": 95,
         "spd": 65,
@@ -1873,11 +1873,11 @@
         "n": "Nidhogg",
         "f": "Nidhogg-V-1.png",
         "t": "A Serpente do Mundo",
-        "role": "Serpente que Corrói a Realidade",
-        "lore": "A serpente que morde as raízes da realidade — não metaforicamente, mas literalmente. Nidhogg existe no plano mais profundo de Eryndor e corrói os fundamentos sobre os quais o mundo foi construído. A Grande Fratura acelerou seu processo; os Primordiais a criaram como um mecanismo de fim de ciclo, não de destruição.",
+        "role": "Serpente que Corr�i a Realidade",
+        "lore": "A serpente que morde as ra�zes da realidade � n�o metaforicamente, mas literalmente. Nidhogg existe no plano mais profundo de Eryndor e corr�i os fundamentos sobre os quais o mundo foi constru�do. A Grande Fratura acelerou seu processo; os Primordiais a criaram como um mecanismo de fim de ciclo, n�o de destrui��o.",
         "ab": [
-          "Mordida das Raízes",
-          "Corrosão da Realidade",
+          "Mordida das Ra�zes",
+          "Corros�o da Realidade",
           "Ciclo do Fim"
         ],
         "pow": 97,
@@ -1891,20 +1891,20 @@
       {
         "n": "Nyxthos",
         "f": "Nyxthos-V-1.png",
-        "t": "O Horror Cósmico",
+        "t": "O Horror C�smico",
         "role": "Divindade do Horror Antigo",
-        "lore": "Um ser de horror cósmico — tentáculos de névoa, olhos que veem além da dimensão, consciência que não pode ser compreendida por mentes mortais. Nyxthos existia antes dos Primordiais e será quando eles forem esquecidos. Observa a guerra com o interesse de quem lê uma briga de formigas.",
+        "lore": "Um ser de horror c�smico � tent�culos de n�voa, olhos que veem al�m da dimens�o, consci�ncia que n�o pode ser compreendida por mentes mortais. Nyxthos existia antes dos Primordiais e ser� quando eles forem esquecidos. Observa a guerra com o interesse de quem l� uma briga de formigas.",
         "ab": [
           "Loucura do Abismo",
-          "Tentáculos Dimensionais",
-          "Presença Incompreensível"
+          "Tent�culos Dimensionais",
+          "Presen�a Incompreens�vel"
         ],
         "pow": 100,
         "spd": 60,
         "def": 97,
         "int": 100,
         "align": "chaos",
-        "region": "Entre Dimensões",
+        "region": "Entre Dimens�es",
         "status": "Observando"
       },
       {
@@ -1912,11 +1912,11 @@
         "f": "Radahn-V-1.png",
         "t": "O Esmagador de Estrelas",
         "role": "General dos Gigantes Celestes",
-        "lore": "Um general de proporções divinas que literalmente parou as estrelas de se moverem usando suas técnicas gravitacionais. Radahn absorveu tanto conhecimento arcano em seu corpo físico que se tornou uma força gravitacional em si mesmo. Combatentes ao redor dele experimentam gravidade alterada.",
+        "lore": "Um general de propor��es divinas que literalmente parou as estrelas de se moverem usando suas t�cnicas gravitacionais. Radahn absorveu tanto conhecimento arcano em seu corpo f�sico que se tornou uma for�a gravitacional em si mesmo. Combatentes ao redor dele experimentam gravidade alterada.",
         "ab": [
           "Controle Gravitacional",
           "Festival da Arena",
-          "Força das Estrelas Paradas"
+          "For�a das Estrelas Paradas"
         ],
         "pow": 99,
         "spd": 70,
@@ -1931,10 +1931,10 @@
         "f": "Bjorn-V-1.png",
         "t": "O Bjorn",
         "role": "Personagem de Gigantes",
-        "lore": "Bjorn é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Gigantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Bjorn era um gigante-montanha que carregava uma torre em cima da cabeça — a última casa de um vilarejo que afundou. Sua ferida: ser o altar temporário. Sua promessa: erguer uma torre que nunca afunde.",
         "ab": [
           "Golpe de Gigantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -1950,10 +1950,10 @@
         "f": "Crimson-V-1.png",
         "t": "O Crimson",
         "role": "Personagem de Gigantes",
-        "lore": "Crimson é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Gigantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Crimson era um gigante de fogo nascido de um cristal vermelho de erupção. Sua raiva é tão intensa quanto a lava — e tão difícil de controlar. Sua ferida: incinerrar tudo ao redor. Sua promessa: aprender a flor de lava.",
         "ab": [
           "Golpe de Gigantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 67,
@@ -1969,10 +1969,10 @@
         "f": "Kabuto-V-1.png",
         "t": "O Kabuto",
         "role": "Personagem de Gigantes",
-        "lore": "Kabuto é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Gigantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Kabuto era um guerreiro-coraça que carregava o cascolo de um samurai extinto. Sua armadura é conchas de kori que se movem como vontade própria. Sua ferida: proteger corpos que não tem. Sua promessa: ser o escudo final.",
         "ab": [
           "Golpe de Gigantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -1988,10 +1988,10 @@
         "f": "Katsu-V-1.png",
         "t": "O Katsu",
         "role": "Personagem de Gigantes",
-        "lore": "Katsu é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Gigantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Katsu era um guerreiro comum cujo espírito foi tocado por um cristal gigante. Sua força aumentou mas sua altura também — agora tropeça nas portas de sua juventude. Sua ferida: não se encaixar no mundo pequeno. Sua promessa: quebrar as portas que o limitam.",
         "ab": [
           "Golpe de Gigantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -2007,10 +2007,10 @@
         "f": "Oblivion-V-1.png",
         "t": "O Oblivion",
         "role": "Personagem de Gigantes",
-        "lore": "Oblivion é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Gigantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Oblivion é um gigante feito de névoa e esquecimento — tudo o que toca some da memória dos sobreviventes. Sua ferida: não ser lembrado. Sua promessa: ser o fim que ninguém recordará.",
         "ab": [
           "Golpe de Gigantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -2026,10 +2026,10 @@
         "f": "Torstein-V-1.png",
         "t": "O Torstein",
         "role": "Personagem de Gigantes",
-        "lore": "Torstein é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Gigantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Torstein é um gigante de gelo que carrega um castelo em cadeia. Sua lenta marcha congela o chão sob seus pés. Sua ferida: tocar sem congelar o mundo. Sua promessa: aquecer o coração uma vez.",
         "ab": [
           "Golpe de Gigantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -2045,10 +2045,10 @@
         "f": "Zinogre-V-1.png",
         "t": "O Zinogre",
         "role": "Personagem de Gigantes",
-        "lore": "Zinogre é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Gigantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Zinogre era um lobo que o Kore transformou em monstro elétrico. Sua raiva é agora um trovão. Sua ferida: luta sem fome. Sua promessa: acalmar o raio.",
         "ab": [
           "Golpe de Gigantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 67,
@@ -2064,10 +2064,10 @@
         "f": "Zrik-V-1.png",
         "t": "O Zrik",
         "role": "Personagem de Gigantes",
-        "lore": "Zrik é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Gigantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Zrik é um gigante pedra que carrega uma inscrição em sua carapaça — um texto que ninguém consegue traduzir. Sua ferida: carregar um segredo sem saber. Sua promessa: decifrar antes que o mundo desabe.",
         "ab": [
           "Golpe de Gigantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -2087,22 +2087,22 @@
     "color": "#d4ac0d",
     "glow": "rgba(212,172,13,0.4)",
     "color2": "#f0c840",
-    "icon": "⚜",
+    "icon": "?",
     "count": 22,
     "region": "Thornwall",
-    "trait": "Potencial ilimitado pela determinação",
-    "desc": "A raça mais numerosa e adaptável de Eryndor. Os Humanos não têm os poderes inatos de demônios ou o peso eterno dos Amaldiçoados — mas compensam com determinação, criatividade e uma capacidade de crescer além de todo limite que deveriam ter. Os maiores e mais devastadores guerreiros de Eryndor começaram como humanos comuns.",
+    "trait": "Potencial ilimitado pela determina��o",
+    "desc": "A ra�a mais numerosa e adapt�vel de Eryndor. Os Humanos n�o t�m os poderes inatos de dem�nios ou o peso eterno dos Amaldi�oados � mas compensam com determina��o, criatividade e uma capacidade de crescer al�m de todo limite que deveriam ter. Os maiores e mais devastadores guerreiros de Eryndor come�aram como humanos comuns.",
     "characters": [
       {
         "n": "Aokiji",
         "f": "Aokiji.png",
         "t": "O Almirante de Gelo",
         "role": "Almirante do Zero Absoluto",
-        "lore": "Um almirante com controle sobre o zero absoluto — o frio que para toda movimento, toda vida, toda possibilidade. Aokiji não usa seu poder levianamente; viu demais para ser entusiasta da destruição. Mas quando o usa, nenhuma chama sobrevive.",
+        "lore": "Um almirante com controle sobre o zero absoluto � o frio que para toda movimento, toda vida, toda possibilidade. Aokiji n�o usa seu poder levianamente; viu demais para ser entusiasta da destrui��o. Mas quando o usa, nenhuma chama sobrevive.",
         "ab": [
           "Gelo Eterno",
           "Zero Absoluto",
-          "Era do Gelo Perpétuo"
+          "Era do Gelo Perp�tuo"
         ],
         "pow": 91,
         "spd": 82,
@@ -2117,10 +2117,10 @@
         "f": "Astrid.png",
         "t": "A Rainha dos Guerreiros",
         "role": "Rainha Guerreira",
-        "lore": "Uma rainha de cabelo vermelho e força que envergonha exércitos inteiros. Astrid ascendeu ao trono não por nascimento, mas por ser a última sobrevivente de sua família após um massacre demoníaco. Cada batalha que vence é dedicada aos mortos que ninguém mais vingou.",
+        "lore": "Uma rainha de cabelo vermelho e for�a que envergonha ex�rcitos inteiros. Astrid ascendeu ao trono n�o por nascimento, mas por ser a �ltima sobrevivente de sua fam�lia ap�s um massacre demon�aco. Cada batalha que vence � dedicada aos mortos que ningu�m mais vingou.",
         "ab": [
           "Machado da Rainha",
-          "Fúria da Sobrevivente",
+          "F�ria da Sobrevivente",
           "Grito de Guerra"
         ],
         "pow": 85,
@@ -2134,13 +2134,13 @@
       {
         "n": "Broly",
         "f": "Broly.png",
-        "t": "O Lendário",
-        "role": "Guerreiro Lendário Nascido",
-        "lore": "Nasceu sob a mais má das estrelas e foi rejeitado por isso — um poder absurdo que aterroriza todos ao redor. Broly não escolheu ser o que é; o poder o escolheu. Seu corpo é uma bateria viva de energia destruidora que cresce sem limite aparente.",
+        "t": "O Lend�rio",
+        "role": "Guerreiro Lend�rio Nascido",
+        "lore": "Nasceu sob a mais m� das estrelas e foi rejeitado por isso � um poder absurdo que aterroriza todos ao redor. Broly n�o escolheu ser o que �; o poder o escolheu. Seu corpo � uma bateria viva de energia destruidora que cresce sem limite aparente.",
         "ab": [
           "Grande Impulso Verde",
           "Poder Ilimitado",
-          "Meteoro Lendário"
+          "Meteoro Lend�rio"
         ],
         "pow": 99,
         "spd": 88,
@@ -2153,12 +2153,12 @@
       {
         "n": "Davy Jones",
         "f": "Davy jones-2.png",
-        "t": "O Capitão Amaldiçoado dos Mares",
-        "role": "Capitão do Holandês Voador",
-        "lore": "Um capitão que fez um pacto proibido pelo amor que nunca recebeu e acabou trocando seu coração por poder sobre as profundezas. Agora controla as criaturas dos oceanos e comanda o Holandês Voador — o navio dos mortos que navega entre os planos de existência.",
+        "t": "O Capit�o Amaldi�oado dos Mares",
+        "role": "Capit�o do Holand�s Voador",
+        "lore": "Um capit�o que fez um pacto proibido pelo amor que nunca recebeu e acabou trocando seu cora��o por poder sobre as profundezas. Agora controla as criaturas dos oceanos e comanda o Holand�s Voador � o navio dos mortos que navega entre os planos de exist�ncia.",
         "ab": [
           "Controle dos Mares",
-          "Coração Aprisionado",
+          "Cora��o Aprisionado",
           "Frota dos Mortos"
         ],
         "pow": 90,
@@ -2172,12 +2172,12 @@
       {
         "n": "Dragon",
         "f": "Dragon-2.png",
-        "t": "O Revolucionário do Mundo",
-        "role": "Líder da Revolução Global",
-        "lore": "O homem mais perigoso do mundo para toda forma de tirania e injustiça. Dragon nasceu com controle sobre os ventos e tempestades, mas seu poder mais aterrorizante é sua capacidade de inspirar — de transformar pessoas comuns em forças de mudança.",
+        "t": "O Revolucion�rio do Mundo",
+        "role": "L�der da Revolu��o Global",
+        "lore": "O homem mais perigoso do mundo para toda forma de tirania e injusti�a. Dragon nasceu com controle sobre os ventos e tempestades, mas seu poder mais aterrorizante � sua capacidade de inspirar � de transformar pessoas comuns em for�as de mudan�a.",
         "ab": [
-          "Tempestade Revolucionária",
-          "Inspiração Inabalável",
+          "Tempestade Revolucion�ria",
+          "Inspira��o Inabal�vel",
           "Vento da Liberdade"
         ],
         "pow": 88,
@@ -2186,18 +2186,18 @@
         "int": 97,
         "align": "good",
         "region": "Errante",
-        "status": "Ativo — Organizando"
+        "status": "Ativo � Organizando"
       },
       {
         "n": "Emporio Alnino",
         "f": "Emporio-Alnino.png",
         "t": "O Menino Prodigio",
-        "role": "Prodigio Incompreensível",
-        "lore": "Uma criança cujo poder desafia toda compreensão de desenvolvimento natural. Emporio nasceu com a capacidade de criar e manipular espíritos — entidades que existem apenas por sua imaginação. Cada espírito que cria tem poder real e permanente.",
+        "role": "Prodigio Incompreens�vel",
+        "lore": "Uma crian�a cujo poder desafia toda compreens�o de desenvolvimento natural. Emporio nasceu com a capacidade de criar e manipular esp�ritos � entidades que existem apenas por sua imagina��o. Cada esp�rito que cria tem poder real e permanente.",
         "ab": [
-          "Criação de Espíritos",
-          "Imaginação Materializada",
-          "Prodigio do Impossível"
+          "Cria��o de Esp�ritos",
+          "Imagina��o Materializada",
+          "Prodigio do Imposs�vel"
         ],
         "pow": 88,
         "spd": 75,
@@ -2212,9 +2212,9 @@
         "f": "Enjin-2.png",
         "t": "O Maestro dos Elementos",
         "role": "Guerreiro Elemental",
-        "lore": "Um guerreiro que dominou não um, mas todos os quatro elementos primordiais através de décadas de treino extremo. Enjin não tem o poder bruto de um demônio ou a magia inata de um Semi-Deus — mas combina elementos em padrões tão complexos que superam oponentes teoricamente superiores.",
+        "lore": "Um guerreiro que dominou n�o um, mas todos os quatro elementos primordiais atrav�s de d�cadas de treino extremo. Enjin n�o tem o poder bruto de um dem�nio ou a magia inata de um Semi-Deus � mas combina elementos em padr�es t�o complexos que superam oponentes teoricamente superiores.",
         "ab": [
-          "Síntese Elemental",
+          "S�ntese Elemental",
           "Maestria do Fogo",
           "Vento e Terra Combinados"
         ],
@@ -2229,13 +2229,13 @@
       {
         "n": "Irelia",
         "f": "Irelia.png",
-        "t": "A Dança das Lâminas",
+        "t": "A Dan�a das L�minas",
         "role": "Defensora de sua Terra",
-        "lore": "Uma guerreira que dança com lâminas levitantes em padrões impossíveis de prever ou defender. Irelia nunca lutou por conquista — cada batalha foi em defesa de sua terra natal devastada por invasores. Seu poder cresce quanto mais luta, quanto mais tem a proteger.",
+        "lore": "Uma guerreira que dan�a com l�minas levitantes em padr�es imposs�veis de prever ou defender. Irelia nunca lutou por conquista � cada batalha foi em defesa de sua terra natal devastada por invasores. Seu poder cresce quanto mais luta, quanto mais tem a proteger.",
         "ab": [
-          "Dança das Lâminas",
+          "Dan�a das L�minas",
           "Tempestade de Corte",
-          "Inabalável"
+          "Inabal�vel"
         ],
         "pow": 87,
         "spd": 93,
@@ -2248,12 +2248,12 @@
       {
         "n": "J",
         "f": "J-3.png",
-        "t": "O Enigma dos Três Olhos",
+        "t": "O Enigma dos Tr�s Olhos",
         "role": "Indefinido / Guerreiro Misterioso",
-        "lore": "Um guerreiro de três olhos cuja origem permanece mistério até para seus aliados. Seus três olhos percebem realidades sobrepostas simultaneamente. Não fala sobre seu passado, mas suas técnicas são reconhecíveis como das mais antigas civilizações humanas extintas.",
+        "lore": "Um guerreiro de tr�s olhos cuja origem permanece mist�rio at� para seus aliados. Seus tr�s olhos percebem realidades sobrepostas simultaneamente. N�o fala sobre seu passado, mas suas t�cnicas s�o reconhec�veis como das mais antigas civiliza��es humanas extintas.",
         "ab": [
-          "Três Visões",
-          "Técnica Arcaica",
+          "Tr�s Vis�es",
+          "T�cnica Arcaica",
           "Segredo dos Olhos"
         ],
         "pow": 86,
@@ -2267,12 +2267,12 @@
       {
         "n": "Laxus",
         "f": "Laxus.png",
-        "t": "O Matador de Deuses do Trovão",
-        "role": "God Slayer do Trovão",
-        "lore": "Neto de um lendário mago, Laxus herdou o poder de matar deuses do trovão — literalmente consumir trovões divinos e torná-los mais fortes. Em um mundo onde semi-deuses e gigantes do trovão proliferam, Laxus tornou-se uma necessidade estratégica para a sobrevivência humana.",
+        "t": "O Matador de Deuses do Trov�o",
+        "role": "God Slayer do Trov�o",
+        "lore": "Neto de um lend�rio mago, Laxus herdou o poder de matar deuses do trov�o � literalmente consumir trov�es divinos e torn�-los mais fortes. Em um mundo onde semi-deuses e gigantes do trov�o proliferam, Laxus tornou-se uma necessidade estrat�gica para a sobreviv�ncia humana.",
         "ab": [
-          "Raio de Destruição Divina",
-          "Consumo de Trovão",
+          "Raio de Destrui��o Divina",
+          "Consumo de Trov�o",
           "Forma do Imperador"
         ],
         "pow": 90,
@@ -2288,11 +2288,11 @@
         "f": "Maki.png",
         "t": "A Especialista nas Armas",
         "role": "Mestre das Armas",
-        "lore": "Uma guerreira que alcançou perfeição física absoluta sem nenhum poder mágico inato — apenas treino. Maki compensa sua falta de magia com uma maestria em armas que transcende qualquer mágico. Cada arma que toca torna-se extensão perfeita de seu corpo.",
+        "lore": "Uma guerreira que alcan�ou perfei��o f�sica absoluta sem nenhum poder m�gico inato � apenas treino. Maki compensa sua falta de magia com uma maestria em armas que transcende qualquer m�gico. Cada arma que toca torna-se extens�o perfeita de seu corpo.",
         "ab": [
           "Maestria de Armas",
-          "Perfeição Física",
-          "Adaptação Instantânea"
+          "Perfei��o F�sica",
+          "Adapta��o Instant�nea"
         ],
         "pow": 85,
         "spd": 95,
@@ -2305,13 +2305,13 @@
       {
         "n": "Malenia",
         "f": "malenia.png",
-        "t": "A Deusa da Podridão",
-        "role": "Guerreira Amaldiçoada da Podridão",
-        "lore": "Uma guerreira que carrega uma maldição de podridão que devora seu próprio corpo — mas a cada batalha, floresce, cicatriza e recomeça. Seu braço dourado protético é mais forte que qualquer aço. Malenia nunca encontrou derrotas, mesmo quando literalmente destrói-se para vencer.",
+        "t": "A Deusa da Podrid�o",
+        "role": "Guerreira Amaldi�oada da Podrid�o",
+        "lore": "Uma guerreira que carrega uma maldi��o de podrid�o que devora seu pr�prio corpo � mas a cada batalha, floresce, cicatriza e recome�a. Seu bra�o dourado prot�tico � mais forte que qualquer a�o. Malenia nunca encontrou derrotas, mesmo quando literalmente destr�i-se para vencer.",
         "ab": [
           "Florescer Escarlate",
-          "Braço de Ouro",
-          "Maldição da Podridão"
+          "Bra�o de Ouro",
+          "Maldi��o da Podrid�o"
         ],
         "pow": 95,
         "spd": 92,
@@ -2319,18 +2319,18 @@
         "int": 78,
         "align": "chaos",
         "region": "Errante",
-        "status": "Buscando Propósito"
+        "status": "Buscando Prop�sito"
       },
       {
         "n": "Raiden",
         "f": "Raiden.png",
-        "t": "O Deus do Trovão Mortal",
-        "role": "Deus do Trovão Humano",
-        "lore": "Um guerreiro que não nasceu deus mas tornou-se um através de batalhas que transcendem o humano. Raiden canalizou raios durante décadas até que seu corpo se tornou um condutor vivo de eletricidade divina. Protege os humanos contra Onis e demônios com poder que nenhum mortal deveria ter.",
+        "t": "O Deus do Trov�o Mortal",
+        "role": "Deus do Trov�o Humano",
+        "lore": "Um guerreiro que n�o nasceu deus mas tornou-se um atrav�s de batalhas que transcendem o humano. Raiden canalizou raios durante d�cadas at� que seu corpo se tornou um condutor vivo de eletricidade divina. Protege os humanos contra Onis e dem�nios com poder que nenhum mortal deveria ter.",
         "ab": [
-          "Trovão Mortal Divino",
+          "Trov�o Mortal Divino",
           "Velocidade do Raio",
-          "Proteção Eletromagnética"
+          "Prote��o Eletromagn�tica"
         ],
         "pow": 92,
         "spd": 95,
@@ -2343,9 +2343,9 @@
       {
         "n": "Rocks D Xebec",
         "f": "Rocks-D-Xebec.png",
-        "t": "A Maior Ameaça que Existiu",
+        "t": "A Maior Amea�a que Existiu",
         "role": "O Ser que Aterrorizou o Mundo",
-        "lore": "O pirata mais perigoso que já viveu — o único ser que fez os maiores poderes de Eryndor se unirem temporariamente para derrotá-lo. Xebec não queria poder ou riqueza — queria destruir a ordem estabelecida pela raiz. Sua morte foi o evento que precedeu a Grande Fratura.",
+        "lore": "O pirata mais perigoso que j� viveu � o �nico ser que fez os maiores poderes de Eryndor se unirem temporariamente para derrot�-lo. Xebec n�o queria poder ou riqueza � queria destruir a ordem estabelecida pela raiz. Sua morte foi o evento que precedeu a Grande Fratura.",
         "ab": [
           "Poder que Aterroriza Deuses",
           "Carisma Destrutivo",
@@ -2356,18 +2356,18 @@
         "def": 90,
         "int": 92,
         "align": "chaos",
-        "region": "Lendário",
-        "status": "Falecido — Herdeiro Desconhecido"
+        "region": "Lend�rio",
+        "status": "Falecido � Herdeiro Desconhecido"
       },
       {
         "n": "Shamrock",
         "f": "Shamrock.png",
         "t": "O Druida da Batalha",
         "role": "Druida Guerreiro Celta",
-        "lore": "Um druida guerreiro que combina a magia da natureza com técnicas de batalha brutais de sua tradição celta. Shamrock faz a terra lutar ao seu lado — pedras voam, raízes prendem, o solo engole. A natureza que ele controla não é gentil; é a natureza predatória em seu estado original.",
+        "lore": "Um druida guerreiro que combina a magia da natureza com t�cnicas de batalha brutais de sua tradi��o celta. Shamrock faz a terra lutar ao seu lado � pedras voam, ra�zes prendem, o solo engole. A natureza que ele controla n�o � gentil; � a natureza predat�ria em seu estado original.",
         "ab": [
-          "Fúria da Natureza",
-          "Ritmo da Batalha Druídica",
+          "F�ria da Natureza",
+          "Ritmo da Batalha Dru�dica",
           "Terra Armada"
         ],
         "pow": 84,
@@ -2382,12 +2382,12 @@
         "n": "Shanks",
         "f": "Shanks-2.png",
         "t": "O Cabelo Vermelho",
-        "role": "Imperador do Equilíbrio",
-        "lore": "Um imperador que existe não para conquista, mas para equilíbrio. Shanks é o único ser capaz de interromper qualquer conflito com sua presença — sua energia vital é tão refinada que projeta como uma força gravitacional de intimidação pura. Perdeu um braço por escolha e tornou-se mais poderoso depois.",
+        "role": "Imperador do Equil�brio",
+        "lore": "Um imperador que existe n�o para conquista, mas para equil�brio. Shanks � o �nico ser capaz de interromper qualquer conflito com sua presen�a � sua energia vital � t�o refinada que projeta como uma for�a gravitacional de intimida��o pura. Perdeu um bra�o por escolha e tornou-se mais poderoso depois.",
         "ab": [
           "Haki do Conquistador",
-          "Lâmina Perfeita",
-          "Presença do Imperador"
+          "L�mina Perfeita",
+          "Presen�a do Imperador"
         ],
         "pow": 97,
         "spd": 90,
@@ -2395,18 +2395,18 @@
         "int": 95,
         "align": "good",
         "region": "Oceano Sul / Errante",
-        "status": "Mantendo Equilíbrio"
+        "status": "Mantendo Equil�brio"
       },
       {
         "n": "Solaria",
         "f": "Solaria.png",
         "t": "A Guerreira do Sol",
-        "role": "Campeã da Luz Solar",
-        "lore": "Uma guerreira abençoada pelo sol primordial de Eryndor, Solaria canalizou durante décadas a luz solar diretamente em seu corpo. Pode transformar luz em força de combate, em cura ou em destruição. Em batalhas noturnas, cria seu próprio sol.",
+        "role": "Campe� da Luz Solar",
+        "lore": "Uma guerreira aben�oada pelo sol primordial de Eryndor, Solaria canalizou durante d�cadas a luz solar diretamente em seu corpo. Pode transformar luz em for�a de combate, em cura ou em destrui��o. Em batalhas noturnas, cria seu pr�prio sol.",
         "ab": [
           "Feixe Solar",
-          "Bênção da Luz",
-          "Criação de Solstício"
+          "B�n��o da Luz",
+          "Cria��o de Solst�cio"
         ],
         "pow": 88,
         "spd": 85,
@@ -2420,11 +2420,11 @@
         "n": "Toji",
         "f": "Toji.png",
         "t": "O Assassino dos Feiticeiros",
-        "role": "Caçador do Sobrenatural",
-        "lore": "Um ser humano comum — literalmente sem energia mágica inata — que se tornou o maior caçador de criaturas sobrenaturais de Eryndor. Toji compreendeu algo fundamental: poder mágico é previsível, e o imprevisível mata o previsível. Cada batalha que vence é com técnica pura e inteligência.",
+        "role": "Ca�ador do Sobrenatural",
+        "lore": "Um ser humano comum � literalmente sem energia m�gica inata � que se tornou o maior ca�ador de criaturas sobrenaturais de Eryndor. Toji compreendeu algo fundamental: poder m�gico � previs�vel, e o imprevis�vel mata o previs�vel. Cada batalha que vence � com t�cnica pura e intelig�ncia.",
         "ab": [
-          "Técnica de Matança de Feiticeiros",
-          "Corpo Aperfeiçoado",
+          "T�cnica de Matan�a de Feiticeiros",
+          "Corpo Aperfei�oado",
           "Imprevisibilidade"
         ],
         "pow": 88,
@@ -2433,18 +2433,18 @@
         "int": 92,
         "align": "neutral",
         "region": "Errante",
-        "status": "Caçando"
+        "status": "Ca�ando"
       },
       {
         "n": "Vice Almirante Bastille",
         "f": "Vice-Almirante Bastille.png",
         "t": "O Gigante de Armadura",
         "role": "Oficial Militar de Elite",
-        "lore": "Um vice-almirante de estatura gigantesca e armadura impenetrável que lidera os esforços militares humanos contra a invasão demoníaca no sul. Bastille é a prova de que a estrutura e a disciplina militares podem enfrentar poder sobrenatural quando aplicadas com inteligência estratégica.",
+        "lore": "Um vice-almirante de estatura gigantesca e armadura impenetr�vel que lidera os esfor�os militares humanos contra a invas�o demon�aca no sul. Bastille � a prova de que a estrutura e a disciplina militares podem enfrentar poder sobrenatural quando aplicadas com intelig�ncia estrat�gica.",
         "ab": [
           "Armadura de Elite",
-          "Comando Tático",
-          "Lâmina dos Gigantes"
+          "Comando T�tico",
+          "L�mina dos Gigantes"
         ],
         "pow": 85,
         "spd": 68,
@@ -2459,10 +2459,10 @@
         "f": "Garp-V-1.png",
         "t": "O Garp",
         "role": "Personagem de Humanos",
-        "lore": "Garp é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Humanos, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Garp era um herói que jurou proteger o mundo, mas perdeu família na primeira Fratura. Sua força aumentou mas seu sorriso sumiu. Sua ferida: proteger sem conseguir salvar. Sua promessa: ser o escudo que dura mais que a tempestade.",
         "ab": [
           "Golpe de Humanos",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -2478,10 +2478,10 @@
         "f": "Kaelen-V-1.png",
         "t": "O Kaelen",
         "role": "Personagem de Humanos",
-        "lore": "Kaelen é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Humanos, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Kaelen era um mago de Thornwall que buscou desvendar a técnica de Kore. Seu desafio foi transformado em marcas que ardem sob a pele. Sua ferida: tocar o segredo sem dominar. Sua promessa: decifrar o código do cristal.",
         "ab": [
           "Golpe de Humanos",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -2497,10 +2497,10 @@
         "f": "Scopper-Gaban-V-1.png",
         "t": "O Scopper Gaban",
         "role": "Personagem de Humanos",
-        "lore": "Scopper Gaban é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Humanos, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Scopper Gaban era um imprestável que virou herói sem querer — cada passo foi acompanhado pelo riso de quem achava que cairia. Mas ele sobreviveu onde os fortes caíram. Sua ferida: rir da própria sobrevivência. Sua promessa: ver o fim sem medo.",
         "ab": [
           "Golpe de Humanos",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -2520,21 +2520,21 @@
     "color": "#1abc9c",
     "glow": "rgba(26,188,156,0.45)",
     "color2": "#6ef5d5",
-    "icon": "✦",
+    "icon": "?",
     "count": 8,
-    "region": "Torres do Exílio",
+    "region": "Torres do Ex�lio",
     "trait": "Controladores das leis arcanas do mundo",
-    "desc": "Estudiosos e praticantes das artes arcanas que foram forçados ao exílio quando a Grande Fratura desestabilizou os fundamentos da magia. Agora retornam, sabendo que seu conhecimento é insubstituível para conter a expansão do Vazio. Os Magos são poucos mas cada um representa séculos de conhecimento concentrado.",
+    "desc": "Estudiosos e praticantes das artes arcanas que foram for�ados ao ex�lio quando a Grande Fratura desestabilizou os fundamentos da magia. Agora retornam, sabendo que seu conhecimento � insubstitu�vel para conter a expans�o do Vazio. Os Magos s�o poucos mas cada um representa s�culos de conhecimento concentrado.",
     "characters": [
       {
         "n": "Dravok",
         "f": "Dravok-V-1.png",
         "t": "O Feiticeiro das Bestas",
         "role": "Mago Bestial",
-        "lore": "Um mago que abandonou a magia convencional para estudar os espíritos animais primordiais. Dravok canaliza a essência de predadores extintos, tornando-se temporariamente algo entre feiticeiro e besta. Sua especialidade é adaptar e combinar — cada forma animal que absorve adiciona ao seu repertório.",
+        "lore": "Um mago que abandonou a magia convencional para estudar os esp�ritos animais primordiais. Dravok canaliza a ess�ncia de predadores extintos, tornando-se temporariamente algo entre feiticeiro e besta. Sua especialidade � adaptar e combinar � cada forma animal que absorve adiciona ao seu repert�rio.",
         "ab": [
-          "Espíritos Animais",
-          "Fusão Bestial",
+          "Esp�ritos Animais",
+          "Fus�o Bestial",
           "Magia da Natureza Primordial"
         ],
         "pow": 82,
@@ -2550,10 +2550,10 @@
         "f": "Gowther-Original-1.png",
         "t": "O Criador de Bonecas",
         "role": "Arcano Criador",
-        "lore": "O criador original — um mago que passou séculos estudando como dar vida artificial a matéria inerte. Gowther não é o que parece; cria entidades que são indistinguíveis de seres vivos, mas são fundamentalmente diferentes. A fronteira entre criação e vida real é algo que ele examina sem descanso.",
+        "lore": "O criador original � um mago que passou s�culos estudando como dar vida artificial a mat�ria inerte. Gowther n�o � o que parece; cria entidades que s�o indistingu�veis de seres vivos, mas s�o fundamentalmente diferentes. A fronteira entre cria��o e vida real � algo que ele examina sem descanso.",
         "ab": [
-          "Criação de Vida Artificial",
-          "Manipulação de Memórias",
+          "Cria��o de Vida Artificial",
+          "Manipula��o de Mem�rias",
           "Alquimia do Ser"
         ],
         "pow": 75,
@@ -2561,7 +2561,7 @@
         "def": 70,
         "int": 100,
         "align": "neutral",
-        "region": "Torres do Exílio",
+        "region": "Torres do Ex�lio",
         "status": "Ativo"
       },
       {
@@ -2569,7 +2569,7 @@
         "f": "Kurogam-Enma-V-1.png",
         "t": "A Feiticeira das Chamas",
         "role": "Feiticeira Destrutiva",
-        "lore": "Uma feiticeira cujo domínio sobre o fogo arcano é tão total que seu próprio corpo queima em manifestação permanente de poder. Kurogam-Enma não usa fire como elemento — usa fogo como linguagem, expressando sua vontade através de chamas que obedecem pensamentos.",
+        "lore": "Uma feiticeira cujo dom�nio sobre o fogo arcano � t�o total que seu pr�prio corpo queima em manifesta��o permanente de poder. Kurogam-Enma n�o usa fire como elemento � usa fogo como linguagem, expressando sua vontade atrav�s de chamas que obedecem pensamentos.",
         "ab": [
           "Inferno Arcano",
           "Chamas do Pensamento",
@@ -2580,18 +2580,18 @@
         "def": 72,
         "int": 92,
         "align": "chaos",
-        "region": "Torres do Exílio",
+        "region": "Torres do Ex�lio",
         "status": "Ativa"
       },
       {
         "n": "Melina",
         "f": "Melina-V-1.png",
         "t": "A Donzela Guia",
-        "role": "Maga da Orientação",
-        "lore": "Aparentemente gentil, Melina carrega um propósito devastador que ela própria questiona. Sua magia é de orientação e transformação — ela não destrói, ela dirige. Mas o que ela dirige pode ser tão destrutivo quanto qualquer arma. Conhece segredos dos Semi-Deuses que eles prefeririam que permanecessem secretos.",
+        "role": "Maga da Orienta��o",
+        "lore": "Aparentemente gentil, Melina carrega um prop�sito devastador que ela pr�pria questiona. Sua magia � de orienta��o e transforma��o � ela n�o destr�i, ela dirige. Mas o que ela dirige pode ser t�o destrutivo quanto qualquer arma. Conhece segredos dos Semi-Deuses que eles prefeririam que permanecessem secretos.",
         "ab": [
-          "Orientação da Chama",
-          "Transformação do Destino",
+          "Orienta��o da Chama",
+          "Transforma��o do Destino",
           "Segredos Divinos"
         ],
         "pow": 80,
@@ -2607,29 +2607,29 @@
         "f": "Shinso-V-1.png",
         "t": "O Mago do Raio Proibido",
         "role": "Praticante das Artes Proibidas",
-        "lore": "Um mago que cruzou deliberadamente os limites do que a ordem arcana permite — desenvolvendo técnicas de raio que desequilibram o próprio campo mágico ao redor. Shinso foi exilado não por ser maligno, mas por ser inconvenientemente poderoso para as estruturas estabelecidas.",
+        "lore": "Um mago que cruzou deliberadamente os limites do que a ordem arcana permite � desenvolvendo t�cnicas de raio que desequilibram o pr�prio campo m�gico ao redor. Shinso foi exilado n�o por ser maligno, mas por ser inconvenientemente poderoso para as estruturas estabelecidas.",
         "ab": [
           "Raio Proibido",
-          "Disrupção Mágica",
-          "Arte Proibida do Trovão"
+          "Disrup��o M�gica",
+          "Arte Proibida do Trov�o"
         ],
         "pow": 86,
         "spd": 85,
         "def": 72,
         "int": 90,
         "align": "chaos",
-        "region": "Torres do Exílio",
-        "status": "Exilado — Ativo"
+        "region": "Torres do Ex�lio",
+        "status": "Exilado � Ativo"
       },
       {
         "n": "Void",
         "f": "Void-V-1.png",
         "t": "O Arcano da Morte",
         "role": "Arquimago da Morte",
-        "lore": "Um feiticeiro que não estuda a morte como conceito filosófico, mas como sistema técnico manipulável. Void descobriu que a morte é uma forma de energia como qualquer outra — e que pode ser canalizada, redirecionada e amplificada. É o pesadelo de qualquer ser que acredita que morrer é o pior destino possível.",
+        "lore": "Um feiticeiro que n�o estuda a morte como conceito filos�fico, mas como sistema t�cnico manipul�vel. Void descobriu que a morte � uma forma de energia como qualquer outra � e que pode ser canalizada, redirecionada e amplificada. � o pesadelo de qualquer ser que acredita que morrer � o pior destino poss�vel.",
         "ab": [
-          "Manipulação da Morte",
-          "Arqueiro da Extinção",
+          "Manipula��o da Morte",
+          "Arqueiro da Extin��o",
           "Barreira do Fim"
         ],
         "pow": 87,
@@ -2637,7 +2637,7 @@
         "def": 80,
         "int": 97,
         "align": "evil",
-        "region": "Torres do Exílio",
+        "region": "Torres do Ex�lio",
         "status": "Pesquisando"
       },
       {
@@ -2645,10 +2645,10 @@
         "f": "Zephyr-V-1.png",
         "t": "O Caos do Vento",
         "role": "Mago das Tempestades",
-        "lore": "Um mago cujo domínio sobre ventos e tempestades é vasto mas notoriamente instável — a magia de Zephyr funciona perfeitamente quando ele mantém calma, o que raramente acontece. Extremamente poderoso em momentos de necessidade; perigosamente imprevisível no resto do tempo.",
+        "lore": "Um mago cujo dom�nio sobre ventos e tempestades � vasto mas notoriamente inst�vel � a magia de Zephyr funciona perfeitamente quando ele mant�m calma, o que raramente acontece. Extremamente poderoso em momentos de necessidade; perigosamente imprevis�vel no resto do tempo.",
         "ab": [
           "Tempestade do Caos",
-          "Vento do Impossível",
+          "Vento do Imposs�vel",
           "Controle pelo Caos"
         ],
         "pow": 85,
@@ -2656,18 +2656,18 @@
         "def": 70,
         "int": 82,
         "align": "chaos",
-        "region": "Torres do Exílio",
-        "status": "Ativo — Caótico"
+        "region": "Torres do Ex�lio",
+        "status": "Ativo � Ca�tico"
       },
       {
         "n": "Hajime",
         "f": "Hajime.png",
         "t": "O Hajime",
         "role": "Personagem de Magos",
-        "lore": "Hajime é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Magos, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Hajime é um mágico branco que carrega um livro amaldiçoado — cada página lida consome um ano de vida. Mas também revela segredos que impedem guerras. Sua ferida: pagar anos por respostas. Sua promessa: terminar o livro antes que o tempo acabe.",
         "ab": [
           "Golpe de Magos",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 67,
@@ -2675,7 +2675,7 @@
         "def": 56,
         "int": 63,
         "align": "neutral",
-        "region": "Torres do Exílio",
+        "region": "Torres do Ex�lio",
         "status": "Ativo"
       }
     ]
@@ -2687,18 +2687,18 @@
     "color": "#bdc3c7",
     "glow": "rgba(189,195,199,0.5)",
     "color2": "#ffffff",
-    "icon": "◈",
+    "icon": "?",
     "count": 12,
     "region": "Desconhecida",
-    "trait": "O único ser entre dois mundos",
-    "desc": "Uma categoria de uma única existência conhecida — a Meio-Sangue. Nascida de pai demoníaco e mãe semi-divina, ro é um paradoxo impossível que a física e a magia de Eryndor deveriam ter impedido de existir. Ela é a chave das profecias de salvação e destruição do mundo.",
+    "trait": "O �nico ser entre dois mundos",
+    "desc": "Uma categoria de uma �nica exist�ncia conhecida � a Meio-Sangue. Nascida de pai demon�aco e m�e semi-divina, ro � um paradoxo imposs�vel que a f�sica e a magia de Eryndor deveriam ter impedido de existir. Ela � a chave das profecias de salva��o e destrui��o do mundo.",
     "characters": [
       {
         "n": "Kaelia",
         "f": "Kaelia-V-1.png",
-        "t": "A Filha do Impossível",
-        "role": "Meio-Sangue — Chave das Profecias",
-        "lore": "Nascida de um Demônio e uma Semi-Deusa em uma união que deveria ser impossível, Kaelia carrega em seu sangue tanto o poder destrutivo de Sombrath quanto a graça divina de Aethelos. Pode atravessar todos os planos de existência sem dano. Pode fechar a Fissura do Vazio — mas fechá-la pode exigir sua própria aniquilação. Ela sabe disso. Ainda assim, caminha em direção ao seu destino.",
+        "t": "A Filha do Imposs�vel",
+        "role": "Meio-Sangue � Chave das Profecias",
+        "lore": "Nascida de um Dem�nio e uma Semi-Deusa em uma uni�o que deveria ser imposs�vel, Kaelia carrega em seu sangue tanto o poder destrutivo de Sombrath quanto a gra�a divina de Aethelos. Pode atravessar todos os planos de exist�ncia sem dano. Pode fechar a Fissura do Vazio � mas fech�-la pode exigir sua pr�pria aniquila��o. Ela sabe disso. Ainda assim, caminha em dire��o ao seu destino.",
         "ab": [
           "Travessia entre Planos",
           "Sangue dos Dois Mundos",
@@ -2709,7 +2709,7 @@
         "def": 85,
         "int": 95,
         "align": "good",
-        "region": "Errante — Buscada por Todos",
+        "region": "Errante � Buscada por Todos",
         "status": "A Profecia a Encontra"
       },
       {
@@ -2717,10 +2717,10 @@
         "f": "Barba-Branca-V-1.png",
         "t": "O Imperador dos Mares",
         "role": "Lenda do Mar e do Sangue",
-        "lore": "Barba Branca nasceu humano, mas o mar o moldou como se fosse uma raça à parte. Suas batalhas contra monstros e impérios deixaram nele marcas de algo além da humanidade comum. Depois de cruzar linhas que poucos humanos sobreviveriam para contar, foi reconhecido entre os Meio-Sangue como alguém que carrega forças incompatíveis no mesmo corpo.",
+        "lore": "Barba Branca nasceu humano, mas o mar o moldou como se fosse uma ra�a � parte. Suas batalhas contra monstros e imp�rios deixaram nele marcas de algo al�m da humanidade comum. Depois de cruzar linhas que poucos humanos sobreviveriam para contar, foi reconhecido entre os Meio-Sangue como algu�m que carrega for�as incompat�veis no mesmo corpo.",
         "ab": [
-          "Terremoto Sísmico",
-          "Voz do Trovão",
+          "Terremoto S�smico",
+          "Voz do Trov�o",
           "Maremoto"
         ],
         "pow": 98,
@@ -2728,18 +2728,18 @@
         "def": 90,
         "int": 85,
         "align": "neutral",
-        "region": "Lendário",
-        "status": "Falecido — Lenda"
+        "region": "Lend�rio",
+        "status": "Falecido � Lenda"
       },
       {
         "n": "Katauri",
         "f": "Katauri-2.png",
         "t": "A Espada do Limiar",
         "role": "Duellista entre Sangues",
-        "lore": "Katauri nunca pertenceu inteiramente aos humanos. A linhagem que o gerou foi marcada por uma antiga mistura de sangue demoníaco e divino, algo que ele passou a esconder por anos. Ao aceitar essa verdade, tornou-se Meio-Sangue e passou a lutar como ponte viva entre pureza e corrupção.",
+        "lore": "Katauri nunca pertenceu inteiramente aos humanos. A linhagem que o gerou foi marcada por uma antiga mistura de sangue demon�aco e divino, algo que ele passou a esconder por anos. Ao aceitar essa verdade, tornou-se Meio-Sangue e passou a lutar como ponte viva entre pureza e corrup��o.",
         "ab": [
           "Corte Perfeito",
-          "Técnica do Oriente",
+          "T�cnica do Oriente",
           "Velocidade do Raio"
         ],
         "pow": 86,
@@ -2755,10 +2755,10 @@
         "f": "Gorefist-V-1.png",
         "t": "O Gorefist",
         "role": "Personagem de Meio-Sangue",
-        "lore": "Gorefist é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Meio-Sangue, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Gorefist era um mercador que vendeu armas até ser pego por seu próprio horror. O Kore transformou suas obrigações em lâminas que crescem da mão. Sua ferida: comerciar com o próprio mal. Sua promessa: enfrentar quem compra seu veneno.",
         "ab": [
           "Golpe de Meio-Sangue",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -2774,10 +2774,10 @@
         "f": "Ibaraki-V-1.png",
         "t": "O Ibaraki",
         "role": "Personagem de Meio-Sangue",
-        "lore": "Ibaraki é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Meio-Sangue, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Ibaraki era um oni que serviu humanos antes da Fratura. Agora sua forma oni é fruto da proteção que lhe foi negada. Sua ferida: ser temido por quem protege. Sua promessa: provar que monstro pode ser guardião.",
         "ab": [
           "Golpe de Meio-Sangue",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 67,
@@ -2793,10 +2793,10 @@
         "f": "Kross-V-1.png",
         "t": "O Kross",
         "role": "Personagem de Meio-Sangue",
-        "lore": "Kross é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Meio-Sangue, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Kross era um ladrão que roubou cristais antes de ser transformado em um. Sua culpa é uma lâmina que corta a própria alma. Sua ferida: cada pedra roubada sangra. Sua promessa: devolver tudo sem deixar rastres.",
         "ab": [
           "Golpe de Meio-Sangue",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -2812,10 +2812,10 @@
         "f": "Kuma-V-1.png",
         "t": "O Kuma",
         "role": "Personagem de Meio-Sangue",
-        "lore": "Kuma é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Meio-Sangue, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Kuma era um bruxo que tentou selar a Fratura sozinho. Falhou e perdeu memórias em troca de poderes que não domina completamente. Sua ferida: esquecer o que precisa lembrar. Sua promessa: selar o que abriu.",
         "ab": [
           "Golpe de Meio-Sangue",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -2831,10 +2831,10 @@
         "f": "Saru-V-1.png",
         "t": "O Saru",
         "role": "Personagem de Meio-Sangue",
-        "lore": "Saru é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Meio-Sangue, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Saru era um sacerdote que rezava para acalmar os monstros. O Kore transformou suas preces em gritos que convocam caos. Sua ferida: bendizer para corromper. Sua promessa: restaurar a paz perdida.",
         "ab": [
           "Golpe de Meio-Sangue",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -2850,10 +2850,10 @@
         "f": "Solan-V-1.png",
         "t": "O Solan",
         "role": "Personagem de Meio-Sangue",
-        "lore": "Solan é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Meio-Sangue, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Solan era um arqueiro que mirou demônios antes de seus olhos se tornarem flechas vivas. Cada inimigo visto se torna seu alvo inevitável. Sua ferida: tocar sem atirar. Sua promessa: acertar a última flecha.",
         "ab": [
           "Golpe de Meio-Sangue",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -2869,10 +2869,10 @@
         "f": "Tentaku-V-1.png",
         "t": "O Tentaku",
         "role": "Personagem de Meio-Sangue",
-        "lore": "Tentaku é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Meio-Sangue, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Tentaku era um general que marcou o front com sinos. Agora sua batalha é um coro de metais que faz o chão tremer. Sua ferida: ouvir sinos sem silêncio. Sua promessa: tocar final sem ruína.",
         "ab": [
           "Golpe de Meio-Sangue",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 67,
@@ -2888,10 +2888,10 @@
         "f": "Thorne-V-1.png",
         "t": "O Thorne",
         "role": "Personagem de Meio-Sangue",
-        "lore": "Thorne é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Meio-Sangue, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Thorne era um assassino que matou reis antes de ser tocado por um Kore negro. Sua lâmina agora consome promessas quebradas. Sua ferida: servir a ninguém. Sua promessa: cumprir a última missão.",
         "ab": [
           "Golpe de Meio-Sangue",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -2907,10 +2907,10 @@
         "f": "Valerion-V-1.png",
         "t": "O Valerion",
         "role": "Personagem de Meio-Sangue",
-        "lore": "Valerion é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Meio-Sangue, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Valerion era um cavaleiro que jurou lealdade a um rei morto. O Kore transformou seu juramento em marcas que brilham em inimigos. Sua ferida: honrar sem senhor. Sua promessa: encontrar o rei que ainda vive.",
         "ab": [
           "Golpe de Meio-Sangue",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -2930,20 +2930,20 @@
     "color": "#27ae60",
     "glow": "rgba(39,174,96,0.4)",
     "color2": "#5ce89a",
-    "icon": "🦷",
+    "icon": "??",
     "count": 25,
     "region": "Wildmere / Profundezas",
-    "trait": "Criaturas além da categorização normal",
-    "desc": "Seres que não se encaixam nas categorias convencionais — criaturas antigas, animais que evoluíram além do reconhecível, ou entidades que emergiram de concentrações anômalas de energia. Os Monstros não têm agenda política; agem por instinto, território ou fome.",
+    "trait": "Criaturas al�m da categoriza��o normal",
+    "desc": "Seres que n�o se encaixam nas categorias convencionais � criaturas antigas, animais que evolu�ram al�m do reconhec�vel, ou entidades que emergiram de concentra��es an�malas de energia. Os Monstros n�o t�m agenda pol�tica; agem por instinto, territ�rio ou fome.",
     "characters": [
       {
         "n": "Battle Beast",
         "f": "Battle-Beast-V-1.png",
-        "t": "O Campeão dos Monstros",
-        "role": "Campeão das Bestas",
-        "lore": "Um leão humanóide em armadura de guerra — o único Monstro com cognição avançada e código de honra. Battle Beast é campeão de sua espécie: combate os mais fortes que encontra para garantir que os Monstros não sejam extintos por nenhuma das facções da guerra. Sua armadura vermelha é feita de materiais que nenhuma forja humana pode reproduzir.",
+        "t": "O Campe�o dos Monstros",
+        "role": "Campe�o das Bestas",
+        "lore": "Um le�o human�ide em armadura de guerra � o �nico Monstro com cogni��o avan�ada e c�digo de honra. Battle Beast � campe�o de sua esp�cie: combate os mais fortes que encontra para garantir que os Monstros n�o sejam extintos por nenhuma das fac��es da guerra. Sua armadura vermelha � feita de materiais que nenhuma forja humana pode reproduzir.",
         "ab": [
-          "Garra do Campeão",
+          "Garra do Campe�o",
           "Rugido de Guerra",
           "Honra da Besta"
         ],
@@ -2960,11 +2960,11 @@
         "f": "Besouro-V-1.png",
         "t": "O Cavaleiro Inseto",
         "role": "Guerreiro Inseto Ancestral",
-        "lore": "Um inseto evoluído ao longo de milênios por exposição a energia Kore residual, tornando-se um ser de armadura natural quase impenetrável. Besouro não tem motivação além da sobrevivência e território — mas seu território é enorme e sua determinação em protegê-lo é absoluta.",
+        "lore": "Um inseto evolu�do ao longo de mil�nios por exposi��o a energia Kore residual, tornando-se um ser de armadura natural quase impenetr�vel. Besouro n�o tem motiva��o al�m da sobreviv�ncia e territ�rio � mas seu territ�rio � enorme e sua determina��o em proteg�-lo � absoluta.",
         "ab": [
           "Armadura Quitinosa",
           "Chifre Perfurante",
-          "Resistência Absurda"
+          "Resist�ncia Absurda"
         ],
         "pow": 82,
         "spd": 72,
@@ -2979,10 +2979,10 @@
         "f": "Davy-Jones-V-1.png",
         "t": "O Terror dos Mares",
         "role": "Horror Abissal",
-        "lore": "A forma monstruosa completa do Capitão Davy Jones — quando abandona qualquer semblança humana e manifesta toda a sua natureza de criatura abissal. Tentáculos, chifres, uma face de pesadelo oceânico. Esta é o que o pacto o tornou completamente, longe de qualquer ilusão.",
+        "lore": "A forma monstruosa completa do Capit�o Davy Jones � quando abandona qualquer semblan�a humana e manifesta toda a sua natureza de criatura abissal. Tent�culos, chifres, uma face de pesadelo oce�nico. Esta � o que o pacto o tornou completamente, longe de qualquer ilus�o.",
         "ab": [
-          "Tentáculos do Abismo",
-          "Horror Aquático",
+          "Tent�culos do Abismo",
+          "Horror Aqu�tico",
           "Voz das Profundezas"
         ],
         "pow": 90,
@@ -2996,13 +2996,13 @@
       {
         "n": "Gloop",
         "f": "Gloop-V-1.png",
-        "t": "A Anomalia Harmônica",
+        "t": "A Anomalia Harm�nica",
         "role": "Entidade Misteriosa",
-        "lore": "Uma criatura de aparência benigna e sons musicais cujo poder real permanece incompreendido. Gloop absorve e retransmite energia em frequências que afetam a magia ao redor. É possivelmente um mecanismo de equilíbrio natural — ou uma arma de uma inteligência que ainda não se revelou.",
+        "lore": "Uma criatura de apar�ncia benigna e sons musicais cujo poder real permanece incompreendido. Gloop absorve e retransmite energia em frequ�ncias que afetam a magia ao redor. � possivelmente um mecanismo de equil�brio natural � ou uma arma de uma intelig�ncia que ainda n�o se revelou.",
         "ab": [
-          "Absorção de Energia",
-          "Transmissão Harmônica",
-          "Anomalia Inexplicável"
+          "Absor��o de Energia",
+          "Transmiss�o Harm�nica",
+          "Anomalia Inexplic�vel"
         ],
         "pow": 60,
         "spd": 55,
@@ -3015,12 +3015,12 @@
       {
         "n": "Guardian Ape",
         "f": "Guardian-Ape-V-1.png",
-        "t": "O Guardião Sem Cabeça",
-        "role": "Guardião das Florestas Esquecidas",
-        "lore": "O protetor dos Pântanos Esquecidos — um macaco colossal que sobreviveu a uma decapitação por pura força de vontade territorial. Sem cabeça, tornou-se paradoxalmente mais aterrorizante e mais poderoso. Uma entidade no pescoço cortado emite sons que dissolvem a magia ao redor.",
+        "t": "O Guardi�o Sem Cabe�a",
+        "role": "Guardi�o das Florestas Esquecidas",
+        "lore": "O protetor dos P�ntanos Esquecidos � um macaco colossal que sobreviveu a uma decapita��o por pura for�a de vontade territorial. Sem cabe�a, tornou-se paradoxalmente mais aterrorizante e mais poderoso. Uma entidade no pesco�o cortado emite sons que dissolvem a magia ao redor.",
         "ab": [
-          "Fúria Sem Cabeça",
-          "Possessão Territorial",
+          "F�ria Sem Cabe�a",
+          "Possess�o Territorial",
           "Roar Dissolvente"
         ],
         "pow": 88,
@@ -3028,15 +3028,15 @@
         "def": 85,
         "int": 35,
         "align": "neutral",
-        "region": "Pântanos Esquecidos",
+        "region": "P�ntanos Esquecidos",
         "status": "Guardando"
       },
       {
-        "n": "Irmã Friede",
-        "f": "Irmã-Friede-V-1.png",
-        "t": "A Freira das Ruínas Geladas",
+        "n": "Irm� Friede",
+        "f": "Irm�-Friede-V-1.png",
+        "t": "A Freira das Ru�nas Geladas",
         "role": "Fantasma Assassino do Gelo",
-        "lore": "Uma entidade que habita ruínas cobertas de neve eterno — uma freira de aparência serena que se torna algo de pesadelo ao combate. Friede não defende seu território; é o território. É o frio, o silêncio e a morte branca que habitam aquelas ruínas.",
+        "lore": "Uma entidade que habita ru�nas cobertas de neve eterno � uma freira de apar�ncia serena que se torna algo de pesadelo ao combate. Friede n�o defende seu territ�rio; � o territ�rio. � o frio, o sil�ncio e a morte branca que habitam aquelas ru�nas.",
         "ab": [
           "Guilhotina de Gelo",
           "Invisibilidade no Gelo",
@@ -3047,19 +3047,19 @@
         "def": 78,
         "int": 82,
         "align": "evil",
-        "region": "Ruínas do Norte",
+        "region": "Ru�nas do Norte",
         "status": "Habitando"
       },
       {
         "n": "Pyrogon",
         "f": "Pyrogon-V-1.png",
-        "t": "O Dragão das Furnas",
-        "role": "Dragão Vulcânico",
-        "lore": "Um dragão nascido nas câmaras mais profundas dos vulcões de Ignareth, Pyrogon é feito literalmente de magma solidificado e chamas vivas. Não tem escamas — tem lava que flui e se solidifica em tempo real. Combate ao seu lado significa inevitavelmente lutar no fogo.",
+        "t": "O Drag�o das Furnas",
+        "role": "Drag�o Vulc�nico",
+        "lore": "Um drag�o nascido nas c�maras mais profundas dos vulc�es de Ignareth, Pyrogon � feito literalmente de magma solidificado e chamas vivas. N�o tem escamas � tem lava que flui e se solidifica em tempo real. Combate ao seu lado significa inevitavelmente lutar no fogo.",
         "ab": [
           "Sopro de Magma Puro",
           "Corpo de Lava",
-          "Fusão Vulcânica"
+          "Fus�o Vulc�nica"
         ],
         "pow": 90,
         "spd": 70,
@@ -3072,11 +3072,11 @@
       {
         "n": "Ratatoskr",
         "f": "Ratatoskr-V-1.png",
-        "t": "O Guardião da Árvore",
-        "role": "Guardião da Árvore do Mundo",
-        "lore": "O esquilo que corre pelo tronco da Árvore do Mundo — um mensageiro de aparência enganosamente adorável que carrega mensagens entre as raízes e os galhos mais altos. Ratatoskr conhece mais segredos do que qualquer ser em Eryndor, e manipula a todos com informações estrategicamente compartilhadas.",
+        "t": "O Guardi�o da �rvore",
+        "role": "Guardi�o da �rvore do Mundo",
+        "lore": "O esquilo que corre pelo tronco da �rvore do Mundo � um mensageiro de apar�ncia enganosamente ador�vel que carrega mensagens entre as ra�zes e os galhos mais altos. Ratatoskr conhece mais segredos do que qualquer ser em Eryndor, e manipula a todos com informa��es estrategicamente compartilhadas.",
         "ab": [
-          "Velocidade da Árvore",
+          "Velocidade da �rvore",
           "Conhecimento de Todos os Segredos",
           "Mensagens que Movem o Mundo"
         ],
@@ -3085,19 +3085,19 @@
         "def": 48,
         "int": 100,
         "align": "chaos",
-        "region": "Árvore do Mundo",
+        "region": "�rvore do Mundo",
         "status": "Ativo"
       },
       {
         "n": "Root",
         "f": "Root-V-1.png",
         "t": "A Besta Primordial",
-        "role": "Criatura da Mutação Pura",
-        "lore": "Uma criatura que representa o que acontece quando a natureza perde completamente seu rumo — mutações sobre mutações, resultando em algo que desafia qualquer categorização. Root não é hostil por natureza; é o que é por acidente evolutivo em um mundo de energia Kore.",
+        "role": "Criatura da Muta��o Pura",
+        "lore": "Uma criatura que representa o que acontece quando a natureza perde completamente seu rumo � muta��es sobre muta��es, resultando em algo que desafia qualquer categoriza��o. Root n�o � hostil por natureza; � o que � por acidente evolutivo em um mundo de energia Kore.",
         "ab": [
-          "Mutação Constante",
-          "Adaptação Instintiva",
-          "Força da Deformação"
+          "Muta��o Constante",
+          "Adapta��o Instintiva",
+          "For�a da Deforma��o"
         ],
         "pow": 78,
         "spd": 65,
@@ -3112,10 +3112,10 @@
         "f": "Behemoth-V-1.png",
         "t": "O Behemoth",
         "role": "Personagem de Monstros",
-        "lore": "Behemoth é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Behemoth era uma besta primordial que o Kore imbuiu com mente. Sua fome é agora uma batalha instintiva. Sua ferida: devorar sem fome. Sua promessa: saciar a voracidade do mundo.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -3131,10 +3131,10 @@
         "f": "Drakul-Zar-V-1.png",
         "t": "O Drakul Zar",
         "role": "Personagem de Monstros",
-        "lore": "Drakul Zar é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Drakul Zar era um vampira que bebeu o sangue do sol. Sua noite é agora eternidade de fogo. Sua ferida: sede que queima. Sua promessa: beber a última gota de luz.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -3150,10 +3150,10 @@
         "f": "Garchomp-V-1.png",
         "t": "O Garchomp",
         "role": "Personagem de Monstros",
-        "lore": "Garchomp é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Garchomp era um dragão-marinho que evoluiu ao tocar um cristal. Sua velocidade corta os céus como águas. Sua ferida: nadar sem oceano. Sua promessa: encontrar as águas.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -3169,10 +3169,10 @@
         "f": "Gargul-V-1.png",
         "t": "O Gargul",
         "role": "Personagem de Monstros",
-        "lore": "Gargul é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Gargul era um golem que ganhou consciência ao absorver fragmentos de Kore. Sua pedra agora fala mas sem voz. Sua ferida: existir sem som. Sua promessa: falar sem palavras.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -3188,10 +3188,10 @@
         "f": "Glacius-V-1.png",
         "t": "O Glacius",
         "role": "Personagem de Monstros",
-        "lore": "Glacius é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Glacius era um elemental gelo que o Kore derreteu parcialmente. Sua forma é agora vapor congelado que corta a carne. Sua ferida: derreter sem dissolver. Sua promessa: solidificar a tempestade.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 67,
@@ -3207,10 +3207,10 @@
         "f": "Gnash-V-1.png",
         "t": "O Gnash",
         "role": "Personagem de Monstros",
-        "lore": "Gnash é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Gnash era um demônio que perdeu asas e força. Sua boca é agora uma lâmina infinita. Sua ferida: morder sem mandíbula. Sua promessa: mastigar o coração.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -3226,10 +3226,10 @@
         "f": "Gorgoroth-V-1.png",
         "t": "O Gorgoroth",
         "role": "Personagem de Monstros",
-        "lore": "Gorgoroth é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Gorgoroth era um titã que o Kore transformou em monstro de pedra. Sua ira é agora um terremoto. Sua ferida: rugir sem eco. Sua promessa: fazer o chão tremer.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -3245,10 +3245,10 @@
         "f": "Ignisaurus-V-1.png",
         "t": "O Ignisaurus",
         "role": "Personagem de Monstros",
-        "lore": "Ignisaurus é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Ignisaurus era um dinossauro que evoluiu ao tocar um cristal incandescente. Sua chama consome tudo mas sem fogo. Sua ferida: arder sem calor. Sua promessa: apagar o fogo interno.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -3264,10 +3264,10 @@
         "f": "Kongor-V-1.png",
         "t": "O Kongor",
         "role": "Personagem de Monstros",
-        "lore": "Kongor é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Kongor era um gorila gigante que o Kore tornou mais selvagem. Sua força é agora uma tormenta de golpes. Sua ferida: agarrar sem toque. Sua promessa: abraçar sem força.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -3283,10 +3283,10 @@
         "f": "Kragor-V-1.png",
         "t": "O Kragor",
         "role": "Personagem de Monstros",
-        "lore": "Kragor é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Kragor era um minotauro que o Kore imbuiu com magia flamejante. Sua força é agora combustão viva. Sua ferida: queimar sem lama. Sua promessa: acalmar a chama.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -3302,10 +3302,10 @@
         "f": "Kragos-V-1.png",
         "t": "O Kragos",
         "role": "Personagem de Monstros",
-        "lore": "Kragos é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Kragos era um esqueleto animado por energia de cristal. Sua ossada é agora uma armadura viva. Sua ferida: viver sem carne. Sua promessa: tocar o peito.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -3321,10 +3321,10 @@
         "f": "Necros-V-1.png",
         "t": "O Necros",
         "role": "Personagem de Monstros",
-        "lore": "Necros é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Necros era um necromante que o Kore transformou em morto-vivo. Sua mágica invoca exércitos de ossos. Sua ferida: comandar sem viver. Sua promessa: encontrar os vivos.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -3340,10 +3340,10 @@
         "f": "Ossifago-V-1.png",
         "t": "O Ossifago",
         "role": "Personagem de Monstros",
-        "lore": "Ossifago é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Ossifago era um canibal que o Kore transformou em monstro de espinhos. Sua fome é agora perfuração viva. Sua ferida: devorar sem boca. Sua promessa: mastigar o ar.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -3359,10 +3359,10 @@
         "f": "Vermithrax-V-1.png",
         "t": "O Vermithrax",
         "role": "Personagem de Monstros",
-        "lore": "Vermithrax é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Vermithrax era uma rainha vampira que o Kore transformou em dragão. Sua asa envolve o ceu todo. Sua ferida: voar sem voo. Sua promessa: tocar o solo.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -3378,10 +3378,10 @@
         "f": "Volcanus-V-1.png",
         "t": "O Volcanus",
         "role": "Personagem de Monstros",
-        "lore": "Volcanus é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Volcanus era um vulcão que ganhou forma e mente. Sua erupção é agora consciencia. Sua ferida: queimar sem força. Sua promessa: serenar a lava.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -3397,10 +3397,10 @@
         "f": "Vorgas-V-1.png",
         "t": "O Vorgas",
         "role": "Personagem de Monstros",
-        "lore": "Vorgas é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Monstros, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Vorgas era um gigante de lodo que o Kore endureceu. Sua lama é agora cinza viva. Sua ferida: mover sem passos. Sua promessa: andar sem mover.",
         "ab": [
           "Golpe de Monstros",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -3420,22 +3420,22 @@
     "color": "#f39c12",
     "glow": "rgba(243,156,18,0.45)",
     "color2": "#ffd460",
-    "icon": "🧬",
+    "icon": "??",
     "count": 32,
     "region": "Wildmere / Errante",
-    "trait": "Transformados pela corrupção do Kore",
-    "desc": "Seres que foram expostos à energia Kore corrompida e transformados — não destruídos, mas reescritos. Cada Mutante é uma história de identidade perdida e poder não pedido. Alguns abraçam o que se tornaram; a maioria luta com isso eternamente.",
+    "trait": "Transformados pela corrup��o do Kore",
+    "desc": "Seres que foram expostos � energia Kore corrompida e transformados � n�o destru�dos, mas reescritos. Cada Mutante � uma hist�ria de identidade perdida e poder n�o pedido. Alguns abra�am o que se tornaram; a maioria luta com isso eternamente.",
     "characters": [
       {
         "n": "Bone Kore",
         "f": "Bone-Kore-V-1.png",
         "t": "O Arsenal de Ossos",
         "role": "Arsenal Vivo",
-        "lore": "Os ossos de Bone-Kore cresceram para fora de seu corpo em resposta à energia Kore, criando uma armadura natural e um arsenal orgânico. Cada espículo de osso é uma arma potencial. Seu sistema nervoso reescreveu-se para sentir os ossos externos como extremidades funcionais.",
+        "lore": "Os ossos de Bone-Kore cresceram para fora de seu corpo em resposta � energia Kore, criando uma armadura natural e um arsenal org�nico. Cada esp�culo de osso � uma arma potencial. Seu sistema nervoso reescreveu-se para sentir os ossos externos como extremidades funcionais.",
         "ab": [
-          "Lança de Osso",
+          "Lan�a de Osso",
           "Armadura Natural",
-          "Regeneração Óssea"
+          "Regenera��o �ssea"
         ],
         "pow": 84,
         "spd": 72,
@@ -3449,12 +3449,12 @@
         "n": "Crush",
         "f": "Crush-V-1.png",
         "t": "O Bruto Mutado",
-        "role": "Força Bruta Pura",
-        "lore": "Uma mutação que amplificou cada fibra muscular ao extremo — Crush é o que a fisiologia humana parece quando reescrita sem restrições. Não tem velocidade, não tem técnica sofisticada, mas sua força é tão absurda que a técnica torna-se irrelevante. Uma montanha que decide caminhar.",
+        "role": "For�a Bruta Pura",
+        "lore": "Uma muta��o que amplificou cada fibra muscular ao extremo � Crush � o que a fisiologia humana parece quando reescrita sem restri��es. N�o tem velocidade, n�o tem t�cnica sofisticada, mas sua for�a � t�o absurda que a t�cnica torna-se irrelevante. Uma montanha que decide caminhar.",
         "ab": [
-          "Força Ilimitada",
+          "For�a Ilimitada",
           "Impacto do Coloso",
-          "Resistência Mutante"
+          "Resist�ncia Mutante"
         ],
         "pow": 92,
         "spd": 48,
@@ -3467,13 +3467,13 @@
       {
         "n": "Echo Kore",
         "f": "Echo-Kore-V-1.png",
-        "t": "O Mutante Sônico",
+        "t": "O Mutante S�nico",
         "role": "Guerreiro do Som",
-        "lore": "Uma mutação de morcego que integrou energia Kore, criando um ser capaz de emitir ondas sônicas que destroem matéria em nível molecular. Echo-Kore usa ecolocalização para enxergar além de qualquer sentido normal — e o que vê, pode destruir com precisão cirúrgica.",
+        "lore": "Uma muta��o de morcego que integrou energia Kore, criando um ser capaz de emitir ondas s�nicas que destroem mat�ria em n�vel molecular. Echo-Kore usa ecolocaliza��o para enxergar al�m de qualquer sentido normal � e o que v�, pode destruir com precis�o cir�rgica.",
         "ab": [
-          "Grito Sônico",
-          "Ecolocalização Perfeita",
-          "Disrupção Molecular"
+          "Grito S�nico",
+          "Ecolocaliza��o Perfeita",
+          "Disrup��o Molecular"
         ],
         "pow": 82,
         "spd": 90,
@@ -3486,31 +3486,31 @@
       {
         "n": "Gale",
         "f": "Gale-V-1.png",
-        "t": "O Caçador do Vento",
-        "role": "Predador Aéreo",
-        "lore": "Uma mutação entre pássaro e morcego que resultou em domínio absoluto do ar. Gale não só voa — comanda ventos e correntes de ar como extensões de seu próprio corpo. Seu método de caça é remover o ar ao redor da presa até o necessário.",
+        "t": "O Ca�ador do Vento",
+        "role": "Predador A�reo",
+        "lore": "Uma muta��o entre p�ssaro e morcego que resultou em dom�nio absoluto do ar. Gale n�o s� voa � comanda ventos e correntes de ar como extens�es de seu pr�prio corpo. Seu m�todo de ca�a � remover o ar ao redor da presa at� o necess�rio.",
         "ab": [
-          "Domínio do Ar",
-          "Vácuo",
-          "Voo Supersônico"
+          "Dom�nio do Ar",
+          "V�cuo",
+          "Voo Supers�nico"
         ],
         "pow": 80,
         "spd": 96,
         "def": 68,
         "int": 72,
         "align": "neutral",
-        "region": "Céus de Wildmere",
-        "status": "Caçando"
+        "region": "C�us de Wildmere",
+        "status": "Ca�ando"
       },
       {
         "n": "Kakuzu",
         "f": "Kakuzu-V-1.png",
         "t": "O Costurado",
-        "role": "Multi-Célula Adaptativo",
-        "lore": "Um ser costurado — literalmente unido de múltiplos corpos, cada um com poderes elementares diferentes. A mutação do Kore fundiu Kakuzu com seus inimigos mortos, expandindo o original com cada ser que derrota. Cada parte de seu corpo tem sua própria consciência, que ele coordena com dificuldade crescente.",
+        "role": "Multi-C�lula Adaptativo",
+        "lore": "Um ser costurado � literalmente unido de m�ltiplos corpos, cada um com poderes elementares diferentes. A muta��o do Kore fundiu Kakuzu com seus inimigos mortos, expandindo o original com cada ser que derrota. Cada parte de seu corpo tem sua pr�pria consci�ncia, que ele coordena com dificuldade crescente.",
         "ab": [
-          "Cinco Corações",
-          "Adaptação Elemental",
+          "Cinco Cora��es",
+          "Adapta��o Elemental",
           "Costura da Morte"
         ],
         "pow": 88,
@@ -3526,11 +3526,11 @@
         "f": "Lobisome-V-1.png",
         "t": "O Primeiro Lobisomem",
         "role": "Alfa Original",
-        "lore": "O primeiro da linhagem — o protótipo da mutação lobisomem que se espalharia por Eryndor. Lobisome não escolheu a transformação mas abraçou-a completamente. Lidera seu clã com autoridade que combina instinto animal e inteligência predatória refinada.",
+        "lore": "O primeiro da linhagem � o prot�tipo da muta��o lobisomem que se espalharia por Eryndor. Lobisome n�o escolheu a transforma��o mas abra�ou-a completamente. Lidera seu cl� com autoridade que combina instinto animal e intelig�ncia predat�ria refinada.",
         "ab": [
-          "Transformação Alfa",
+          "Transforma��o Alfa",
           "Chamado da Alcateia",
-          "Fúria da Lua"
+          "F�ria da Lua"
         ],
         "pow": 83,
         "spd": 88,
@@ -3543,12 +3543,12 @@
       {
         "n": "Lobisomem V2",
         "f": "Lobisomem-V-2.png",
-        "t": "A Segunda Evolução",
-        "role": "Lobisomem Evoluído Beta",
-        "lore": "A segunda geração da linhagem lobisomem — maior, mais rápido, mais capaz de controlar a transformação. Representa o sucesso da adaptação: onde a primeira geração sofria, a segunda prosperou.",
+        "t": "A Segunda Evolu��o",
+        "role": "Lobisomem Evolu�do Beta",
+        "lore": "A segunda gera��o da linhagem lobisomem � maior, mais r�pido, mais capaz de controlar a transforma��o. Representa o sucesso da adapta��o: onde a primeira gera��o sofria, a segunda prosperou.",
         "ab": [
-          "Transformação Controlada",
-          "Garras do Caçador",
+          "Transforma��o Controlada",
+          "Garras do Ca�ador",
           "Sentidos Amplificados"
         ],
         "pow": 85,
@@ -3562,13 +3562,13 @@
       {
         "n": "Lobisomem V3",
         "f": "Lobisomem-V-3.png",
-        "t": "A Terceira Evolução",
-        "role": "Lobisomem Ápice",
-        "lore": "A terceira e atual geração da mutação lobisomem — quase não se assemelha mais ao lobo original. Esta versão integrou elementos dracônicos na mutação, criando algo novo. Marca o ponto onde a mutação deixou de ser corrupção e tornou-se evolução genuína.",
+        "t": "A Terceira Evolu��o",
+        "role": "Lobisomem �pice",
+        "lore": "A terceira e atual gera��o da muta��o lobisomem � quase n�o se assemelha mais ao lobo original. Esta vers�o integrou elementos drac�nicos na muta��o, criando algo novo. Marca o ponto onde a muta��o deixou de ser corrup��o e tornou-se evolu��o genu�na.",
         "ab": [
-          "Forma Dracônica-Lobisomem",
+          "Forma Drac�nica-Lobisomem",
           "Rugido Ancestral",
-          "Predador Ápice"
+          "Predador �pice"
         ],
         "pow": 88,
         "spd": 87,
@@ -3581,12 +3581,12 @@
       {
         "n": "Malagor",
         "f": "Malagor-V-1.png",
-        "t": "O Dragão das Serpentes",
-        "role": "Dragão Serpentino Caótico",
-        "lore": "Uma mutação que fundiu múltiplas criaturas serpentinas com energia dracônica — o resultado é um ser de múltiplas cabeças serpentinas e poder elemental desconcertante. Malagor não tem hierarquia interna clara entre suas cabeças, tornando seus ataques imprevisíveis mesmo para seus aliados.",
+        "t": "O Drag�o das Serpentes",
+        "role": "Drag�o Serpentino Ca�tico",
+        "lore": "Uma muta��o que fundiu m�ltiplas criaturas serpentinas com energia drac�nica � o resultado � um ser de m�ltiplas cabe�as serpentinas e poder elemental desconcertante. Malagor n�o tem hierarquia interna clara entre suas cabe�as, tornando seus ataques imprevis�veis mesmo para seus aliados.",
         "ab": [
-          "Veneno Dracônico",
-          "Múltiplas Mordidas",
+          "Veneno Drac�nico",
+          "M�ltiplas Mordidas",
           "Caos Serpentino"
         ],
         "pow": 87,
@@ -3600,13 +3600,13 @@
       {
         "n": "Rage Kore",
         "f": "Rage-Kore-V-1.png",
-        "t": "A Fúria Encarnada",
-        "role": "Entidade de Fúria",
-        "lore": "Uma mutação tão profundamente afetada pela raiva que a própria raiva tornou-se sua substância. Rage-Kore não está com raiva — é a raiva, manifestada em forma física. O cristal Kore que o criou absorveu décadas de sofrimento acumulado antes de transformá-lo.",
+        "t": "A F�ria Encarnada",
+        "role": "Entidade de F�ria",
+        "lore": "Uma muta��o t�o profundamente afetada pela raiva que a pr�pria raiva tornou-se sua subst�ncia. Rage-Kore n�o est� com raiva � � a raiva, manifestada em forma f�sica. O cristal Kore que o criou absorveu d�cadas de sofrimento acumulado antes de transform�-lo.",
         "ab": [
-          "Explosão de Raiva Pura",
-          "Forma da Fúria",
-          "Amplificação da Agonia"
+          "Explos�o de Raiva Pura",
+          "Forma da F�ria",
+          "Amplifica��o da Agonia"
         ],
         "pow": 90,
         "spd": 82,
@@ -3614,18 +3614,18 @@
         "int": 42,
         "align": "chaos",
         "region": "Korrfeld",
-        "status": "Ativo — Incontrolável"
+        "status": "Ativo � Incontrol�vel"
       },
       {
         "n": "Rin Kore",
         "f": "Rin-Kore-V-1.png",
         "t": "A Vampira do Kore",
-        "role": "Predadora Vampírica",
-        "lore": "Uma mutação que combinou características vampíricas com energia Kore — asas negras, garras afiadas e um apetite que vai além de sangue. Rin consome energia vital diretamente, e cada consumo a fortalece. Extremamente veloz e extremamente perigosa em combate próximo.",
+        "role": "Predadora Vamp�rica",
+        "lore": "Uma muta��o que combinou caracter�sticas vamp�ricas com energia Kore � asas negras, garras afiadas e um apetite que vai al�m de sangue. Rin consome energia vital diretamente, e cada consumo a fortalece. Extremamente veloz e extremamente perigosa em combate pr�ximo.",
         "ab": [
           "Consumo de Vida",
           "Asas do Vazio",
-          "Velocidade Vampírica"
+          "Velocidade Vamp�rica"
         ],
         "pow": 83,
         "spd": 95,
@@ -3633,18 +3633,18 @@
         "int": 78,
         "align": "evil",
         "region": "Errante",
-        "status": "Caçando"
+        "status": "Ca�ando"
       },
       {
         "n": "Satan Soul",
         "f": "Satan-Soul-V-1.png",
         "t": "A Absorvedora",
-        "role": "Portadora da Alma Demoníaca",
-        "lore": "Uma mutante que absorveu a alma de um demônio durante a Grande Fratura, fundindo-se com ela sem ser completamente consumida. Satan-Soul existe em equilíbrio precário entre sua identidade original e a entidade que coabita seu corpo — um equilíbrio que fica mais difícil manter a cada batalha.",
+        "role": "Portadora da Alma Demon�aca",
+        "lore": "Uma mutante que absorveu a alma de um dem�nio durante a Grande Fratura, fundindo-se com ela sem ser completamente consumida. Satan-Soul existe em equil�brio prec�rio entre sua identidade original e a entidade que coabita seu corpo � um equil�brio que fica mais dif�cil manter a cada batalha.",
         "ab": [
-          "Forma Demoníaca",
+          "Forma Demon�aca",
           "Chamas da Alma Dupla",
-          "Equilíbrio do Impossível"
+          "Equil�brio do Imposs�vel"
         ],
         "pow": 87,
         "spd": 82,
@@ -3659,9 +3659,9 @@
         "f": "Savage-V-1.png",
         "t": "O Lobo Selvagem",
         "role": "Besta Pura",
-        "lore": "Uma mutação lobisomem que perdeu completamente o lado humano — Savage é pura besta, puro instinto, pura fúria territorial. Mais poderoso que lobisomens com consciência porque não desperdiça energia em escolhas éticas.",
+        "lore": "Uma muta��o lobisomem que perdeu completamente o lado humano � Savage � pura besta, puro instinto, pura f�ria territorial. Mais poderoso que lobisomens com consci�ncia porque n�o desperdi�a energia em escolhas �ticas.",
         "ab": [
-          "Fúria Pura",
+          "F�ria Pura",
           "Garras da Besta",
           "Instinto de Predador"
         ],
@@ -3671,17 +3671,17 @@
         "int": 20,
         "align": "chaos",
         "region": "Wildmere",
-        "status": "Caçando"
+        "status": "Ca�ando"
       },
       {
         "n": "Tri Gorgon",
         "f": "Tri-Gorgon-V-1.png",
-        "t": "O Senhor das Gorgônas",
-        "role": "Gorgona de Três Cabeças",
-        "lore": "Uma mutação tripla da serpente petrificante — três gorgônas que fundiram seus poderes em um único ser de três cabeças. Cada cabeça tem um ângulo diferente de ataque, tornando impossível desviar de todas simultaneamente. A petrificação é completa em menos de três segundos de contato visual.",
+        "t": "O Senhor das Gorg�nas",
+        "role": "Gorgona de Tr�s Cabe�as",
+        "lore": "Uma muta��o tripla da serpente petrificante � tr�s gorg�nas que fundiram seus poderes em um �nico ser de tr�s cabe�as. Cada cabe�a tem um �ngulo diferente de ataque, tornando imposs�vel desviar de todas simultaneamente. A petrifica��o � completa em menos de tr�s segundos de contato visual.",
         "ab": [
           "Olhar Petrificante",
-          "Três Ângulos de Ataque",
+          "Tr�s �ngulos de Ataque",
           "Veneno das Serpentes"
         ],
         "pow": 85,
@@ -3696,12 +3696,12 @@
         "n": "Valthier",
         "f": "Valthier-V-1.png",
         "t": "O Predador Elegante",
-        "role": "Caçador Refinado",
-        "lore": "Um mutante de cabelos brancos que manteve sua elegância e inteligência apesar da transformação. Valthier é o exemplo de que mutação e civilidade não são incompatíveis — e usa essa distinção para ser subestimado, com resultados letais para quem o subestima.",
+        "role": "Ca�ador Refinado",
+        "lore": "Um mutante de cabelos brancos que manteve sua eleg�ncia e intelig�ncia apesar da transforma��o. Valthier � o exemplo de que muta��o e civilidade n�o s�o incompat�veis � e usa essa distin��o para ser subestimado, com resultados letais para quem o subestima.",
         "ab": [
-          "Lâmina de Kore",
+          "L�mina de Kore",
           "Refinamento Mortal",
-          "Presença do Predador"
+          "Presen�a do Predador"
         ],
         "pow": 85,
         "spd": 90,
@@ -3714,11 +3714,11 @@
       {
         "n": "Vespera",
         "f": "Vespera-V-1.png",
-        "t": "A Ferrão da Sombra",
+        "t": "A Ferr�o da Sombra",
         "role": "Predadora de Sombra e Veneno",
-        "lore": "Uma fusão de vespa e morcego com energia Kore escura — Vespera ataca de cima, na sombra, com um ferrão que paralysa antes de matar. Silenciosa, rápida, letal. É a assassina que os Mutantes usam quando precisam que o alvo nunca veja de onde veio o golpe.",
+        "lore": "Uma fus�o de vespa e morcego com energia Kore escura � Vespera ataca de cima, na sombra, com um ferr�o que paralysa antes de matar. Silenciosa, r�pida, letal. � a assassina que os Mutantes usam quando precisam que o alvo nunca veja de onde veio o golpe.",
         "ab": [
-          "Ferrão Paralisante",
+          "Ferr�o Paralisante",
           "Voo nas Sombras",
           "Veneno de Vespa"
         ],
@@ -3728,17 +3728,17 @@
         "int": 78,
         "align": "evil",
         "region": "Errante",
-        "status": "Missão"
+        "status": "Miss�o"
       },
       {
         "n": "Vyryn Wing",
         "f": "Vyrn-Wing-V-1.png",
-        "t": "O Predador Dracônico",
-        "role": "Predador dos Céus Dracônico",
-        "lore": "Uma mutação que integrou DNA dracônico na linhagem mutante, criando um predador aéreo de proporções impressionantes. Vyryn-Wing não tem a magia de um dragão completo, mas tem sua velocidade, suas garras e seu apetite territorial inexorável.",
+        "t": "O Predador Drac�nico",
+        "role": "Predador dos C�us Drac�nico",
+        "lore": "Uma muta��o que integrou DNA drac�nico na linhagem mutante, criando um predador a�reo de propor��es impressionantes. Vyryn-Wing n�o tem a magia de um drag�o completo, mas tem sua velocidade, suas garras e seu apetite territorial inexor�vel.",
         "ab": [
-          "Garras Dracônicas",
-          "Voo Predatório",
+          "Garras Drac�nicas",
+          "Voo Predat�rio",
           "Mergulho Letal"
         ],
         "pow": 83,
@@ -3746,7 +3746,7 @@
         "def": 75,
         "int": 58,
         "align": "neutral",
-        "region": "Céus de Wildmere",
+        "region": "C�us de Wildmere",
         "status": "Territorial"
       },
       {
@@ -3754,10 +3754,10 @@
         "f": "Aegis Prime-V-1.png",
         "t": "O Aegis Prime",
         "role": "Personagem de Mutantes",
-        "lore": "Aegis Prime é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Mutantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Placeholder",
         "ab": [
           "Golpe de Mutantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -3773,10 +3773,10 @@
         "f": "Bloodfang-V-1.png",
         "t": "O Bloodfang",
         "role": "Personagem de Mutantes",
-        "lore": "Bloodfang é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Mutantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Placeholder",
         "ab": [
           "Golpe de Mutantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -3792,10 +3792,10 @@
         "f": "Fenrir Rugidor-V-1.png",
         "t": "O Fenrir Rugidor",
         "role": "Personagem de Mutantes",
-        "lore": "Fenrir Rugidor é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Mutantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Placeholder",
         "ab": [
           "Golpe de Mutantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -3811,10 +3811,10 @@
         "f": "Frostbite-V-1.png",
         "t": "O Frostbite",
         "role": "Personagem de Mutantes",
-        "lore": "Frostbite é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Mutantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Placeholder",
         "ab": [
           "Golpe de Mutantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -3830,10 +3830,10 @@
         "f": "Gargoyle-V-1.png",
         "t": "O Gargoyle",
         "role": "Personagem de Mutantes",
-        "lore": "Gargoyle é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Mutantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Placeholder",
         "ab": [
           "Golpe de Mutantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -3849,10 +3849,10 @@
         "f": "Genzo-V-1.png",
         "t": "O Genzo",
         "role": "Personagem de Mutantes",
-        "lore": "Genzo é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Mutantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Placeholder",
         "ab": [
           "Golpe de Mutantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -3868,10 +3868,10 @@
         "f": "Grimm-V-1.png",
         "t": "O Grimm",
         "role": "Personagem de Mutantes",
-        "lore": "Grimm é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Mutantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Placeholder",
         "ab": [
           "Golpe de Mutantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -3887,10 +3887,10 @@
         "f": "Kruul-V-1.png",
         "t": "O Kruul",
         "role": "Personagem de Mutantes",
-        "lore": "Kruul é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Mutantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Placeholder",
         "ab": [
           "Golpe de Mutantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -3906,10 +3906,10 @@
         "f": "Morrigan-V-1.png",
         "t": "O Morrigan",
         "role": "Personagem de Mutantes",
-        "lore": "Morrigan é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Mutantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Placeholder",
         "ab": [
           "Golpe de Mutantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -3925,10 +3925,10 @@
         "f": "Savage-Mane-V-1.png",
         "t": "O Savage Mane",
         "role": "Personagem de Mutantes",
-        "lore": "Savage Mane é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Mutantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Placeholder",
         "ab": [
           "Golpe de Mutantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -3944,10 +3944,10 @@
         "f": "Scraptron-V-1.png",
         "t": "O Scraptron",
         "role": "Personagem de Mutantes",
-        "lore": "Scraptron é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Mutantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Placeholder",
         "ab": [
           "Golpe de Mutantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -3963,10 +3963,10 @@
         "f": "Tusker-V-1.png",
         "t": "O Tusker",
         "role": "Personagem de Mutantes",
-        "lore": "Tusker é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Mutantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Placeholder",
         "ab": [
           "Golpe de Mutantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -3982,10 +3982,10 @@
         "f": "Vector-X-V-1.png",
         "t": "O Vector X",
         "role": "Personagem de Mutantes",
-        "lore": "Vector X é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Mutantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Placeholder",
         "ab": [
           "Golpe de Mutantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -4001,10 +4001,10 @@
         "f": "Vespis-V-1.png",
         "t": "O Vespis",
         "role": "Personagem de Mutantes",
-        "lore": "Vespis é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Mutantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Placeholder",
         "ab": [
           "Golpe de Mutantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -4020,10 +4020,10 @@
         "f": "Wargen-V-1.png",
         "t": "O Wargen",
         "role": "Personagem de Mutantes",
-        "lore": "Wargen é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Mutantes, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Placeholder",
         "ab": [
           "Golpe de Mutantes",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -4043,22 +4043,22 @@
     "color": "#e74c3c",
     "glow": "rgba(231,76,60,0.55)",
     "color2": "#ff9080",
-    "icon": "🔥",
+    "icon": "??",
     "count": 15,
     "region": "Ignareth",
-    "trait": "Nascidos do fogo e da tradição da guerra",
-    "desc": "Guerreiros de pele avermelhada e chifres — os Onis são uma raça guerreira que evoluiu ao lado dos vulcões de Ignareth. Sua cultura é de honra marcial absoluta, e sua força física média supera a maioria das outras raças. Sob Zen-Kore-Shin, tornaram-se a força terrestre mais temida da Guerra da Convergência.",
+    "trait": "Nascidos do fogo e da tradi��o da guerra",
+    "desc": "Guerreiros de pele avermelhada e chifres � os Onis s�o uma ra�a guerreira que evoluiu ao lado dos vulc�es de Ignareth. Sua cultura � de honra marcial absoluta, e sua for�a f�sica m�dia supera a maioria das outras ra�as. Sob Zen-Kore-Shin, tornaram-se a for�a terrestre mais temida da Guerra da Converg�ncia.",
     "characters": [
       {
         "n": "Akuma Ghen",
         "f": "Akuma-Ghen-V-1.png",
-        "t": "O Rei Demônio dos Onis",
+        "t": "O Rei Dem�nio dos Onis",
         "role": "Rei Oni",
-        "lore": "O Rei dos Onis antes de Zen-Kore-Shin ascender — ainda vivo e ainda poderoso, mas em conflito com o novo supremo. Akuma-Ghen representa a tradição Oni pura: força acima de tudo, honra acima de vida. Empunha a Lâmina das Chamas que nunca se apaga.",
+        "lore": "O Rei dos Onis antes de Zen-Kore-Shin ascender � ainda vivo e ainda poderoso, mas em conflito com o novo supremo. Akuma-Ghen representa a tradi��o Oni pura: for�a acima de tudo, honra acima de vida. Empunha a L�mina das Chamas que nunca se apaga.",
         "ab": [
-          "Lâmina das Chamas Eternas",
-          "Aura do Rei Demônio",
-          "Tradição de Mil Anos"
+          "L�mina das Chamas Eternas",
+          "Aura do Rei Dem�nio",
+          "Tradi��o de Mil Anos"
         ],
         "pow": 93,
         "spd": 80,
@@ -4066,16 +4066,16 @@
         "int": 78,
         "align": "evil",
         "region": "Ignareth",
-        "status": "Rei Deposto — Ativo"
+        "status": "Rei Deposto � Ativo"
       },
       {
         "n": "Enma Oh Ko",
         "f": "Enma-Oh'ko-V-1.png",
         "t": "O General Supremo",
         "role": "General dos Onis",
-        "lore": "O maior general militar que os Onis produziram — uma mente tática de precisão assustadora em um corpo de poder devastador. Enma-Oh'ko planeja campanhas com a mesma profundidade que um mago planeja feitiços, e executa-os com a brutali­dade que define os Onis.",
+        "lore": "O maior general militar que os Onis produziram � uma mente t�tica de precis�o assustadora em um corpo de poder devastador. Enma-Oh'ko planeja campanhas com a mesma profundidade que um mago planeja feiti�os, e executa-os com a brutali�dade que define os Onis.",
         "ab": [
-          "Tática de Guerra Oni",
+          "T�tica de Guerra Oni",
           "Armadura do General",
           "Golpe que Encerra Batalhas"
         ],
@@ -4092,11 +4092,11 @@
         "f": "General-Krogan-V-1.png",
         "t": "A Besta de Batalha",
         "role": "General Bestial",
-        "lore": "Um Oni de forma mais bestial que humanóide — General Krogan representa a linha evolutiva dos Onis que abraçou a animalidade acima da disciplina. Comanda com fúria e instinto em vez de estratégia, o que torna seus ataques impossíveis de prever por táticos convencionais.",
+        "lore": "Um Oni de forma mais bestial que human�ide � General Krogan representa a linha evolutiva dos Onis que abra�ou a animalidade acima da disciplina. Comanda com f�ria e instinto em vez de estrat�gia, o que torna seus ataques imposs�veis de prever por t�ticos convencionais.",
         "ab": [
           "Carga do Krogan",
-          "Fúria Animal",
-          "Presença Aterrorizante"
+          "F�ria Animal",
+          "Presen�a Aterrorizante"
         ],
         "pow": 90,
         "spd": 82,
@@ -4111,10 +4111,10 @@
         "f": "Kaguro-V-1.png",
         "t": "O Oni Assassino",
         "role": "Assassino da Casta Superior",
-        "lore": "O mais perigoso dos Onis em combate singular — um assassino de vermelho e preto cujas técnicas de eliminação são cirúrgicas em um corpo de força absurda. Kaguro não mata por ordem; mata porque é sua arte, e cada morte é uma obra perfeita.",
+        "lore": "O mais perigoso dos Onis em combate singular � um assassino de vermelho e preto cujas t�cnicas de elimina��o s�o cir�rgicas em um corpo de for�a absurda. Kaguro n�o mata por ordem; mata porque � sua arte, e cada morte � uma obra perfeita.",
         "ab": [
-          "Corte da Extinção",
-          "Técnica do Fantasma Oni",
+          "Corte da Extin��o",
+          "T�cnica do Fantasma Oni",
           "Velocidade do Assassino"
         ],
         "pow": 88,
@@ -4122,19 +4122,19 @@
         "def": 78,
         "int": 85,
         "align": "evil",
-        "region": "Errante — Missão",
-        "status": "Caçando"
+        "region": "Errante � Miss�o",
+        "status": "Ca�ando"
       },
       {
         "n": "Kagutsuchi Kore",
         "f": "Kagutsuchi-Kore-V-1.png",
         "t": "O Deus do Fogo Oni",
         "role": "Deus Oni do Kore",
-        "lore": "Um Oni que absorveu um Cristal Kore de fogo e tornou-se literalmente um deus do fogo em nível divino. Kagutsuchi-Kore não controla fogo — é fogo, em toda a sua extensão primordial. Sua existência aquece regiões inteiras ao seu redor.",
+        "lore": "Um Oni que absorveu um Cristal Kore de fogo e tornou-se literalmente um deus do fogo em n�vel divino. Kagutsuchi-Kore n�o controla fogo � � fogo, em toda a sua extens�o primordial. Sua exist�ncia aquece regi�es inteiras ao seu redor.",
         "ab": [
           "Forma do Deus do Fogo",
           "Calor que Derrete Pedra",
-          "Explosão Kore Ardente"
+          "Explos�o Kore Ardente"
         ],
         "pow": 95,
         "spd": 80,
@@ -4149,10 +4149,10 @@
         "f": "Kore-Magma-V-1.png",
         "t": "O Oni de Magma",
         "role": "Oni Elemental",
-        "lore": "Um Oni que evoluiu de forma natural nas câmaras mais quentes de Ignareth, até que seu corpo começou a incorporar a rocha fundida ao redor. Kore-Magma não usa magma como arma — é feito de magma, que flui e se solidifica em tempo real. Combate ao seu lado significa inevitavelmente lutar no fogo.",
+        "lore": "Um Oni que evoluiu de forma natural nas c�maras mais quentes de Ignareth, at� que seu corpo come�ou a incorporar a rocha fundida ao redor. Kore-Magma n�o usa magma como arma � � feito de magma, que flui e se solidifica em tempo real. Combate ao seu lado significa inevitavelmente lutar no fogo.",
         "ab": [
           "Corpo de Magma",
-          "Fusão com o Vulcão",
+          "Fus�o com o Vulc�o",
           "Calor Absoluto"
         ],
         "pow": 88,
@@ -4166,11 +4166,11 @@
       {
         "n": "Kurenai Rage",
         "f": "Kurenai-Rage-V1.png",
-        "t": "A Fúria Vermelha",
+        "t": "A F�ria Vermelha",
         "role": "Berserker Oni",
-        "lore": "O berserker supremo dos Onis — um guerreiro de cabelos carmesins cujo poder cresce exponencialmente quanto mais dano sofre. A estratégia padrão de derrotar Kurenai é não o machucar e esperar que ele se mate por frustração, o que nunca funcionou.",
+        "lore": "O berserker supremo dos Onis � um guerreiro de cabelos carmesins cujo poder cresce exponencialmente quanto mais dano sofre. A estrat�gia padr�o de derrotar Kurenai � n�o o machucar e esperar que ele se mate por frustra��o, o que nunca funcionou.",
         "ab": [
-          "Fúria que Cresce com Dano",
+          "F�ria que Cresce com Dano",
           "Vermelho da Raiva Divina",
           "Berserker Oni"
         ],
@@ -4180,17 +4180,17 @@
         "int": 52,
         "align": "chaos",
         "region": "Ignareth",
-        "status": "Em Fúria"
+        "status": "Em F�ria"
       },
       {
         "n": "Kyofu Kore",
         "f": "Kyofu-Kore-V1.png",
         "t": "O Oni do Medo",
         "role": "Oni do Terror",
-        "lore": "Um Oni que, ao absorver um Cristal Kore de natureza psíquica, desenvolveu o poder de projetar seu próprio terror diretamente na mente dos oponentes. Kyofu não precisa ser mais forte que você — precisa apenas fazer você acreditar que ele é.",
+        "lore": "Um Oni que, ao absorver um Cristal Kore de natureza ps�quica, desenvolveu o poder de projetar seu pr�prio terror diretamente na mente dos oponentes. Kyofu n�o precisa ser mais forte que voc� � precisa apenas fazer voc� acreditar que ele �.",
         "ab": [
-          "Projeção de Terror",
-          "Ilusão do Fim",
+          "Proje��o de Terror",
+          "Ilus�o do Fim",
           "Mente Quebrada"
         ],
         "pow": 82,
@@ -4205,12 +4205,12 @@
         "n": "Raijin Kore",
         "f": "Raijin-Kore-V-1.png",
         "t": "O Oni das Tempestades",
-        "role": "Oni do Trovão",
-        "lore": "Um Oni que canalizou energia Kore de natureza elétrica, tornando-se o Oni das Tempestades — capaz de invocar relâmpagos e ventanias de poder sem precedente. Raijin-Kore rivaliza com deuses do trovão em poder puro, sem ter sangue divino.",
+        "role": "Oni do Trov�o",
+        "lore": "Um Oni que canalizou energia Kore de natureza el�trica, tornando-se o Oni das Tempestades � capaz de invocar rel�mpagos e ventanias de poder sem precedente. Raijin-Kore rivaliza com deuses do trov�o em poder puro, sem ter sangue divino.",
         "ab": [
-          "Trovão do Oni",
+          "Trov�o do Oni",
           "Tempestade Invocada",
-          "Relâmpago do Kore"
+          "Rel�mpago do Kore"
         ],
         "pow": 90,
         "spd": 88,
@@ -4223,13 +4223,13 @@
       {
         "n": "Ryu Kore",
         "f": "Ryu-Kore-V-1.png",
-        "t": "O Dragão Oni",
-        "role": "Oni Dragão",
-        "lore": "A fusão mais completa entre a herança Oni e o sangue dracônico — Ryu-Kore é um Oni que manifestou características dracônicas ao absorver o Kore correto, tornando-se mestre das chamas serpentinas que combinam o fogo Oni com a magia dracônica.",
+        "t": "O Drag�o Oni",
+        "role": "Oni Drag�o",
+        "lore": "A fus�o mais completa entre a heran�a Oni e o sangue drac�nico � Ryu-Kore � um Oni que manifestou caracter�sticas drac�nicas ao absorver o Kore correto, tornando-se mestre das chamas serpentinas que combinam o fogo Oni com a magia drac�nica.",
         "ab": [
-          "Chama Serpentina Dracônica",
-          "Escamas do Dragão Oni",
-          "Voo do Dragão"
+          "Chama Serpentina Drac�nica",
+          "Escamas do Drag�o Oni",
+          "Voo do Drag�o"
         ],
         "pow": 92,
         "spd": 82,
@@ -4244,10 +4244,10 @@
         "f": "Zan-kura-V-1.png",
         "t": "A Flor da Morte",
         "role": "Oni da Flor Cerejeira",
-        "lore": "Um Oni que incorporou a estética da morte-como-beleza — petalas de cerejeira caem ao redor de cada golpe que desfere, e cada golpe é letal. Zan-kura é o Oni mais visualmente impressionante, o que amplifica o terror de vê-lo agir.",
+        "lore": "Um Oni que incorporou a est�tica da morte-como-beleza � petalas de cerejeira caem ao redor de cada golpe que desfere, e cada golpe � letal. Zan-kura � o Oni mais visualmente impressionante, o que amplifica o terror de v�-lo agir.",
         "ab": [
-          "Pétala Assassina",
-          "Dança da Cerejeira",
+          "P�tala Assassina",
+          "Dan�a da Cerejeira",
           "Golpe da Beleza Letal"
         ],
         "pow": 87,
@@ -4262,12 +4262,12 @@
         "n": "Zanka Kore",
         "f": "Zanka-Kore-V-1.png",
         "t": "O Oni das Cinzas",
-        "role": "Oni da Desolação",
-        "lore": "Onde Zanka-Kore passa, cinzas ficam. Não é hipérbole — sua energia Kore de desolação transforma tudo ao redor em cinza fria. Não queima como o fogo, não destrói como força bruta; apenas apaga, de forma lenta e inevitável.",
+        "role": "Oni da Desola��o",
+        "lore": "Onde Zanka-Kore passa, cinzas ficam. N�o � hip�rbole � sua energia Kore de desola��o transforma tudo ao redor em cinza fria. N�o queima como o fogo, n�o destr�i como for�a bruta; apenas apaga, de forma lenta e inevit�vel.",
         "ab": [
-          "Toque da Desolação",
+          "Toque da Desola��o",
           "Cinza Eterno",
-          "Extinção Gradual"
+          "Extin��o Gradual"
         ],
         "pow": 88,
         "spd": 72,
@@ -4275,25 +4275,25 @@
         "int": 78,
         "align": "evil",
         "region": "Ignareth",
-        "status": "Avançando"
+        "status": "Avan�ando"
       },
       {
         "n": "Zen Kore Shin",
         "f": "Zen-Kore-Shin-V-1.png",
         "t": "O Supremo dos Onis",
-        "role": "Oni Supremo — Mais Próximo da Divindade",
-        "lore": "O atual líder supremo dos Onis — um ser que absorveu múltiplos Cristais Kore de forma controlada e tornou-se algo além de Oni. Zen-Kore-Shin é o que a raça Oni seria se continuasse evoluindo por dez mil anos. Não lidera por força, mas por ser simplesmente o mais completo ser que os Onis já produziram.",
+        "role": "Oni Supremo � Mais Pr�ximo da Divindade",
+        "lore": "O atual l�der supremo dos Onis � um ser que absorveu m�ltiplos Cristais Kore de forma controlada e tornou-se algo al�m de Oni. Zen-Kore-Shin � o que a ra�a Oni seria se continuasse evoluindo por dez mil anos. N�o lidera por for�a, mas por ser simplesmente o mais completo ser que os Onis j� produziram.",
         "ab": [
-          "Presença do Supremo",
+          "Presen�a do Supremo",
           "Todos os Elementos Oni",
-          "Ascensão Kore Perfeita"
+          "Ascens�o Kore Perfeita"
         ],
         "pow": 99,
         "spd": 88,
         "def": 93,
         "int": 90,
         "align": "evil",
-        "region": "Ignareth — Trono de Fogo",
+        "region": "Ignareth � Trono de Fogo",
         "status": "Governando"
       },
       {
@@ -4301,10 +4301,10 @@
         "f": "Kyo-Zan-V-1.png",
         "t": "O Kyo Zan",
         "role": "Personagem de Onis",
-        "lore": "Kyo Zan é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Onis, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Kyo Zan era um oni guerreiro que o Kore transformou em demônio. Sua forma é agora um meio-termo. Sua ferida: ser omisso sem equilíbrio. Sua promessa: decidir o lado.",
         "ab": [
           "Golpe de Onis",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 67,
@@ -4320,10 +4320,10 @@
         "f": "Xar-Drakan-V-1.png",
         "t": "O Xar Drakan",
         "role": "Personagem de Onis",
-        "lore": "Xar Drakan é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Onis, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Xar Drakan era um dragão oni que o Kore imbuiu com mente humana. Sua fúria é agora razão viva. Sua ferida: racionalizar o ataque. Sua promessa: parar o fogo.",
         "ab": [
           "Golpe de Onis",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 88,
@@ -4343,22 +4343,22 @@
     "color": "#f1c40f",
     "glow": "rgba(241,196,15,0.5)",
     "color2": "#fff06a",
-    "icon": "☀",
+    "icon": "?",
     "count": 23,
     "region": "Aethelos",
-    "trait": "Sangue divino e poder além do mortal",
-    "desc": "Filhos e manifestações dos Primordiais — os Semi-Deuses foram os primeiros guardiões de Eryndor. A destruição dos Cinco Selos é para eles uma falha pessoal que alimenta tanto sua determinação quanto sua culpa. Não são unânimes em propósito: alguns lutam para restaurar a ordem, outros questionam se a ordem valia salvar.",
+    "trait": "Sangue divino e poder al�m do mortal",
+    "desc": "Filhos e manifesta��es dos Primordiais � os Semi-Deuses foram os primeiros guardi�es de Eryndor. A destrui��o dos Cinco Selos � para eles uma falha pessoal que alimenta tanto sua determina��o quanto sua culpa. N�o s�o un�nimes em prop�sito: alguns lutam para restaurar a ordem, outros questionam se a ordem valia salvar.",
     "characters": [
       {
         "n": "Aethel",
         "f": "Aethel-V-1.png",
         "t": "A Deusa da Passagem",
-        "role": "Divindade da Morte e Transição",
-        "lore": "A semi-deusa responsável pela passagem dos mortos entre os mundos. Com os Selos destruídos e as Aparições presas no plano físico, Aethel está sobrecarregada — almas que deveriam ter partido há séculos estão acumuladas, e seu poder para mantê-las em trânsito está atingindo limites.",
+        "role": "Divindade da Morte e Transi��o",
+        "lore": "A semi-deusa respons�vel pela passagem dos mortos entre os mundos. Com os Selos destru�dos e as Apari��es presas no plano f�sico, Aethel est� sobrecarregada � almas que deveriam ter partido h� s�culos est�o acumuladas, e seu poder para mant�-las em tr�nsito est� atingindo limites.",
         "ab": [
           "Passagem dos Mortos",
-          "Manto da Transição",
-          "Equilíbrio do Além"
+          "Manto da Transi��o",
+          "Equil�brio do Al�m"
         ],
         "pow": 85,
         "spd": 80,
@@ -4371,13 +4371,13 @@
       {
         "n": "Aether Kore",
         "f": "Aether-Kore-V-1.png",
-        "t": "O Anjo Caído do Kore",
+        "t": "O Anjo Ca�do do Kore",
         "role": "Semi-Deus Corrompido pelo Kore",
-        "lore": "Um semi-deus que absorveu um Cristal Kore na tentativa de ampliar seu poder o suficiente para fechar a Fissura do Vazio sozinho. O resultado foi parcialmente bem-sucedido — seu poder cresceu enormemente — mas a corrução do Kore corrói sua natureza divina a cada dia que passa.",
+        "lore": "Um semi-deus que absorveu um Cristal Kore na tentativa de ampliar seu poder o suficiente para fechar a Fissura do Vazio sozinho. O resultado foi parcialmente bem-sucedido � seu poder cresceu enormemente � mas a corru��o do Kore corr�i sua natureza divina a cada dia que passa.",
         "ab": [
           "Asas do Anjo Corrompido",
           "Poder Kore Divino",
-          "Corrução Crescente"
+          "Corru��o Crescente"
         ],
         "pow": 96,
         "spd": 85,
@@ -4391,10 +4391,10 @@
         "n": "Astrolon",
         "f": "Astrolon-V-1.png",
         "t": "O Cavaleiro do Cosmos",
-        "role": "Guardião da Ordem Cósmica",
-        "lore": "Um semi-deus de armadura dourada que patrulha as fronteiras entre os planos de existência. Astrolon viu a Grande Fratura de uma perspectiva que nenhum mortal experimentaria — de fora, observando todos os planos colidirem simultaneamente. O trauma disso moldou tanto seu propósito quanto suas limitações.",
+        "role": "Guardi�o da Ordem C�smica",
+        "lore": "Um semi-deus de armadura dourada que patrulha as fronteiras entre os planos de exist�ncia. Astrolon viu a Grande Fratura de uma perspectiva que nenhum mortal experimentaria � de fora, observando todos os planos colidirem simultaneamente. O trauma disso moldou tanto seu prop�sito quanto suas limita��es.",
         "ab": [
-          "Armadura Cósmica",
+          "Armadura C�smica",
           "Patrulha dos Planos",
           "Ordem entre Mundos"
         ],
@@ -4409,13 +4409,13 @@
       {
         "n": "Dio Heaven",
         "f": "Dio-Heaven-V-1.png",
-        "t": "O Senhor do Paraíso",
-        "role": "Deus da Transcendência",
-        "lore": "A forma ascendida de Dio — após décadas de busca por poder perfeito, alcançou um estado semi-divino que transcende categorias convencionais. Dio-Heaven pode parar o tempo, alterar a realidade e conceder ou negar imortalidade. Mas sua arrogância é proporcional ao seu poder.",
+        "t": "O Senhor do Para�so",
+        "role": "Deus da Transcend�ncia",
+        "lore": "A forma ascendida de Dio � ap�s d�cadas de busca por poder perfeito, alcan�ou um estado semi-divino que transcende categorias convencionais. Dio-Heaven pode parar o tempo, alterar a realidade e conceder ou negar imortalidade. Mas sua arrog�ncia � proporcional ao seu poder.",
         "ab": [
-          "Za Warudo — O Mundo",
+          "Za Warudo � O Mundo",
           "Controle do Tempo",
-          "Graça do Paraíso"
+          "Gra�a do Para�so"
         ],
         "pow": 99,
         "spd": 90,
@@ -4429,12 +4429,12 @@
         "n": "Dividade",
         "f": "Dividade-V-1.png",
         "t": "A Deusa da Luz Pura",
-        "role": "Encarnação da Luz Divina",
-        "lore": "Não é um semi-deus — é uma manifestação direta do Primordial da Luz em forma física. Dividade apareceu quando a Grande Fratura ameaçou destruir o equilíbrio de luz e trevas de Eryndor. É benevolente mas absolutamente imparcial — protege o equilíbrio, não lados.",
+        "role": "Encarna��o da Luz Divina",
+        "lore": "N�o � um semi-deus � � uma manifesta��o direta do Primordial da Luz em forma f�sica. Dividade apareceu quando a Grande Fratura amea�ou destruir o equil�brio de luz e trevas de Eryndor. � benevolente mas absolutamente imparcial � protege o equil�brio, n�o lados.",
         "ab": [
           "Luz Primordial",
-          "Purificação Total",
-          "Presença da Divindade"
+          "Purifica��o Total",
+          "Presen�a da Divindade"
         ],
         "pow": 97,
         "spd": 85,
@@ -4447,11 +4447,11 @@
       {
         "n": "Enel",
         "f": "Enel-V-1.png",
-        "t": "O Deus Autoproclamado do Trovão",
+        "t": "O Deus Autoproclamado do Trov�o",
         "role": "Deus do Raio",
-        "lore": "Um semi-deus que proclamou ser o único deus verdadeiro de Eryndor — não sem fundamento, pois seu poder sobre o trovão é superior ao de qualquer outro usuário de eletricidade. Sua maior fraqueza é acreditar em sua própria invencibilidade, o que o torna previsível para adversários suficientemente humildes.",
+        "lore": "Um semi-deus que proclamou ser o �nico deus verdadeiro de Eryndor � n�o sem fundamento, pois seu poder sobre o trov�o � superior ao de qualquer outro usu�rio de eletricidade. Sua maior fraqueza � acreditar em sua pr�pria invencibilidade, o que o torna previs�vel para advers�rios suficientemente humildes.",
         "ab": [
-          "Raio Divino Máximo",
+          "Raio Divino M�ximo",
           "Corpo de Raio",
           "Deus da Tempestade"
         ],
@@ -4466,12 +4466,12 @@
       {
         "n": "Haku",
         "f": "Haku-V-1.png",
-        "t": "O Dragão das Águas Sagradas",
-        "role": "Dragão Deus",
-        "lore": "Pequeno em aparência, ilimitado em poder — Haku é um espírito dragão das águas sagradas, um semi-deus que governou rios e chuvas por milênios. Sua transformação entre forma humanóide e forma dracônica é instantânea, e cada forma tem poderes completamente diferentes.",
+        "t": "O Drag�o das �guas Sagradas",
+        "role": "Drag�o Deus",
+        "lore": "Pequeno em apar�ncia, ilimitado em poder � Haku � um esp�rito drag�o das �guas sagradas, um semi-deus que governou rios e chuvas por mil�nios. Sua transforma��o entre forma human�ide e forma drac�nica � instant�nea, e cada forma tem poderes completamente diferentes.",
         "ab": [
-          "Forma Dracônica",
-          "Espírito das Águas Sagradas",
+          "Forma Drac�nica",
+          "Esp�rito das �guas Sagradas",
           "Rio Divino"
         ],
         "pow": 90,
@@ -4479,7 +4479,7 @@
         "def": 82,
         "int": 88,
         "align": "good",
-        "region": "Águas Sagradas",
+        "region": "�guas Sagradas",
         "status": "Guardando"
       },
       {
@@ -4487,11 +4487,11 @@
         "f": "Ignis-V-1.png",
         "t": "O Semi-Deus da Conquista",
         "role": "Demi-Deus da Guerra e do Fogo",
-        "lore": "Um semi-deus nascido da união entre um guerreiro humano lendário e a própria chama primordial. Ignis existe para a guerra — não como destruição, mas como o catalisador que força o crescimento. Acredita que a Guerra da Convergência é necessária para queimar o que está podre e fortalecer o que pode sobreviver.",
+        "lore": "Um semi-deus nascido da uni�o entre um guerreiro humano lend�rio e a pr�pria chama primordial. Ignis existe para a guerra � n�o como destrui��o, mas como o catalisador que for�a o crescimento. Acredita que a Guerra da Converg�ncia � necess�ria para queimar o que est� podre e fortalecer o que pode sobreviver.",
         "ab": [
           "Chama da Conquista",
           "Armadura de Guerra Divina",
-          "Catalisador da Mudança"
+          "Catalisador da Mudan�a"
         ],
         "pow": 92,
         "spd": 85,
@@ -4505,12 +4505,12 @@
         "n": "Imu",
         "f": "Imu-V-1.png",
         "t": "A Soberana das Sombras",
-        "role": "Soberana do Mistério",
-        "lore": "A entidade no topo da hierarquia do mundo — cujos poderes e motivações reais permanecem o maior mistério de Eryndor. Imu é um semi-deus que ascendeu além do que semi-deuses deveriam atingir, chegando perto demais da divindade pura. Sua sombra se estende sobre os eventos da guerra sem que sua mão seja visível.",
+        "role": "Soberana do Mist�rio",
+        "lore": "A entidade no topo da hierarquia do mundo � cujos poderes e motiva��es reais permanecem o maior mist�rio de Eryndor. Imu � um semi-deus que ascendeu al�m do que semi-deuses deveriam atingir, chegando perto demais da divindade pura. Sua sombra se estende sobre os eventos da guerra sem que sua m�o seja vis�vel.",
         "ab": [
           "Sombra Soberana",
           "Poder Oculto",
-          "Presença que Move o Mundo"
+          "Presen�a que Move o Mundo"
         ],
         "pow": 100,
         "spd": 88,
@@ -4523,11 +4523,11 @@
       {
         "n": "Nika",
         "f": "Nika-V-1.png",
-        "t": "O Deus Sol — O Libertador",
-        "role": "Deus da Libertação e Alegria",
-        "lore": "A encarnação da alegria e da libertação em forma divina — um semi-deus que representa o desejo fundamental de todo ser vivo de ser livre. O poder de Nika cresce quanto mais pessoas ao seu redor desejam liberdade. Em tempos de opressão como a Guerra da Convergência, esse poder se torna ilimitado.",
+        "t": "O Deus Sol � O Libertador",
+        "role": "Deus da Liberta��o e Alegria",
+        "lore": "A encarna��o da alegria e da liberta��o em forma divina � um semi-deus que representa o desejo fundamental de todo ser vivo de ser livre. O poder de Nika cresce quanto mais pessoas ao seu redor desejam liberdade. Em tempos de opress�o como a Guerra da Converg�ncia, esse poder se torna ilimitado.",
         "ab": [
-          "Libertação Divina",
+          "Liberta��o Divina",
           "Goma-Goma das Divindades",
           "Alegria que Move Mundos"
         ],
@@ -4536,19 +4536,19 @@
         "def": 88,
         "int": 85,
         "align": "good",
-        "region": "Errante — Lendário",
-        "status": "Lendário"
+        "region": "Errante � Lend�rio",
+        "status": "Lend�rio"
       },
       {
         "n": "Ossuaria",
         "f": "Ossuaria-V-1.png",
         "t": "A Rainha dos Ossos",
         "role": "Rainha do Reino dos Mortos",
-        "lore": "A semi-deusa que governa o reino dos mortos como complemento ao trabalho de Aethel. Se a Aethel guia os mortos, Ossuaria os governa no destino final. Com o colapso dos Selos, seu reino está inundado de almas que chegam sem as condições adequadas de recepção.",
+        "lore": "A semi-deusa que governa o reino dos mortos como complemento ao trabalho de Aethel. Se a Aethel guia os mortos, Ossuaria os governa no destino final. Com o colapso dos Selos, seu reino est� inundado de almas que chegam sem as condi��es adequadas de recep��o.",
         "ab": [
-          "Exército dos Ossos",
+          "Ex�rcito dos Ossos",
           "Autoridade sobre os Mortos",
-          "Barreira do Além"
+          "Barreira do Al�m"
         ],
         "pow": 88,
         "spd": 72,
@@ -4563,9 +4563,9 @@
         "f": "Radagon-of-the-Golden-Order-V-1.png",
         "t": "O Perfeito Dourado",
         "role": "Cavaleiro da Ordem Divina",
-        "lore": "Um semi-deus que buscou a perfeição absoluta através da Ordem Dourada — um código filosófico de combate e existência que busca o ideal platônico do ser. Radagon é ao mesmo tempo um dos Semi-Deuses mais devotos e um dos mais atormentados: sabe que a perfeição não existe, mas não pode parar de buscá-la.",
+        "lore": "Um semi-deus que buscou a perfei��o absoluta atrav�s da Ordem Dourada � um c�digo filos�fico de combate e exist�ncia que busca o ideal plat�nico do ser. Radagon � ao mesmo tempo um dos Semi-Deuses mais devotos e um dos mais atormentados: sabe que a perfei��o n�o existe, mas n�o pode parar de busc�-la.",
         "ab": [
-          "Golpe da Perfeição Dourada",
+          "Golpe da Perfei��o Dourada",
           "Ordem como Arma",
           "Martelo dos Fundamentos"
         ],
@@ -4575,18 +4575,18 @@
         "int": 90,
         "align": "good",
         "region": "Aethelos",
-        "status": "Em Busca da Perfeição"
+        "status": "Em Busca da Perfei��o"
       },
       {
-        "n": "Rei Demônio",
+        "n": "Rei Dem�nio",
         "f": "Rei-Demonio-V-1.png",
-        "t": "O Rei Que Não É",
-        "role": "Paradoxo Divino-Demoníaco",
-        "lore": "Uma anomalia: um semi-deus com essência demoníaca que nunca tocou Sombrath. O Rei-Demônio nasceu da intersecção entre dois planos que não deveriam se cruzar — antes de Kaelia, antes da Fissura do Vazio. Seu poder combina elementos divinos e demoníacos de forma que nenhuma escola arcana consegue explicar.",
+        "t": "O Rei Que N�o �",
+        "role": "Paradoxo Divino-Demon�aco",
+        "lore": "Uma anomalia: um semi-deus com ess�ncia demon�aca que nunca tocou Sombrath. O Rei-Dem�nio nasceu da intersec��o entre dois planos que n�o deveriam se cruzar � antes de Kaelia, antes da Fissura do Vazio. Seu poder combina elementos divinos e demon�acos de forma que nenhuma escola arcana consegue explicar.",
         "ab": [
           "Paradoxo de Dois Mundos",
           "Poder do Limite",
-          "Existência Impossível"
+          "Exist�ncia Imposs�vel"
         ],
         "pow": 93,
         "spd": 85,
@@ -4601,11 +4601,11 @@
         "f": "Shikon-Kore-V-1.png",
         "t": "O Colosso do Kore",
         "role": "Semi-Deus Amplificado",
-        "lore": "Um semi-deus que integrou um Cristal Kore de forma controlada através de rituais divinos — o experimento mais bem-sucedido de amplificação Kore em sangue semi-divino. Shikon-Kore é imenso, poderoso além da medida usual de Semi-Deuses, e completamente estável. Uma arma de destruição que sabe o que faz.",
+        "lore": "Um semi-deus que integrou um Cristal Kore de forma controlada atrav�s de rituais divinos � o experimento mais bem-sucedido de amplifica��o Kore em sangue semi-divino. Shikon-Kore � imenso, poderoso al�m da medida usual de Semi-Deuses, e completamente est�vel. Uma arma de destrui��o que sabe o que faz.",
         "ab": [
           "Colosso do Kore Divino",
           "Controle Absoluto",
-          "Amplificação Estável"
+          "Amplifica��o Est�vel"
         ],
         "pow": 97,
         "spd": 70,
@@ -4618,32 +4618,32 @@
       {
         "n": "Skarner",
         "f": "Skarner-V-1.png",
-        "t": "O Escorpião Cristalino",
+        "t": "O Escorpi�o Cristalino",
         "role": "Deus da Terra e dos Cristais",
-        "lore": "Um semi-deus de forma escorpioníde que emergiu das profundezas cristalinas de Eryndor — exatamente das mesmas câmaras onde os Cristais Kore foram formados. Skarner guarda os cristais restantes, sabendo seu poder e seu perigo, esperando que alguém digno apareça para usá-los.",
+        "lore": "Um semi-deus de forma escorpion�de que emergiu das profundezas cristalinas de Eryndor � exatamente das mesmas c�maras onde os Cristais Kore foram formados. Skarner guarda os cristais restantes, sabendo seu poder e seu perigo, esperando que algu�m digno apare�a para us�-los.",
         "ab": [
           "Cristal Vivo",
           "Garras da Terra",
-          "Guardião dos Kore"
+          "Guardi�o dos Kore"
         ],
         "pow": 88,
         "spd": 72,
         "def": 93,
         "int": 82,
         "align": "neutral",
-        "region": "Câmaras Cristalinas",
+        "region": "C�maras Cristalinas",
         "status": "Guardando"
       },
       {
         "n": "Skel Shin",
         "f": "Skel-Shin-V-1.png",
-        "t": "A Entidade Óssea Divina",
+        "t": "A Entidade �ssea Divina",
         "role": "Divindade Dual",
-        "lore": "Uma entidade que existe na fronteira entre a vida divina e a morte estruturada — Skel-Shin é a manifestação de que mesmo os Semi-Deuses têm um fim, e desse fim algo emerge. Seu corpo de osso e luz é o que resta quando um semi-deus passa pelo que os mortais chamam de morte.",
+        "lore": "Uma entidade que existe na fronteira entre a vida divina e a morte estruturada � Skel-Shin � a manifesta��o de que mesmo os Semi-Deuses t�m um fim, e desse fim algo emerge. Seu corpo de osso e luz � o que resta quando um semi-deus passa pelo que os mortais chamam de morte.",
         "ab": [
           "Luz dos Ossos",
           "Dual Natureza",
-          "Persistência do Divino"
+          "Persist�ncia do Divino"
         ],
         "pow": 88,
         "spd": 78,
@@ -4658,11 +4658,11 @@
         "f": "Sun-Wukong-V-1.png",
         "t": "O Rei Macaco",
         "role": "Igual dos Deuses",
-        "lore": "Nascido como mortal simples, Sun Wukong desafiou os próprios Semi-Deuses em combate singular e provou ser igual — através de determinação, inteligência e um cajado mágico que pode ter o tamanho de uma agulha ou de uma montanha. É o símbolo de que o potencial não tem origem definida.",
+        "lore": "Nascido como mortal simples, Sun Wukong desafiou os pr�prios Semi-Deuses em combate singular e provou ser igual � atrav�s de determina��o, intelig�ncia e um cajado m�gico que pode ter o tamanho de uma agulha ou de uma montanha. � o s�mbolo de que o potencial n�o tem origem definida.",
         "ab": [
-          "Cajado das Dimensões",
-          "Setenta e Duas Transformações",
-          "Pêlo que Clona"
+          "Cajado das Dimens�es",
+          "Setenta e Duas Transforma��es",
+          "P�lo que Clona"
         ],
         "pow": 97,
         "spd": 95,
@@ -4677,10 +4677,10 @@
         "f": "Sylvaris-V-1.png",
         "t": "O Senhor das Florestas Antigas",
         "role": "Deus da Natureza Primordial",
-        "lore": "O semi-deus que governa as florestas mais antigas de Eryndor — árvores que pré-datam até os Primordiais. Sylvaris não usa magia de plantas; é a magia das plantas. Cada raiz em todo o continente é uma extensão de seu sistema nervoso.",
+        "lore": "O semi-deus que governa as florestas mais antigas de Eryndor � �rvores que pr�-datam at� os Primordiais. Sylvaris n�o usa magia de plantas; � a magia das plantas. Cada raiz em todo o continente � uma extens�o de seu sistema nervoso.",
         "ab": [
-          "Raízes do Mundo",
-          "Consciência da Floresta",
+          "Ra�zes do Mundo",
+          "Consci�ncia da Floresta",
           "Crescimento Divino"
         ],
         "pow": 88,
@@ -4694,13 +4694,13 @@
       {
         "n": "The Radiance",
         "f": "The-Radiance-V-1.png",
-        "t": "A Radiância Pura",
-        "role": "Manifestação da Luz Primordial",
-        "lore": "A manifestação mais pura da luz primordial de Eryndor — não uma deusa da luz, mas a própria luz tomando forma para combater a corrupção do Vazio. The Radiance existe apenas enquanto a escuridão que combate existe, tornando sua vitória simultaneamente seu fim.",
+        "t": "A Radi�ncia Pura",
+        "role": "Manifesta��o da Luz Primordial",
+        "lore": "A manifesta��o mais pura da luz primordial de Eryndor � n�o uma deusa da luz, mas a pr�pria luz tomando forma para combater a corrup��o do Vazio. The Radiance existe apenas enquanto a escurid�o que combate existe, tornando sua vit�ria simultaneamente seu fim.",
         "ab": [
           "Luz que Apaga o Vazio",
-          "Bênção da Radiance",
-          "Sacrifício da Luz"
+          "B�n��o da Radiance",
+          "Sacrif�cio da Luz"
         ],
         "pow": 100,
         "spd": 88,
@@ -4708,17 +4708,17 @@
         "int": 92,
         "align": "good",
         "region": "Aethelos",
-        "status": "Manifestada — Sacrifício Iminente"
+        "status": "Manifestada � Sacrif�cio Iminente"
       },
       {
         "n": "Aurion",
         "f": "Aurion-V-1.png",
         "t": "O Aurion",
         "role": "Personagem de Semi-Deus",
-        "lore": "Aurion é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Semi-Deus, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Aurion era um Semi-Deus que o Kore transformou em amaldiçoado. Sua luz é agora sombra viva. Sua ferida: servir o mal com bondade. Sua promessa: voltar ao céu.",
         "ab": [
           "Golpe de Semi-Deus",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -4734,10 +4734,10 @@
         "f": "Azazel-V-1.png",
         "t": "O Azazel",
         "role": "Personagem de Semi-Deus",
-        "lore": "Azazel é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Semi-Deus, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Azazel era um anjo caído que o Kore imbuiu com corrupção. Sua asa é agora fogo corrupto. Sua ferida: servir o mal com bondade. Sua promessa: voltar ao céu.",
         "ab": [
           "Golpe de Semi-Deus",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -4753,10 +4753,10 @@
         "f": "Morthan-V-1.png",
         "t": "O Morthan",
         "role": "Personagem de Semi-Deus",
-        "lore": "Morthan é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Semi-Deus, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Morthan era um deus da peste que o Kore transformou em curandeiro. Sua peste é agora medicina. Sua ferida: contaminar para limpar. Sua promessa: achar a cura.",
         "ab": [
           "Golpe de Semi-Deus",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 67,
@@ -4772,10 +4772,10 @@
         "f": "Xul'gath-V-1.png",
         "t": "O Xul'gath",
         "role": "Personagem de Semi-Deus",
-        "lore": "Xul'gath é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Semi-Deus, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Xul'gath era um demônio que o Kore imbuiu com divindade. Sua escuridão é agora clareira. Sua ferida: ser bom sem ser santo. Sua promessa: encontrar o limiar.",
         "ab": [
           "Golpe de Semi-Deus",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 74,
@@ -4795,22 +4795,22 @@
     "color": "#4a4a7a",
     "glow": "rgba(74,74,122,0.5)",
     "color2": "#9090ff",
-    "icon": "∅",
+    "icon": "�",
     "count": 17,
     "region": "Voidrift",
-    "trait": "Entidades de além da realidade conhecida",
-    "desc": "Não são apenas poderosos — são categoricamente diferentes. Os Seres do Vazio existem em um estado de não-ser que a física de Eryndor não acomoda facilmente. Sua presença corrode a realidade ao redor. Sua motivação — se têm uma — é incompreensível para mentes formadas dentro de uma realidade funcional.",
+    "trait": "Entidades de al�m da realidade conhecida",
+    "desc": "N�o s�o apenas poderosos � s�o categoricamente diferentes. Os Seres do Vazio existem em um estado de n�o-ser que a f�sica de Eryndor n�o acomoda facilmente. Sua presen�a corrode a realidade ao redor. Sua motiva��o � se t�m uma � � incompreens�vel para mentes formadas dentro de uma realidade funcional.",
     "characters": [
       {
         "n": "Abyss Maw",
         "f": "Abyss-Maw-V-1.png",
-        "t": "O Dragão do Vazio",
-        "role": "Dragão da Não-Existência",
-        "lore": "O maior ser vivo do Vazio — um dragão cujo corpo é feito de não-existência comprimida. Abyss-Maw não destrói as coisas que devora; apaga-as do registro da realidade. Nenhuma magia de ressurreição funciona em algo que Abyss-Maw consumiu, porque não há mais nada para ressuscitar.",
+        "t": "O Drag�o do Vazio",
+        "role": "Drag�o da N�o-Exist�ncia",
+        "lore": "O maior ser vivo do Vazio � um drag�o cujo corpo � feito de n�o-exist�ncia comprimida. Abyss-Maw n�o destr�i as coisas que devora; apaga-as do registro da realidade. Nenhuma magia de ressurrei��o funciona em algo que Abyss-Maw consumiu, porque n�o h� mais nada para ressuscitar.",
         "ab": [
           "Apagamento da Realidade",
-          "Voo além do Possível",
-          "Presença do Vazio Absoluto"
+          "Voo al�m do Poss�vel",
+          "Presen�a do Vazio Absoluto"
         ],
         "pow": 100,
         "spd": 75,
@@ -4825,7 +4825,7 @@
         "f": "Alaric-V-1.png",
         "t": "O Viajante dos Fins",
         "role": "Vidente do Apocalipse",
-        "lore": "Um Ser do Vazio que viajou através de múltiplas realidades e viu o fim de cada uma delas. Alaric não é hostil — é exausto. Viu tantos fins que não sabe mais se há mundos que escapam, ou se todos terminam apenas de formas diferentes. Partilha este conhecimento com quem encontra, sem se importar com o efeito.",
+        "lore": "Um Ser do Vazio que viajou atrav�s de m�ltiplas realidades e viu o fim de cada uma delas. Alaric n�o � hostil � � exausto. Viu tantos fins que n�o sabe mais se h� mundos que escapam, ou se todos terminam apenas de formas diferentes. Partilha este conhecimento com quem encontra, sem se importar com o efeito.",
         "ab": [
           "Conhecimento dos Fins",
           "Viagem entre Realidades",
@@ -4842,9 +4842,9 @@
       {
         "n": "Kael",
         "f": "Kael-V-1.png",
-        "t": "A Criança do Vazio",
+        "t": "A Crian�a do Vazio",
         "role": "Ceifador Jovem",
-        "lore": "Aparência de criança, poder de fim de mundo. Kael é um Ser do Vazio jovem — se tal conceito tem significado para eles — e sua foice é desproporcional ao seu tamanho em todos os sentidos. Sua juventude dentro do Vazio significa que ainda tem alguma curiosidade sobre a existência, o que o torna ligeiramente menos inexoravelmente destrutivo.",
+        "lore": "Apar�ncia de crian�a, poder de fim de mundo. Kael � um Ser do Vazio jovem � se tal conceito tem significado para eles � e sua foice � desproporcional ao seu tamanho em todos os sentidos. Sua juventude dentro do Vazio significa que ainda tem alguma curiosidade sobre a exist�ncia, o que o torna ligeiramente menos inexoravelmente destrutivo.",
         "ab": [
           "Foice do Vazio",
           "Curiosidade Perigosa",
@@ -4856,18 +4856,18 @@
         "int": 82,
         "align": "chaos",
         "region": "Voidrift",
-        "status": "Curioso — Perigoso"
+        "status": "Curioso � Perigoso"
       },
       {
         "n": "Kael'thas",
         "f": "Kael'thas-V-1.png",
         "t": "O Cavaleiro do Vazio",
-        "role": "Cavaleiro da Não-Existência",
-        "lore": "Um Ser do Vazio que adotou a estética e a lógica de um cavaleiro mortal — armadura, lâmina, código. Kael'thas observou mortais por tanto tempo que começou a imitar sua estrutura, sem compreender completamente por quê. Este comportamento de imitação o torna o Ser do Vazio mais previsível e portanto o mais recrutável por outras facções.",
+        "role": "Cavaleiro da N�o-Exist�ncia",
+        "lore": "Um Ser do Vazio que adotou a est�tica e a l�gica de um cavaleiro mortal � armadura, l�mina, c�digo. Kael'thas observou mortais por tanto tempo que come�ou a imitar sua estrutura, sem compreender completamente por qu�. Este comportamento de imita��o o torna o Ser do Vazio mais previs�vel e portanto o mais recrut�vel por outras fac��es.",
         "ab": [
-          "Lâmina do Vazio",
-          "Código Imitado",
-          "Armadura da Não-Existência"
+          "L�mina do Vazio",
+          "C�digo Imitado",
+          "Armadura da N�o-Exist�ncia"
         ],
         "pow": 90,
         "spd": 85,
@@ -4881,12 +4881,12 @@
         "n": "Kallysta",
         "f": "Kallysta-V-1.png",
         "t": "A Feiticeira do Vazio",
-        "role": "Maga da Não-Existência",
-        "lore": "Uma Ser do Vazio que manifesta o poder do Vazio através de padrões que se assemelham à magia mortal, mas operam em princípios inversos. Kallysta não cria — desfaz. Cada feitiço que lança é a negação de algo que existe.",
+        "role": "Maga da N�o-Exist�ncia",
+        "lore": "Uma Ser do Vazio que manifesta o poder do Vazio atrav�s de padr�es que se assemelham � magia mortal, mas operam em princ�pios inversos. Kallysta n�o cria � desfaz. Cada feiti�o que lan�a � a nega��o de algo que existe.",
         "ab": [
-          "Magia da Negação",
-          "Disrupção do Ser",
-          "Feitiçaria da Não-Existência"
+          "Magia da Nega��o",
+          "Disrup��o do Ser",
+          "Feiti�aria da N�o-Exist�ncia"
         ],
         "pow": 88,
         "spd": 82,
@@ -4901,11 +4901,11 @@
         "f": "Kalthazar-V-1.png",
         "t": "O Lord Espectral",
         "role": "Senhor Espectral do Vazio",
-        "lore": "Um Ser do Vazio que existe como espectro mesmo dentro do Vazio — uma camada adicional de não-ser sobre o não-ser. Kalthazar usa esta natureza duplamente espectral para penetrar defesas que bloqueiam seres físicos e defesas que bloqueiam espíritos simultaneamente.",
+        "lore": "Um Ser do Vazio que existe como espectro mesmo dentro do Vazio � uma camada adicional de n�o-ser sobre o n�o-ser. Kalthazar usa esta natureza duplamente espectral para penetrar defesas que bloqueiam seres f�sicos e defesas que bloqueiam esp�ritos simultaneamente.",
         "ab": [
           "Forma Espectral dentro do Vazio",
-          "Penetração Total",
-          "Presença que Gela o Vazio"
+          "Penetra��o Total",
+          "Presen�a que Gela o Vazio"
         ],
         "pow": 87,
         "spd": 88,
@@ -4920,11 +4920,11 @@
         "f": "Koku-Kore-V-1.png",
         "t": "O Cavaleiro do Apocalipse do Vazio",
         "role": "Cavaleiro Kore do Vazio",
-        "lore": "O encontro improvável entre energia Kore e natureza do Vazio — Koku-Kore é um Ser do Vazio que entrou em contato com um Cristal Kore sem ser destruído, resultando em uma fusão impossível. A energia Kore amplificou o poder do Vazio de formas que os estudiosos do Kore temiam ser possíveis.",
+        "lore": "O encontro improv�vel entre energia Kore e natureza do Vazio � Koku-Kore � um Ser do Vazio que entrou em contato com um Cristal Kore sem ser destru�do, resultando em uma fus�o imposs�vel. A energia Kore amplificou o poder do Vazio de formas que os estudiosos do Kore temiam ser poss�veis.",
         "ab": [
-          "Fusão Kore-Vazio",
+          "Fus�o Kore-Vazio",
           "Cavaleiro do Apocalipse",
-          "Poder Impossível"
+          "Poder Imposs�vel"
         ],
         "pow": 95,
         "spd": 80,
@@ -4937,13 +4937,13 @@
       {
         "n": "Korvessa Nightlash",
         "f": "Korvessa-Nightlash-V-1.png",
-        "t": "A Caçadora da Noite",
-        "role": "Caçadora do Vazio",
-        "lore": "Um Ser do Vazio com dois machados e um código de caça preciso — alvo, perseguição, execução. Korvessa não destrói aleatoriamente; é seletiva, o que a torna a assassina mais eficaz dos Seres do Vazio. Seus alvos são aqueles que buscam fechar a Fissura do Vazio.",
+        "t": "A Ca�adora da Noite",
+        "role": "Ca�adora do Vazio",
+        "lore": "Um Ser do Vazio com dois machados e um c�digo de ca�a preciso � alvo, persegui��o, execu��o. Korvessa n�o destr�i aleatoriamente; � seletiva, o que a torna a assassina mais eficaz dos Seres do Vazio. Seus alvos s�o aqueles que buscam fechar a Fissura do Vazio.",
         "ab": [
           "Duplos Machados do Vazio",
-          "Furtividade da Não-Existência",
-          "Caça Precisa"
+          "Furtividade da N�o-Exist�ncia",
+          "Ca�a Precisa"
         ],
         "pow": 88,
         "spd": 93,
@@ -4951,17 +4951,17 @@
         "int": 82,
         "align": "evil",
         "region": "Errante",
-        "status": "Caçando"
+        "status": "Ca�ando"
       },
       {
         "n": "Kraivos",
         "f": "Kraivos-V-1.png",
         "t": "O Guerreiro de Armadura",
         "role": "Combatente do Vazio",
-        "lore": "Um Ser do Vazio que evoluiu uma forma mais física e pesada que a maioria de sua espécie — armadura densa, lâmina enorme, combate direto. Kraivos é a prova de que alguns Seres do Vazio preferem a abordagem direta à sutileza da não-existência.",
+        "lore": "Um Ser do Vazio que evoluiu uma forma mais f�sica e pesada que a maioria de sua esp�cie � armadura densa, l�mina enorme, combate direto. Kraivos � a prova de que alguns Seres do Vazio preferem a abordagem direta � sutileza da n�o-exist�ncia.",
         "ab": [
           "Armadura do Vazio",
-          "Lâmina Pesada da Não-Existência",
+          "L�mina Pesada da N�o-Exist�ncia",
           "Combate Direto"
         ],
         "pow": 90,
@@ -4977,11 +4977,11 @@
         "f": "Krown-Kore-V-1.png",
         "t": "O Alado do Vazio",
         "role": "Ser do Vazio com Asas",
-        "lore": "Um Ser do Vazio que manifesta asas — não para voar, mas para expandir sua área de influência do Vazio. Krown-Kore usa suas asas como campos de força da não-existência, criando zonas onde a realidade começa a falhar ao redor de qualquer coisa que se aproxime.",
+        "lore": "Um Ser do Vazio que manifesta asas � n�o para voar, mas para expandir sua �rea de influ�ncia do Vazio. Krown-Kore usa suas asas como campos de for�a da n�o-exist�ncia, criando zonas onde a realidade come�a a falhar ao redor de qualquer coisa que se aproxime.",
         "ab": [
           "Asas do Vazio",
-          "Campo de Não-Existência",
-          "Coroação do Vazio"
+          "Campo de N�o-Exist�ncia",
+          "Coroa��o do Vazio"
         ],
         "pow": 88,
         "spd": 82,
@@ -4996,11 +4996,11 @@
         "f": "Malakor-V-1.png",
         "t": "O Observador das Penas Negras",
         "role": "Vigia do Vazio",
-        "lore": "Um Ser do Vazio que adotou uma forma de penas negras e asas que lembram o luto. Malakor observa o conflito de Eryndor sem intervir diretamente — coleta informações que transmite de volta ao coletivo do Vazio, auxiliando a expansão estratégica da Fissura.",
+        "lore": "Um Ser do Vazio que adotou uma forma de penas negras e asas que lembram o luto. Malakor observa o conflito de Eryndor sem intervir diretamente � coleta informa��es que transmite de volta ao coletivo do Vazio, auxiliando a expans�o estrat�gica da Fissura.",
         "ab": [
-          "Observação Total",
-          "Transmissão ao Coletivo",
-          "Penas da Não-Existência"
+          "Observa��o Total",
+          "Transmiss�o ao Coletivo",
+          "Penas da N�o-Exist�ncia"
         ],
         "pow": 80,
         "spd": 82,
@@ -5015,7 +5015,7 @@
         "f": "Wraith-V-1.png",
         "t": "O Espectro Supremo do Vazio",
         "role": "Senhor do Vazio",
-        "lore": "O Ser do Vazio mais antigo e mais poderoso — o arquiteto da Grande Fratura. Wraith foi quem coordenou o uso dos Cristais Kore para rasgar a barreira entre mundos. Não odeia Eryndor; simplesmente a considera temporária, como considera temporário tudo que existe dentro duma realidade com limites.",
+        "lore": "O Ser do Vazio mais antigo e mais poderoso � o arquiteto da Grande Fratura. Wraith foi quem coordenou o uso dos Cristais Kore para rasgar a barreira entre mundos. N�o odeia Eryndor; simplesmente a considera tempor�ria, como considera tempor�rio tudo que existe dentro duma realidade com limites.",
         "ab": [
           "Rasgadura da Realidade",
           "Senhorio do Vazio",
@@ -5026,7 +5026,7 @@
         "def": 95,
         "int": 100,
         "align": "chaos",
-        "region": "Voidrift — Centro",
+        "region": "Voidrift � Centro",
         "status": "Senhor Supremo"
       },
       {
@@ -5034,10 +5034,10 @@
         "f": "Akuma-Zan-V-1.png",
         "t": "O Akuma Zan",
         "role": "Personagem de Seres do Vazio",
-        "lore": "Akuma Zan é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Seres do Vazio, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Akuma Zan era um vazio que o Kore deu forma. Sua ausência é agora presença. Sua ferida: existir sem realidade. Sua promessa: encontrar o vazio.",
         "ab": [
           "Golpe de Seres do Vazio",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 81,
@@ -5053,10 +5053,10 @@
         "f": "Astraon-V-1.png",
         "t": "O Astraon",
         "role": "Personagem de Seres do Vazio",
-        "lore": "Astraon é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Seres do Vazio, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Astraon era uma estrela que o Vazio transformou em ser. Sua luz é agora escuridão. Sua ferida: brilhar sem fogo. Sua promessa: apagar a escuridão.",
         "ab": [
           "Golpe de Seres do Vazio",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 67,
@@ -5072,10 +5072,10 @@
         "f": "Erebus-V-1.png",
         "t": "O Erebus",
         "role": "Personagem de Seres do Vazio",
-        "lore": "Erebus é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Seres do Vazio, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Erebus era uma sombra primordial que o Kore imbuiu com mente. Sua escuridão é agora consciencia. Sua ferida: ver sem olhos. Sua promessa: observar o fim.",
         "ab": [
           "Golpe de Seres do Vazio",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 60,
@@ -5091,10 +5091,10 @@
         "f": "Nalakor-V-1.png",
         "t": "O Nalakor",
         "role": "Personagem de Seres do Vazio",
-        "lore": "Nalakor é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Seres do Vazio, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Nalakor era um voidwalker que o Kore transformou em semi-deus. Sua ausência é agora existencia. Sua ferida: andar sem pisar. Sua promessa: tocar o chão.",
         "ab": [
           "Golpe de Seres do Vazio",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 67,
@@ -5110,10 +5110,10 @@
         "f": "Xanthos-V-1.png",
         "t": "O Xanthos",
         "role": "Personagem de Seres do Vazio",
-        "lore": "Xanthos é uma presença recém-reconhecida em Eryndor. Sua imagem já está na galeria, e sua história agora passa a integrar oficialmente a linhagem Seres do Vazio, servindo como peça viva da Guerra da Convergência.",
+        "lore": "Xanthos era um ser do vazio que o Kore deu forma. Sua não existência é agora real. Sua ferida: ser sem existir. Sua promessa: encontrar o vazio.",
         "ab": [
           "Golpe de Seres do Vazio",
-          "Presença Imponente",
+          "Presen�a Imponente",
           "Vontade de Combate"
         ],
         "pow": 67,
@@ -5128,9 +5128,9 @@
   }
 ];
 
-// Mantém o atlas sincronizado com os arquivos presentes em `images/`.
+// Mant�m o atlas sincronizado com os arquivos presentes em `images/`.
 // As entradas abaixo completam as imagens que existem nas pastas, mas ainda
-// não estavam cadastradas no conteúdo principal do site.
+// n�o estavam cadastradas no conte�do principal do site.
 const EXTRA_RACE_CHARACTERS = {
   Beserk: ["Frostmorne-V-1.png", "Godfrey-First-Elden-Lord-V-1.png", "Solano-V-1.png", "Uriel-V-1.png", "Vulcan-V-1.png", "Xathur-V-1.png"],
   Demonio: ["Abadom-V-1.png", "Apoliom-V-1.png", "Belial-V-1.png", "Grunbeld-V-2.png", "Topo-V-1.png"],
@@ -5161,8 +5161,8 @@ function buildExtraCharacter(fileName, race) {
     f: fileName,
     t: `Registro adicional de ${race.name}`,
     role: `Personagem de ${race.name}`,
-    lore: `${displayName} já está presente na pasta de imagens da raça ${race.name}, então foi incorporado automaticamente ao atlas para não ficar de fora do site.`,
-    ab: ["Ataque Kore", "Presença de Campo", "Instinto de Combate"],
+    lore: `${displayName} j� est� presente na pasta de imagens da ra�a ${race.name}, ent�o foi incorporado automaticamente ao atlas para n�o ficar de fora do site.`,
+    ab: ["Ataque Kore", "Presen�a de Campo", "Instinto de Combate"],
     pow: 68,
     spd: 68,
     def: 68,
@@ -5189,4 +5189,5 @@ for (const race of RACES) {
 
 // Export RACES to window for module access
 window.RACES = RACES;
+
 

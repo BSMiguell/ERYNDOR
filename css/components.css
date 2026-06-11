@@ -1,17 +1,11 @@
-/* ===== Site Loader ===== */
+/* ===== Site Loader — Ritual de Selos ===== */
 .site-loader {
   position: fixed;
   inset: 0;
   z-index: 2200;
   display: grid;
   place-items: center;
-  background:
-    linear-gradient(180deg, rgba(8, 7, 6, 0.96), rgba(8, 7, 6, 0.9)),
-    repeating-linear-gradient(
-      135deg,
-      rgba(240, 226, 196, 0.04) 0 1px,
-      transparent 1px 12px
-    );
+  background: radial-gradient(ellipse at center, #1a0a00 0%, #080706 70%);
   transition:
     opacity 0.55s ease,
     visibility 0.55s ease;
@@ -25,6 +19,35 @@ body.is-loaded .site-loader {
 .loader-mark {
   width: min(76vw, 420px);
   text-align: center;
+}
+
+/* Fragmentos de cristal Kore emanando do centro */
+.loader-kore-shards {
+  position: absolute;
+  inset: 0;
+}
+
+.loader-kore-shards::before,
+.loader-kore-shards::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  border: 1px solid var(--kore);
+  clip-path: polygon(50% 0, 64% 33%, 100% 50%, 64% 67%, 50% 100%, 36% 67%, 0 50%, 36% 33%);
+  animation: koreShardPulse 2s ease-in-out infinite;
+  opacity: 0.4;
+}
+
+.loader-kore-shards::after {
+  width: 200px;
+  height: 200px;
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  animation-delay: 0.5s;
+  animation-duration: 2.8s;
+  opacity: 0.25;
 }
 
 .loader-sigil {
@@ -48,8 +71,7 @@ body.is-loaded .site-loader {
     0 50%,
     36% 33%
   );
-  animation: sigilAwaken 0.9s cubic-bezier(0.19, 1, 0.22, 1) both,
-    sigilTurn 1.8s cubic-bezier(0.66, 0, 0.18, 1) 0.9s infinite;
+  animation: sealAwaken 0.9s cubic-bezier(0.19, 1, 0.22, 1) both;
 }
 
 .loader-text {
@@ -58,6 +80,41 @@ body.is-loaded .site-loader {
   font-weight: 700;
   font-size: 0.9rem;
   color: var(--paper);
+  letter-spacing: 0.4em;
+  animation: sealRip 0.8s cubic-bezier(0.25, 1.5, 0.5, 1) both;
+}
+
+@keyframes sealRip {
+  from {
+    clip-path: inset(50% 0 50% 0);
+    filter: brightness(3) blur(4px);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    filter: brightness(1) blur(0);
+  }
+}
+
+@keyframes koreShardPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 0.6;
+  }
+}
+
+@keyframes sealAwaken {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate(-180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
 }
 
 .loader-track {
@@ -664,7 +721,7 @@ body.cursor-active .cursor span {
   gap: 0.5rem;
 }
 
-/* ===== Character Cards ===== */
+/* ===== Character Cards — Dossiê ===== */
 .characters-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -672,38 +729,58 @@ body.cursor-active .cursor span {
 }
 
 .char-card {
-  --tilt-x: 0deg;
-  --tilt-y: 0deg;
   position: relative;
   min-height: 430px;
   display: grid;
   grid-template-rows: minmax(220px, 1fr) auto;
   padding: 0;
-  border: 1px solid color-mix(in srgb, var(--race-color), transparent 56%);
+  border: 1px solid color-mix(in srgb, var(--race-color), transparent 55%);
   border-radius: 6px;
   color: var(--bone);
   background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(240, 226, 196, 0.025) 0 1px,
+      transparent 1px 12px
+    ),
     linear-gradient(
       160deg,
-      color-mix(in srgb, var(--race-color), #080706 86%),
-      rgba(8, 7, 6, 0.9)
-    ),
-    repeating-linear-gradient(
-      90deg,
-      rgba(240, 226, 196, 0.03) 0 1px,
-      transparent 1px 12px
+      color-mix(in srgb, var(--race-color), #080706 88%),
+      rgba(8, 7, 6, 0.96)
     );
   box-shadow: 0 22px 45px rgba(0, 0, 0, 0.32);
   text-align: left;
   cursor: pointer;
   overflow: hidden;
-  transform: perspective(900px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateY(26px);
+  transform: translateY(24px);
   opacity: 0;
   transition:
     transform 0.45s cubic-bezier(0.19, 1, 0.22, 1),
     opacity 0.45s ease,
-    border-color 0.22s ease,
-    filter 0.22s ease;
+    border-color 0.25s ease,
+    box-shadow 0.35s ease;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 18px) 0,
+    100% 18px,
+    100% 100%,
+    18px 100%,
+    0 calc(100% - 18px)
+  );
+}
+
+.char-card.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.char-card:hover,
+.char-card:focus-visible {
+  border-color: color-mix(in srgb, var(--race-color), #fff 28%);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px var(--race-color);
+  outline: none;
 }
 
 .char-card.is-visible {
@@ -828,7 +905,25 @@ body.cursor-active .cursor span {
   overflow: hidden;
 }
 
-/* Threat Bar */
+/* Threat Ring via conic-gradient */
+.threat-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--race-color) var(--threat-pct, 50%),
+    rgba(255, 255, 255, 0.05) var(--threat-pct, 50%)
+  );
+  mask: radial-gradient(circle, transparent 78%, black 79%);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.char-card:hover .threat-ring {
+  opacity: 1;
+}
+
+/* Threat Bar (mantida para compatibilidade) */
 .threat-bar {
   width: 100%;
   height: 4px;
@@ -841,7 +936,7 @@ body.cursor-active .cursor span {
 .threat-fill {
   width: 0%;
   height: 100%;
-  background: linear-gradient(90deg, var(--blood), var(--kore));
+  background: linear-gradient(90deg, var(--race-color), color-mix(in srgb, var(--race-color), #fff 30%));
   border-radius: 2px;
   transition: width 1.2s cubic-bezier(0.19, 1, 0.22, 1) var(--delay, 0s);
 }
@@ -1136,11 +1231,43 @@ body.cursor-active .cursor span {
   color: var(--bone);
   font-family: "Cinzel Decorative", serif;
   font-size: 6.1rem;
+  font-size: clamp(3rem, 12vw, 6.1rem);
   font-weight: 900;
   line-height: 0.9;
   text-shadow:
     0 2px 0 rgba(0, 0, 0, 0.56),
     0 0 34px rgba(215, 175, 69, 0.24);
+}
+
+/* Névoa de batalha que emerge com scroll */
+.hero-warfog {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 120% 60% at 30% 80%,
+      rgba(184, 61, 52, 0.18),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 80% 40% at 70% 20%,
+      rgba(74, 181, 158, 0.12),
+      transparent
+    );
+  animation: fogDrift 8s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes fogDrift {
+  from {
+    transform: translateX(-1%) scale(1.02);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateX(1%) scale(0.98);
+    opacity: 1;
+  }
 }
 
 .hero-title-line {
@@ -1191,7 +1318,7 @@ body.cursor-active .cursor span {
   opacity: 1;
 }
 
-/* ===== Modal ===== */
+/* ===== Modal — Pergaminho Vivo ===== */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -1206,6 +1333,14 @@ body.cursor-active .cursor span {
     opacity 0.25s ease,
     visibility 0.25s ease;
   clip-path: circle(0 at var(--origin-x, 50%) var(--origin-y, 50%));
+}
+
+.character-modal {
+  background:
+    /* Ruído de papel pergaminho */
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/><feColorMatrix type='saturate' values='0'/></filter><rect width='200' height='200' filter='url(%23noise)' opacity='0.03'/></svg>"),
+    linear-gradient(145deg, rgba(8, 7, 6, 0.98), rgba(20, 15, 8, 0.99));
+  border: 1px solid color-mix(in srgb, var(--race-color, var(--kore)), transparent 40%);
 }
 
 .modal-backdrop.open {
@@ -1392,17 +1527,30 @@ body.cursor-active .cursor span {
   overflow: hidden;
 }
 
+.stat-bar-fill {
+  background: linear-gradient(
+    90deg,
+    var(--race-color),
+    color-mix(in srgb, var(--race-color), #fff 30%)
+  );
+  box-shadow: 0 0 12px var(--race-color);
+  animation: plasmaFlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes plasmaFlow {
+  from {
+    filter: brightness(1);
+  }
+  to {
+    filter: brightness(1.4);
+  }
+}
+
 .stat-bar span {
   display: block;
   width: 0;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(
-    90deg,
-    var(--race-color, var(--kore)),
-    color-mix(in srgb, var(--race-color, var(--kore)), #fff 30%)
-  );
-  box-shadow: 0 0 18px var(--race-glow, rgba(215, 175, 69, 0.35));
   transition: width 0.7s ease;
 }
 

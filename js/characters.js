@@ -112,16 +112,20 @@ function renderCharacters(RACES, els) {
 function buildCharacterCard(item, index, els) {
   const button = document.createElement("button");
   button.type = "button";
-  button.className = `char-card archetype-${item.archetype}`;
+  button.className = `char-card`;
   button.dataset.cursor = "Abrir";
+  button.dataset.race = item.race.id;
+  button.dataset.threat = item.threat;
   button.style.setProperty("--race-color", item.race.color);
   button.style.setProperty("--race-glow", item.race.glow);
+  button.style.setProperty("--threat-pct", `${(item.threat / 100) * 360}deg`);
   button.style.transitionDelay = `${(index % 12) * 34}ms`;
 
   const imgPath = `images/${item.race.folder}/${item.char.f}`;
 
   button.innerHTML = `
     <div class="char-art">
+      <div class="threat-ring" aria-hidden="true"></div>
       <img src="${escapeHtml(imgPath)}" alt="${escapeHtml(item.char.n)}" loading="lazy" decoding="async" />
       <span class="char-sigil">${escapeHtml(item.race.icon)}</span>
       <span class="char-threat">${item.threat}</span>
@@ -153,11 +157,6 @@ function buildCharacterCard(item, index, els) {
   });
 
   button.addEventListener("click", (event) => openModal(item, event, els));
-  button.addEventListener("pointermove", (event) => tiltCard(button, event));
-  button.addEventListener("pointerleave", () => {
-    button.style.setProperty("--tilt-x", "0deg");
-    button.style.setProperty("--tilt-y", "0deg");
-  });
 
   if (window.revealObserver) {
     window.revealObserver.observe(button);
@@ -276,10 +275,10 @@ function renderModalStats(item, els) {
   if (els.modalStats) {
     els.modalStats.innerHTML = stats
       .map(
-        ([label, value]) => `
+        ([label, value], i) => `
       <div class="stat-row">
         <span>${label}</span>
-        <div class="stat-bar"><span data-value="${value}"></span></div>
+        <div class="stat-bar"><span class="stat-bar-fill" data-value="${value}" style="--stat-index: ${i}"></span></div>
         <strong>${value}</strong>
       </div>
     `,
@@ -287,7 +286,7 @@ function renderModalStats(item, els) {
       .join("");
 
     requestAnimationFrame(() => {
-      els.modalStats.querySelectorAll(".stat-bar span").forEach((bar) => {
+      els.modalStats.querySelectorAll(".stat-bar-fill").forEach((bar) => {
         bar.style.width = `${bar.dataset.value}%`;
       });
     });
