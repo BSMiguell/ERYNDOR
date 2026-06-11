@@ -39,7 +39,6 @@
         --transition-med: 0.35s cubic-bezier(0.19, 1, 0.22, 1);
         --transition-slow: 0.7s ease;
         --reveal-delay: 0s;
-
         --kore-a10: rgba(215, 175, 69, 0.1);
         --kore-a20: rgba(215, 175, 69, 0.2);
         --copper-a10: rgba(207, 111, 59, 0.1);
@@ -209,26 +208,9 @@
           0 50%,
           36% 33%
         );
-        animation: sigilAwaken 3.2s ease-in-out infinite;
-      }
-
-      @keyframes sigilAwaken {
-        0% {
-          transform: scale(0.88);
-          filter: brightness(0.9) saturate(0.8);
-          opacity: 0.8;
-        }
-        30%,
-        70% {
-          transform: scale(1) rotate(180deg);
-          filter: brightness(1.2) saturate(1.1);
-          opacity: 1;
-        }
-        100% {
-          transform: scale(0.88) rotate(360deg);
-          filter: brightness(0.9) saturate(0.8);
-          opacity: 0.8;
-        }
+        animation:
+          sigilAwaken 0.9s cubic-bezier(0.19, 1, 0.22, 1) both,
+          sigilTurn 1.8s cubic-bezier(0.66, 0, 0.18, 1) 0.9s infinite;
       }
 
       .loader-text {
@@ -257,28 +239,6 @@
           transparent
         );
         animation: loaderSweep 1.15s ease-in-out infinite;
-      }
-
-      @media (max-width: 1024px) {
-        .hero {
-          grid-template-columns: 1fr;
-          padding-bottom: 4rem;
-        }
-        .hero-dossiers {
-          display: none;
-        }
-        .races-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .races-grid {
-          grid-template-columns: 1fr;
-        }
-        .section-heading {
-          display: block;
-        }
       }
 
       .cursor {
@@ -312,12 +272,12 @@
         background: var(--active-race);
         box-shadow: 0 0 18px var(--active-glow);
         transform: scale(0.44);
-        mix-blend-mode: color-dodge;
+        mix-blend-mode: difference;
       }
 
       .cursor::after {
         border: 1px solid color-mix(in srgb, var(--active-race), #fff 35%);
-        transform: scale(1.8);
+        transform: scale(2.2);
         transition:
           transform 0.2s ease,
           border-color 0.2s ease;
@@ -352,7 +312,7 @@
       }
 
       body.cursor-active .cursor::after {
-        transform: scale(1.4);
+        transform: scale(1.05);
       }
 
       body.cursor-active .cursor span {
@@ -385,24 +345,40 @@
           );
         backdrop-filter: blur(12px);
       }
-      .top-nav::before,
+
       .top-nav::after {
         content: "";
         position: absolute;
-        left: var(--page-gutter);
-        right: var(--page-gutter);
+        bottom: -1px;
+        left: max(1rem, calc((100vw - 1240px) / 2));
+        right: max(1rem, calc((100vw - 1240px) / 2));
         height: 1px;
-        background: var(--kore-a20);
-        transform-origin: center;
-        transition: transform var(--transition-slow);
-        transform: scaleX(calc(var(--scroll-ratio, 0) * 2));
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--kore),
+          var(--verdigris),
+          transparent
+        );
+        opacity: 0.35;
       }
-      .top-nav::before {
-        top: 0;
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: 6px;
+        left: 0.9rem;
+        right: 0.9rem;
+        height: 1px;
+        background: var(--kore);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.22s ease;
       }
-      .top-nav::after {
-        bottom: 0;
-        transform: scaleX(calc(1 - var(--scroll-ratio, 0) * 1.5));
+
+      .nav-links a:hover::after,
+      .nav-links a.is-active::after {
+        transform: scaleX(1);
       }
 
       .nav-brand {
@@ -462,28 +438,17 @@
         font-weight: 700;
         font-size: 0.88rem;
         border: 1px solid transparent;
-        transition: color var(--transition-fast);
-      }
-      .nav-links a::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: 4px;
-        width: 0;
-        height: 1px;
-        background: var(--kore);
         transition:
-          width var(--transition-med),
-          left var(--transition-med);
+          color 0.2s ease,
+          border-color 0.2s ease,
+          background 0.2s ease;
       }
+
       .nav-links a:hover,
       .nav-links a.is-active {
         color: var(--bone);
-      }
-      .nav-links a:hover::after,
-      .nav-links a.is-active::after {
-        width: calc(100% - 1.8rem);
-        left: 0.9rem;
+        border-color: rgba(215, 175, 69, 0.32);
+        background: rgba(215, 175, 69, 0.08);
       }
 
       .nav-quick {
@@ -779,16 +744,18 @@
         text-align: left;
         transform: translateX(var(--entry-x, 0));
         animation: dossierIn 0.78s ease both;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
       }
 
-      .hero-dossier:hover,
-      .hero-dossier:focus-visible {
-        transform: translateX(-6px);
-        border-color: var(--race-color);
+      .hero-dossier:hover {
+        transform: translateX(6px);
+        border-color: color-mix(in srgb, var(--race-color), #fff 40%);
         box-shadow:
-          -6px 0 0 var(--race-glow),
-          0 0 24px -4px var(--race-glow);
-        outline: none;
+          0 24px 60px rgba(0, 0, 0, 0.5),
+          inset 4px 0 0 var(--race-color);
       }
 
       .hero-dossier:nth-child(2) {
@@ -813,7 +780,6 @@
         width: 118px;
         height: 128px;
         object-fit: cover;
-        object-position: center 20%;
         object-position: top center;
         filter: saturate(1.05) contrast(1.08);
         clip-path: polygon(0 0, 100% 8%, 92% 100%, 0 92%);
@@ -1054,7 +1020,7 @@
         width: 108%;
         height: 108%;
         object-fit: cover;
-        object-position: center;
+        object-position: center 20%;
         filter: saturate(1.12) contrast(1.08) blur(var(--banner-blur, 0px));
         transform: translate3d(
             calc(var(--parallax-x, 0) * 1px),
@@ -1190,19 +1156,23 @@
         opacity: 1;
       }
 
+      .race-card.is-active,
       .race-card:hover,
       .race-card:focus-visible {
-        border-color: color-mix(in srgb, var(--race-color), #fff 22%);
         outline: none;
-        transform: translateY(-5px);
       }
 
       .race-card.is-active {
         border-color: var(--race-color);
         box-shadow:
-          0 0 24px -4px var(--race-glow),
-          inset 0 0 12px rgba(0, 0, 0, 0.4);
-        transform: translateY(-4px) scale(1.02);
+          0 0 0 1px color-mix(in srgb, var(--race-color), transparent 40%),
+          0 0 28px color-mix(in srgb, var(--race-color), transparent 60%),
+          0 16px 40px rgba(0, 0, 0, 0.5);
+        transform: translateY(-8px);
+      }
+
+      .race-card.is-active::before {
+        opacity: 0.4;
       }
 
       .race-card::before {
@@ -1994,6 +1964,24 @@
         filter: saturate(0.86) contrast(1.18) hue-rotate(18deg);
       }
 
+      @keyframes sigilAwaken {
+        0% {
+          opacity: 0;
+          transform: scale(0.4) rotate(-90deg);
+          filter: blur(12px);
+        }
+        60% {
+          opacity: 1;
+          transform: scale(1.1) rotate(15deg);
+          filter: blur(0);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1) rotate(0deg);
+          filter: blur(0);
+        }
+      }
+
       @keyframes sigilTurn {
         0% {
           transform: rotate(0) scale(0.86);
@@ -2192,9 +2180,55 @@
         }
       }
 
-      @media (max-width: 460px) {
-        .characters-grid {
+      @media (max-width: 1024px) {
+        .hero {
           grid-template-columns: 1fr;
+        }
+        .hero-dossiers {
+          display: none;
+        }
+        .races-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .section-heading {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 3.2rem;
+        }
+        .race-stage {
+          min-height: 360px;
+        }
+        .race-stage-copy h3 {
+          font-size: 2rem;
+        }
+        .races-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .story-grid {
+          grid-template-columns: 1fr;
+        }
+        .rift-map {
+          display: none;
+        }
+        .top-nav .nav-links {
+          display: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .races-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-actions {
+          flex-direction: column;
+        }
+        .command-button,
+        .ghost-button {
+          width: 100%;
         }
       }
 
@@ -2267,15 +2301,15 @@
           <div class="hero-ledger reveal" aria-live="polite">
             <div class="ledger-item">
               <small>Raças</small>
-              <strong id="metric-races" data-count="12">0</strong>
+              <strong id="metric-races" data-count="0">0</strong>
             </div>
             <div class="ledger-item">
               <small>Personagens</small>
-              <strong id="metric-characters" data-count="48">0</strong>
+              <strong id="metric-characters" data-count="0">0</strong>
             </div>
             <div class="ledger-item">
               <small>Regiões</small>
-              <strong id="metric-regions" data-count="7">0</strong>
+              <strong id="metric-regions" data-count="0">0</strong>
             </div>
           </div>
         </div>
@@ -2305,12 +2339,10 @@
               data-index="I"
               style="--chapter-color: var(--kore); --reveal-delay: 0s"
             >
-              <h3>A Convergência</h3>
+              <h3>Os Selos cedem</h3>
               <p>
-                Quando os Cristais Kore, pilares da ordem, se estilhaçaram, os
-                Selos que separavam os planos cederam. O caos resultante não foi
-                uma invasão, mas uma fusão. Realidades sangraram umas nas
-                outras, forjando linhagens e reescrevendo a própria terra.
+                A barreira entre planos perdeu a forma. Demônios, Aparições e
+                forças sem nome passaram a disputar território no mesmo mapa.
               </p>
             </article>
             <article
@@ -2318,13 +2350,10 @@
               data-index="II"
               style="--chapter-color: var(--verdigris); --reveal-delay: 0.12s"
             >
-              <h3>Marcas da Criação</h3>
+              <h3>O Kore escolhe corpos</h3>
               <p>
-                Cada raça carrega um eco do seu plano de origem. Os Engrenados,
-                uma memória de ordem mecânica. Os Noturnos, a sombra de um
-                crepúsculo eterno. Eryndor tornou-se um mosaico de
-                impossibilidades, onde a geografia é tanto história quanto campo
-                de batalha.
+                Cristais deixaram de ser relíquias e viraram motores de mutação,
+                fé, fome, disciplina, ruína e ascensão.
               </p>
             </article>
             <article
@@ -2332,12 +2361,10 @@
               data-index="III"
               style="--chapter-color: var(--blood); --reveal-delay: 0.24s"
             >
-              <h3>O Fim em Fragmentos</h3>
+              <h3>A guerra ganha nomes</h3>
               <p>
-                Não há uma única profecia, mas várias. Cada herói e vilão
-                carrega um fragmento de um possível apocalipse. O Atlas não
-                apenas mapeia lugares, mas futuros potenciais, cada um uma
-                ameaça existencial à espera de um catalisador.
+                Cada personagem do atlas entra como dossiê vivo: poder, papel,
+                alinhamento, região, ferida e promessa.
               </p>
             </article>
           </div>
@@ -2747,6 +2774,10 @@
           const regions = new Set(
             allCharacters.map((item) => item.char.region || item.race.region),
           );
+          // Atualizar data-count antes da animação
+          els.metricRaces.dataset.count = RACES.length;
+          els.metricCharacters.dataset.count = allCharacters.length;
+          els.metricRegions.dataset.count = regions.size;
           countTo(els.metricRaces, RACES.length);
           countTo(els.metricCharacters, allCharacters.length);
           countTo(els.metricRegions, regions.size);
@@ -3300,17 +3331,13 @@
             els.raceStage.style.setProperty("--parallax-x", x.toFixed(1));
             els.raceStage.style.setProperty("--parallax-y", y.toFixed(1));
           });
-          els.raceStage.addEventListener("pointerleave", () => {
-            els.raceStage.style.setProperty("--parallax-x", "0");
-            els.raceStage.style.setProperty("--parallax-y", "0");
-          });
-          els.raceStage.addEventListener("pointermove", (event) => {
-            if (window.innerWidth < 760) return;
-            const rect = els.raceStage.getBoundingClientRect();
-            const x = ((event.clientX - rect.left) / rect.width - 0.5) * -28;
-            const y = ((event.clientY - rect.top) / rect.height - 0.5) * -18;
-            els.raceStage.style.setProperty("--parallax-x", x.toFixed(1));
-            els.raceStage.style.setProperty("--parallax-y", y.toFixed(1));
+          // Parallax aprimorado via .race-theater
+          document.querySelector(".race-theater")?.addEventListener("pointermove", (e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const cx = (e.clientX - rect.left) / rect.width - 0.5;
+            const cy = (e.clientY - rect.top) / rect.height - 0.5;
+            els.raceStage.style.setProperty("--parallax-x", (cx * 18).toFixed(1));
+            els.raceStage.style.setProperty("--parallax-y", (cy * 10).toFixed(1));
           });
           els.raceStage.addEventListener("pointerleave", () => {
             els.raceStage.style.setProperty("--parallax-x", "0");
