@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090806" />
+  <title>ERYNDOR - Mundo Interativo</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/mapa-regioes.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body class="mundo-interativo-body" style="margin: 0; background: var(--ink); color: var(--bone); font-family: 'EB Garamond', Georgia, serif;">
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+
+  <nav class="top-nav" aria-label="Navegação principal">
+    <a class="nav-brand" href="index.html" data-cursor="Eryndor">Eryndor</a>
+    <ul class="nav-links">
+      <li><a href="index.html#chronicles" data-cursor="Crônica">Crônica</a></li>
+      <li><a href="index.html#races" data-cursor="Raças">Raças</a></li>
+      <li><a href="index.html#characters" data-cursor="Galeria">Personagens</a></li>
+      <li><a href="#mapa-interativo" class="ativo" data-cursor="Mapa">Mapa</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <section class="hero" style="min-height: 60vh;">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">Mundo Interativo</p>
+        <h1 class="reveal">
+          <span class="hero-letter" style="--delay: 0s">E</span>
+          <span class="hero-letter" style="--delay: 0.04s">X</span>
+          <span class="hero-letter" style="--delay: 0.08s">P</span>
+          <span class="hero-letter" style="--delay: 0.12s">L</span>
+          <span class="hero-letter" style="--delay: 0.16s">O</span>
+          <span class="hero-letter" style="--delay: 0.2s">R</span>
+          <span class="hero-letter" style="--delay: 0.24s">A</span>
+          <span class="hero-title-line">Explore cada região</span>
+        </h1>
+        <p class="hero-lead reveal">
+          Clique nas marcas no mapa ou nos cartões abaixo para descobrir as raças,
+          histórias e terras que compõem o mundo de ERYNDOR.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mapa Interativo -->
+    <section class="mapa-container" id="mapa-interativo" aria-label="Mapa interativo de regiões">
+      <!-- O mapa SVG será inserido via JavaScript -->
+    </section>
+
+    <!-- Grid de Regiões -->
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Regiões</p>
+          <h2>As terras habitadas pelas linhagens</h2>
+        </div>
+        <p>
+          Cada região tem sua própria história, cultura e manifestação do Kore.
+          Explorar uma região é como abrir um dossiê vivo do mundo.
+        </p>
+      </div>
+
+      <div class="regioes-grid" id="regioes-grid">
+        <!-- Cards gerados via JavaScript -->
+      </div>
+    </section>
+
+    <!-- Mini-mapa de navegação -->
+    <div class="mini-mapa" id="mini-mapa" aria-hidden="true">
+      <svg class="mini-mapa-svg" viewBox="0 0 100 100"></svg>
+    </div>
+
+    <!-- Modal de Região -->
+    <div class="regiao-modal" id="regiao-modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <article class="regiao-modal-content">
+        <button class="regiao-modal-close" id="modal-close" aria-label="Fechar">×</button>
+        <div class="regiao-modal-header">
+          <div class="regiao-modal-imagens" id="modal-imagens">
+            <!-- Imagens inseridas via JS -->
+          </div>
+          <div class="regiao-modal-info">
+            <h2 id="modal-nome"></h2>
+            <p class="raca" id="modal-raca"></p>
+            <p class="descricao" id="modal-descricao"></p>
+            <div class="regiao-tags" id="modal-tags"></div>
+          </div>
+        </div>
+        <div class="regiao-modal-personagens" id="modal-personagens">
+          <!-- Lista de personagens da região -->
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="data-regioes.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/mapa-regioes.js"></script>
+  <script src="js/vistas-regioes.js"></script>
+
+  <script>
+    // Reveal observer para animações de scroll
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Hero letters animation
+    document.querySelectorAll('.hero-letter').forEach((el, i) => {
+      el.style.setProperty('--drift-y', `${(Math.random() - 0.5) * 80}px`);
+      el.style.setProperty('--drift-x', `${(Math.random() - 0.5) * 60}px`);
+      el.style.setProperty('--drift-r', `${(Math.random() - 0.5) * 25}deg`);
+    });
+  </script>
+</body>
+</html>

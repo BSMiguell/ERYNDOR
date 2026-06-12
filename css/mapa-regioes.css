@@ -1,0 +1,471 @@
+/* ===== Mapa Interativo - ERYNDOR ===== */
+
+.mundo-interativo-body {
+  margin: 0;
+  color: var(--bone);
+  background: var(--ink);
+  font-family: "EB Garamond", Georgia, serif;
+  overflow-x: hidden;
+}
+
+.mapa-container {
+  min-height: 70vh;
+  position: relative;
+  background:
+    radial-gradient(ellipse at center, rgba(16,16,16,0.8) 0%, rgba(10,10,10,0.9) 70%),
+    var(--ink);
+  overflow: hidden;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.mapa-svg {
+  width: 100%;
+  height: 60vh;
+  max-height: 500px;
+  filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+}
+
+/* Pins do mapa */
+.mapa-pin-grupo {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mapa-pin-grupo:focus {
+  outline: none;
+}
+
+.mapa-pin {
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  filter: drop-shadow(0 0 8px currentColor);
+  animation: pulseSlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseSlow {
+  0%, 100% { r: 2.5; opacity: 0.8; }
+  50% { r: 3.2; opacity: 1; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { r: 3; filter: drop-shadow(0 0 12px currentColor); }
+  50% { r: 4; filter: drop-shadow(0 0 24px currentColor); }
+}
+
+.mapa-pin-grupo:hover .mapa-pin,
+.mapa-pin-grupo.selecionada .mapa-pin {
+  filter: drop-shadow(0 0 16px currentColor);
+}
+
+.mapa-pin-grupo.selecionada .mapa-pin {
+  animation: pulseGlow 1.5s infinite;
+}
+
+/* Tooltips e labels */
+.mapa-tooltip {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5px;
+  fill: var(--bone);
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.mapa-tooltip.ativa {
+  opacity: 1;
+  font-size: 3px;
+}
+
+.mapa-label {
+  font-family: 'EB Garamond', serif;
+  font-size: 2px;
+  fill: var(--moss);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.mapa-pin-grupo:hover .mapa-label,
+.mapa-pin-grupo.selecionada .mapa-label {
+  opacity: 1;
+  fill: var(--kore);
+}
+
+/* Conexões entre regiões */
+.mapa-conexao {
+  transition: all 0.5s ease;
+}
+
+.mapa-pin-grupo:hover ~ .mapa-conexao,
+.mapa-pin-grupo.selecionada ~ .mapa-conexao {
+  stroke-opacity: 0.6;
+  stroke-width: 1;
+}
+
+/* Painel de informações */
+.mapa-painel {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: linear-gradient(135deg, rgba(22,22,22,0.95) 0%, rgba(16,16,16,0.98) 100%);
+  border: 1px solid var(--kore);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  min-width: 280px;
+  max-width: 400px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5), inset 0 0 30px rgba(215,175,69,0.1);
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+.mapa-painel.ativo {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: all;
+}
+
+.painel-conteudo h3 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  color: var(--kore);
+  letter-spacing: 0.05em;
+}
+
+.painel-conteudo p {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+  color: var(--bone);
+}
+
+.painel-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  background: rgba(215,175,69,0.2);
+  color: var(--bone);
+  border: 1px solid rgba(215,175,69,0.3);
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+}
+
+/* Grid de regiões com imagens */
+.regioes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.regiao-card {
+  position: relative;
+  aspect-ratio: 3/4;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  background: linear-gradient(135deg, var(--card-from) 0%, var(--card-to) 100%);
+  transform: translateY(24px);
+  opacity: 0;
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+}
+
+.regiao-card.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.regiao-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 60px var(--card-glow), inset 0 0 40px rgba(0,0,0,0.5);
+}
+
+.regiao-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.7s ease;
+  filter: grayscale(0.5) contrast(1.1);
+}
+
+.regiao-card:hover img {
+  filter: grayscale(0) contrast(1);
+  transform: scale(1.08);
+}
+
+.regiao-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  transition: all 0.5s ease;
+}
+
+.regiao-nome {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.8rem;
+  margin: 0 0 0.25rem;
+  color: var(--kore);
+  text-shadow: 0 0 10px rgba(215,175,69,0.5);
+}
+
+.regiao-raca {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+  color: var(--bone);
+}
+
+.regiao-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.regiao-tag {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background: rgba(215,175,69,0.25);
+  color: var(--moss);
+  border: 1px solid var(--kore);
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+}
+
+/* Modal de Região */
+.regiao-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.regiao-modal.ativo {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.regiao-modal-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  overflow-y: auto;
+  border: 2px solid var(--kore);
+  position: relative;
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+}
+
+.regiao-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--bone);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.regiao-modal-close:hover {
+  transform: rotate(90deg) scale(1.2);
+  color: var(--kore);
+}
+
+/* Modal conteúdo */
+.regiao-modal-header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.regiao-modal-imagens {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.regiao-modal-imagens img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--kore);
+  transition: all 0.3s ease;
+}
+
+.regiao-modal-imagens img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px var(--active-glow);
+}
+
+.regiao-modal-info h2 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem;
+  color: var(--kore);
+}
+
+.regiao-modal-info .raca {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  color: var(--verdigris);
+  margin-bottom: 1rem;
+}
+
+.regiao-modal-info .descricao {
+  font-family: 'EB Garamond', serif;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  color: var(--bone);
+}
+
+/* Mini-mapa de navegação */
+.mini-mapa {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 180px;
+  height: 180px;
+  background: rgba(16,16,16,0.8);
+  border-radius: 50%;
+  border: 2px solid var(--kore);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.mini-mapa-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.mini-mapa-pin {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mini-mapa-pin:hover {
+  r: 4;
+}
+
+.modal-personagens-titulo {
+  font-family: 'Cinzel', serif;
+  color: var(--kore);
+  margin: 1rem 0;
+  font-size: 1.3rem;
+}
+
+.modal-personagens-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal-personagem-card {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(8,7,6,0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-personagem-card:hover {
+  border-color: var(--kore);
+  transform: translateY(-4px);
+}
+
+.modal-personagem-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.modal-personagem-card span {
+  font-size: 0.8rem;
+  color: var(--bone);
+  text-align: center;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+/* Hero letters animation */
+.hero-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(1rem) scale(0.96);
+  animation: letterRise 0.6s ease both;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes letterRise {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero-title-line {
+  display: block;
+  color: color-mix(in srgb, var(--bone), var(--kore) 28%);
+  font-size: 0.36em;
+  letter-spacing: 0.08em;
+}
+
+/* Responisvidade */
+@media (max-width: 768px) {
+  .mapa-svg {
+    height: 40vh;
+  }
+
+  .mapa-painel {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: 1rem;
+    min-width: auto;
+    max-width: 100%;
+  }
+
+  .regioes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .regiao-modal-header {
+    flex-direction: column;
+  }
+
+  .mini-mapa {
+    display: none;
+  }
+}

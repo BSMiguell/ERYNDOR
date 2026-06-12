@@ -14,6 +14,18 @@
   border-top: 1px solid rgba(240, 226, 196, 0.08);
 }
 
+/* Hero ajustado para mundo interativo */
+.mundo-interativo-body .hero {
+  min-height: 60vh;
+  padding: 7.8rem max(1.2rem, calc((100vw - 1240px) / 2)) 4rem;
+}
+
+.mundo-interativo-body #ambient-canvas,
+.mundo-interativo-body .hero-warfog,
+.mundo-interativo-body .hero-dossiers {
+  display: none;
+}
+
 .section-heading {
   display: grid;
   grid-template-columns: minmax(0, 0.78fr) minmax(260px, 0.42fr);
