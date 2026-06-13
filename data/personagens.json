@@ -1,0 +1,154 @@
+[
+  {
+    "id": "crimson-kore",
+    "nome": "Crimson Kore",
+    "raca": "amaldic",
+    "regiao": "veldara",
+    "coordenadas_mapa": { "x": 580, "y": 145 },
+    "ameaca": "alta",
+    "poder": "Aura Carmesim e Propagação da Maldição",
+    "imagem": "assets/personagens/crimson-kore.webp",
+    "imagem_placeholder": true,
+    "lore_curto": "O Primeiro Amaldiçoado, consumido pelo horror dos cristais.",
+    "dossie": {
+      "ferida": "Carregar a maldição de seu primeiro contato com o Kore por milênios",
+      "promessa": "Encontrar um fim que nunca chegará",
+      "papel": "Patriarca da Maldição",
+      "alinhamento": "caos"
+    },
+    "eventos_participados": ["forja-que-nao-apaga"]
+  },
+  {
+    "id": "guts",
+    "nome": "Guts",
+    "raca": "beserk",
+    "regiao": "sylvar",
+    "coordenadas_mapa": { "x": 880, "y": 200 },
+    "ameaca": "alta",
+    "poder": "Espadão Drakar e Frenesi de Batalha",
+    "imagem": "assets/personagens/guts.webp",
+    "imagem_placeholder": true,
+    "lore_curto": "O Guerreiro Negro, único a sobreviver a cem batalhas sem arranhões.",
+    "dossie": {
+      "ferida": "Ser consumido pela fúria que o mantém vivo",
+      "promessa": "Encontrar paz em meio ao caos",
+      "papel": "Campeão do Beserk",
+      "alinhamento": "neutro"
+    },
+    "eventos_participados": ["raizes-que-recordam"]
+  },
+  {
+    "id": "aatrox",
+    "nome": "Aatrox",
+    "raca": "demonio",
+    "regiao": "korgath",
+    "coordenadas_mapa": { "x": 710, "y": 800 },
+    "ameaca": "alta",
+    "poder": "Espada da Extinção e Forma do Aniquilador",
+    "imagem": "assets/personagens/aatrox.webp",
+    "imagem_placeholder": true,
+    "lore_curto": "O Exterminador Primordial, uma entidade de destruição selada em forma de espada.",
+    "dossie": {
+      "ferida": "Ser a destruição encarnada sem saber se é liberdade ou prisão",
+      "promessa": "Apagar toda vida em Eryndor",
+      "papel": "Destruidor Primordial",
+      "alinhamento": "mal"
+    },
+    "eventos_participados": ["queda-primeiro-selo"]
+  },
+  {
+    "id": "mycelium",
+    "nome": "Mycelium",
+    "raca": "aparicao",
+    "regiao": "sylvar",
+    "coordenadas_mapa": { "x": 910, "y": 190 },
+    "ameaca": "media",
+    "poder": "Enxame da Divindade e Mel Venenoso",
+    "imagem": "assets/personagens/mycelium.webp",
+    "imagem_placeholder": true,
+    "lore_curto": "Um druida morto cujo espírito se espalhou como fungo entre as raízes.",
+    "dossie": {
+      "ferida": "Ser mil vozes sem nenhuma individual",
+      "promessa": "Transmitir as últimas palavras dos caídos",
+      "papel": "Deusa da Colmeia",
+      "alinhamento": "neutro"
+    },
+    "eventos_participados": ["raizes-que-recordam"]
+  },
+  {
+    "id": "astrid",
+    "nome": "Astrid",
+    "raca": "humano",
+    "regiao": "mareveth",
+    "coordenadas_mapa": { "x": 230, "y": 480 },
+    "ameaca": "alta",
+    "poder": "Machado da Rainha e Fúria da Sobrevivente",
+    "imagem": "assets/personagens/astrid.webp",
+    "imagem_placeholder": true,
+    "lore_curto": "Rainha guerreira cujo coração arde pela vingança dos mortos.",
+    "dossie": {
+      "ferida": "Ser a última sobrevivente de sua linhagem",
+      "promessa": "Que nenhuma batalha será em vão",
+      "papel": "Rainha Guerreira",
+      "alinhamento": "bem"
+    },
+    "eventos_participados": ["leilao-de-mareveth"]
+  },
+  {
+    "id": "leon",
+    "nome": "Leon",
+    "raca": "beserk",
+    "regiao": "veldara",
+    "coordenadas_mapa": { "x": 590, "y": 140 },
+    "ameaca": "alta",
+    "poder": "Rugido Destrutivo e Instinto do Rei",
+    "imagem": "assets/personagens/leon.webp",
+    "imagem_placeholder": true,
+    "lore_curto": "O Rei Tribal cujo rugido despedaça montanhas.",
+    "dossie": {
+      "ferida": "Ver sua terra queimada pelos demônios",
+      "promessa": "Que nenhuma pedra demoníaca reste em pé",
+      "papel": "Rei Tribal",
+      "alinhamento": "neutro"
+    },
+    "eventos_participados": ["forja-que-nao-apaga"]
+  },
+  {
+    "id": "reigen",
+    "nome": "Reigen",
+    "raca": "canibais",
+    "regiao": "mirshael",
+    "coordenadas_mapa": { "x": 370, "y": 650 },
+    "ameaca": "baixa",
+    "poder": "Passo da Caça e Execução Rápida",
+    "imagem": "assets/personagens/reigen.webp",
+    "imagem_placeholder": true,
+    "lore_curto": "A Facada Faminta, caçadora que nunca falha ao desmembrar um inimigo.",
+    "dossie": {
+      "ferida": "Carregar o peso de cada execução limpa",
+      "promessa": "Honrar o que o mundo não suporta",
+      "papel": "Carrasco Ritual",
+      "alinhamento": "mal"
+    },
+    "eventos_participados": ["silencio-de-valdris"]
+  },
+  {
+    "id": "radahn",
+    "nome": "Radahn",
+    "raca": "gigante",
+    "regiao": "valdris",
+    "coordenadas_mapa": { "x": 720, "y": 260 },
+    "ameaca": "alta",
+    "poder": "Controle Gravitacional e Festival da Arena",
+    "imagem": "assets/personagens/radahn.webp",
+    "imagem_placeholder": true,
+    "lore_curto": "O Esmagador de Estrelas, general que parou o céu de girar.",
+    "dossie": {
+      "ferida": "Ser um deus que ninguém quer seguir",
+      "promessa": "Que todas as estrelas caiam",
+      "papel": "General dos Gigantes Celestes",
+      "alinhamento": "neutro"
+    },
+    "eventos_participados": []
+  }
+]

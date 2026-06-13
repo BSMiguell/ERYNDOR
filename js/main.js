@@ -98,23 +98,6 @@ function showToast(message, els) {
 }
 
 // Counter animation
-function countTo(el, value) {
-  if (!el) return;
-  if (window.prefersReducedMotion) {
-    el.textContent = value;
-    return;
-  }
-  const start = performance.now();
-  const duration = 900;
-  const tick = (now) => {
-    const progress = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.round(eased * value);
-    if (progress < 1) requestAnimationFrame(tick);
-  };
-  requestAnimationFrame(tick);
-}
-
 // Theme from race
 function setThemeFromRace(race) {
   document.documentElement.style.setProperty("--active-race", race.color);
@@ -443,9 +426,10 @@ function boot() {
   // Set initial theme
   setThemeFromRace(RACES[0]);
 
-  // Initialize modules
-  initMetrics(els, RACES);
-  renderHeroDossiers(els, RACES);
+  // Initialize modules (ordem importante)
+  if (window.initLoader) window.initLoader(els, RACES);
+  else initMetrics(els, RACES);
+  if (typeof renderHeroDossiers === 'function') renderHeroDossiers(els, RACES);
 
   if (window.renderRaces) window.renderRaces(els, RACES);
   if (window.renderFilters) window.renderFilters(els, RACES);
@@ -460,7 +444,10 @@ function boot() {
 
   if (window.initAmbientCanvas) window.initAmbientCanvas();
   if (window.initRaceParallax) window.initRaceParallax(els);
-  if (window.initLoader) window.initLoader();
+  // Inicializa loader via DOMContentLoaded no loader.js, mas garante fallback
+  if (window.initLoader && !document.body.classList.contains('is-loaded')) {
+    window.initLoader();
+  }
 
   // Store active race index globally
   window.activeRaceIndex = 0;

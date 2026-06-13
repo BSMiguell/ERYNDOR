@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#090806" />
-  <title>ERYNDOR - Mundo Interativo</title>
+  <title>ERYNDOR - Mundo Interativo 3D</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,10 +20,29 @@
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
 
-<body class="mundo-interativo-body" style="margin: 0; background: var(--ink); color: var(--bone); font-family: 'EB Garamond', Georgia, serif;">
+<body class="mundo-interativo-body" style="margin: 0; background: var(--ink); color: var(--bone); font-family: 'EB Garamond', Georgia, serif; overflow-x: hidden;">
   <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
 
+  <!-- Loader Épico -->
+  <div class="site-loader" id="epic-loader">
+    <div class="loader-mark">
+      <div class="loader-sigil"></div>
+      <p class="loader-text">DESEMBARQUE DIMENSIONAL</p>
+      <div class="loader-track"><span></span></div>
+    </div>
+  </div>
+
   <div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+
+  <!-- Vértice de energia de fundo -->
+  <div class="world-vertex" id="vertex">
+    <div class="vertex-aura"></div>
+    <div class="vertex-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+  </div>
 
   <nav class="top-nav" aria-label="Navegação principal">
     <a class="nav-brand" href="index.html" data-cursor="Eryndor">Eryndor</a>
@@ -33,12 +52,22 @@
       <li><a href="index.html#characters" data-cursor="Galeria">Personagens</a></li>
       <li><a href="#mapa-interativo" class="ativo" data-cursor="Mapa">Mapa</a></li>
     </ul>
+    <div class="nav-aurum" id="kore-indicator">
+      <span class="kore-dot"></span>
+      <span class="kore-wave"></span>
+    </div>
   </nav>
 
   <main id="main-content">
-    <section class="hero" style="min-height: 60vh;">
-      <div class="hero-copy">
-        <p class="eyebrow reveal">Mundo Interativo</p>
+    <!-- Hero épico com partículas -->
+    <section class="hero" style="min-height: 70vh; position: relative; overflow: hidden;">
+      <div class="hero-warfog"></div>
+      <canvas id="hero-particles" class="hero-particles"></canvas>
+      <div class="hero-copy" style="position: relative; z-index: 2;">
+        <p class="eyebrow reveal">
+          <span class="eyebrow-sigil">⬢</span>
+          Mundo Interativo 3D
+        </p>
         <h1 class="reveal">
           <span class="hero-letter" style="--delay: 0s">E</span>
           <span class="hero-letter" style="--delay: 0.04s">X</span>
@@ -50,27 +79,93 @@
           <span class="hero-title-line">Explore cada região</span>
         </h1>
         <p class="hero-lead reveal">
-          Clique nas marcas no mapa ou nos cartões abaixo para descobrir as raças,
-          histórias e terras que compõem o mundo de ERYNDOR.
+          Mergulhe nas profundezas do Kore corrompido. Cada região guarda segredos ancestrais,
+          personagens marcados pela Convergência e auras que contam histórias de eras perdidas.
         </p>
+        <div class="hero-actions">
+          <button class="command-button" id="explore-btn" data-cursor="Explorar">Iniciar Exploração</button>
+          <div class="command-button ghost-button" data-cursor="Legenda" id="legend-btn">
+            <span>⚡</span> Legenda
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Mapa Interativo -->
-    <section class="mapa-container" id="mapa-interativo" aria-label="Mapa interativo de regiões">
-      <!-- O mapa SVG será inserido via JavaScript -->
+    <!-- Legenda das regiões -->
+    <div class="region-legend" id="region-legend" aria-hidden="true">
+      <div class="legend-header">
+        <h3>Tipos de Regiões</h3>
+        <button class="legend-close" id="legend-close">×</button>
+      </div>
+      <div class="legend-grid">
+        <div class="legend-item" data-tipo="corrompido">
+          <span class="legend-badge corrompido"></span>
+          <span>Corrompido (Amaldiçoados)</span>
+        </div>
+        <div class="legend-item" data-tipo="natureza">
+          <span class="legend-badge natureza"></span>
+          <span>Natureza (Beserk)</span>
+        </div>
+        <div class="legend-item" data-tipo="infernal">
+          <span class="legend-badge infernal"></span>
+          <span>Infernal (Demônios)</span>
+        </div>
+        <div class="legend-item" data-tipo="civilizado">
+          <span class="legend-badge civilizado"></span>
+          <span>Civilizado (Humanos)</span>
+        </div>
+        <div class="legend-item" data-tipo="desolado">
+          <span class="legend-badge desolado"></span>
+          <span>Desolado (Canibais)</span>
+        </div>
+        <div class="legend-item" data-tipo="etereo">
+          <span class="legend-badge etereo"></span>
+          <span>Etereo (Aparições)</span>
+        </div>
+        <div class="legend-item" data-tipo="cosmico">
+          <span class="legend-badge cosmico"></span>
+          <span>Cosmico (Desconhecidos)</span>
+        </div>
+        <div class="legend-item" data-tipo="abissal">
+          <span class="legend-badge abissal"></span>
+          <span>Abissal (Gigantes)</span>
+        </div>
+        <div class="legend-item" data-tipo="mar">
+          <span class="legend-badge mar"></span>
+          <span>Mar (Humanos Aquáticos)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mapa Interativo 3D -->
+    <section class="mapa-container" id="mapa-interativo" aria-label="Mapa interativo dimensional de regiões">
+      <!-- O canvas 3D será inserido via JavaScript -->
+      <canvas id="mapa-3d" class="mapa-3d-canvas"></canvas>
+      <div class="mapa-overlay">
+        <div class="mapa-hud">
+          <div class="hud-item">
+            <span class="hud-label">REGIÕES</span>
+            <span class="hud-value" id="hud-regioes">0/10</span>
+          </div>
+          <div class="hud-item">
+            <span class="hud-label">CONEXÕES</span>
+            <span class="hud-value" id="hud-conexoes">0</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Grid de Regiões -->
+    <!-- Grid de Regiões com efeito Holograma -->
     <section class="section">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Regiões</p>
+          <p class="eyebrow">Regiões Dimensional</p>
           <h2>As terras habitadas pelas linhagens</h2>
         </div>
         <p>
           Cada região tem sua própria história, cultura e manifestação do Kore.
-          Explorar uma região é como abrir um dossiê vivo do mundo.
+          Explorar uma região é como abrir um dossiê vivo do mundo — cada clique revela
+          memórias, personagens e segredos entrelaçados.
         </p>
       </div>
 
@@ -79,12 +174,13 @@
       </div>
     </section>
 
-    <!-- Mini-mapa de navegação -->
+    <!-- Mini-mapa HUD -->
     <div class="mini-mapa" id="mini-mapa" aria-hidden="true">
       <svg class="mini-mapa-svg" viewBox="0 0 100 100"></svg>
+      <div class="mini-mapa-north">⬢ N</div>
     </div>
 
-    <!-- Modal de Região -->
+    <!-- Modal de Região 3D -->
     <div class="regiao-modal" id="regiao-modal" role="dialog" aria-modal="true" aria-hidden="true">
       <article class="regiao-modal-content">
         <button class="regiao-modal-close" id="modal-close" aria-label="Fechar">×</button>
@@ -96,11 +192,18 @@
             <h2 id="modal-nome"></h2>
             <p class="raca" id="modal-raca"></p>
             <p class="descricao" id="modal-descricao"></p>
+            <div class="regiao-kore-manifest" id="modal-kore-manifest">
+              <div class="kore-orb"></div>
+              <span class="kore-intensity">Kore: <span id="kore-percent">0%</span></span>
+            </div>
             <div class="regiao-tags" id="modal-tags"></div>
           </div>
         </div>
         <div class="regiao-modal-personagens" id="modal-personagens">
           <!-- Lista de personagens da região -->
+        </div>
+        <div class="regiao-modal-footer">
+          <button class="ghost-button" id="modal-lore-btn">Ver Lore Completo</button>
         </div>
       </article>
     </div>
@@ -114,6 +217,106 @@
   <script src="js/vistas-regioes.js"></script>
 
   <script>
+    // ===== Configurações avançadas =====
+    const CONFIG = {
+      vertexParticles: 120,
+      mapParticles: 80,
+      hoverIntensity: 0.3,
+      korePulseSpeed: 3000
+    };
+
+    // Loader épico
+    const loader = document.getElementById('epic-loader');
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.body.classList.add('is-loaded');
+        loader?.classList.add('loaded');
+      }, 500);
+    });
+
+    // Partículas do hero
+    class HeroParticles {
+      constructor(canvas) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.particles = [];
+        this.init();
+      }
+
+      init() {
+        const resize = () => {
+          canvas.width = canvas.offsetWidth;
+          canvas.height = canvas.offsetHeight;
+        };
+        resize();
+        window.addEventListener('resize', resize);
+
+        for(let i = 0; i < CONFIG.vertexParticles; i++) {
+          this.particles.push({
+            x: Math.random() * this.canvas.width,
+            y: Math.random() * this.canvas.height,
+            r: Math.random() * 2 + 0.5,
+            vx: (Math.random() - 0.5) * 0.2,
+            vy: (Math.random() - 0.5) * 0.2,
+            hue: Math.random() > 0.5 ? 45 : 25
+          });
+        }
+        this.animate();
+      }
+
+      animate() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+        this.particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if(p.x < 0 || p.x > this.canvas.width) p.vx *= -1;
+          if(p.y < 0 || p.y > this.canvas.height) p.vy *= -1;
+
+          this.ctx.beginPath();
+          this.ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          this.ctx.fillStyle = `hsla(${p.hue}, 70%, 60%, 0.3)`;
+          this.ctx.fill();
+        });
+
+        requestAnimationFrame(() => this.animate());
+      }
+    }
+
+    // Iniciar partículas
+    const heroCanvas = document.getElementById('hero-particles');
+    if (heroCanvas) new HeroParticles(heroCanvas);
+
+    // Botão explorar
+    document.getElementById('explore-btn')?.addEventListener('click', () => {
+      document.getElementById('mapa-interativo')?.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Legenda interativa
+    const legendBtn = document.getElementById('legend-btn');
+    const legend = document.getElementById('region-legend');
+    const legendClose = document.getElementById('legend-close');
+
+    legendBtn?.addEventListener('click', () => {
+      legend.classList.add('ativo');
+    });
+
+    legendClose?.addEventListener('click', () => {
+      legend.classList.remove('ativo');
+    });
+
+    // Indicador Kore pulsante
+    const koreIndicator = document.getElementById('kore-indicator');
+    let koreIntensity = 0;
+
+    setInterval(() => {
+      koreIntensity = (Math.sin(Date.now() / CONFIG.korePulseSpeed) + 1) / 2;
+      if(koreIndicator) {
+        koreIndicator.style.setProperty('--intensity', koreIntensity);
+      }
+    }, 50);
+
     // Reveal observer para animações de scroll
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

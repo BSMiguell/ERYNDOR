@@ -30,6 +30,179 @@
   }
 }
 
+/* Novas animações épicas */
+@keyframes koreShardPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 0.6;
+  }
+}
+
+@keyframes sealAwaken {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate(-180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes sealRip {
+  from {
+    clip-path: inset(50% 0 50% 0);
+    filter: brightness(3) blur(4px);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    filter: brightness(1) blur(0);
+  }
+}
+
+@keyframes hologramSweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes plasmaFlow {
+  from { filter: brightness(1); }
+  to { filter: brightness(1.4); }
+}
+
+@keyframes pulseSlow {
+  0%, 100% { r: 2.5; opacity: 0.8; }
+  50% { r: 3.2; opacity: 1; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { r: 3; filter: drop-shadow(0 0 12px currentColor); }
+  50% { r: 4; filter: drop-shadow(0 0 24px currentColor); }
+}
+
+@keyframes korePulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes waveExpand {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(50px, -30px) scale(1.1); }
+  66% { transform: translate(-20px, 40px) scale(0.9); }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-60px, 50px) scale(1.2); }
+}
+
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, 20px) scale(0.8); }
+  75% { transform: translate(-40px, -30px) scale(1.15); }
+}
+
+@keyframes letterRise {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fogDrift {
+  from {
+    transform: translateX(-1%) scale(1.02);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateX(1%) scale(0.98);
+    opacity: 1;
+  }
+}
+
+@keyframes mapPulse {
+  0%,
+  100% {
+    transform: scale(0.96) rotate(0deg);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.02) rotate(2deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes veilOpen {
+  from {
+    clip-path: circle(0 at var(--origin-x, 50%) var(--origin-y, 50%));
+  }
+  to {
+    clip-path: circle(150% at var(--origin-x, 50%) var(--origin-y, 50%));
+  }
+}
+
+@keyframes clashFlash {
+  0%   { opacity: 0; }
+  30%  { opacity: 0.6; }
+  100% { opacity: 0; }
+}
+
+@keyframes slideFromLeft {
+  from { transform: translateX(-120%) rotate(-8deg); opacity: 0; }
+  to   { transform: translateX(0) rotate(0deg);      opacity: 1; }
+}
+
+@keyframes slideFromRight {
+  from { transform: translateX(120%) rotate(8deg); opacity: 0; }
+  to   { transform: translateX(0) rotate(0deg);   opacity: 1; }
+}
+
+@keyframes vertexSpin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes koreOrbit {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.2) rotate(180deg); }
+}
+
+@keyframes loaderSweep {
+  from { transform: translateX(-120%); }
+  to { transform: translateX(260%); }
+}
+
+@keyframes dossierIn {
+  from {
+    opacity: 0;
+    transform: translateX(var(--entry-x, 0)) translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(var(--entry-x, 0)) translateY(0);
+  }
+}
+
+@keyframes sigilTurn {
+  0% {
+    transform: rotate(0) scale(0.86);
+  }
+  55% {
+    transform: rotate(180deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.86);
+  }
+}
+
 @keyframes loaderSweep {
   from {
     transform: translateX(-120%);

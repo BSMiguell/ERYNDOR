@@ -1,0 +1,147 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" id="eryndor-map" preserveAspectRatio="xMidYMid meet">
+  <!-- CAMADA 0: Fundo oceano/void -->
+  <rect width="1600" height="900" fill="#07060A"/>
+
+  <!-- CAMADA 1: Continente principal (path orgânico grande) -->
+  <path id="continente-eryndor" d="M300,100
+    C400,80 500,90 600,120
+    C700,150 800,180 900,200
+    C1000,220 1100,250 1200,280
+    C1250,320 1280,380 1300,450
+    C1320,520 1300,580 1250,620
+    C1200,650 1100,680 1000,700
+    C900,720 800,730 700,740
+    C600,750 500,740 400,720
+    C300,700 250,650 220,600
+    C200,550 220,480 250,420
+    C280,350 290,250 300,100 Z"
+    fill="#1A1525" stroke="#C9A84C" stroke-width="1.5"/>
+
+  <!-- CAMADA 2: Regiões (paths filhos, clicáveis) -->
+  <!-- KORRHELM → veldara (norte) -->
+  <path id="veldara" class="regiao" data-regiao="veldara" d="M550,50
+    C600,40 650,50 700,80
+    C750,110 780,140 800,180
+    C820,220 850,200 880,220
+    C910,240 900,200 900,180
+    C880,140 850,120 820,100
+    C790,80 750,60 700,50
+    C650,40 600,45 550,50 Z"
+    fill="#2C4A6E" opacity="0.6"/>
+
+  <!-- WILDMERE → sylvar (nordeste) -->
+  <path id="sylvar" class="regiao" data-regiao="sylvar" d="M850,150
+    C900,130 950,140 1000,170
+    C1050,200 1080,230 1100,270
+    C1120,310 1100,350 1050,380
+    C1000,410 950,420 900,440
+    C850,460 800,450 780,420
+    C760,390 750,350 760,310
+    C770,270 800,240 850,150 Z"
+    fill="#1E4D2B" opacity="0.6"/>
+
+  <!-- ASH PLAINS (centro) -->
+  <path id="ash-plains" class="regiao" data-regiao="ash-plains" d="M680,400
+    C720,380 760,390 800,420
+    C840,450 880,460 920,450
+    C960,440 1000,420 1020,380
+    C1040,340 1020,300 980,280
+    C940,260 900,270 860,300
+    C820,330 780,350 740,340
+    C700,330 680,360 680,400 Z"
+    fill="#4A3B28" opacity="0.6"/>
+
+  <!-- DUSKARA (leste) -->
+  <path id="duskara" class="regiao" data-regiao="duskara" d="M1050,350
+    C1100,320 1150,340 1200,380
+    C1250,420 1280,460 1260,500
+    C1240,540 1200,550 1150,530
+    C1100,510 1080,480 1060,440
+    C1040,400 1020,380 1050,350 Z"
+    fill="#6B4C1E" opacity="0.6"/>
+
+  <!-- MAREVETH (oeste) -->
+  <path id="mareveth" class="regiao" data-regiao="mareveth" d="M150,400
+    C200,380 250,390 300,430
+    C350,470 380,500 360,540
+    C340,580 300,600 250,590
+    C200,580 160,540 170,490
+    C180,440 160,420 150,400 Z"
+    fill="#1A3A4A" opacity="0.6"/>
+
+  <!-- KORGATH (sul) -->
+  <path id="korgath" class="regiao" data-regiao="korgath" d="M600,600
+    C650,580 700,590 750,620
+    C800,650 850,680 900,670
+    C950,660 1000,640 1020,600
+    C1040,560 1000,540 960,530
+    C920,520 880,530 840,510
+    C800,490 760,500 720,510
+    C680,520 640,510 600,500
+    C560,510 520,500 500,490
+    C480,480 480,480 480,480
+    C480,520 480,560 480,600
+    C480,640 500,660 550,680
+    C520,690 560,690 600,600 Z"
+    fill="#5C1A1A" opacity="0.6"/>
+
+  <!-- MIRSHAEL (sudoeste) -->
+  <path id="mirshael" class="regiao" data-regiao="mirshael" d="M200,600
+    C250,580 300,590 350,620
+    C400,650 450,660 500,640
+    C550,620 580,580 560,540
+    C540,500 500,490 450,490
+    C400,490 380,500 350,530
+    C320,560 280,580 250,590
+    C220,590 200,595 200,600 Z"
+    fill="#2A3B2A" opacity="0.6"/>
+
+  <!-- VALDRIS (centro-norte / capital) -->
+  <path id="valdris" class="regiao" data-regiao="valdris" d="M600,200
+    C630,180 660,190 690,220
+    C720,250 750,240 780,270
+    C810,300 800,320 770,340
+    C740,360 720,350 700,330
+    C680,310 660,290 640,280
+    C620,270 600,250 600,200 Z"
+    fill="#3D2D4A" opacity="0.6"/>
+
+  <!-- CAMADA 3: Rios e acidentes geográficos -->
+  <g id="rios" opacity="0.4">
+    <path class="rio" d="M400,300 C500,350 600,380 700,360" stroke="#4A7FA5" stroke-width="2" fill="none"/>
+    <path class="rio" d="M800,200 C900,250 1000,280 1100,260" stroke="#4A7FA5" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- CAMADA 4: Montanhas (ícones SVG posicionados) -->
+  <g id="montanhas">
+    <polygon points="720,90 730,70 740,90" fill="#3D3530"/>
+    <polygon points="750,110 760,90 770,110" fill="#3D3530"/>
+    <polygon points="780,85 790,65 800,85" fill="#3D3530"/>
+    <polygon points="950,140 960,120 970,140" fill="#3D3530"/>
+    <polygon points="980,160 990,140 1000,160" fill="#3D3530"/>
+    <polygon points="1050,420 1060,400 1070,420" fill="#5D4F3A"/>
+  </g>
+
+  <!-- CAMADA 5: Pins de personagem (injetados por JS) -->
+  <g id="pins-personagens"></g>
+
+  <!-- CAMADA 6: Marcadores de evento (injetados por JS) -->
+  <g id="marcadores-eventos"></g>
+
+  <!-- CAMADA 7: Labels de região (injetados por JS ou fixos) -->
+  <g id="labels-regiao" font-family="Cinzel Decorative, serif" font-size="18" fill="#FFD97D">
+    <text x="580" y="100" text-anchor="middle">Veldara</text>
+    <text x="920" y="170" text-anchor="middle">Sylvar</text>
+    <text x="750" y="430" text-anchor="middle">Ash Plains</text>
+    <text x="1130" y="380" text-anchor="middle">Duskara</text>
+    <text x="250" y="490" text-anchor="middle">Mareveth</text>
+    <text x="700" y="760" text-anchor="middle">Korgath</text>
+    <text x="350" y="720" text-anchor="middle">Mirshael</text>
+    <text x="700" y="230" text-anchor="middle">Valdris</text>
+  </g>
+
+  <!-- CAMADA 8: Névoa de guerra (animada por CSS) -->
+  <g id="fog-of-war" opacity="0.3">
+    <ellipse class="fog-cloud" cx="800" cy="450" rx="400" ry="200" fill="#1A1525"/>
+  </g>
+</svg>

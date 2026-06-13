@@ -1,0 +1,289 @@
+/* ===== Mapa Interativo ERYNDOR - Seção 4 ===== */
+
+.mapa-wrapper {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 68px); /* Altura da tela menos nav */
+  min-height: 600px;
+  background: var(--eryndor-void);
+}
+
+#mapa-svg-container {
+  width: 100%;
+  height: 100%;
+}
+
+#eryndor-map {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  display: block;
+  background: var(--eryndor-void);
+}
+
+#eryndor-map:active {
+  cursor: grabbing;
+}
+
+.regiao {
+  transition: opacity 0.3s ease, stroke 0.2s ease;
+  cursor: pointer;
+}
+
+.regiao:hover {
+  opacity: 0.85 !important;
+  stroke: var(--kore-gold);
+  stroke-width: 2;
+}
+
+.regiao.selected {
+  opacity: 0.9 !important;
+  stroke: var(--kore-glow);
+  stroke-width: 3;
+}
+
+.regiao.selected {
+  opacity: 0.9 !important;
+  stroke: var(--kore-glow);
+  stroke-width: 3;
+}
+
+/* Tooltips */
+.regiao-tooltip {
+  position: absolute;
+  background: var(--eryndor-abyss);
+  border: 1px solid var(--kore-gold);
+  padding: 12px 16px;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 100;
+  min-width: 200px;
+  backdrop-filter: blur(4px);
+}
+
+.regiao-tooltip h4 {
+  margin: 0 0 4px 0;
+  font-family: "Cinzel Decorative", serif;
+  font-size: 16px;
+  color: var(--kore-glow);
+  letter-spacing: 0.08em;
+}
+
+.regiao-tooltip p {
+  margin: 4px 0;
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 12px;
+  color: var(--parchment);
+}
+
+.regiao-tooltip.visivel {
+  display: block;
+}
+
+.regiao-tooltip img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.regiao-tooltip h4 {
+  margin: 0 0 4px 0;
+  font-family: "Cinzel Decorative", serif;
+  font-size: 16px;
+  color: var(--kore-glow);
+}
+
+.regiao-tooltip p {
+  margin: 4px 0;
+  font-size: 12px;
+  color: var(--parchment);
+}
+
+.regiao-tooltip img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+/* Pins de personagem */
+.pin-personagem {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.pin-personagem:hover {
+  transform: scale(1.2);
+}
+
+.pin-personagem circle {
+  fill: var(--eryndor-void);
+  stroke-width: 2;
+}
+
+/* Marcador de evento */
+.marcador-evento {
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+.marcador-evento g {
+  fill: var(--kore-gold);
+}
+
+/* Fog of War */
+.fog-cloud {
+  filter: blur(2px);
+}
+
+/* Painel de filtros */
+.mapa-filtros {
+  position: fixed;
+  top: 80px;
+  left: 16px;
+  background: rgba(14, 11, 20, 0.9);
+  border: 1px dashed var(--kore-gold);
+  padding: 16px;
+  border-radius: 8px;
+  z-index: 50;
+  min-width: 200px;
+  backdrop-filter: blur(8px);
+}
+
+.mapa-filtros h3 {
+  margin: 0 0 12px 0;
+  font-family: "Cinzel Decorative", serif;
+  font-size: 16px;
+  color: var(--kore-glow);
+}
+
+.filtro-grupo {
+  margin-bottom: 12px;
+}
+
+.filtro-grupo label {
+  display: block;
+  font-size: 13px;
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+.filtro-grupo input[type="checkbox"] {
+  accent-color: var(--kore-gold);
+  margin-right: 6px;
+}
+
+/* Minimap */
+.minimap {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 200px;
+  height: 120px;
+  background: var(--eryndor-abyss);
+  border: 1px solid var(--kore-gold);
+  border-radius: 8px;
+  z-index: 50;
+  cursor: pointer;
+}
+
+.minimap svg {
+  width: 100%;
+  height: 100%;
+}
+
+.minimap viewport {
+  fill: none;
+  stroke: var(--kore-glow);
+  stroke-width: 2;
+}
+
+/* Modal de região */
+.modal-regiao {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 6, 10, 0.95);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-regiao.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-regiao-content {
+  background: var(--eryndor-abyss);
+  border: 1px solid var(--kore-gold);
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-regiao-header {
+  position: relative;
+  height: 300px;
+}
+
+.modal-regiao-cenario {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--eryndor-void), var(--stone));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-regiao-cenario.placeholder {
+  background: linear-gradient(135deg, var(--eryndor-void), var(--stone));
+}
+
+.modal-regiao-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--seal-crimson);
+  border: none;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Cursor customizado no mapa */
+body.hover-regiao #cursor {
+  transform: scale(2.5);
+  border-color: var(--kore-glow);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mapa-filtros {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 16px;
+  }
+
+  .minimap {
+    display: none;
+  }
+}

@@ -201,3 +201,46 @@
     font-size: 1rem;
   }
 }
+
+/* ===== Legend Responsive ===== */
+@media (max-width: 768px) {
+  .region-legend {
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    transform: translateY(-50%) scale(0.95);
+    min-width: auto;
+  }
+
+  .legend-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Map 3D Adjustments ===== */
+@media (max-width: 768px) {
+  .mapa-3d-canvas {
+    height: 50vh;
+    max-height: 400px;
+  }
+
+  .mapa-hud {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hud-item {
+    padding: 0.3rem 0.6rem;
+  }
+
+  .hud-label {
+    font-size: 0.5rem;
+  }
+
+  .hud-value {
+    font-size: 1rem;
+  }
+}

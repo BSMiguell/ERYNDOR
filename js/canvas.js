@@ -3,7 +3,8 @@
 function initAmbientCanvas() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  const canvas = document.getElementById("ambient-canvas");
+  // Suporta ambos os IDs (index.html e mapa.html)
+  const canvas = document.getElementById("ambient-canvas") || document.getElementById("map-particles");
   if (!canvas) return;
 
   const ctx = canvas.getContext("2d");

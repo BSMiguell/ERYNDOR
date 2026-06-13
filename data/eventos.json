@@ -1,0 +1,87 @@
+[
+  {
+    "id": "queda-primeiro-selo",
+    "titulo": "A Queda do Primeiro Selo",
+    "regiao": "korgath",
+    "coordenadas": { "x": 710, "y": 800 },
+    "tipo": "convergencia",
+    "data_cronica": "Ano 0 da Convergência",
+    "personagens_envolvidos": ["aatrox", "sukuna", "stellaris"],
+    "narrativa": [
+      "Os primeiros selos entre planos cedem simultaneamente em sete pontos de Korgath. Demônios e Aparições entram no mundo material pela primeira vez em milênios.",
+      "O chão treme com o som de pedras quebrando. Cada quebra é uma voz que se solta, cada fissura um portal que se abre.",
+      "Quando a luz do sol primeiro tocou a lava corrompida, os cristais Kore brilharam com um dourado negro — não ouro, mas a promessa de fogo eternal."
+    ],
+    "consequencia": "A barreira entre o mundo material e o espiritual tornou-se permeável. Criaturas de ambos os planos passaram a interagir livremente, mudando para sempre o curso das guerras em Eryndor.",
+    "imagem": "assets/eventos/queda-primeiro-selo.webp",
+    "imagem_placeholder": true
+  },
+  {
+    "id": "silencio-de-valdris",
+    "titulo": "O Silêncio de Valdris",
+    "regiao": "valdris",
+    "coordenadas": { "x": 700, "y": 300 },
+    "tipo": "revelacao",
+    "data_cronica": "Ano 3 da Convergência",
+    "personagens_envolvidos": ["reigen"],
+    "narrativa": [
+      "A capital do mundo antigo é abandonada em uma noite. Nenhuma linhagem sabe o que aconteceu.",
+      "O trono foi encontrado rachado ao meio, como se algo tão grande quanto o próprio mundo tivesse tentado sentar nele.",
+      "As últimas memórias que os bardos conseguem registrar são de uma música que não terminou — apenas parou."
+    ],
+    "consequencia": "Valdris tornou-se zona neutra e disputada por todas as facções. Nenhuma raça tem domínio sobre as ruínas da capital.",
+    "imagem": "assets/eventos/silencio-de-valdris.webp",
+    "imagem_placeholder": true
+  },
+  {
+    "id": "raizes-que-recordam",
+    "titulo": "As Raízes que Recordam",
+    "regiao": "sylvar",
+    "coordenadas": { "x": 920, "y": 200 },
+    "tipo": "revelacao",
+    "data_cronica": "Ano 7 da Convergência",
+    "personagens_envolvidos": ["mycelium", "garrick"],
+    "narrativa": [
+      "Uma criança entra na floresta de Sylvar e sai décadas depois com memórias que não são suas — memórias da guerra que ainda não aconteceu.",
+      "As árvores guardam os gritos dos que morreram em batalha, e os cristais crescem nas raízes como cicatrizes abertas.",
+      "Quem ouse tocar um desses cristais vê flashes do futuro iminente — mas a sanidade para ao ver o que está por vir."
+    ],
+    "consequencia": "Sylvar se tornou um local de visões proféticas, evitado por todos exceto apóstatas e visionários desesperados.",
+    "imagem": "assets/eventos/raizes-que-recordam.webp",
+    "imagem_placeholder": true
+  },
+  {
+    "id": "leilao-de-mareveth",
+    "titulo": "O Leilão de Mareveth",
+    "regiao": "mareveth",
+    "coordenadas": { "x": 230, "y": 500 },
+    "tipo": "politico",
+    "data_cronica": "Ano 12 da Convergência",
+    "personagens_envolvidos": ["astrid", "davy-jones"],
+    "narrativa": [
+      "Cristais Kore corrompidos são vendidos no mercado negro dos portos. Quem os compra começa a mutar.",
+      "A cidade decide ignorar, priorizando os lucos sobre a própria integridade. Os contrabandistas prosperam.",
+      "Navios aprendem a navegar sem tripulação, guiados apenas pela sede de cristal."
+    ],
+    "consequencia": "Mareveth tornou-se o centro de tráfico de Kore corrompido. Sua economia cresce, mas seus filhos nascem com olhos que brilham no escuro.",
+    "imagem": "assets/eventos/leilao-de-mareveth.webp",
+    "imagem_placeholder": true
+  },
+  {
+    "id": "forja-que-nao-apaga",
+    "titulo": "A Forja que Não Apaga",
+    "regiao": "veldara",
+    "coordenadas": { "x": 590, "y": 140 },
+    "tipo": "batalha",
+    "data_cronica": "Ano 15 da Convergência",
+    "personagens_envolvidos": ["thomas", "leon"],
+    "narrativa": [
+      "Uma forja em Veldara começa a produzir metal que nenhum ferreiro reconhece.",
+      "Armas forjadas com ele não podem ser quebradas — e não param de sangrar.",
+      "O metal parece vivo, pulsando com um ritmo que corresponde ao do coração do mundo."
+    ],
+    "consequencia": "As armas de Veldara tornaram-se as mais buscadas de Eryndor. Guerreiros de todo o mundo viajam até as montanhas, mesmo sabendo que pode ser a última viagem.",
+    "imagem": "assets/eventos/forja-que-nao-apaga.webp",
+    "imagem_placeholder": true
+  }
+]

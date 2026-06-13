@@ -11,9 +11,17 @@
     visibility 0.55s ease;
 }
 
+.site-loader.loaded,
 body.is-loaded .site-loader {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.site-loader.loaded {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
 }
 
 .loader-mark {

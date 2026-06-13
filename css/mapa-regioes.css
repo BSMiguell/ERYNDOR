@@ -1,11 +1,93 @@
-/* ===== Mapa Interativo - ERYNDOR ===== */
+/* ===== Mapa Interativo 3D - ERYNDOR ===== */
 
-.mundo-interativo-body {
-  margin: 0;
-  color: var(--bone);
-  background: var(--ink);
-  font-family: "EB Garamond", Georgia, serif;
-  overflow-x: hidden;
+/* Vértice de energia de fundo */
+.world-vertex {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.vertex-aura {
+  position: absolute;
+  inset: -100vmax;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(215, 175, 69, 0.03) 0deg,
+    rgba(207, 111, 59, 0.02) 90deg,
+    rgba(74, 181, 158, 0.02) 180deg,
+    rgba(215, 175, 69, 0.03) 270deg
+  );
+  animation: vertexSpin 60s linear infinite;
+}
+
+@keyframes vertexSpin {
+  to { transform: rotate(360deg); }
+}
+
+.vertex-orbs {
+  position: absolute;
+  inset: 0;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+}
+
+.orb-1 {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: 5%;
+  background: radial-gradient(circle, var(--kore), transparent);
+  animation: orbFloat1 25s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  bottom: 5%;
+  right: 10%;
+  background: radial-gradient(circle, var(--copper), transparent);
+  animation: orbFloat2 30s ease-in-out infinite;
+}
+
+.orb-3 {
+  width: 250px;
+  height: 250px;
+  top: 40%;
+  right: 20%;
+  background: radial-gradient(circle, var(--verdigris), transparent);
+  animation: orbFloat3 35s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(50px, -30px) scale(1.1); }
+  66% { transform: translate(-20px, 40px) scale(0.9); }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-60px, 50px) scale(1.2); }
+}
+
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, 20px) scale(0.8); }
+  75% { transform: translate(-40px, -30px) scale(1.15); }
+}
+
+/* Canvas 3D */
+.mapa-3d-canvas {
+  width: 100%;
+  height: 70vh;
+  max-height: 600px;
+  display: block;
 }
 
 .mapa-container {
@@ -19,6 +101,78 @@
   margin: 2rem 0;
   border: 1px solid var(--line);
   border-radius: 8px;
+  box-shadow:
+    0 0 60px rgba(215, 175, 69, 0.15),
+    inset 0 0 80px rgba(0,0,0,0.5);
+}
+
+/* HUD do mapa */
+.mapa-hud {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.hud-item {
+  padding: 0.5rem 1rem;
+  background: rgba(8,7,6,0.7);
+  border: 1px solid var(--kore);
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+}
+
+.hud-label {
+  display: block;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 0.6rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.hud-value {
+  font-family: "Cinzel", serif;
+  font-size: 1.2rem;
+  color: var(--kore);
+  font-weight: 700;
+}
+
+/* Indicador Kore na navbar */
+.nav-aurum {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.kore-dot {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, var(--kore), var(--copper));
+  border-radius: 50%;
+  box-shadow: 0 0 calc(10px * var(--intensity, 1)) var(--kore);
+  animation: korePulse 2s ease-in-out infinite;
+}
+
+.kore-wave {
+  position: absolute;
+  inset: -4px;
+  border: 1px solid var(--kore);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: waveExpand 2s ease-out infinite;
+}
+
+@keyframes korePulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes waveExpand {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.8); opacity: 0; }
 }
 
 .mapa-svg {
@@ -441,7 +595,211 @@
   letter-spacing: 0.08em;
 }
 
-/* Responisvidade */
+/* Legenda das Regiões (Holograma) */
+.region-legend {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: min(500px, 90vw);
+  background:
+    linear-gradient(145deg, rgba(18, 14, 8, 0.98), rgba(8, 7, 6, 0.99)),
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix type='saturate' values='0'/></filter><rect width='200' height='200' filter='url(%23noise)' opacity='0.04'/></svg>");
+  border: 1px solid var(--kore);
+  border-radius: 16px;
+  padding: 2rem;
+  z-index: 2100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  backdrop-filter: blur(15px);
+  box-shadow:
+    0 0 60px rgba(215, 175, 69, 0.4),
+    inset 0 0 40px rgba(215, 175, 69, 0.1);
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+}
+
+.region-legend.ativo {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.legend-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.legend-header h3 {
+  margin: 0;
+  color: var(--kore);
+  font-family: "Cinzel Decorative", serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.legend-close {
+  background: none;
+  border: none;
+  color: var(--bone);
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.legend-close:hover {
+  color: var(--kore);
+  transform: rotate(90deg);
+}
+
+.legend-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.legend-item:hover {
+  border-color: var(--kore);
+  background: rgba(215, 175, 69, 0.08);
+}
+
+.legend-badge {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--kore);
+}
+
+.legend-badge.corrompido { background: linear-gradient(135deg, #c0392b, #ff6b57); }
+.legend-badge.natureza { background: linear-gradient(135deg, #d35400, #e67e22); }
+.legend-badge.infernal { background: linear-gradient(135deg, #8e44ad, #e74c3c); }
+.legend-badge.civilizado { background: linear-gradient(135deg, #d4ac0d, #27ae60); }
+.legend-badge.desolado { background: linear-gradient(135deg, #8f4b2b, #c0392b); }
+.legend-badge.etereo { background: linear-gradient(135deg, #8ab4c0, #ffffff); }
+.legend-badge.cosmico { background: linear-gradient(135deg, #9b59b6, #f1c40f); }
+.legend-badge.abissal { background: linear-gradient(135deg, #2980b9, #ecf0f1); }
+.legend-badge.mar { background: linear-gradient(135deg, #3498db, #1abc9c); }
+
+.legend-item span {
+  font-size: 0.8rem;
+  color: var(--bone);
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+/* Efeito holográfico nos cards */
+.regiao-card-hologram {
+  position: relative;
+  isolation: isolate;
+}
+
+.regiao-card-hologram::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: conic-gradient(
+    from 0deg,
+    var(--kore),
+    var(--copper),
+    var(--verdigris),
+    var(--kore)
+  );
+  border-radius: 12px;
+  opacity: 0;
+  animation: hologramSweep 4s linear infinite;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.regiao-card-hologram:hover::before {
+  opacity: 0.4;
+}
+
+@keyframes hologramSweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Kore Manifest Indicator no Modal */
+.regiao-kore-manifest {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(8, 7, 6, 0.5);
+}
+
+.kore-orb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--kore), var(--copper));
+  box-shadow: 0 0 12px var(--kore);
+  animation: koreOrbit 2s ease-in-out infinite;
+}
+
+@keyframes koreOrbit {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.2) rotate(180deg); }
+}
+
+.kore-intensity {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 0.85rem;
+  color: var(--bone);
+}
+
+/* Mini-mapa Norte */
+.mini-mapa-north {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6px;
+  color: var(--copper);
+  font-family: "Cinzel", serif;
+}
+
+/* Footer do modal */
+.regiao-modal-footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+/* Hero particles canvas */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Eyebrow sigil */
+.eyebrow-sigil {
+  display: inline-block;
+  font-size: 1.2rem;
+  animation: sigilAwaken 0.8s ease both;
+}
 @media (max-width: 768px) {
   .mapa-svg {
     height: 40vh;

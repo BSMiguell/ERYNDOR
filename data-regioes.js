@@ -14,10 +14,9 @@ const REGIOES = [
       destaque: "#d35400"
     },
     imagens: [
-      "assets/imagens/regiao-korrfeld/korrfeld-1.png",
-      "assets/imagens/regiao-korrfeld/korrfeld-2.png",
-      "assets/imagens/regiao-korrfeld/korrfeld-3.png",
-      "assets/imagens/regiao-korrfeld/korrfeld-4.png"
+      "images/Amaldiçoados/Xerxes.png",
+      "images/Banner/Banner-Amaldiçoados.png",
+      "images/Amaldiçoados/Crimson-Kore.png"
     ],
     posicao: { x: 25, y: 35 },
     conexao: ["wildmere", "sombrath"]
@@ -35,10 +34,9 @@ const REGIOES = [
       destaque: "#e67e22"
     },
     imagens: [
-      "assets/imagens/regiao-wildmere/wildmere-1.png",
-      "assets/imagens/regiao-wildmere/wildmere-2.png",
-      "assets/imagens/regiao-wildmere/wildmere-3.png",
-      "assets/imagens/regiao-wildmere/wildmere-4.png"
+      "images/Beserk/Guts-2.png",
+      "images/Beserk/Vorgrim Ironspine.png",
+      "images/Beserk/Vorgreth.png"
     ],
     posicao: { x: 45, y: 20 },
     conexao: ["korrfeld", "thornwall", "elbaf"]
@@ -56,10 +54,9 @@ const REGIOES = [
       destaque: "#e74c3c"
     },
     imagens: [
-      "assets/imagens/regiao-sombrath/sombrath-1.png",
-      "assets/imagens/regiao-sombrath/sombrath-2.png",
-      "assets/imagens/regiao-sombrath/sombrath-3.png",
-      "assets/imagens/regiao-sombrath/sombrath-4.png"
+      "images/Demonio/Aatrox-V-1.png",
+      "images/Demonio/Drakhar.png",
+      "images/Banner/Banner-Demonio.png"
     ],
     posicao: { x: 65, y: 40 },
     conexao: ["korrfeld", "nether", "voidrift"]
@@ -77,10 +74,9 @@ const REGIOES = [
       destaque: "#27ae60"
     },
     imagens: [
-      "assets/imagens/regiao-thornwall/thornwall-1.png",
-      "assets/imagens/regiao-thornwall/thornwall-2.png",
-      "assets/imagens/regiao-thornwall/thornwall-3.png",
-      "assets/imagens/regiao-thornwall/thornwall-4.png"
+      "images/Humanos/Raiden.png",
+      "images/Humanos/malenia.png",
+      "images/Banner/Banner-Humanos.png"
     ],
     posicao: { x: 35, y: 55 },
     conexao: ["wildmere", "terras-devastadas"]
@@ -98,10 +94,9 @@ const REGIOES = [
       destaque: "#c0392b"
     },
     imagens: [
-      "assets/imagens/regiao-terras/terras-1.png",
-      "assets/imagens/regiao-terras/terras-2.png",
-      "assets/imagens/regiao-terras/terras-3.png",
-      "assets/imagens/regiao-terras/terras-4.png"
+      "images/Mutantes/Valthier-V-1.png",
+      "images/Mutantes/Lobisomem-V-2.png",
+      "images/Banner/Banner-Mutantes.png"
     ],
     posicao: { x: 40, y: 65 },
     conexao: ["thornwall", "voidrift"]
@@ -119,10 +114,9 @@ const REGIOES = [
       destaque: "#ffffff"
     },
     imagens: [
-      "assets/imagens/regiao-plano/plano-1.png",
-      "assets/imagens/regiao-plano/plano-2.png",
-      "assets/imagens/regiao-plano/plano-3.png",
-      "assets/imagens/regiao-plano/plano-4.png"
+      "images/Seres do Vazio/Korvessa-Nightlash-V-1.png",
+      "images/Seres do Vazio/Alaric-V-1.png",
+      "images/Banner/Banner-Aparições.png"
     ],
     posicao: { x: 20, y: 25 },
     conexao: ["wildmere", "templos-esquecidos"]
@@ -140,10 +134,9 @@ const REGIOES = [
       destaque: "#f1c40f"
     },
     imagens: [
-      "assets/imagens/regiao-voidrift/voidrift-1.png",
-      "assets/imagens/regiao-voidrift/voidrift-2.png",
-      "assets/imagens/regiao-voidrift/voidrift-3.png",
-      "assets/imagens/regiao-voidrift/voidrift-4.png"
+      "images/Seres do Vazio/Krown-Kore-V-1.png",
+      "images/Desconhecido/Glorivex-V-1.png",
+      "images/Banner/Banner-Maw Shin.png"
     ],
     posicao: { x: 15, y: 75 },
     conexao: ["sombrath", "terras-devastadas"]
@@ -161,10 +154,9 @@ const REGIOES = [
       destaque: "#ecf0f1"
     },
     imagens: [
-      "assets/imagens/regiao-nether/nether-1.png",
-      "assets/imagens/regiao-nether/nether-2.png",
-      "assets/imagens/regiao-nether/nether-3.png",
-      "assets/imagens/regiao-nether/nether-4.png"
+      "images/Gigantes/Nidhogg-V-1.png",
+      "images/Gigantes/Hydraskull-V-1.png",
+      "images/Banner/Banner-Gigantes.png"
     ],
     posicao: { x: 55, y: 80 },
     conexao: ["sombrath", "ilhas-elbaf"]
@@ -182,10 +174,9 @@ const REGIOES = [
       destaque: "#f1c40f"
     },
     imagens: [
-      "assets/imagens/regiao-elbaf/elbaf-1.png",
-      "assets/imagens/regiao-elbaf/elbaf-2.png",
-      "assets/imagens/regiao-elbaf/elbaf-3.png",
-      "assets/imagens/regiao-elbaf/elbaf-4.png"
+      "images/Gigantes/Elbaf-V-1.png",
+      "images/Gigantes/Harald-V-1.png",
+      "images/Banner/Banner-Gigantes.png"
     ],
     posicao: { x: 85, y: 15 },
     conexao: ["wildmere", "nether"]
@@ -203,10 +194,9 @@ const REGIOES = [
       destaque: "#bdc3c7"
     },
     imagens: [
-      "assets/imagens/regiao-oceano/oceano-1.png",
-      "assets/imagens/regiao-oceano/oceano-2.png",
-      "assets/imagens/regiao-oceano/oceano-3.png",
-      "assets/imagens/regiao-oceano/oceano-4.png"
+      "images/Monstros/Davy-Jones-V-1.png",
+      "images/Monstros/Davy jones-2.png",
+      "images/Banner/Banner-Humanos.png"
     ],
     posicao: { x: 70, y: 85 },
     conexao: ["nether", "voidrift"]

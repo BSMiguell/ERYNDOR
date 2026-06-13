@@ -1,11 +1,31 @@
-/* ===== CSS Custom Properties & Reset ===== */
+/* ===== CSS Custom Properties - ERYNDOR Design System ===== */
 :root {
-  --ink: #080706;
-  --ink-2: #11100d;
-  --charcoal: #191714;
-  --iron: #24211c;
-  --bone: #f0e2c4;
-  --paper: #d8c7a1;
+  /* PRIMÁRIOS (Fundo profundo) - Seção 2.1 */
+  --eryndor-void: #07060A;      /* quase-preto com toque violeta */
+  --eryndor-abyss: #0E0B14;     /* fundo de cards e seções */
+  --eryndor-deep: #1A1525;      /* superfícies elevadas */
+
+  /* ACENTO PRINCIPAL (Kore Crystal) - Seção 2.1 */
+  --kore-gold: #C9A84C;         /* dourado envelhecido */
+  --kore-amber: #E8B84B;        /* hover, highlights ativos */
+  --kore-glow: #FFD97D;         /* brilhos, partículas */
+
+  /* ACENTO SECUNDÁRIO (Selagem / Magia Antiga) - Seção 2.1 */
+  --seal-crimson: #7B1F2E;      /* vermelho sangue escuro */
+  --seal-ember: #C0392B;         /* alerta, ameaça alta */
+  --seal-violet: #4A2060;       /* magia de Convergência */
+
+  /* NEUTROS - Seção 2.1 */
+  --parchment: #D4C5A9;         /* texto corrido, lore */
+  --fog: #8A7F72;              /* texto secundário, labels */
+  --stone: #3D3530;             /* bordas, divisores */
+
+  /* Variáveis legadas para compatibilidade */
+  --ink: var(--eryndor-void);
+  --ink-2: var(--eryndor-abyss);
+  --charcoal: var(--eryndor-deep);
+  --bone: var(--parchment);
+  --paper: var(--parchment);
   --muted: #a7997c;
   --dim: #6e6250;
   --kore: #d7af45;

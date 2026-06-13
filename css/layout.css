@@ -16,8 +16,15 @@
 
 /* Hero ajustado para mundo interativo */
 .mundo-interativo-body .hero {
-  min-height: 60vh;
+  min-height: 70vh;
   padding: 7.8rem max(1.2rem, calc((100vw - 1240px) / 2)) 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.mundo-interativo-body .hero-copy {
+  position: relative;
+  z-index: 3;
 }
 
 .mundo-interativo-body #ambient-canvas,

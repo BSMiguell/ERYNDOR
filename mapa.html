@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <noscript>
+      <style>.site-loader { display: none !important; }</style>
+    </noscript>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07060A" />
+  <title>ERYNDOR - Mapa Interativo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/mapa.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- Loader -->
+  <div class="site-loader" aria-hidden="true">
+    <div class="loader-mark">
+      <div class="loader-sigil"></div>
+      <p class="loader-text">O Mapa Desperta</p>
+    </div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+
+  <!-- Partículas de fundo -->
+  <canvas id="map-particles" class="hero-particles"></canvas>
+
+  <nav class="top-nav" aria-label="Navegação principal">
+    <a class="nav-brand" href="index.html" data-cursor="Eryndor">Eryndor</a>
+    <ul class="nav-links">
+      <li><a href="index.html#chronicles" data-cursor="Crônica">Crônica</a></li>
+      <li><a href="index.html#races" data-cursor="Raças">Raças</a></li>
+      <li><a href="index.html#characters" data-cursor="Galeria">Personagens</a></li>
+      <li><a href="#mapa-container" class="ativo" data-cursor="Mapa">Mapa</a></li>
+      <li><a href="index.html#duel" data-cursor="Duelo">Duelo</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <!-- Hero do Mapa -->
+    <section class="hero" style="min-height: 60vh;">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">Mapa Interativo</p>
+        <h1 class="reveal">
+          <span class="hero-letter" style="--delay: 0s">E</span>
+          <span class="hero-letter" style="--delay: 0.04s">X</span>
+          <span class="hero-letter" style="--delay: 0.08s">P</span>
+          <span class="hero-letter" style="--delay: 0.12s">L</span>
+          <span class="hero-letter" style="--delay: 0.16s">O</span>
+          <span class="hero-letter" style="--delay: 0.2s">R</span>
+          <span class="hero-letter" style="--delay: 0.24s">A</span>
+          <span class="hero-title-line">Explore cada região</span>
+        </h1>
+        <p class="hero-lead reveal">
+          Mergulhe nas profundezas do Kore corrompido. Cada região guarda segredos ancestrais,
+          personagens marcados pela Convergência e auras que contam histórias de eras perdidas.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mapa Interativo -->
+    <section class="mapa-wrapper" id="mapa-container">
+      <div id="tooltip-regiao" class="regiao-tooltip" aria-hidden="true"></div>
+
+      <!-- Inclui SVG inline para evitar request -->
+      <!--#include virtual="/assets/mapa/mapa-base.svg" -->
+
+      <!-- O SVG será carregado via JS e inserido aqui -->
+      <div id="mapa-svg-container"></div>
+    </section>
+
+    <!-- Painel de Filtros -->
+    <aside class="mapa-filtros" aria-label="Filtros do mapa">
+      <h3>FILTRAR MAPA</h3>
+      <div class="filtro-grupo">
+        <label><input type="checkbox" id="filtro-regioes" checked> Regiões</label>
+        <label><input type="checkbox" id="filtro-personagens" checked> Personagens</label>
+        <label><input type="checkbox" id="filtro-eventos" checked> Eventos</label>
+        <label><input type="checkbox" id="filtro-cristais"> Cristais K.</label>
+      </div>
+      <div class="filtro-grupo">
+        <label><input type="checkbox" id="filtro-batalhas"> Batalhas</label>
+      </div>
+      <div class="filtro-grupo">
+        <strong style="font-size: 14px; display: block; margin-bottom: 8px;">Raças:</strong>
+        <label><input type="checkbox" class="filtro-raca" data-raca="all" checked> Todas</label>
+        <label><input type="checkbox" class="filtro-raca" data-raca="amaldic"> Amaldiçoados</label>
+        <label><input type="checkbox" class="filtro-raca" data-raca="beserk"> Beserk</label>
+        <label><input type="checkbox" class="filtro-raca" data-raca="demonio"> Demônios</label>
+        <label><input type="checkbox" class="filtro-raca" data-raca="humano"> Humanos</label>
+        <label><input type="checkbox" class="filtro-raca" data-raca="aparicao"> Aparições</label>
+      </div>
+    </aside>
+
+    <!-- Minimap -->
+    <div class="minimap" id="minimap" aria-label="Minimap do mundo">
+      <svg viewBox="0 0 100 100" class="mini-mapa-svg">
+        <!-- Regiões simplificadas -->
+        <rect x="15" y="5" width="20" height="15" fill="#2C4A6E" opacity="0.7"/>
+        <rect x="25" y="15" width="25" height="20" fill="#1E4D2B" opacity="0.7"/>
+        <rect x="40" y="30" width="20" height="20" fill="#4A3B28" opacity="0.7"/>
+        <rect x="55" y="25" width="15" height="15" fill="#6B4C1E" opacity="0.7"/>
+        <rect x="10" y="35" width="15" height="20" fill="#1A3A4A" opacity="0.7"/>
+        <rect x="40" y="60" width="25" height="25" fill="#5C1A1A" opacity="0.7"/>
+        <rect x="8" y="60" width="15" height="20" fill="#2A3B2A" opacity="0.7"/>
+        <rect x="38" y="20" width="10" height="10" fill="#3D2D4A" opacity="0.7"/>
+      </svg>
+    </div>
+  </main>
+
+  <!-- Modal de Região -->
+  <div class="modal-backdrop" id="modal-regiao" role="presentation">
+    <article class="regiao-modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-regiao-nome">
+      <button class="regiao-modal-close" id="modal-regiao-close" aria-label="Fechar">×</button>
+      <div class="modal-regiao-header">
+        <div class="modal-regiao-cenario placeholder" id="modal-regiao-cenario">
+          <p style="color: var(--parchment); font-style: italic;">Imagem pendente</p>
+        </div>
+        <div class="modal-regiao-info">
+          <h2 id="modal-regiao-nome"></h2>
+          <p class="raca" id="modal-regiao-raca"></p>
+          <p class="descricao" id="modal-regiao-descricao"></p>
+        </div>
+      </div>
+      <div class="regiao-modal-personagens" id="modal-regiao-personagens">
+        <h3>Personagens nesta região</h3>
+        <div class="chars-horizontal" id="chars-horizontal"></div>
+      </div>
+    </article>
+  </div>
+
+  <!-- Modal de Evento -->
+  <div class="modal-backdrop" id="modal-evento" role="presentation">
+    <article class="character-modal" role="dialog" aria-modal="true" aria-labelledby="modal-evento-titulo">
+      <button class="icon-button modal-close" id="modal-evento-close" aria-label="Fechar">×</button>
+      <div class="modal-copy">
+        <span class="modal-tipo" id="modal-evento-tipo"></span>
+        <h2 class="modal-name" id="modal-evento-titulo"></h2>
+        <p class="modal-lore" id="modal-evento-narrativa"></p>
+        <p><strong>Consequência:</strong> <span id="modal-evento-consequencia"></span></p>
+        <p><strong>Região:</strong> <span id="modal-evento-regiao"></span></p>
+      </div>
+    </article>
+  </div>
+
+  <!-- Scripts (bottom for performance) -->
+  <script src="data.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/canvas.js"></script>
+  <script src="js/loader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+  <script src="js/mapa-interativo.js"></script>
+  <script src="js/races.js"></script>
+  <script src="js/characters.js"></script>
+
+  <script>
+    // Iniciar mapa quando DOM estiver pronto
+    function iniciarMapa() {
+      if (window.hideLoader) window.hideLoader();
+      if (window.initMap) window.initMap();
+    }
+
+    document.addEventListener('DOMContentLoaded', iniciarMapa);
+  </script>
+
+  <script>
+    // Iniciar mapa quando DOM estiver pronto
+    function iniciarMapa() {
+      if (window.hideLoader) window.hideLoader();
+      if (window.initMap) window.initMap();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', iniciarMapa);
+    } else {
+      iniciarMapa();
+    }
+  </script>
+
+    // Fechar modais
+    document.getElementById('modal-regiao-close')?.addEventListener('click', () => {
+      document.getElementById('modal-regiao')?.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+    document.getElementById('modal-evento-close')?.addEventListener('click', () => {
+      document.getElementById('modal-evento')?.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+
+    // ESC para fechar modais (conforme spec 5.2)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-backdrop').forEach(m => m.classList.remove('open'));
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+</html>
